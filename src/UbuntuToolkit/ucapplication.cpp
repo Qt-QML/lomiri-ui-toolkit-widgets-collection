@@ -69,7 +69,7 @@ void UCApplication::setApplicationName(const QString& applicationName) {
     /* QStandardPaths uses the name to build folder names.
        This works across platforms. For confinement we rely on the fact
        that the folders are whitelisted based on the app name. Similar
-       to how Unity uses it to distinguish running applications.
+       to how Lomiri uses it to distinguish running applications.
      */
     QCoreApplication::setApplicationName(applicationName);
 

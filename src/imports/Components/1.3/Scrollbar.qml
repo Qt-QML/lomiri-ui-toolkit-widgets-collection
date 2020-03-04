@@ -144,7 +144,7 @@ Toolkit.StyledItem {
 
     /*!
       \internal
-      simulate the system setting (which will be implemented in unity8, I guess)
+      simulate the system setting (which will be implemented in lomiri, I guess)
       True --> Steppers style, non-overlay scrollbars
       False --> Indicator and Trough styles
       CURRENTLY UNUSED

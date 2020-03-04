@@ -59,10 +59,10 @@ PageTreeNode {
     }
 
     active: true
-    property alias actions: unityActionManager.actions
-    property alias actionManager: unityActionManager
+    property alias actions: lomiriActionManager.actions
+    property alias actionManager: lomiriActionManager
     Toolkit.ActionManager {
-        id: unityActionManager
+        id: lomiriActionManager
         onQuit: {
             // FIXME Wire this up to the application lifecycle management API instead of quit().
             Qt.quit()

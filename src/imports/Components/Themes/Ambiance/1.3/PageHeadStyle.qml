@@ -65,7 +65,7 @@ Style.PageHeadStyle {
     }
 
     // FIXME: When the three panel color properties below are removed,
-    //  update unity8/Dash/PageHeader to use the new theming (currently
+    //  update lomiri/Dash/PageHeader to use the new theming (currently
     //  in progress) to set these colors.
     /*!
       \deprecated
@@ -112,7 +112,7 @@ Style.PageHeadStyle {
     readonly property bool animating: headerStyle.state == "OUT"
                                       || leftAnchor.anchors.leftMargin < 0
 
-    // for Unity8
+    // for Lomiri
     // FIXME: Remove this property when we introduce a header preset that does not
     //  have a separator.
     property alias __separator_visible: divider.visible

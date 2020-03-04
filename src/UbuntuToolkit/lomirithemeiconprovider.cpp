@@ -16,7 +16,7 @@
  * Authors: Lars Uebernickel <lars.uebernickel@canonical.com>
  */
 
-#include "unitythemeiconprovider_p.h"
+#include "lomirithemeiconprovider_p.h"
 
 #include <QtCore/QDir>
 #include <QtCore/QFileInfo>
@@ -274,13 +274,13 @@ private:
     QList<IconThemePointer> parents;
 };
 
-UnityThemeIconProvider::UnityThemeIconProvider(const QString &themeName):
+LomiriThemeIconProvider::LomiriThemeIconProvider(const QString &themeName):
   QQuickImageProvider(QQuickImageProvider::Image)
 {
     theme = IconTheme::get(themeName);
 }
 
-QImage UnityThemeIconProvider::requestImage(const QString &id, QSize *size, const QSize &requestedSize)
+QImage LomiriThemeIconProvider::requestImage(const QString &id, QSize *size, const QSize &requestedSize)
 {
     // The hicolor theme will be searched last as per
     // https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html

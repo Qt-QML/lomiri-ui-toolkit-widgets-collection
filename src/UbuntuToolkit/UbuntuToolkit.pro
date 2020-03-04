@@ -134,7 +134,7 @@ HEADERS += \
     $$PWD/ucubuntushapetextures_p.h \
     $$PWD/ucunits_p.h \
     $$PWD/ucurihandler_p.h \
-    $$PWD/unitythemeiconprovider_p.h \
+    $$PWD/lomirithemeiconprovider_p.h \
     $$PWD/unixsignalhandler_p.h
 
 SOURCES += \
@@ -227,7 +227,7 @@ SOURCES += \
     $$PWD/ucunits.cpp \
     $$PWD/ucurihandler.cpp \
     $$PWD/ucviewitemsattached.cpp \
-    $$PWD/unitythemeiconprovider.cpp \
+    $$PWD/lomirithemeiconprovider.cpp \
     $$PWD/unixsignalhandler_p.cpp
 
 RESOURCES += \

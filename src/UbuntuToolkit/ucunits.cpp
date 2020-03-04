@@ -305,7 +305,7 @@ void UCUnits::windowPropertyChanged(QPlatformWindow *window, const QString &prop
      * when an external screen is connected, for which a different scale is required. Otherwise
      * the two screens would fight for which scale gets applied.
      *
-     * This is only currently supported for unity8, which has a window per screen, but we want the
+     * This is only currently supported for lomiri, which has a window per screen, but we want the
      * external (non-LVDS) screen's scale applied across the shell.
      *
      */

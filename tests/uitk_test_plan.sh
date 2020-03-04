@@ -61,7 +61,7 @@ declare -a TEST_SUITE=(
     " camera_app"
 #   " filemanager"
 #   " ubuntu_terminal_app"
-    " -n unity8"
+    " -n lomiri"
 #   " ubuntu_clock_app"
 #   " shorts_app"
 #   " online_accounts_ui"
@@ -71,7 +71,7 @@ declare -a TEST_SUITE=(
 UITK_PACKAGES="qtdeclarative5-ubuntu-ui-toolkit-plugin \
                ubuntu-ui-toolkit-autopilot \
                ubuntu-ui-toolkit-theme"
-#UITK_PACKAGES="unity8 unity8-common unity8-private"
+#UITK_PACKAGES="lomiri lomiri-common lomiri-private"
 #UITK_PACKAGES="qtmir-android qtdeclarative5-qtmir-plugin"
 
 
@@ -82,17 +82,17 @@ AP_PACKAGES="address-book-service-dummy \
              reminders-app-autopilot \
              address-book-app-autopilot \
 #             messaging-app-autopilot \
-#             unity8-autopilot \
+#             lomiri-autopilot \
              dialer-app-autopilot \
              camera-app-autopilot \
              webbrowser-app-autopilot \
              mediaplayer-app-autopilot \
-             unity-webapps-qml-autopilot \
+             lomiri-webapps-qml-autopilot \
              ubuntu-system-settings-autopilot\
              ubuntu-html5-ui-toolkit-autopilot \
              ubuntu-system-settings-online-accounts-autopilot \
              messaging-app-autopilot \
-             unity8"
+             lomiri"
 
 declare -a UNREGISTERED_APPS=(
 	"com.ubuntu.terminal"
@@ -111,12 +111,12 @@ wait_for_shell()
 	# Waiting for device on ADB
 	set -e
 	adb -s ${SERIALNUMBER} wait-for-device
-	# Start waiting for Unity8"
-	until PIDS=$(adb -s ${SERIALNUMBER} shell pidof unity8 2>/dev/null|egrep -v "^$"); 
+	# Start waiting for Lomiri"
+	until PIDS=$(adb -s ${SERIALNUMBER} shell pidof lomiri 2>/dev/null|egrep -v "^$"); 
 	do
         	sleep 0.1;
 	done;
-	echo "Unity8 is up with PID: ${PIDS}"
+	echo "Lomiri is up with PID: ${PIDS}"
 	set +e
 }
 
@@ -147,7 +147,7 @@ sleep_indicator () {
 		i=$[$i+1]
 	done
 	echo -ne '\n'
-        until pids=$(adb -s ${SERIALNUMBER} shell pidof unity-system-compositor|egrep -v "^$|initctl:"); 
+        until pids=$(adb -s ${SERIALNUMBER} shell pidof lomiri-system-compositor|egrep -v "^$|initctl:"); 
         do
           echo -ne "Wait for compositor: $i seconds\r"
           sleep 1;
@@ -189,12 +189,12 @@ function reset {
 	        adb -s ${SERIALNUMBER} shell powerd-cli active |egrep -v "requested, cookie is|Press ctrl-c to exit|not fully supported." &
 	        #sleep_indicator 10
 	        adb -s ${SERIALNUMBER} shell amixer -D pulse set Master 1+ mute 2>&1 > /dev/null
-	        adb -s ${SERIALNUMBER} shell "gdbus call --session --dest com.canonical.UnityGreeter --object-path / --method com.canonical.UnityGreeter.HideGreeter|grep -v '\(\)'"
+	        adb -s ${SERIALNUMBER} shell "gdbus call --session --dest com.canonical.LomiriGreeter --object-path / --method com.canonical.LomiriGreeter.HideGreeter|grep -v '\(\)'"
 	        adb -s ${SERIALNUMBER} shell "echo ${PASSWORD}|sudo -S dbus-send   --system --print-reply \
 	                                                 --dest=org.freedesktop.Accounts \
         	                                         /org/freedesktop/Accounts/User32011 \
                 	                                 org.freedesktop.DBus.Properties.Set \
-                        	                         string:com.canonical.unity.AccountsService \
+                        	                         string:com.canonical.lomiri.AccountsService \
                                 	                 string:demo-edges variant:boolean:false 2>&1|grep -v password|egrep -v '\(\)|method return'"
 	fi
     fi
@@ -519,7 +519,7 @@ echo ""
 if [ ${UNLOCK_ONLY} == true ]; then
 	adb -s ${SERIALNUMBER} shell powerd-cli display on |egrep -v "Display State requested, cookie is|Press ctrl-c to exit|not fully supported." &
 	adb -s ${SERIALNUMBER} shell powerd-cli active |egrep -v "requested, cookie is|Press ctrl-c to exit|not fully supported." &
-	adb -s ${SERIALNUMBER} shell "gdbus call --session --dest com.canonical.UnityGreeter --object-path / --method com.canonical.UnityGreeter.HideGreeter|grep -v '\(\)'"
+	adb -s ${SERIALNUMBER} shell "gdbus call --session --dest com.canonical.LomiriGreeter --object-path / --method com.canonical.LomiriGreeter.HideGreeter|grep -v '\(\)'"
 	exit
 fi
 # Check if the device need to be flashed and set up for testing

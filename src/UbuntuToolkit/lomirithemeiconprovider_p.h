@@ -16,8 +16,8 @@
  * Authors: Lars Uebernickel <lars.uebernickel@canonical.com>
  */
 
-#ifndef UNITYTHEMEICONPROVIDER_P_H
-#define UNITYTHEMEICONPROVIDER_P_H
+#ifndef LOMIRITHEMEICONPROVIDER_P_H
+#define LOMIRITHEMEICONPROVIDER_P_H
 
 #include <QtQuick/QQuickImageProvider>
 
@@ -25,10 +25,10 @@
 
 UT_NAMESPACE_BEGIN
 
-class UBUNTUTOOLKIT_EXPORT UnityThemeIconProvider: public QQuickImageProvider
+class UBUNTUTOOLKIT_EXPORT LomiriThemeIconProvider: public QQuickImageProvider
 {
 public:
-    UnityThemeIconProvider(const QString &themeName = QStringLiteral("suru"));
+    LomiriThemeIconProvider(const QString &themeName = QStringLiteral("suru"));
     QImage requestImage(const QString &id, QSize *size, const QSize &requestedSize) override;
 
 private:
@@ -37,4 +37,4 @@ private:
 
 UT_NAMESPACE_END
 
-#endif // UNITYTHEMEICONPROVIDER_P_H
+#endif // LOMIRITHEMEICONPROVIDER_P_H

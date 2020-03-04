@@ -16,7 +16,7 @@
 
 #include <QtTest/QtTest>
 #define private public
-#include <UbuntuToolkit/private/unitythemeiconprovider_p.h>
+#include <UbuntuToolkit/private/lomirithemeiconprovider_p.h>
 #undef private
 
 UT_USE_NAMESPACE
@@ -65,7 +65,7 @@ private Q_SLOTS:
         QFETCH(QSize, requestSize);
         QFETCH(QSize, resultSize);
 
-        UnityThemeIconProvider provider("mockTheme");
+        LomiriThemeIconProvider provider("mockTheme");
         QSize returnedSize;
         QImage i = provider.requestImage(icon, &returnedSize, requestSize);
         QCOMPARE(i.size(), resultSize);
@@ -80,7 +80,7 @@ private Q_SLOTS:
     void test_hicolorLast()
     {
         QSize returnedSize;
-        UnityThemeIconProvider provider("mockTheme");
+        LomiriThemeIconProvider provider("mockTheme");
 
         // myapp is in MockTheme3 (white) and hicolor (black)
         // MockTheme3 one is returned since hicolor is last per spec

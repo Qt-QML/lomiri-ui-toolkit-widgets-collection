@@ -41,7 +41,7 @@ def _write_test_desktop_file():
     desktop_file_dir = get_local_desktop_file_directory()
     if not os.path.exists(desktop_file_dir):
         os.makedirs(desktop_file_dir)
-    # Strip underscores which look like an APP_ID to Unity
+    # Strip underscores which look like an APP_ID to Lomiri
     # See https://bugs.launchpad.net/ubuntu-ui-toolkit/+bug/1329141
     chars = tempfile._RandomNameSequence.characters.strip("_")
     tempfile._RandomNameSequence.characters = chars

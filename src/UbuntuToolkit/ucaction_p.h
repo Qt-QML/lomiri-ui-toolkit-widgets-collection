@@ -59,7 +59,7 @@ class UBUNTUTOOLKIT_EXPORT UCAction : public QObject
 {
     Q_OBJECT
 
-    // transferred from Unity Actions
+    // transferred from Lomiri Actions
     Q_ENUMS(Type)
     Q_PROPERTY(QString name MEMBER m_name WRITE setName NOTIFY nameChanged)
     Q_PROPERTY(QString text READ text WRITE setText RESET resetText NOTIFY textChanged)

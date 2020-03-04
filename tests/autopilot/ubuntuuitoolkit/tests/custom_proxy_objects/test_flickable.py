@@ -314,21 +314,21 @@ class SwipeFlickableTestCase(tests.QMLFileAppTestCase):
         self.assertEqual('Could not swipe in the flickable.', str(error))
 
 
-class UnityFlickableTestCase(tests.QMLFileAppTestCase):
+class LomiriFlickableTestCase(tests.QMLFileAppTestCase):
 
     path = os.path.abspath(__file__)
     dir_path = os.path.dirname(path)
     test_qml_file_path = os.path.join(
-        dir_path, 'test_flickable.UnityFlickableTestCase.qml')
+        dir_path, 'test_flickable.LomiriFlickableTestCase.qml')
 
     def get_command_line(self, command_line):
         command_line.append('-engine')
         return command_line
 
-    def test_get_unity_top_container(self):
-        """Test that we can get the top cointainer in Unity."""
+    def test_get_lomiri_top_container(self):
+        """Test that we can get the top cointainer in Lomiri."""
         # This tests bug http://pad.lv/1314390
-        # On Unity, the top container is not the first child as it is in all
+        # On Lomiri, the top container is not the first child as it is in all
         # the apps that have a MainView. This makes the first implementation of
         # _get_top_container fail. Instead of going from the top looking for
         # a container, we should start from the flickable until we find the

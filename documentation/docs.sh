@@ -52,7 +52,7 @@ test ! -s $DOC_PATH/qdoc.err || exit 1
 echo docs: Online done.
 
 # Second qdoc pass, this time with indexes for cross-referencing.
-# If we don't do this, bugs in docs from other modules (Qt, Unity) fail our build
+# If we don't do this, bugs in docs from other modules (Qt, Lomiri) fail our build
 eval "$QDOC $SRC/ubuntu-ui-toolkit-offline-indexes.qdocconf 2> $DOC_PATH/qdoc.log"
 grep "warning: Can't link to" $DOC_PATH/qdoc.log > $DOC_PATH/qdoc.err
 cat $DOC_PATH/qdoc.err

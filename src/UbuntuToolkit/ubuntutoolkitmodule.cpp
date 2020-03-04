@@ -99,7 +99,7 @@
 #include "ucubuntushapeoverlay_p.h"
 #include "ucunits_p.h"
 #include "ucurihandler_p.h"
-#include "unitythemeiconprovider_p.h"
+#include "lomirithemeiconprovider_p.h"
 
 UT_NAMESPACE_BEGIN
 
@@ -274,7 +274,7 @@ void UbuntuToolkitModule::initializeModule(QQmlEngine *engine, const QUrl &plugi
     engine->addImageProvider(QLatin1String("scaling"), new UCScalingImageProvider);
 
     // register icon provider
-    engine->addImageProvider(QLatin1String("theme"), new UnityThemeIconProvider);
+    engine->addImageProvider(QLatin1String("theme"), new LomiriThemeIconProvider);
 
     // Necessary for Screen.orientation (from import QtQuick.Window 2.0) to work
     QGuiApplication::primaryScreen()->setOrientationUpdateMask( Qt::ScreenOrientations(

@@ -313,7 +313,7 @@ bool UCAction::isValidType(QVariant::Type valueType)
 void UCAction::generateName()
 {
     static int id = 0;
-    m_name = QStringLiteral("unity-action-%1").arg(id++);
+    m_name = QStringLiteral("lomiri-action-%1").arg(id++);
 }
 
 /*!
