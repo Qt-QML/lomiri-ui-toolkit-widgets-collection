@@ -189,12 +189,12 @@ function reset {
 	        adb -s ${SERIALNUMBER} shell powerd-cli active |egrep -v "requested, cookie is|Press ctrl-c to exit|not fully supported." &
 	        #sleep_indicator 10
 	        adb -s ${SERIALNUMBER} shell amixer -D pulse set Master 1+ mute 2>&1 > /dev/null
-	        adb -s ${SERIALNUMBER} shell "gdbus call --session --dest com.canonical.LomiriGreeter --object-path / --method com.canonical.LomiriGreeter.HideGreeter|grep -v '\(\)'"
+	        adb -s ${SERIALNUMBER} shell "gdbus call --session --dest com.lomiri.LomiriGreeter --object-path / --method com.lomiri.LomiriGreeter.HideGreeter|grep -v '\(\)'"
 	        adb -s ${SERIALNUMBER} shell "echo ${PASSWORD}|sudo -S dbus-send   --system --print-reply \
 	                                                 --dest=org.freedesktop.Accounts \
         	                                         /org/freedesktop/Accounts/User32011 \
                 	                                 org.freedesktop.DBus.Properties.Set \
-                        	                         string:com.canonical.lomiri.AccountsService \
+                        	                         string:com.lomiri.lomiri.AccountsService \
                                 	                 string:demo-edges variant:boolean:false 2>&1|grep -v password|egrep -v '\(\)|method return'"
 	fi
     fi
@@ -519,7 +519,7 @@ echo ""
 if [ ${UNLOCK_ONLY} == true ]; then
 	adb -s ${SERIALNUMBER} shell powerd-cli display on |egrep -v "Display State requested, cookie is|Press ctrl-c to exit|not fully supported." &
 	adb -s ${SERIALNUMBER} shell powerd-cli active |egrep -v "requested, cookie is|Press ctrl-c to exit|not fully supported." &
-	adb -s ${SERIALNUMBER} shell "gdbus call --session --dest com.canonical.LomiriGreeter --object-path / --method com.canonical.LomiriGreeter.HideGreeter|grep -v '\(\)'"
+	adb -s ${SERIALNUMBER} shell "gdbus call --session --dest com.lomiri.LomiriGreeter --object-path / --method com.lomiri.LomiriGreeter.HideGreeter|grep -v '\(\)'"
 	exit
 fi
 # Check if the device need to be flashed and set up for testing
