@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Styles 1.3 as Style
+import Lomiri.Components 1.3
+import Lomiri.Components.Styles 1.3 as Style
 
 Style.ComboButtonStyle {
     id: comboStyle
@@ -46,7 +46,7 @@ Style.ComboButtonStyle {
         property real minimumWidth: units.gu(36)
         property real horizontalPadding: units.gu(4)
         property color defaultColor: theme.palette.normal.foreground
-        property font defaultFont: Qt.font({family: "Ubuntu", pixelSize: FontUtils.sizeToPixels("medium")})
+        property font defaultFont: Qt.font({family: "Lomiri", pixelSize: FontUtils.sizeToPixels("medium")})
         property Gradient defaultGradient: null
         property real buttonFaceOffset: -dropDownWidth/2
         property bool stroke: false
@@ -74,7 +74,7 @@ Style.ComboButtonStyle {
         LayoutMirroring.enabled: Qt.application.layoutDirection == Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
 
-        UbuntuShape {
+        LomiriShape {
             id: background
             anchors.fill: parent
             borderSource: "radius_idle.sci"  // Deprecated, use a dedicated shape.
@@ -82,7 +82,7 @@ Style.ComboButtonStyle {
             source: mainButton.backgroundSource
 
             backgroundColor: defaultColor
-            backgroundMode: UbuntuShape.SolidColor
+            backgroundMode: LomiriShape.SolidColor
             opacity: styledItem.enabled ? 1.0 : 0.6
         }
 
@@ -105,7 +105,7 @@ Style.ComboButtonStyle {
             scale: styledItem.pressed ? 0.98 : 1.0
             Behavior on scale {
                 NumberAnimation {
-                    duration: UbuntuAnimation.SnapDuration
+                    duration: LomiriAnimation.SnapDuration
                     easing.type: Easing.Linear
                 }
             }
@@ -273,7 +273,7 @@ Style.ComboButtonStyle {
             color: defaultDropdownColor
         }
 
-        UbuntuShape {
+        LomiriShape {
             id: shape
             anchors {
                 fill: parent
@@ -284,14 +284,14 @@ Style.ComboButtonStyle {
 
         Behavior on height {
             NumberAnimation {
-                duration: UbuntuAnimation.FastDuration
-                easing: UbuntuAnimation.StandardEasing
+                duration: LomiriAnimation.FastDuration
+                easing: LomiriAnimation.StandardEasing
             }
         }
         Behavior on opacity {
             NumberAnimation {
-                duration: UbuntuAnimation.FastDuration
-                easing: UbuntuAnimation.StandardEasing
+                duration: LomiriAnimation.FastDuration
+                easing: LomiriAnimation.StandardEasing
             }
         }
     }

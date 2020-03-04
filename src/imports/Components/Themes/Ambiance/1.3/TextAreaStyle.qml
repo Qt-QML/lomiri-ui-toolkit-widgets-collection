@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 // frame
 // FIXME: stabilize API
@@ -62,26 +62,26 @@ Item {
     FocusShape {
     }
 
-    property Component background: UbuntuShape {
+    property Component background: LomiriShape {
         property bool error: (styledItem.hasOwnProperty("errorHighlight") && styledItem.errorHighlight && !styledItem.acceptableInput)
         onErrorChanged: (error) ? visuals.errorColor : visuals.backgroundColor;
         backgroundColor: visuals.borderColor
-        aspect: UbuntuShape.Flat
+        aspect: LomiriShape.Flat
         visible: !styledItem.readOnly
         anchors.fill: parent
 
-        UbuntuShape {
+        LomiriShape {
             anchors.fill: parent
             anchors.margins: parent.visible ? units.dp(0.5) : 0
             radius: units.gu(1.7)
             backgroundColor: visuals.backgroundColor
-            aspect: UbuntuShape.Flat
+            aspect: LomiriShape.Flat
             source: ShaderEffectSource {
                 sourceItem: styledItem.__rightScrollbar ? styledItem.__rightScrollbar : null
                 hideSource: true
             }
-            sourceFillMode: UbuntuShape.Pad
-            sourceHorizontalAlignment: UbuntuShape.AlignRight
+            sourceFillMode: LomiriShape.Pad
+            sourceHorizontalAlignment: LomiriShape.AlignRight
         }
     }
 

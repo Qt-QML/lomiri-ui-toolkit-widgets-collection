@@ -16,8 +16,8 @@
 
 /*!
   \qmltype pageUtils
-  \inqmlmodule Ubuntu.Components
-  \ingroup ubuntu
+  \inqmlmodule Lomiri.Components
+  \ingroup lomiri
   \internal
   \brief Page-related utility functions.
  */

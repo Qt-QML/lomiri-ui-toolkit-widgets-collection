@@ -16,9 +16,9 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.1
-import Ubuntu.Components.ListItems 1.0 as ListItem
+import Lomiri.Test 1.0
+import Lomiri.Components 1.1
+import Lomiri.Components.ListItems 1.0 as ListItem
 
 Item {
     id: main
@@ -83,7 +83,7 @@ Item {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "TextAreaAPI"
         when: windowShown
 

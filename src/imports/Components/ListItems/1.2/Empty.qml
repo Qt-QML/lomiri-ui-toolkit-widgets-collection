@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 /*!
     \qmltype Empty
-    \inqmlmodule Ubuntu.Components.ListItems 1.0
-    \ingroup ubuntu-listitems
+    \inqmlmodule Lomiri.Components.ListItems 1.0
+    \ingroup lomiri-listitems
     \brief A list item with no contents.
     \note \b{The component is deprecated. Use ListItem component instead.}
     The Empty class can be used for generic list items containing other
@@ -35,8 +35,8 @@ import Ubuntu.Components 1.2
 
     Examples:
     \qml
-        import Ubuntu.Components 1.2
-        import Ubuntu.Components.ListItems 1.0 as ListItem
+        import Lomiri.Components 1.2
+        import Lomiri.Components.ListItems 1.0 as ListItem
 
         Item {
             Model {
@@ -325,7 +325,7 @@ AbstractButton {
             Behavior on x {
                 enabled: !priv.held
                 SequentialAnimation {
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                     }
                     ScriptAction {
                         script: {
@@ -395,7 +395,7 @@ AbstractButton {
                         width: units.gu(5)
                     }
                     Label {
-                        text: i18n.dtr('ubuntu-ui-toolkit', "Delete")
+                        text: i18n.dtr('lomiri-ui-toolkit', "Delete")
                         verticalAlignment: Text.AlignVCenter
                         anchors {
                             verticalCenter: parent.verticalCenter
@@ -441,7 +441,7 @@ AbstractButton {
         id: removeItemAnimation
 
         running: false
-        UbuntuNumberAnimation {
+        LomiriNumberAnimation {
             target: emptyListItem
             property: "height"
             to: 0

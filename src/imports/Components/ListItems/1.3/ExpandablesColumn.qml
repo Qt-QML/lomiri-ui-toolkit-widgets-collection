@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*!
     \qmltype ExpandablesColumn
-    \inqmlmodule Ubuntu.Components.ListItems 1.0
-    \ingroup ubuntu-listitems
+    \inqmlmodule Lomiri.Components.ListItems 1.0
+    \ingroup lomiri-listitems
     \brief A column to be used together with the \l Expandable item.
     This lays out its content just like a regular Column inside a Flickable but
     when used together with items of type \l Expandable it provides additional features
@@ -29,8 +29,8 @@ import Ubuntu.Components 1.3
 
     Examples:
     \qml
-        import Ubuntu.Components 1.3
-        import Ubuntu.Components.ListItems 1.3 as ListItem
+        import Lomiri.Components 1.3
+        import Lomiri.Components.ListItems 1.3 as ListItem
 
         ListItem.ExpandablesColumn {
             anchors { left: parent.left; right: parent.right }
@@ -107,7 +107,7 @@ Flickable {
     }
 
     Behavior on contentY {
-        UbuntuNumberAnimation { }
+        LomiriNumberAnimation { }
     }
 
     Column {

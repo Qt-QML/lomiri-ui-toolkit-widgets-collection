@@ -17,14 +17,14 @@
 pragma Singleton
 import QtQuick 2.4
 import QtQuick.Window 2.2
-import Ubuntu.Components 1.3
-import Ubuntu.Components.ListItems 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.ListItems 1.3
+import Lomiri.Components.Popups 1.3
 
 /*!
     \qmltype PickerPanel
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu-pickers
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri-pickers
     \brief Provides a panel for opening a DatePicker in place of the input panel or
     as Popover, depending on the form factor.
 
@@ -33,8 +33,8 @@ import Ubuntu.Components.Popups 1.3
     on date pickers.
     \qml
     import QtQuick 2.4
-    import Ubuntu.Components 1.3
-    import Ubuntu.Components.Pickers 1.3
+    import Lomiri.Components 1.3
+    import Lomiri.Components.Pickers 1.3
 
     MainView {
         width: units.gu(40)
@@ -243,7 +243,7 @@ Object {
                 Transition {
                     from: ''
                     to: 'opened'
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                         target: panel
                         property: 'y'
                     }
@@ -252,7 +252,7 @@ Object {
                     from: 'opened'
                     to: ''
                     SequentialAnimation {
-                        UbuntuNumberAnimation {
+                        LomiriNumberAnimation {
                             target: panel
                             property: 'y'
                         }

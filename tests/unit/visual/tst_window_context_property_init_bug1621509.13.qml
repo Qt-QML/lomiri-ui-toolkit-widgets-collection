@@ -17,8 +17,8 @@
 import QtQuick 2.4
 import QtTest 1.0
 
-// Ubuntu.Components is not explicitly used below, but its import causes bug #1621509.
-import Ubuntu.Components 1.3
+// Lomiri.Components is not explicitly used below, but its import causes bug #1621509.
+import Lomiri.Components 1.3
 
 TestCase {
     id: testCase

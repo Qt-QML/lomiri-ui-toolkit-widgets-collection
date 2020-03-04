@@ -1,10 +1,10 @@
 CXX_MODULE = qml
-TARGET  = UbuntuLayouts
-TARGETPATH = Ubuntu/Layouts
+TARGET  = LomiriLayouts
+TARGETPATH = Lomiri/Layouts
 IMPORT_VERSION = 0.1
 
 #QMAKE_DOCS = $$PWD/doc/qtquicklayouts.qdocconf
 
 include(plugin/plugin.pri)
 
-load(ubuntu_qml_plugin)
+load(lomiri_qml_plugin)

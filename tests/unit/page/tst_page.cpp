@@ -45,7 +45,7 @@ private Q_SLOTS:
     }
 
     void testAnchorToPage_bug1249386() {
-        QScopedPointer<UbuntuTestCase> testCase(new UbuntuTestCase("AnchorToPage.qml"));
+        QScopedPointer<LomiriTestCase> testCase(new LomiriTestCase("AnchorToPage.qml"));
         QCOMPARE(testCase->warnings(), 0);
     }
 };

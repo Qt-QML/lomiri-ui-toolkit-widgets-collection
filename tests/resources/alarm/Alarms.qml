@@ -15,10 +15,10 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 1.2 // due to ListItem
-import Ubuntu.Components.ListItems 1.0
-import Ubuntu.Components.Popups 1.0
-import Ubuntu.Components.Pickers 1.0
+import Lomiri.Components 1.2 // due to ListItem
+import Lomiri.Components.ListItems 1.0
+import Lomiri.Components.Popups 1.0
+import Lomiri.Components.Pickers 1.0
 
 MainView {
     id: mainView

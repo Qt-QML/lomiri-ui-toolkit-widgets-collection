@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 1.1
+import Lomiri.Components 1.1
 
 Item {
     id: mainView
@@ -37,7 +37,7 @@ Item {
         verticalAlignment: Text.AlignVCenter
         font.pixelSize: 20
         font.bold: true
-        font.family: "Ubuntu"
+        font.family: "Lomiri"
         color: "white"
         text: "Uri: \"\""
     }

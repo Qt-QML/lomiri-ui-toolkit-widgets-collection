@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Rectangle {
     id: progressBarStyle
@@ -46,7 +46,7 @@ Rectangle {
                     ? MathUtils.clamp(parent.width / 4, units.gu(1), units.gu(30))
                     : parent.width * progressBarStyle.progress
 
-        property int duration: UbuntuAnimation.SleepyDuration
+        property int duration: LomiriAnimation.SleepyDuration
         property int easing: Easing.InOutQuad
         readonly property bool animateStrip:
             styledItem.enabled && styledItem.visible
@@ -56,7 +56,7 @@ Rectangle {
         property bool reverseAnimate: false
 
         NumberAnimation on width {
-            duration: UbuntuAnimation.SlowDuration
+            duration: LomiriAnimation.SlowDuration
             easing.type: strip.easing
             running: !styledItem.indeterminate && styledItem.enabled && styledItem.visible
         }

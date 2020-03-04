@@ -16,8 +16,8 @@
 
 /*!
     \qmltype AnimatedItem
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief The AnimatedItem drives the animated components behavior inside a Flickable.
     Reports whether the component whos parent is a Flickable is in the visible area or not,
     so derived components can pause animations while off-screen.
@@ -25,7 +25,7 @@
 */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 StyledItem {
     id: root

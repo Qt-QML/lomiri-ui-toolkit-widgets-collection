@@ -15,18 +15,18 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 /*!
     \qmltype MultiValue
-    \inqmlmodule Ubuntu.Components.ListItems 1.0
-    \ingroup ubuntu-listitems
+    \inqmlmodule Lomiri.Components.ListItems 1.0
+    \ingroup lomiri-listitems
     \brief List item displaying a second string under the main label.
     \note \b{The component is deprecated. Use ListItem component instead.}
 
     Examples:
     \qml
-        import Ubuntu.Components.ListItems 1.0 as ListItem
+        import Lomiri.Components.ListItems 1.0 as ListItem
         Column {
             ListItem.Subtitled {
                 text: "Idle"

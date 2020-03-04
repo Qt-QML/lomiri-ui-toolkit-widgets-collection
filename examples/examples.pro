@@ -1,7 +1,7 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    ubuntu-ui-toolkit-gallery\
+    lomiri-ui-toolkit-gallery\
     locale \
     jokes \
     unit-converter \

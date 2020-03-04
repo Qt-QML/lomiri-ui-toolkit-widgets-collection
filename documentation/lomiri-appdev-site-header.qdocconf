@@ -1,0 +1,36 @@
+HTML.postheader = \
+    "<header>\n" \
+    "	<div class=\"header-login\">\n" \
+    "		<ul>\n" \
+    "			<li><a href=\"https://myapps.developer.lomiri.com/openid/login/?next\=/dev\">Sign in or register</a></li>\n" \
+    "		</ul>\n" \
+    "	</div>\n" \
+    "	<div class=\"header-navigation\">\n" \
+    "		<div>\n" \
+    "			<nav role=\"navigation\">\n" \
+    "				<ul>\n" \
+    "					<li class=\"page_item page-item-5\"><a href=\"http://developer.lomiri.com/apps/\">Apps</a></li>\n" \
+    "					<li class=\"page_item page-item-7\"><a href=\"http://developer.lomiri.com/scopes/\">Scopes</a></li>\n" \
+    "					<li class=\"page_item page-item-9\"><a href=\"http://developer.lomiri.com/cloud/\">Cloud</a></li>\n" \
+    "					<li class=\"page_item page-item-11\"><a href=\"http://developer.lomiri.com/web/\">Web</a></li>\n" \
+    "					<li class=\"page_item page-item-13\"><a href=\"http://developer.lomiri.com/publish/\">Publish</a></li>\n" \
+    "					<li class=\"page_item page-item-15\"><a href=\"http://developer.lomiri.com/community/\">Community</a></li>\n" \
+    "					<li><a href=\"http://developer.lomiri.com/blog/\">Blog</a></li>\n" \
+    "					<li>\n" \
+    "						<form id=\"form-search\" method=\"get\" action=\"/\">\n" \
+    "							<fieldset>\n" \
+    "								<input id=\"input-search\" type=\"text\" name=\"s\" value=\"Search\" />\n" \
+    "							</fieldset>\n" \
+    "						</form>\n" \
+    "					</li>\n" \
+    "				</ul>\n" \
+    "			</nav>\n" \
+    "			<a class=\"logo-lomiri\" href=\"/\"><img src=\"http://developer.lomiri.com/wp-content/themes/wordpress-theme-lomirideveloper/img/logo-lomiri.png\" width=\"119\" height=\"27\" alt=\"Lomiri logo\" /></a>\n" \
+    "			<h2><a href=\"/\">Developer</a></h2>\n" \
+    "		</div>\n" \
+    "	</div>\n" \
+    "	\n" \
+    "	</header>\n" \
+    "   <div class=\"wrapper\">\n" \
+    "   <div class=\"main-content\">\n" 
+

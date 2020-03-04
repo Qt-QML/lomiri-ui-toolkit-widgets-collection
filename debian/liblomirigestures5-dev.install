@@ -1,0 +1,12 @@
+usr/include/*/qt5/LomiriGestures/LomiriGestures
+usr/include/*/qt5/LomiriGestures/LomiriGesturesDepends
+usr/include/*/qt5/LomiriGestures/LomiriGesturesModule
+usr/include/*/qt5/LomiriGestures/LomiriGesturesVersion
+usr/include/*/qt5/LomiriGestures/lomirigesturesglobal.h
+usr/include/*/qt5/LomiriGestures/lomirigesturesmodule.h
+usr/include/*/qt5/LomiriGestures/lomirigesturesversion.h
+usr/lib/*/libLomiriGestures.prl
+usr/lib/*/libLomiriGestures.so
+usr/lib/*/pkgconfig/LomiriGestures.pc
+usr/lib/*/qt5/mkspecs/modules/qt_lib_LomiriGestures.pri
+usr/lib/*/qt5/mkspecs/modules/qt_lib_LomiriGestures_private.pri

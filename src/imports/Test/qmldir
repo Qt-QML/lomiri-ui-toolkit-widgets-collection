@@ -1,9 +1,9 @@
-module Ubuntu.Test
-plugin UbuntuTest
-UbuntuTestCase 0.1 UbuntuTestCase.qml
+module Lomiri.Test
+plugin LomiriTest
+LomiriTestCase 0.1 LomiriTestCase.qml
 
 #version 1.0
-UbuntuTestCase 1.0 UbuntuTestCase.qml
+LomiriTestCase 1.0 LomiriTestCase.qml
 
 #version 1.3
-UbuntuTestCase 1.3 UbuntuTestCase13.qml
+LomiriTestCase 1.3 LomiriTestCase13.qml

@@ -16,7 +16,7 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components 1.1
+import Lomiri.Components 1.1
 
 Item {
     width: units.gu(50)
@@ -70,7 +70,7 @@ Item {
             var toolbar = mainView.__propagated.toolbar;
             toolbar.open();
             compare(toolbar.opened, true, "Cannot open toolbar using open()");
-            wait(UbuntuAnimation.FastDuration); // wait for the open animation to finish
+            wait(LomiriAnimation.FastDuration); // wait for the open animation to finish
             return toolbar;
         }
 

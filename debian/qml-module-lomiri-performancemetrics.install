@@ -1,0 +1,4 @@
+usr/lib/*/qt5/qml/Lomiri/PerformanceMetrics/*.qml
+usr/lib/*/qt5/qml/Lomiri/PerformanceMetrics/libLomiriPerformanceMetrics.so
+usr/lib/*/qt5/qml/Lomiri/PerformanceMetrics/plugins.qmltypes
+usr/lib/*/qt5/qml/Lomiri/PerformanceMetrics/qmldir

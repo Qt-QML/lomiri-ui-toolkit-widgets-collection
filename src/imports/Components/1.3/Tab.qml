@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3 as Toolkit
+import Lomiri.Components 1.3 as Toolkit
 
 /*!
     \qmltype Tab
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \deprecated
     \brief Component to represent a single tab in a \l Tabs environment.
 
@@ -52,7 +52,7 @@ Toolkit.PageTreeNode {
       Example:
       \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.3
+        import Lomiri.Components 1.3
         MainView {
             width: units.gu(40)
             height: units.gu(50)

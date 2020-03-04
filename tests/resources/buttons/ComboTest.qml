@@ -16,8 +16,8 @@
  * Author: Zsombor Egri <zsombor.egri@canonical.com>
  */
 import QtQuick 2.0
-import Ubuntu.Components 1.1
-import Ubuntu.Components.ListItems 1.0
+import Lomiri.Components 1.1
+import Lomiri.Components.ListItems 1.0
 
 MainView {
     width: units.gu(40)
@@ -94,7 +94,7 @@ MainView {
             text: "comboList is ListView"
             expanded: true
             expandedHeight: units.gu(30)
-            UbuntuListView {
+            LomiriListView {
                 objectName: "ListView"
                 model: 20
                 delegate: Standard {

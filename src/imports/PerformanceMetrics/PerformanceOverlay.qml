@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.PerformanceMetrics 1.0 as PerformanceMetrics
+import Lomiri.PerformanceMetrics 1.0 as PerformanceMetrics
 
 /*!
     \qmltype PerformanceOverlay
-    \inqmlmodule Ubuntu.PerformanceMetrics 0.1
-    \ingroup ubuntu-performance-metrics
+    \inqmlmodule Lomiri.PerformanceMetrics 0.1
+    \ingroup lomiri-performance-metrics
     \brief Overlay displaying performance related metrics (rendering time, CPU usage, etc.)
 
     PerformanceOverlay displays various performance related indicators to help
@@ -33,7 +33,7 @@ import Ubuntu.PerformanceMetrics 1.0 as PerformanceMetrics
         }
     \endqml
 
-    \deprecated Use the QML Ubuntu.Metrics module or the C++ libUbuntuMetrics instead.
+    \deprecated Use the QML Lomiri.Metrics module or the C++ libLomiriMetrics instead.
 */
 Item {
     id: overlay

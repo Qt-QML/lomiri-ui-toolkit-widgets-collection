@@ -16,9 +16,9 @@
 
 import QtQuick 2.4
 import QtTest 1.0
-import Ubuntu.Test 1.3
-import Ubuntu.Components 1.3
-import Ubuntu.Components.ListItems 1.3
+import Lomiri.Test 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.ListItems 1.3
 
 Item {
     width: units.gu(40)
@@ -100,7 +100,7 @@ Item {
 
     SignalSpy { id: spy }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "ComboButton"
         when: windowShown
 
@@ -121,7 +121,7 @@ Item {
             var lheight = combo.expandedHeight - combo.collapsedHeight - combo.__styleInstance.comboListMargin;
             compare(combo.comboListHeight, lheight, "comboListHeight default");
             compare(combo.comboList.length, 0, "comboList is empty");
-            verify(combo.font === Qt.font({family: "Ubuntu", pixelSize: FontUtils.sizeToPixels("medium")}), "Default font differs.");
+            verify(combo.font === Qt.font({family: "Lomiri", pixelSize: FontUtils.sizeToPixels("medium")}), "Default font differs.");
         }
 
         function test_comboListWidth() {
@@ -167,7 +167,7 @@ Item {
 
         function test_flickRectCombo() {
             // skip the test temporarily due to flakyness on powerpc target
-            // https://bugs.launchpad.net/ubuntu-ui-toolkit/+bug/1315244
+            // https://bugs.launchpad.net/lomiri-ui-toolkit/+bug/1315244
             skip("The test is flaky on powerpc target");
             var dropDown = findChild(rectCombo, "combobutton_dropdown");
             var comboListPanel = findChild(rectCombo, "combobutton_combopanel");

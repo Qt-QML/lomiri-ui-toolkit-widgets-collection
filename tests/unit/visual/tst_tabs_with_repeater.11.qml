@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.2
-import Ubuntu.Components 1.1
-import Ubuntu.Test 1.0
+import Lomiri.Components 1.1
+import Lomiri.Test 1.0
 
 MainView {
     id: testCase
@@ -112,7 +112,7 @@ MainView {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "TabsWithRepeaterNewHeader"
         when: windowShown
 

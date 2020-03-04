@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.3
-import Ubuntu.Components 1.1
+import Lomiri.Components 1.1
 
 Item {
     property alias service: service
@@ -24,7 +24,7 @@ Item {
         service: "org.freedesktop.Accounts"
         serviceInterface: "org.freedesktop.Accounts"
         path: "/org/freedesktop/Accounts"
-        adaptorInterface: "com.ubuntu.touch.AccountsService.Sound"
+        adaptorInterface: "com.lomiri.touch.AccountsService.Sound"
 
         property bool thisIsAnInvalidPropertyToWatch: true
         property bool incomingCallVibrate: true

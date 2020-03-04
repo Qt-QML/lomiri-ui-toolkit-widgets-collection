@@ -1,7 +1,7 @@
 {
     "architecture": "all",
     "description": "description of customtheme",
-    "framework": "ubuntu-sdk-14.10-dev2",
+    "framework": "lomiri-sdk-14.10-dev2",
     "hooks": {
         "customtheme": {
             "apparmor": "customtheme.apparmor",

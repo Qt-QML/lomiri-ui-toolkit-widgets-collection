@@ -3,9 +3,9 @@ SOURCES += tst_performance.cpp
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
 
 OTHER_FILES += \
-    UbuntuShapeGrid.qml \
+    LomiriShapeGrid.qml \
     ButtonStyleGrid.qml \
-    PairOfUbuntuShapeGrid.qml \
+    PairOfLomiriShapeGrid.qml \
     ButtonGrid.qml \
     CheckBoxStyleGrid.qml \
     CheckBoxGrid.qml \

@@ -14,12 +14,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 StyledItem {
     width: units.gu(40)
     height: units.gu(40)
-    theme.name: "Ubuntu.Components.Themes.Ambiance"
+    theme.name: "Lomiri.Components.Themes.Ambiance"
     styleName: "OptionSelectorStyle"
     StyledItemV12 { objectName: "otherStyled" }
 }

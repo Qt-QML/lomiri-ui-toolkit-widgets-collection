@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 /*
   The default slider style consists of a bar and a thumb shape.
@@ -26,7 +26,7 @@ import Ubuntu.Components 1.2
 Item {
     id: sliderStyle
 
-    property color foregroundColor: UbuntuColors.orange
+    property color foregroundColor: LomiriColors.orange
     property color backgroundColor: Theme.palette.normal.base
 
     property real thumbSpacing: units.gu(0)
@@ -36,7 +36,7 @@ Item {
     implicitWidth: units.gu(38)
     implicitHeight: units.gu(5)
 
-    UbuntuShapeOverlay {
+    LomiriShapeOverlay {
         id: background
         anchors {
             verticalCenter: parent.verticalCenter
@@ -51,7 +51,7 @@ Item {
             Qt.rect(thumb.x / thumb.barMinusThumbWidth, 0.0, 1 - (thumb.x / thumb.barMinusThumbWidth), 1.0)
     }
 
-    UbuntuShape {
+    LomiriShape {
         id: thumb
 
         anchors {
@@ -75,7 +75,7 @@ Item {
         Behavior on x {
             id: xBehavior
             SmoothedAnimation {
-                duration: UbuntuAnimation.FastDuration
+                duration: LomiriAnimation.FastDuration
             }
         }
         width: units.gu(2)

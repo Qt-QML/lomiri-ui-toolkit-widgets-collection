@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Themes 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Themes 1.3
 
 Palette {
     normal: AmbianceNormal {}
@@ -25,7 +25,7 @@ Palette {
         Component.onCompleted: {
             // specific disabled colors
             var diff = {
-                selection: Qt.rgba(UbuntuColors.blue.r, UbuntuColors.blue.g, UbuntuColors.blue.b, 0.1),
+                selection: Qt.rgba(LomiriColors.blue.r, LomiriColors.blue.g, LomiriColors.blue.b, 0.1),
                 positiveText: "#FFFFFF",
                 negativeText: "#FFFFFF",
                 activityText: "#FFFFFF",
@@ -51,12 +51,12 @@ Palette {
         Component.onCompleted: {
             // specific selected-disabled colors
             var diff = {
-                foreground: UbuntuColors.porcelain,
-                selection: Qt.rgba(UbuntuColors.blue.r, UbuntuColors.blue.g, UbuntuColors.blue.b, 0.1),
+                foreground: LomiriColors.porcelain,
+                selection: Qt.rgba(LomiriColors.blue.r, LomiriColors.blue.g, LomiriColors.blue.b, 0.1),
                 positiveText: "#FFFFFF",
                 negativeText: "#FFFFFF",
                 activityText: "#FFFFFF",
-                focus: UbuntuColors.blue,
+                focus: LomiriColors.blue,
                 focusText: "#FFFFFF",
                 field: "#FFFFFF",
                 position: "#00000000"
@@ -73,16 +73,16 @@ Palette {
     }
 
     highlighted: AmbianceNormal {
-        background: UbuntuColors.silk
-        base: UbuntuColors.ash
-        baseText: UbuntuColors.jet
-        foreground: UbuntuColors.silk
-        raised: UbuntuColors.silk
-        raisedText: UbuntuColors.inkstone
-        raisedSecondaryText: UbuntuColors.ash
+        background: LomiriColors.silk
+        base: LomiriColors.ash
+        baseText: LomiriColors.jet
+        foreground: LomiriColors.silk
+        raised: LomiriColors.silk
+        raisedText: LomiriColors.inkstone
+        raisedSecondaryText: LomiriColors.ash
     }
 
     focused: AmbianceNormal {
-        background: Qt.rgba(UbuntuColors.blue.r, UbuntuColors.blue.g, UbuntuColors.blue.b, 0.2)
+        background: Qt.rgba(LomiriColors.blue.r, LomiriColors.blue.g, LomiriColors.blue.b, 0.2)
     }
 }

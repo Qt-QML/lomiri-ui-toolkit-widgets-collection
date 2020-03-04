@@ -15,13 +15,13 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3 as Toolkit
-import Ubuntu.Components.Private 1.3 as Private
+import Lomiri.Components 1.3 as Toolkit
+import Lomiri.Components.Private 1.3 as Private
 
 /*!
     \qmltype Scrollbar
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief The Scrollbar component provides scrolling functionality for
     scrollable views (i.e. Flickable, ListView).
 
@@ -66,7 +66,7 @@ import Ubuntu.Components.Private 1.3 as Private
 
     \section1 Vertical Scrollbar and Flickable behaviour
 
-    Since Flickable's topMargin and bottomMargin are modified by Ubuntu components
+    Since Flickable's topMargin and bottomMargin are modified by Lomiri components
     such as \l BottomEdgeHint and \l Header in their positioning logic, the Scrollbar component
     uses the value of those properties to its top and bottom anchors margins, by default. This is
     to prevent any overlap with BottomEdgeHint or Header (see \l {Vertical Scrollbar and Header behaviour}

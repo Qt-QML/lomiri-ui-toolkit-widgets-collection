@@ -16,8 +16,8 @@
 
 import QtQuick 2.4
 import QtTest 1.0
-import Ubuntu.Test 1.3
-import Ubuntu.Components 1.3
+import Lomiri.Test 1.3
+import Lomiri.Components 1.3
 
 Item {
     id: main
@@ -50,8 +50,8 @@ Item {
             model: [ "Lorem ipsum dolor sit amet" ]
             enabled: false
             delegate: Label {
-                id: ubuntuIdLabel
-                objectName: "ubuntuIdLabel"
+                id: lomiriIdLabel
+                objectName: "lomiriIdLabel"
                 text: modelData
                 elide: Text.ElideRight
                 property string email: modelData
@@ -63,7 +63,7 @@ Item {
         id: testLoader
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "Label13Extras"
         when: windowShown
 
@@ -90,7 +90,7 @@ Item {
             // override the text color with the same as the default
             test.color = theme.palette.normal.backgroundText;
             // change the color of the palette
-            theme.palette.normal.backgroundText = UbuntuColors.blue;
+            theme.palette.normal.backgroundText = LomiriColors.blue;
             verify(test.color != theme.palette.normal.backgroundText);
         }
 

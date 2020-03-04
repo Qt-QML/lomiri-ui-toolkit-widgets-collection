@@ -1,6 +1,6 @@
 TEMPLATE = aux
 
-PROJECTNAME = ubuntu-ui-toolkit
+PROJECTNAME = lomiri-ui-toolkit
 
 SOURCECODE = `find .. -name *.qml`
 
@@ -14,11 +14,11 @@ message("")
 
 ## generate pot file 'make pot'
 potfile.target = pot
-potfile.commands = cd $$PWD; $$PWD/update-pot.sh ubuntu-ui-toolkit $$PWD/../modules .;
+potfile.commands = cd $$PWD; $$PWD/update-pot.sh lomiri-ui-toolkit $$PWD/../modules .;
 QMAKE_EXTRA_TARGETS += potfile
 
 ## generate pot file for gallery
-potfile.commands += cd $$PWD; $$PWD/update-pot.sh ubuntu-ui-toolkit-gallery $$PWD/../examples/ubuntu-ui-toolkit-gallery $$PWD/../examples/ubuntu-ui-toolkit-gallery/po;
+potfile.commands += cd $$PWD; $$PWD/update-pot.sh lomiri-ui-toolkit-gallery $$PWD/../examples/lomiri-ui-toolkit-gallery $$PWD/../examples/lomiri-ui-toolkit-gallery/po;
 
 ## Installation steps for mo files. 'make install'
 MO_FILES = $$files(*.po)
@@ -31,7 +31,7 @@ for(po_file, MO_FILES) {
   system(msgfmt $$po_file -o $$mo_file)
   mo_name = $$replace(mo_file,.mo,)
   mo_targetpath = $(INSTALL_ROOT)$$[QT_INSTALL_PREFIX]/share/locale/$${mo_name}/LC_MESSAGES
-  mo_target = $${mo_targetpath}/ubuntu-ui-toolkit.mo
+  mo_target = $${mo_targetpath}/lomiri-ui-toolkit.mo
   !isEmpty(install_mo_commands): install_mo_commands += &&
   install_mo_commands += test -d $$mo_targetpath || mkdir -p $$mo_targetpath
   install_mo_commands += && cp $${PWD}/$$mo_file $$mo_target

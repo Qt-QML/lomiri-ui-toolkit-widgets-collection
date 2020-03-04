@@ -32,9 +32,9 @@
 #include <QtQuick/QQuickView>
 #include <QtTest/QSignalSpy>
 #include <QtTest/QTest>
-#include <UbuntuToolkit/ubuntutoolkitmodule.h>
-#include <UbuntuToolkit/private/ucapplication_p.h>
-#include <UbuntuToolkit/private/ucunits_p.h>
+#include <LomiriToolkit/lomiritoolkitmodule.h>
+#include <LomiriToolkit/private/ucapplication_p.h>
+#include <LomiriToolkit/private/ucunits_p.h>
 
 #include "uctestcase.h"
 
@@ -75,12 +75,12 @@ private Q_SLOTS:
 
     void initTestCase()
     {
-        QString modules(UBUNTU_QML_IMPORT_PATH);
+        QString modules(LOMIRI_QML_IMPORT_PATH);
         QVERIFY(QDir(modules).exists());
 
         view = new QQuickView;
         QQmlEngine *quickEngine = view->engine();
-        UbuntuToolkitModule::initializeContextProperties(quickEngine);
+        LomiriToolkitModule::initializeContextProperties(quickEngine);
 
         view->setGeometry(0,0, UCUnits::instance()->gu(40), UCUnits::instance()->gu(30));
         //add modules folder so we have access to the plugin from QML
@@ -106,7 +106,7 @@ private Q_SLOTS:
     }
 
     void testSetApplicationName() {
-        QString appName("com.ubuntu.foo");
+        QString appName("com.lomiri.foo");
         UCApplication::instance()->setApplicationName(appName);
         QCOMPARE(UCApplication::instance()->applicationName(), appName);
         QCOMPARE(QCoreApplication::applicationName(), appName);
@@ -191,7 +191,7 @@ private Q_SLOTS:
     void testNoWarnings_bug186065() {
         QSKIP("Qt 5.9 causes OpenGL context failure here.");
         // An empty MainView would suffice
-        QScopedPointer<UbuntuTestCase>testCase (new UbuntuTestCase("AppName.qml"));
+        QScopedPointer<LomiriTestCase>testCase (new LomiriTestCase("AppName.qml"));
 
         // No warnings from QML
         QCOMPARE(testCase->warnings(), 0);
@@ -199,7 +199,7 @@ private Q_SLOTS:
 
     void testWindowTitleFromPage() {
         QSKIP("Qt 5.9 causes OpenGL context failure here.");
-        QScopedPointer<UbuntuTestCase> testCase(new UbuntuTestCase("PageTitle.qml"));
+        QScopedPointer<LomiriTestCase> testCase(new LomiriTestCase("PageTitle.qml"));
         QQuickItem *page = testCase->findItem<QQuickItem*>("page");
         QCOMPARE(QString("Once upon a time"), page->property("title").toString());
         QCOMPARE(testCase->title(), page->property("title").toString());
@@ -207,7 +207,7 @@ private Q_SLOTS:
 
     void testWindowTitleFromStack() {
         QSKIP("Qt 5.9 causes OpenGL context failure here.");
-        QScopedPointer<UbuntuTestCase> testCase(new UbuntuTestCase("PageStack.qml"));
+        QScopedPointer<LomiriTestCase> testCase(new LomiriTestCase("PageStack.qml"));
         QQuickItem *page = testCase->findItem<QQuickItem*>("page");
         QCOMPARE(QString("Far far away"), page->property("title").toString());
         QCOMPARE(testCase->title(), page->property("title").toString());

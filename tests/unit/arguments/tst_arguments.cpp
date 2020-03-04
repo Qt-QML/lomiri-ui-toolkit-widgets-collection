@@ -22,9 +22,9 @@
 #include <QtQml/QQmlEngine>
 #include <QtTest/QSignalSpy>
 #include <QtTest/QTest>
-#include <UbuntuToolkit/private/i18n_p.h>
+#include <LomiriToolkit/private/i18n_p.h>
 #define protected public
-#include <UbuntuToolkit/private/ucarguments_p.h>
+#include <LomiriToolkit/private/ucarguments_p.h>
 #undef protected
 
 #include "uctestcase.h"
@@ -74,7 +74,7 @@ private:
         m_application = new QCoreApplication(m_argumentsSize, m_arguments.data());
         engine = new QQmlEngine;
         // initialize i18 only
-        UbuntuI18n::instance(engine);
+        LomiriI18n::instance(engine);
     }
 
     void testCommandLine(QString commandLine, bool expectedError, QString dataTag=QString()) {

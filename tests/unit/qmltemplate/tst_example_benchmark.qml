@@ -16,7 +16,7 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components 1.1
+import Lomiri.Components 1.1
 
 TestCase {
     name: "ExampleBenchmarkObject"
@@ -47,7 +47,7 @@ TestCase {
      */
     function benchmark_create_component_data() {
         return [
-                { tag: "Button", fileName: "../../../qml/Ubuntu/Components/Button.qml" }
+                { tag: "Button", fileName: "../../../qml/Lomiri/Components/Button.qml" }
                ];
     }
     

@@ -15,36 +15,36 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Themes 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Themes 1.3
 
 PaletteValues {
     background: "#FFFFFF"
-    backgroundText: UbuntuColors.jet
-    backgroundSecondaryText: UbuntuColors.inkstone
-    backgroundTertiaryText: UbuntuColors.graphite
-    base: UbuntuColors.silk
-    baseText: UbuntuColors.inkstone
-    foreground: UbuntuColors.porcelain
-    foregroundText: UbuntuColors.jet
+    backgroundText: LomiriColors.jet
+    backgroundSecondaryText: LomiriColors.inkstone
+    backgroundTertiaryText: LomiriColors.graphite
+    base: LomiriColors.silk
+    baseText: LomiriColors.inkstone
+    foreground: LomiriColors.porcelain
+    foregroundText: LomiriColors.jet
     raised: "#FFFFFF"
-    raisedText: UbuntuColors.slate
-    raisedSecondaryText: UbuntuColors.silk
+    raisedText: LomiriColors.slate
+    raisedSecondaryText: LomiriColors.silk
     overlay: "#FFFFFF"
-    overlayText: UbuntuColors.slate
-    overlaySecondaryText: UbuntuColors.silk
+    overlayText: LomiriColors.slate
+    overlaySecondaryText: LomiriColors.silk
     field: "#FFFFFF"
-    fieldText: UbuntuColors.jet
-    focus: UbuntuColors.blue
+    fieldText: LomiriColors.jet
+    focus: LomiriColors.blue
     focusText: "#FFFFFF"
-    selection: Qt.rgba(UbuntuColors.blue.r, UbuntuColors.blue.g, UbuntuColors.blue.b, 0.2)
-    selectionText: UbuntuColors.jet
-    positive: UbuntuColors.green
+    selection: Qt.rgba(LomiriColors.blue.r, LomiriColors.blue.g, LomiriColors.blue.b, 0.2)
+    selectionText: LomiriColors.jet
+    positive: LomiriColors.green
     positiveText: "#FFFFFF"
-    negative: UbuntuColors.red
+    negative: LomiriColors.red
     negativeText: "#FFFFFF"
-    activity: UbuntuColors.blue
+    activity: LomiriColors.blue
     activityText: "#FFFFFF"
     position: "#00000000"
-    positionText: UbuntuColors.blue
+    positionText: LomiriColors.blue
 }

@@ -15,7 +15,7 @@
  */
 
 import QtTest 1.0
-import Ubuntu.Components 1.1
+import Lomiri.Components 1.1
 import QtQuick 2.0
 
 TestCase {

@@ -14,18 +14,18 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*!
     \qmltype Expandable
-    \inqmlmodule Ubuntu.Components.ListItems 1.0
-    \ingroup ubuntu-listitems
+    \inqmlmodule Lomiri.Components.ListItems 1.0
+    \ingroup lomiri-listitems
     \brief An expandable list item with no contents.
     The Expandable class can be used for generic list items containing other
     components such as buttons. It subclasses \l Empty and thus brings all that
     functionality, but additionally provides means to expand and collapse the item.
 
-    When used together with an \l UbuntuListView or \l ExpandablesColumn it
+    When used together with an \l LomiriListView or \l ExpandablesColumn it
     can coordinate with other items in the list to make sure it is scrolled while
     expanding to be fully visible in the view. Additionally it is made sure that
     only one Expandable item is expanded at a time and it is collapsed when the
@@ -35,15 +35,15 @@ import Ubuntu.Components 1.3
 
     Examples:
     \qml
-        import Ubuntu.Components 1.3
-        import Ubuntu.Components.ListItems 1.3 as ListItem
+        import Lomiri.Components 1.3
+        import Lomiri.Components.ListItems 1.3 as ListItem
 
         Item {
             ListModel {
                 id: listModel
             }
 
-            ListItem.UbuntuListView {
+            ListItem.LomiriListView {
                 anchors { left: parent.left; right: parent.right }
                 height: units.gu(24)
                 model: listModel
@@ -113,7 +113,7 @@ Empty {
         readonly property bool isInExpandableColumn: view && view !== undefined && view.hasOwnProperty("expandItem") && view.hasOwnProperty("collapse")
 
         /*! \internal
-          Gives information whether this item is inside an index based container supporting Expandable items, such as UbuntuListView
+          Gives information whether this item is inside an index based container supporting Expandable items, such as LomiriListView
          */
         readonly property bool isInExpandableListView: view && view !== undefined && view.hasOwnProperty("expandedIndex") 
 
@@ -177,10 +177,10 @@ Empty {
     }
 
     Behavior on height {
-        UbuntuNumberAnimation {}
+        LomiriNumberAnimation {}
     }
     Behavior on opacity {
-        UbuntuNumberAnimation {}
+        LomiriNumberAnimation {}
     }
 
     Flickable {
@@ -193,7 +193,7 @@ Empty {
         clip: true
 
         Behavior on contentY {
-            UbuntuNumberAnimation {}
+            LomiriNumberAnimation {}
         }
 
         Item {

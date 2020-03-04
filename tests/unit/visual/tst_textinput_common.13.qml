@@ -16,9 +16,9 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Test 1.3
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Test 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 
 Item {
     id: testMain
@@ -31,7 +31,7 @@ Item {
             property var textField: textFieldInPopover
             Rectangle {
                 anchors.fill: parent
-                color: UbuntuColors.orange
+                color: LomiriColors.orange
             }
             Column {
                 anchors.margins: units.gu(2)
@@ -105,7 +105,7 @@ Item {
                 anchors.fill: parent
                 id: textFieldInMouseArea
                 text: 'Lorem ipsum dolor sit amet'
-                color: UbuntuColors.blue
+                color: LomiriColors.blue
             }
             MouseArea {
                 anchors.fill: parent
@@ -114,10 +114,10 @@ Item {
                     textFieldInMouseArea.forceActiveFocus()
                     textFieldInMouseArea.selectAll()
                 }
-                UbuntuShape {
+                LomiriShape {
                     anchors.fill: parent
-                    aspect: UbuntuShape.Flat
-                    backgroundColor: UbuntuColors.blue
+                    aspect: LomiriShape.Flat
+                    backgroundColor: LomiriColors.blue
                     opacity: 0.1
                     visible: parent.enabled
                 }
@@ -159,7 +159,7 @@ Item {
     }
 
     MockKeyboard13 {
-        Component.onCompleted: UbuntuApplication.inputMethod = this
+        Component.onCompleted: LomiriApplication.inputMethod = this
     }
 
     SignalSpy {
@@ -199,7 +199,7 @@ Item {
         signalName: "escapePressed"
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "TextInputCommonTest13"
         when: windowShown
 
@@ -226,7 +226,7 @@ Item {
             scrollerSpy.clear();
             escapePressedSpy.clear();
             // Hide OSK if showing
-            UbuntuApplication.inputMethod.visible = false;
+            LomiriApplication.inputMethod.visible = false;
             // Dismiss popover if any
             mouseClick(testMain, testMain.width - units.gu(1), testMain.height - units.gu(1));
             waitForRendering(testMain);
@@ -512,7 +512,7 @@ Item {
             // Original height before showing OSK
             var originalHeight = popover.height;
             // Subtract OSK
-            var expectedHeight = originalHeight - UbuntuApplication.inputMethod.keyboardRectangle.height;
+            var expectedHeight = originalHeight - LomiriApplication.inputMethod.keyboardRectangle.height;
             popover.textField.forceActiveFocus();
             waitForRendering(popover.textField);
             // Only get the value here so in case of failure the popover won't get stuck
@@ -592,7 +592,7 @@ Item {
             mouseClick(data.input);
             waitForRendering(data.input);
             compare(data.input.activeFocus, true, 'TextField is focused');
-            compare(UbuntuApplication.inputMethod.visible, true, 'OSK is visible');
+            compare(LomiriApplication.inputMethod.visible, true, 'OSK is visible');
         }
     }
 }

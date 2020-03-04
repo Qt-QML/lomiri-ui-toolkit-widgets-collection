@@ -15,20 +15,20 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*!
-    ****DEPRECATED! PLEASE USE ITEM SELECTOR OR FOR THE UBUNTU SHAPE VERSION THE OPTION SELECTOR.****
+    ****DEPRECATED! PLEASE USE ITEM SELECTOR OR FOR THE LOMIRI SHAPE VERSION THE OPTION SELECTOR.****
 
     \qmltype ValueSelector
-    \inqmlmodule Ubuntu.Components.ListItems 1.0
-    \ingroup ubuntu-listitems
+    \inqmlmodule Lomiri.Components.ListItems 1.0
+    \ingroup lomiri-listitems
     \brief List item displaying single selected value when not expanded,
     where expanding it opens a listing of all the possible values for selection.
 
     Examples:
     \qml
-        import Ubuntu.Components.ListItems 1.3 as ListItem
+        import Lomiri.Components.ListItems 1.3 as ListItem
         Column {
             width: 250
             ListItem.ValueSelector {
@@ -89,11 +89,11 @@ Empty {
 
       If both fallbackIconSource and fallbackIconName are defined, fallbackIconName will be ignored.
 
-      \note The complete list of icons available in Ubuntu is not published yet.
+      \note The complete list of icons available in Lomiri is not published yet.
             For now please refer to the folders where the icon themes are installed:
             \list
-              \li Ubuntu Touch: \l file:/usr/share/icons/suru
-              \li Ubuntu Desktop: \l file:/usr/share/icons/ubuntu-mono-dark
+              \li Lomiri Touch: \l file:/usr/share/icons/suru
+              \li Lomiri Desktop: \l file:/usr/share/icons/lomiri-mono-dark
             \endlist
             These 2 separate icon themes will be merged soon.
     */
@@ -221,10 +221,10 @@ Empty {
                     ]
 
                     transitions: Transition {
-                        UbuntuNumberAnimation {
+                        LomiriNumberAnimation {
                             target: accordionIcon
                             properties: "rotation"
-                            duration: UbuntuAnimation.SnapDuration
+                            duration: LomiriAnimation.SnapDuration
                         }
                     }
                 }
@@ -253,10 +253,10 @@ Empty {
             ]
 
             transitions: Transition {
-                UbuntuNumberAnimation {
+                LomiriNumberAnimation {
                     target: valueRepeater
                     properties: "valueHeight"
-                    duration: UbuntuAnimation.SnapDuration
+                    duration: LomiriAnimation.SnapDuration
                 }
             }
 

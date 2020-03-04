@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 /*!
     \qmltype Picker
-    \inqmlmodule Ubuntu.Components.Pickers 1.0
-    \ingroup ubuntu-pickers
+    \inqmlmodule Lomiri.Components.Pickers 1.0
+    \ingroup lomiri-pickers
     \brief Picker is a slot-machine style value selection component.
 
     The Picker lists the elements specified by the \l model using the \l delegate
@@ -35,8 +35,8 @@ import Ubuntu.Components 1.2
     Example:
     \qml
     import QtQuick 2.4
-    import Ubuntu.Components 1.2
-    import Ubuntu.Components.Pickers 1.0
+    import Lomiri.Components 1.2
+    import Lomiri.Components.Pickers 1.0
 
     Picker {
         model: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]

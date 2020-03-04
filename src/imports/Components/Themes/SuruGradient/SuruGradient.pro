@@ -1,4 +1,4 @@
-TARGETPATH = Ubuntu/Components/Themes/SuruGradient
+TARGETPATH = Lomiri/Components/Themes/SuruGradient
 
 PARENT_THEME_FILE = parent_theme
 DEPRECATED_FILE = deprecated
@@ -14,4 +14,4 @@ QML_FILES += MainViewStyle.qml \
     $$PARENT_THEME_FILE \
     $$DEPRECATED_FILE
 
-load(ubuntu_qml_module)
+load(lomiri_qml_module)

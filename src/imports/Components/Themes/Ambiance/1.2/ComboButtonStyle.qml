@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
-import Ubuntu.Components.Styles 1.2 as Style
+import Lomiri.Components 1.2
+import Lomiri.Components.Styles 1.2 as Style
 
 Style.ComboButtonStyle {
     id: comboStyle
@@ -158,7 +158,7 @@ Style.ComboButtonStyle {
             }
             source: Qt.resolvedUrl("../artwork/bubble_shadow.sci")
         }
-        UbuntuShape {
+        LomiriShape {
             id: shape
             anchors {
                 fill: parent
@@ -183,14 +183,14 @@ Style.ComboButtonStyle {
 
         Behavior on height {
             NumberAnimation {
-                duration: UbuntuAnimation.FastDuration
-                easing: UbuntuAnimation.StandardEasing
+                duration: LomiriAnimation.FastDuration
+                easing: LomiriAnimation.StandardEasing
             }
         }
         Behavior on opacity {
             NumberAnimation {
-                duration: UbuntuAnimation.FastDuration
-                easing: UbuntuAnimation.StandardEasing
+                duration: LomiriAnimation.FastDuration
+                easing: LomiriAnimation.StandardEasing
             }
         }
     }

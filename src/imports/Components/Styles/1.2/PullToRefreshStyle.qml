@@ -18,7 +18,7 @@ import QtQuick 2.4
 
 /*!
     \qmltype PullToRefreshStyle
-    \inqmlmodule Ubuntu.Components.Styles 1.1
+    \inqmlmodule Lomiri.Components.Styles 1.1
     \ingroup style-api
     \brief Style API for PullToRefresh component.
 

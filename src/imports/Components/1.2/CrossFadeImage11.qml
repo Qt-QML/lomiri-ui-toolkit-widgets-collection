@@ -17,9 +17,9 @@
 import QtQuick 2.4
 // FIXME: When a module contains QML, C++ and JavaScript elements exported,
 // we need to use named imports otherwise namespace collision is reported
-// by the QML engine. As workaround, we use Ubuntu named import.
+// by the QML engine. As workaround, we use Lomiri named import.
 // Bug to watch: https://bugreports.qt-project.org/browse/QTBUG-27645
-import Ubuntu.Components 1.2 as Ubuntu
+import Lomiri.Components 1.2 as Lomiri
 
 /*!
   \internal
@@ -32,7 +32,7 @@ Item {
 
     property int fillMode : Image.PreserveAspectFit
 
-    property int fadeDuration: Ubuntu.UbuntuAnimation.FastDuration
+    property int fadeDuration: Lomiri.LomiriAnimation.FastDuration
 
     // FIXME: Support resetting sourceSize
     property size sourceSize: internals.loadingImage ? Qt.size(internals.loadingImage.sourceSize.width, internals.loadingImage.sourceSize.height) : Qt.size(0, 0)
@@ -168,7 +168,7 @@ Item {
     ParallelAnimation {
         id: nextImageFadeIn
 
-        Ubuntu.UbuntuNumberAnimation {
+        Lomiri.LomiriNumberAnimation {
             id: currentImageFadeOut
             target: fadeStyle == "cross" ? internals.currentImage : fadeOutDummy
             property: "opacity"
@@ -176,7 +176,7 @@ Item {
             duration: crossFadeImage.fadeDuration
         }
 
-        Ubuntu.UbuntuNumberAnimation {
+        Lomiri.LomiriNumberAnimation {
             target: internals.nextImage
             property: "opacity"
             to: 1.0

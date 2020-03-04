@@ -18,9 +18,9 @@
 
 import QtQuick 2.4
 import QtTest 1.1
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Styles 1.3
+import Lomiri.Test 1.0
+import Lomiri.Components 1.3
+import Lomiri.Components.Styles 1.3
 import QtQml.Models 2.1
 
 Item {
@@ -1199,9 +1199,9 @@ Item {
             compare(style.sliderRadius, units.dp(3), "Wrong styling property default value.")
             compare(style.thumbThickness, units.gu(1), "Wrong styling property default value.")
             compare(style.indicatorThickness, units.dp(3), "Wrong styling property default value.")
-            compare(style.scrollbarThicknessAnimation.duration, UbuntuAnimation.SnapDuration, "Wrong styling property default value.")
-            compare(style.scrollbarFadeInAnimation.duration, UbuntuAnimation.SlowDuration, "Wrong styling property default value.")
-            compare(style.scrollbarFadeOutAnimation.duration, UbuntuAnimation.SlowDuration, "Wrong styling property default value.")
+            compare(style.scrollbarThicknessAnimation.duration, LomiriAnimation.SnapDuration, "Wrong styling property default value.")
+            compare(style.scrollbarFadeInAnimation.duration, LomiriAnimation.SlowDuration, "Wrong styling property default value.")
+            compare(style.scrollbarFadeOutAnimation.duration, LomiriAnimation.SlowDuration, "Wrong styling property default value.")
             compare(style.scrollbarFadeOutPause, 3000, "Wrong styling property default value.")
             compare(style.scrollbarCollapsePause, 1000, "Wrong styling property default value.")
             compare(style.shortScrollingRatio, 0.1, "Wrong styling property default value.")

@@ -15,15 +15,15 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*!
     \qmltype Button
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
-    \brief Standard Ubuntu button.
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
+    \brief Standard Lomiri button.
 
-    \l {http://design.ubuntu.com/apps/building-blocks/buttons}{See also the Design Guidelines on Buttons}.
+    \l {http://design.lomiri.com/apps/building-blocks/buttons}{See also the Design Guidelines on Buttons}.
 
     Examples:
     \qml
@@ -34,7 +34,7 @@ import Ubuntu.Components 1.3
             }
             Button {
                 iconName: "compose"
-                gradient: UbuntuColors.greyGradient
+                gradient: LomiriColors.greyGradient
                 onClicked: print("clicked icon-only Button")
             }
             Button {
@@ -57,14 +57,14 @@ import Ubuntu.Components 1.3
             Button {
                 anchors.centerIn: parent
                 action: action1
-                color: UbuntuColors.warmGrey
+                color: LomiriColors.warmGrey
             }
        }
     \endqml*/
 AbstractButton {
     id: button
     /*!
-      \since Ubuntu.Components 1.1
+      \since Lomiri.Components 1.1
       If set to a color, the button has a stroke border instead of a filled shape.
     */
     property color strokeColor: Qt.rgba(0.0, 0.0, 0.0, 0.0)
@@ -94,7 +94,7 @@ AbstractButton {
     /*!
        The gradient used to fill the background of the button.
 
-       Standard Ubuntu gradients are defined in \l UbuntuColors.
+       Standard Lomiri gradients are defined in \l LomiriColors.
 
        If both a gradient and a color are specified, the gradient will be used.
 

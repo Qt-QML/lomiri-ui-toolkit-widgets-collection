@@ -15,13 +15,13 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 /*!
     \qmltype ComposerSheet
     \inherits SheetBase
-    \inqmlmodule Ubuntu.Components.Popups 1.0
+    \inqmlmodule Lomiri.Components.Popups 1.0
     \deprecated
-    \ingroup ubuntu-popups
+    \ingroup lomiri-popups
     \brief Much like the \l DefaultSheet the Composer Sheet allows an application to insert a content
         view over the focused view without disrupting the navigation pattern. However the Composer Sheet
         is optimised for scenarios in which user content is at risk of corruption, most often (but not
@@ -32,8 +32,8 @@ import Ubuntu.Components 1.2
 
     Example:
     \qml
-        import Ubuntu.Components 1.2
-        import Ubuntu.Components.Popups 1.0
+        import Lomiri.Components 1.2
+        import Lomiri.Components.Popups 1.0
 
         Item {
             Component {
@@ -75,7 +75,7 @@ SheetBase {
     signal confirmClicked
 
     __leftButton: Button {
-        text: i18n.dtr("ubuntu-ui-toolkit", "Cancel")
+        text: i18n.dtr("lomiri-ui-toolkit", "Cancel")
         objectName: "cancelButton"
         /*! \internal */ // avoid warning when generating documentation
         onClicked: {
@@ -85,9 +85,9 @@ SheetBase {
     }
 
     __rightButton: Button {
-        text: i18n.dtr("ubuntu-ui-toolkit", "Confirm")
+        text: i18n.dtr("lomiri-ui-toolkit", "Confirm")
         objectName: "confirmButton"
-        color: UbuntuColors.orange
+        color: LomiriColors.orange
         /*! \internal */ // avoid warning when generating documentation
         onClicked: {
             composer.confirmClicked();

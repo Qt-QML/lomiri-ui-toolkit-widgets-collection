@@ -16,8 +16,8 @@
 
 import QtQuick 2.4
 import QtTest 1.0
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.3
+import Lomiri.Test 1.0
+import Lomiri.Components 1.3
 
 Rectangle {
     id: root
@@ -77,7 +77,7 @@ Rectangle {
                 right: parent.right
                 margins: units.gu(2)
             }
-            color: UbuntuColors.blue
+            color: LomiriColors.blue
             height: units.gu(5)
             Label {
                 id: label
@@ -137,7 +137,7 @@ Rectangle {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         id: testCase
         name: "SectionsApi"
         when: windowShown

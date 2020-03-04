@@ -16,9 +16,9 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.2
-import Ubuntu.Components.Popups 1.0
+import Lomiri.Test 1.0
+import Lomiri.Components 1.2
+import Lomiri.Components.Popups 1.0
 
 Item {
     id: testMain
@@ -31,7 +31,7 @@ Item {
             property var textField: textFieldInPopover
             Rectangle {
                 anchors.fill: parent
-                color: UbuntuColors.orange
+                color: LomiriColors.orange
             }
             Column {
                 anchors.margins: units.gu(2)
@@ -107,7 +107,7 @@ Item {
     }
 
     MockKeyboard12 {
-        Component.onCompleted: UbuntuApplication.inputMethod = this
+        Component.onCompleted: LomiriApplication.inputMethod = this
     }
 
     SignalSpy {
@@ -143,7 +143,7 @@ Item {
         signalName: "movementEnded"
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "TextInputCommonTest"
         when: windowShown
 
@@ -451,7 +451,7 @@ Item {
             // Original height before showing OSK
             var originalHeight = popover.height;
             // Subtract OSK
-            var expectedHeight = originalHeight - UbuntuApplication.inputMethod.keyboardRectangle.height;
+            var expectedHeight = originalHeight - LomiriApplication.inputMethod.keyboardRectangle.height;
             popover.textField.forceActiveFocus();
             waitForRendering(popover.textField);
             // Only get the value here so in case of failure the popover won't get stuck

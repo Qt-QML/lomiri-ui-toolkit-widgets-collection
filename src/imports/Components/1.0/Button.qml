@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.0
+import Lomiri.Components 1.0
 
 /*!
    \internal
@@ -28,7 +28,7 @@ AbstractButton {
 
     property Gradient gradient: __styleInstance.defaultGradient
 
-    property font font: __styleInstance ? __styleInstance.defaultFont : Qt.font({family: "Ubuntu", pixelSize: FontUtils.sizeToPixels("medium")})
+    property font font: __styleInstance ? __styleInstance.defaultFont : Qt.font({family: "Lomiri", pixelSize: FontUtils.sizeToPixels("medium")})
 
     property string iconPosition: "left"
 

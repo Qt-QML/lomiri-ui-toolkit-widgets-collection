@@ -42,7 +42,7 @@ Test Button
 This test shows that the button emits a signal when pressed
 
 Setup:
-#. start examples/ubuntu-ui-toolkit-gallery/ubuntu-ui-toolkit-gallery.qml in qmlscene 
+#. start examples/lomiri-ui-toolkit-gallery/lomiri-ui-toolkit-gallery.qml in qmlscene 
 
 Actions:
 #. Select Buttons

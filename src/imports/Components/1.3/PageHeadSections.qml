@@ -15,13 +15,13 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*!
     \qmltype PageHeadSections
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
-    \since Ubuntu.Components 1.1
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
+    \since Lomiri.Components 1.1
     \deprecated
     \brief PageHeadSections is used to configure the sections for a \l Page.
 
@@ -45,7 +45,7 @@ QtObject {
       as input, but if no trigger functions need to be specified, it can be
       simplified to a list of strings naming the sections:
       \qml
-        import Ubuntu.Components 1.3
+        import Lomiri.Components 1.3
         import QtQuick 2.4
 
         MainView {
@@ -79,7 +79,7 @@ QtObject {
       When \l selectedIndex is changed (by user interaction or by setting
       the value), actions[selectedIndex] will be triggered.
 
-      \since Ubuntu.Components 1.3
+      \since Lomiri.Components 1.3
      */
     property list<Action> actions
 

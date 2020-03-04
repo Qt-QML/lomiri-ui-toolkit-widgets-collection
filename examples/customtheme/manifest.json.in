@@ -1,6 +1,6 @@
 {
     "name": "customtheme.zsombi",
-    "description": "Example application of the Ubuntu UI Toolkit - Jokes",
+    "description": "Example application of the Lomiri UI Toolkit - Jokes",
     "architecture": "@CLICK_ARCH@",
     "title": "Jokes",
     "hooks": {
@@ -11,5 +11,5 @@
     },
     "version": "0.1",
     "maintainer": "Zsombor Egri <zsombor.egri@canonical.com>",
-    "framework": "ubuntu-sdk-15.04"
+    "framework": "lomiri-sdk-15.04"
 }

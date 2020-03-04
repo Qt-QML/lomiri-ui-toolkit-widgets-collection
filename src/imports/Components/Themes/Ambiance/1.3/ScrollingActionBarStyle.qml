@@ -14,8 +14,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Styles 1.3 as Style
+import Lomiri.Components 1.3
+import Lomiri.Components.Styles 1.3 as Style
 
 Style.ActionBarStyle {
     id: actionBarStyle
@@ -38,7 +38,7 @@ Style.ActionBarStyle {
         backgroundColor: actionBarStyle.backgroundColor // must be opaque to hide the icon buttons
         pressedBackgroundColor: actionBarStyle.buttons.pressedBackgroundColor
         property real width: units.gu(4)
-        property int fadeDuration: UbuntuAnimation.FastDuration
+        property int fadeDuration: LomiriAnimation.FastDuration
     }
 
     /*!
@@ -91,7 +91,7 @@ Style.ActionBarStyle {
             return visibleActionList;
         }
 
-        UbuntuListView {
+        LomiriListView {
             id: actionsListView
             objectName: "actions_listview"
             anchors {
@@ -132,7 +132,7 @@ Style.ActionBarStyle {
                 id: contentXAnim
                 target: actionsListView
                 property: "contentX"
-                duration: UbuntuAnimation.FastDuration
+                duration: LomiriAnimation.FastDuration
             }
 
             // direction == 1 to show more icons on the left
@@ -161,7 +161,7 @@ Style.ActionBarStyle {
                 opacity: buttonOpacity
                 objectName: buttonName
                 Behavior on opacity {
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                         duration: actionBarStyle.scrollButtons.fadeDuration
                     }
                 }

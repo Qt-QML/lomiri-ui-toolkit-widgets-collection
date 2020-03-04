@@ -15,13 +15,13 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 /*!
     \qmltype SheetBase
     \deprecated
-    \inqmlmodule Ubuntu.Components.Popups 1.0
-    \ingroup ubuntu-popups
+    \inqmlmodule Lomiri.Components.Popups 1.0
+    \ingroup lomiri-popups
     \brief Parent class of different types of sheets. Not to be used directly.
 
     Examples: See subclasses.
@@ -76,7 +76,7 @@ PopupBase {
     /*! \internal */
     property alias __rightButton: foreground.rightButton
 
-    fadingAnimation: UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration }
+    fadingAnimation: LomiriNumberAnimation { duration: LomiriAnimation.SnapDuration }
 
     __foreground: foreground
     __eventGrabber.enabled: modal

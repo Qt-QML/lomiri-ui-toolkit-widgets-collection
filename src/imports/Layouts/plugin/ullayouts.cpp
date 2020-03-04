@@ -351,8 +351,8 @@ void ULLayoutsPrivate::warning(QObject *item, const QString &message)
 /*!
  * \qmltype Layouts
  * \instantiates ULLayouts
- * \inqmlmodule Ubuntu.Layouts 1.0
- * \ingroup ubuntu-layouts
+ * \inqmlmodule Lomiri.Layouts 1.0
+ * \ingroup lomiri-layouts
  * \brief The Layouts component allows one to specify multiple different layouts for a
  * fixed set of Items, and applies the desired layout to those Items.
  *

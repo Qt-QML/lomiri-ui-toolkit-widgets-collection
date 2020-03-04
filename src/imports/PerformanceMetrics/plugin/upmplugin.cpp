@@ -27,7 +27,7 @@
 #include "upmgraphmodel.h"
 #include "upmrenderingtimes.h"
 
-void UbuntuPerformanceMetricsPlugin::registerTypeVersion(const char *uri, int major, int minor)
+void LomiriPerformanceMetricsPlugin::registerTypeVersion(const char *uri, int major, int minor)
 {
     qmlRegisterType<UPMRenderingTimes>(uri, major, minor, "RenderingTimes");
     qmlRegisterType<UPMCpuUsage>(uri, major, minor, "CpuUsage");
@@ -35,14 +35,14 @@ void UbuntuPerformanceMetricsPlugin::registerTypeVersion(const char *uri, int ma
     qmlRegisterType<UPMGraphModel>();
 }
 
-void UbuntuPerformanceMetricsPlugin::registerTypes(const char *uri)
+void LomiriPerformanceMetricsPlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("Ubuntu.PerformanceMetrics"));
+    Q_ASSERT(uri == QLatin1String("Lomiri.PerformanceMetrics"));
     registerTypeVersion(uri, 0, 1);
     registerTypeVersion(uri, 1, 0);
 }
 
-void UbuntuPerformanceMetricsPlugin::initializeEngine(QQmlEngine *engine, const char *uri)
+void LomiriPerformanceMetricsPlugin::initializeEngine(QQmlEngine *engine, const char *uri)
 {
     QQmlExtensionPlugin::initializeEngine(engine, uri);
     QQmlContext* context = engine->rootContext();

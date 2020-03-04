@@ -5,5 +5,5 @@ Exec=qmlscene $@ unit-converter.qml
 Icon=qmlscene
 Terminal=false
 Type=Application
-X-Ubuntu-Touch=true
-X-Ubuntu-Gettext-Domain=com.ubuntu.developer.bzoltan.unit-converter
+X-Lomiri-Touch=true
+X-Lomiri-Gettext-Domain=com.lomiri.developer.bzoltan.unit-converter

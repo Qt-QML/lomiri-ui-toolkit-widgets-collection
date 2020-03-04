@@ -15,12 +15,12 @@
  */
 
 /**
- * Test to prevent regressions for bug: https://bugs.launchpad.net/ubuntu-ui-toolkit/+bug/1338602
+ * Test to prevent regressions for bug: https://bugs.launchpad.net/lomiri-ui-toolkit/+bug/1338602
  * Activity Indicator crashes in QML/Widget mixed applications
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Item {
     Flow {

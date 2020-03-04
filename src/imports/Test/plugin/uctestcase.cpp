@@ -29,15 +29,15 @@
 Q_DECLARE_METATYPE(QList<QQmlError>)
 
 /*!
- * \ingroup ubuntu
- * \brief UbuntuTestCase is the C++ pendant to the QML UbuntuTestCase.
+ * \ingroup lomiri
+ * \brief LomiriTestCase is the C++ pendant to the QML LomiriTestCase.
  */
-UbuntuTestCase::UbuntuTestCase(const QString& file, ResizeMode resize, bool assertOnFailure, QWindow* parent) : QQuickView(parent)
+LomiriTestCase::LomiriTestCase(const QString& file, ResizeMode resize, bool assertOnFailure, QWindow* parent) : QQuickView(parent)
 {
     // Create a dummy touch device for tests.
     QTest::createTouchDevice();
 
-    QString modules(UBUNTU_QML_IMPORT_PATH);
+    QString modules(LOMIRI_QML_IMPORT_PATH);
     Q_ASSERT(QDir(modules).exists());
     QString modulePath(QDir(modules).absolutePath());
     engine()->addImportPath(modulePath);
@@ -62,7 +62,7 @@ UbuntuTestCase::UbuntuTestCase(const QString& file, ResizeMode resize, bool asse
 /*!
  * The number of all warnings from the point of loading the first line of QML code.
  */
-int UbuntuTestCase::warnings() const
+int LomiriTestCase::warnings() const
 {
 	return m_spy->count();
 }
@@ -70,7 +70,7 @@ int UbuntuTestCase::warnings() const
 /*!
  * Ignore an expected warning message created using qmlWarning.
  */
-void UbuntuTestCase::ignoreWarning(const QString& fileName, uint line,
+void LomiriTestCase::ignoreWarning(const QString& fileName, uint line,
     uint column, const QString& message, uint occurences)
 {
     for (uint i = 0; i < occurences; i++) {
@@ -83,7 +83,7 @@ void UbuntuTestCase::ignoreWarning(const QString& fileName, uint line,
 /*!
  * Same as previous but without column number
  */
-void UbuntuTestCase::ignoreWarning(const QString& fileName, uint line,
+void LomiriTestCase::ignoreWarning(const QString& fileName, uint line,
     const QString& message, uint occurences)
 {
     for (uint i = 0; i < occurences; i++) {

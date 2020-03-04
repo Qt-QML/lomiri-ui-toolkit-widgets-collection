@@ -24,11 +24,11 @@
 #include <QtTest/QtTest>
 #include <QtTest/QSignalSpy>
 
-class UbuntuTestCase : public QQuickView
+class LomiriTestCase : public QQuickView
 {
     Q_OBJECT
 public:
-    UbuntuTestCase(const QString& file, ResizeMode resize = SizeViewToRootObject, bool assertOnFailure = true, QWindow* parent = 0);
+    LomiriTestCase(const QString& file, ResizeMode resize = SizeViewToRootObject, bool assertOnFailure = true, QWindow* parent = 0);
     int warnings() const;
     // getter
     template<class T>

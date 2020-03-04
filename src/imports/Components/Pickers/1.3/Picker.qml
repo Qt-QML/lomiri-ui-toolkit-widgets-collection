@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*!
     \qmltype Picker
-    \inqmlmodule Ubuntu.Components.Pickers 1.0
-    \ingroup ubuntu-pickers
+    \inqmlmodule Lomiri.Components.Pickers 1.0
+    \ingroup lomiri-pickers
     \inherits StyledItem
     \brief Picker is a slot-machine style value selection component.
 
@@ -36,8 +36,8 @@ import Ubuntu.Components 1.3
     Example:
     \qml
     import QtQuick 2.4
-    import Ubuntu.Components 1.3
-    import Ubuntu.Components.Pickers 1.0
+    import Lomiri.Components 1.3
+    import Lomiri.Components.Pickers 1.0
 
     Picker {
         model: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
@@ -129,7 +129,7 @@ StyledItem {
     readonly property bool moving: (loader.item ? loader.item.moving : false) || movingPoll.indexChanging
 
     /*!
-      \since Ubuntu.Components.Pickers 1.3
+      \since Lomiri.Components.Pickers 1.3
       The property specifies the defautl height of the PickerDelegates. It is
       recommended to change the delegate height through this property rather than
       changing it from the delegate itself.

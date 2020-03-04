@@ -16,18 +16,18 @@
 
 import QtQuick 2.4
 import "." as ListItem
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*!
     \qmltype ItemSelector
-    \inqmlmodule Ubuntu.Components.ListItems 1.0
-    \ingroup ubuntu-listitems
+    \inqmlmodule Lomiri.Components.ListItems 1.0
+    \ingroup lomiri-listitems
     \brief ListItem displaying either a single selected value or expanded multiple choice with an optional image and subtext when not expanded, when expanding it opens a
     listing of all the possible values for selection with an additional option of always being expanded. If multiple choice is selected the list is expanded automatically.
 
     Examples:
     \qml
-        import Ubuntu.Components.ListItems 1.3 as ListItem
+        import Lomiri.Components.ListItems 1.3 as ListItem
         Column {
             anchors.left: parent.left
             anchors.right: parent.right
@@ -237,9 +237,9 @@ ListItem.Empty {
 
             transitions: [ Transition {
                     SequentialAnimation {
-                        UbuntuNumberAnimation {
+                        LomiriNumberAnimation {
                             properties: "height"
-                            duration: UbuntuAnimation.BriskDuration
+                            duration: LomiriAnimation.BriskDuration
                         }
                         ScriptAction {
                             script: {
@@ -275,9 +275,9 @@ ListItem.Empty {
                 delegate: itemSelector.delegate
 
                 Behavior on contentY {
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                         properties: "contentY"
-                        duration: UbuntuAnimation.BriskDuration
+                        duration: LomiriAnimation.BriskDuration
                     }
                 }
             }

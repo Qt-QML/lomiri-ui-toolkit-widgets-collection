@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Item {
     id: ambianceStyle
@@ -27,9 +27,9 @@ Item {
     property bool colourComponent: true
     property alias content: backgroundFrame
 
-    UbuntuShape {
+    LomiriShape {
         id: background
-        aspect: UbuntuShape.Inset
+        aspect: LomiriShape.Inset
 
         width: styledItem.width
         height: styledItem.height

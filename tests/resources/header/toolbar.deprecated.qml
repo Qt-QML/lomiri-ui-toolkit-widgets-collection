@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 1.1
+import Lomiri.Components 1.1
 
 MainView {
     width: units.gu(50)
@@ -25,7 +25,7 @@ MainView {
         id: action1
         text: "action 1"
         onTriggered: print("one!")
-        iconSource: Qt.resolvedUrl("../../../examples/ubuntu-ui-toolkit-gallery/call_icon.png")
+        iconSource: Qt.resolvedUrl("../../../examples/lomiri-ui-toolkit-gallery/call_icon.png")
     }
 
     Page {
@@ -44,7 +44,7 @@ MainView {
                 onClicked: print("upa")
             }
             ToolbarButton {
-                iconSource: Qt.resolvedUrl("../../../examples/ubuntu-ui-toolkit-gallery/small_avatar.png")
+                iconSource: Qt.resolvedUrl("../../../examples/lomiri-ui-toolkit-gallery/small_avatar.png")
                 text: "oh"
                 onTriggered: print("lala")
                 enabled: false
@@ -55,7 +55,7 @@ MainView {
             ToolbarButton {
                 action: Action {
                     onTriggered: print("two!")
-                    iconSource: Qt.resolvedUrl("../../../examples/ubuntu-ui-toolkit-gallery/small_avatar.png")
+                    iconSource: Qt.resolvedUrl("../../../examples/lomiri-ui-toolkit-gallery/small_avatar.png")
                     text: "Second action"
                 }
                 text: "action 2"
@@ -63,7 +63,7 @@ MainView {
 
             back: ToolbarButton {
                 text: "cancel"
-                iconSource: Qt.resolvedUrl("../../../qml/Ubuntu/Components/artwork/back.png")
+                iconSource: Qt.resolvedUrl("../../../qml/Lomiri/Components/artwork/back.png")
                 anchors.verticalCenter: parent.verticalCenter
             }
         }

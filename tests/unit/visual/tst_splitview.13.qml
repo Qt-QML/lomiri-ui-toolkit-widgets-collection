@@ -16,9 +16,9 @@
 
 import QtQuick 2.4
 import QtTest 1.1
-import Ubuntu.Test 1.3
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Labs 1.0
+import Lomiri.Test 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Labs 1.0
 
 Item {
     id: main
@@ -36,9 +36,9 @@ Item {
                 topMargin: handle.height / 2 - units.gu(3)
                 bottomMargin: handle.height / 2 - units.gu(3)
             }
-            color: UbuntuColors.graphite
+            color: LomiriColors.graphite
             scale: handle.containsMouse || handle.pressed ? 1.6 : 1.0
-            Behavior on scale { UbuntuNumberAnimation {} }
+            Behavior on scale { LomiriNumberAnimation {} }
         }
     }
 
@@ -86,26 +86,26 @@ Item {
 
             Rectangle {
                 objectName: "column" + SplitView.column
-                color: UbuntuColors.red
+                color: LomiriColors.red
                 height: parent.height
                 width: units.gu(90)
                 Label { text: parent.width }
             }
             Rectangle {
                 objectName: "column" + SplitView.column
-                color: UbuntuColors.green
+                color: LomiriColors.green
                 height: parent.height
                 Label { text: parent.width }
             }
             Rectangle {
                 objectName: "column" + SplitView.column
-                color: UbuntuColors.blue
+                color: LomiriColors.blue
                 height: parent.height
                 Label { text: parent.width }
             }
             Rectangle {
                 objectName: "column" + SplitView.column
-                color: UbuntuColors.ash
+                color: LomiriColors.ash
                 height: parent.height
                 Label { text: parent.width }
             }
@@ -148,7 +148,7 @@ Item {
         sourceComponent: testLayout
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         when: windowShown
 
         readonly property real defaultSpacing: units.dp(4)

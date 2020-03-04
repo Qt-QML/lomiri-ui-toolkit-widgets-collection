@@ -18,8 +18,8 @@ import QtQuick 2.4
 
 /*!
     \qmltype ToolbarItems
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \deprecated
     \brief Row of Items to be placed in a toolbar.
 
@@ -39,7 +39,7 @@ import QtQuick 2.4
     be visible to the user:
     \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
+        import Lomiri.Components 1.2
 
         MainView {
             width: units.gu(50)
@@ -71,7 +71,7 @@ import QtQuick 2.4
     the full height of the toolbar, and other Items you will probably want to center vertically:
     \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
+        import Lomiri.Components 1.2
 
         MainView {
             width: units.gu(50)
@@ -120,7 +120,7 @@ Item {
       visible in the toolbar, instead of the default toolbar-styled back button:
         \qml
             import QtQuick 2.4
-            import Ubuntu.Components 1.2
+            import Lomiri.Components 1.2
 
             MainView {
                 width: units.gu(50)
@@ -140,7 +140,7 @@ Item {
     property Item back: ToolbarButton {
         objectName: "back_toolbar_button"
         iconSource: Qt.resolvedUrl("../artwork/back.png")
-        text: i18n.dtr('ubuntu-ui-toolkit', "Back")
+        text: i18n.dtr('lomiri-ui-toolkit', "Back")
         visible: toolbarItems.pageStack && toolbarItems.pageStack.depth > 1
         /*!
           If there is a \l PageStack of sufficient depth, triggering the back button

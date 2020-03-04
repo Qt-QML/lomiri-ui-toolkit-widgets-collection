@@ -1,0 +1,2 @@
+include(lomiri-ui-toolkit-online.qdocconf)
+include(lomiri-ui-toolkit-indexes.qdocconf)

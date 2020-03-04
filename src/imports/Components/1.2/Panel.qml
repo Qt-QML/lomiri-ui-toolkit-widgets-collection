@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2 as Toolkit
+import Lomiri.Components 1.2 as Toolkit
 
 /*!
     \qmltype Panel
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief A panel that can be swiped in and out from an edge of the window by the user.
     For most applications, it is highly recommended to use the \l MainView instead which includes
     a toolbar at its bottom that can be swiped in or out.
@@ -38,7 +38,7 @@ import Ubuntu.Components 1.2 as Toolkit
     A black panel that can be swiped in from the lower-right of the window can be created like this:
     \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
+        import Lomiri.Components 1.2
 
         Item {
             width: units.gu(80)
@@ -69,7 +69,7 @@ import Ubuntu.Components 1.2 as Toolkit
     A panel that looks like the standard (bottom-aligned) toolbar, but with custom contents, can be created like this:
     \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
+        import Lomiri.Components 1.2
 
         Item {
             width: units.gu(80)
@@ -106,7 +106,7 @@ import Ubuntu.Components 1.2 as Toolkit
     signals are forwarded from the panel by calling the child's trigger() function. Example:
     \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
+        import Lomiri.Components 1.2
 
         Rectangle {
             color: Theme.palette.normal.background
@@ -357,7 +357,7 @@ Item {
         Transition {
             id: transitionToAll
             to: ""
-            UbuntuNumberAnimation {
+            LomiriNumberAnimation {
                 target: bar
                 properties: "position"
                 duration: internal.transitionDuration
@@ -366,7 +366,7 @@ Item {
         Transition {
             id: transitionToHint
             to: "hint"
-            UbuntuNumberAnimation {
+            LomiriNumberAnimation {
                 target: bar
                 properties: "position"
                 duration: internal.transitionDuration
@@ -375,7 +375,7 @@ Item {
         Transition {
             id: transitionToSpread
             to: "spread"
-            UbuntuNumberAnimation {
+            LomiriNumberAnimation {
                 target: bar
                 properties: "position"
                 duration: internal.transitionDuration
@@ -384,10 +384,10 @@ Item {
         Transition {
             id: transitionToMoving
             to: "moving"
-            UbuntuNumberAnimation {
+            LomiriNumberAnimation {
                 target: bar
                 properties: "position"
-                duration: panel.animate ? Toolkit.UbuntuAnimation.SnapDuration : 0
+                duration: panel.animate ? Toolkit.LomiriAnimation.SnapDuration : 0
             }
         }
     ]
@@ -402,7 +402,7 @@ Item {
           The duration in milliseconds of sliding in or out transitions when opening, closing, and showing the hint.
           Default value: 250
          */
-        property real transitionDuration: panel.animate ? Toolkit.UbuntuAnimation.FastDuration : 0
+        property real transitionDuration: panel.animate ? Toolkit.LomiriAnimation.FastDuration : 0
 
         property string previousState: ""
         property int movingDelta

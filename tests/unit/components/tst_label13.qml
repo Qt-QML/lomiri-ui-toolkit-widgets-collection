@@ -16,7 +16,7 @@
 
 import QtQuick 2.4
 import QtTest 1.0
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 TestCase {
     name: "Label13API"
@@ -27,7 +27,7 @@ TestCase {
     }
 
     function initTestCase() {
-        compare(textCustom.font.family, "Ubuntu", "Default font family");
+        compare(textCustom.font.family, "Lomiri", "Default font family");
         compare(textCustom.font.weight, Font.Light, "Default font weight");
         compare(textCustom.fontSize, "medium", "fontSize is 'medium' by default")
         compare(textCustom.textSize, Label.Medium, "fontSize is 'medium' by default")

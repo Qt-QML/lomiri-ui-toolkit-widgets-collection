@@ -17,7 +17,7 @@
 
 source $PWD/export_qml_dir.sh
 
-if [ ! -e $QML2_IMPORT_PATH/Ubuntu/Layouts/libUbuntuLayouts.so ]; then
+if [ ! -e $QML2_IMPORT_PATH/Lomiri/Layouts/libLomiriLayouts.so ]; then
     echo You need to build UITK before you can run Autopilot test cases!
     exit 1
 fi
@@ -31,11 +31,11 @@ usage(){
 
 cd tests/autopilot
 
-export UBUNTU_UI_TOOLKIT_AUTOPILOT_FROM_SOURCE=1
+export LOMIRI_UI_TOOLKIT_AUTOPILOT_FROM_SOURCE=1
 export UITK_BUILD_ROOT="$BUILD_DIR"
 export UITK_SOURCE_ROOT="$SRC_DIR"
 MODE="run"
-SUITE=ubuntuuitoolkit
+SUITE=lomiriuitoolkit
 
 if [ "$1" == "" ]; then
     usage

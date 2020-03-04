@@ -1,4 +1,4 @@
-module Ubuntu.Components.ListItems
+module Lomiri.Components.ListItems
 Empty 0.1 1.2/Empty.qml
 Base 0.1 1.2/Base.qml
 Caption 0.1 1.2/Caption.qml

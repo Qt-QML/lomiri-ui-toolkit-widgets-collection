@@ -33,7 +33,7 @@ private Q_SLOTS:
         QTest::addColumn<QString>("fileName");
 
         QDir dir;
-        dir.setPath(QString("%1/%2.%3").arg(UBUNTU_COMPONENT_PATH).arg(MAJOR_VERSION(LATEST_UITK_VERSION)).arg(MINOR_VERSION(LATEST_UITK_VERSION)));
+        dir.setPath(QString("%1/%2.%3").arg(LOMIRI_COMPONENT_PATH).arg(MAJOR_VERSION(LATEST_UITK_VERSION)).arg(MINOR_VERSION(LATEST_UITK_VERSION)));
         QVERIFY2(dir.exists(), qPrintable(dir.absolutePath()));
         QStringList nameFilters;
         nameFilters << "*.qml";
@@ -66,7 +66,7 @@ private Q_SLOTS:
         QTest::addColumn<QString>("fileName");
 
         QDir dir;
-        dir.setPath(QString("%1/ListItems/%2.%3").arg(UBUNTU_COMPONENT_PATH).arg(MAJOR_VERSION(LATEST_UITK_VERSION)).arg(MINOR_VERSION(LATEST_UITK_VERSION)));
+        dir.setPath(QString("%1/ListItems/%2.%3").arg(LOMIRI_COMPONENT_PATH).arg(MAJOR_VERSION(LATEST_UITK_VERSION)).arg(MINOR_VERSION(LATEST_UITK_VERSION)));
         QVERIFY2(dir.exists(), qPrintable(dir.absolutePath()));
         QStringList nameFilters;
         nameFilters << "*.qml";

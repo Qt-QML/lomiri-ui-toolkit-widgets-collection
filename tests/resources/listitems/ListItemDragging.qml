@@ -15,9 +15,9 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import QtQuick.Layouts 1.1
-import Ubuntu.Components.ListItems 1.3
+import Lomiri.Components.ListItems 1.3
 import QtQml.Models 2.1
 
 MainView {
@@ -119,7 +119,7 @@ MainView {
                     }
 
                     moveDisplaced: Transition {
-                        UbuntuNumberAnimation {
+                        LomiriNumberAnimation {
                             properties: "x,y"
                         }
                     }
@@ -148,7 +148,7 @@ MainView {
                                 subtitle.text: "from index #" + index
                             }
                             Captions {
-                                captionStyle: Ubuntu.SummaryCaptionStyle
+                                captionStyle: Lomiri.SummaryCaptionStyle
                                 title.text: "LTR"
                                 subtitle.text: "RTL"
                                 MouseArea {

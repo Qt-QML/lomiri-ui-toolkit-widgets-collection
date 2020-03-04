@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components.Styles 1.2 as Styles
-import Ubuntu.Components 1.2
+import Lomiri.Components.Styles 1.2 as Styles
+import Lomiri.Components 1.2
 
 Styles.ListItemStyle {
 
@@ -30,7 +30,7 @@ Styles.ListItemStyle {
     /*
      * Coloring properties
      */
-    property color leadingPanelColor: UbuntuColors.red
+    property color leadingPanelColor: LomiriColors.red
     property color trailingPanelColor: "white"
     property color leadingForegroundColor: "white"
     property color trailingForegroundColor: theme.palette.normal.foreground
@@ -173,8 +173,8 @@ Styles.ListItemStyle {
                 reversible: true
                 enabled: listItemStyle.animatePanels
                 OpacityAnimator {
-                    easing: UbuntuAnimation.StandardEasing
-                    duration: UbuntuAnimation.FastDuration
+                    easing: LomiriAnimation.StandardEasing
+                    duration: LomiriAnimation.FastDuration
                 }
             }
         }
@@ -218,12 +218,12 @@ Styles.ListItemStyle {
                 enabled: listItemStyle.animatePanels
                 ParallelAnimation {
                     OpacityAnimator {
-                        easing: UbuntuAnimation.StandardEasing
-                        duration: UbuntuAnimation.FastDuration
+                        easing: LomiriAnimation.StandardEasing
+                        duration: LomiriAnimation.FastDuration
                     }
                     ScaleAnimator {
-                        easing: UbuntuAnimation.StandardEasing
-                        duration: UbuntuAnimation.FastDuration
+                        easing: LomiriAnimation.StandardEasing
+                        duration: LomiriAnimation.FastDuration
                     }
                 }
             }
@@ -274,8 +274,8 @@ Styles.ListItemStyle {
             PropertyAnimation {
                 target: styledItem.contentItem
                 properties: "anchors.leftMargin"
-                easing: UbuntuAnimation.StandardEasing
-                duration: UbuntuAnimation.FastDuration
+                easing: LomiriAnimation.StandardEasing
+                duration: LomiriAnimation.FastDuration
             }
         }
     }
@@ -321,8 +321,8 @@ Styles.ListItemStyle {
             PropertyAnimation {
                 target: styledItem.contentItem
                 properties: "anchors.rightMargin"
-                easing: UbuntuAnimation.StandardEasing
-                duration: UbuntuAnimation.FastDuration
+                easing: LomiriAnimation.StandardEasing
+                duration: LomiriAnimation.FastDuration
             }
         }
     }

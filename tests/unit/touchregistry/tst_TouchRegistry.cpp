@@ -18,10 +18,10 @@
 #include <QtGui/QTouchEvent>
 #include <QtQuick/QQuickItem>
 #include <QtTest/QtTest>
-#include <UbuntuGestures/private/timer_p.h>
-#include <UbuntuGestures/private/touchownershipevent_p.h>
-#include <UbuntuGestures/private/touchregistry_p.h>
-#include <UbuntuGestures/private/unownedtouchevent_p.h>
+#include <LomiriGestures/private/timer_p.h>
+#include <LomiriGestures/private/touchownershipevent_p.h>
+#include <LomiriGestures/private/touchregistry_p.h>
+#include <LomiriGestures/private/unownedtouchevent_p.h>
 
 UG_NAMESPACE_BEGIN
 
@@ -824,7 +824,7 @@ void tst_TouchRegistry::interimOwnerWontGetUnownedTouchEvents()
 }
 
 /*
-  Regression test for https://bugs.launchpad.net/ubuntu/+source/unity8/+bug/1473492
+  Regression test for https://bugs.launchpad.net/lomiri/+source/unity8/+bug/1473492
 
   Bug caused by candidates getting deleted before ownership resolution
  */

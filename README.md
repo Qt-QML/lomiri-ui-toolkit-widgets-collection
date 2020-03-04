@@ -1,10 +1,10 @@
-# Ubuntu UI Toolkit
+# Lomiri UI Toolkit
 
 
 ## Introduction
 
 This project consists of a set of QML components to ease the creation of
-beautiful applications in QML for Ubuntu.
+beautiful applications in QML for Lomiri.
 
 QML alone lacks built-in components for basic widgets like Button, Slider,
 Scrollbar, etc, meaning a developer has to build them from scratch. This
@@ -54,7 +54,7 @@ shell.
 ## Tests
 
 tests
- - autopilot/ubuntuuitoolkit: Autopilot test cases and CPOs
+ - autopilot/lomiriuitoolkit: Autopilot test cases and CPOs
    ./run_tests.sh list
    ./run_tests.sh run [TESTCASE]
  - api: Tests for apicheck (API description generator)
@@ -63,7 +63,7 @@ tests
    make license
  - resources: Manual test cases (deprecated, should move to unit/visual)
  - unit:
-   Unit tests using QTest/UbuntuTestCase
+   Unit tests using QTest/LomiriTestCase
    Run 'make check[_BASENAME_WITH_UNDERSCORES]' in the respective subfolder
    eg. 'tst_label_extras.13.qml' becomes 'make check_tst_label_extras_13'
    This is driven by runtest.sh and checkresults.sh.
@@ -71,7 +71,7 @@ tests
     interactively. That means 'make check' or via gallery.sh.
     Optional: prefix with './tests/xvfb.sh' to run inside XVfb.
     Note for adding new files: The root must be a visual Item-based type
-    with a width and height. TestCase or UbuntuTestCase must be a child.
+    with a width and height. TestCase or LomiriTestCase must be a child.
 
  Verify the whole Toolkit API:
  `./tests/qmlapicheck.sh` inspects components.api and produces components.api.new
@@ -88,7 +88,7 @@ tests
 ## Documentation
 
 Once built, you may view the documentation by opening
-  documentation/html/overview-ubuntu-sdk.html
+  documentation/html/overview-lomiri-sdk.html
 in your favorite web browser.
 
 ## Autopilot SDK Helpers Documentation (Sphinx docs):

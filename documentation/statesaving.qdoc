@@ -25,7 +25,7 @@
     history, or a news reader application should continue from the last news the
     application was opened on, preferably from the same position.
 
-    Ubuntu UI toolkit provides a simple way to save the state of any component
+    Lomiri UI toolkit provides a simple way to save the state of any component
     within an application, by using the attached component \l StateSaver. By simply
     attaching this component to any QtQuick component and specifying the
     \l{StateSaver::properties}{properties} to be saved, applications can be restored
@@ -44,7 +44,7 @@
     \title Application name, IDs
     \section1 Application name
     First of all, the application must have a proper application name set. If you
-    use Qt Creator's Ubuntu project wizards, you will have the application name
+    use Qt Creator's Lomiri project wizards, you will have the application name
     set by default, name which is in sync with the name from the application's
     desktop file.
 
@@ -146,5 +146,5 @@
     therefore the property saving will be successful in these cases too.
 
     See documentation on \l StateSaver properties under \l{Services} section.
-    \nextpage {Ubuntu User Interface Toolkit}
+    \nextpage {Lomiri User Interface Toolkit}
   */

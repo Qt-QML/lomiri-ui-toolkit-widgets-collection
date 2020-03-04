@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.2
-import Ubuntu.Components 1.3
-import Ubuntu.Test 1.0
+import Lomiri.Components 1.3
+import Lomiri.Test 1.0
 
 // pagestack tests for deprecated toolbar are in
 // unit/tst_components/tst_pagestack_deprecated_toolbar.qml
@@ -104,7 +104,7 @@ Item {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "PageStackDeprecatedAppHeaderAPI"
         when: windowShown
         id: testCase

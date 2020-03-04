@@ -16,7 +16,7 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components 1.1
+import Lomiri.Components 1.1
 
 Item {
     id: main
@@ -120,7 +120,7 @@ Item {
         // will not update the iconSource
         function test_iconSource() {
             compare(item1.iconSource, "", "iconSource is empty string by default")
-            var newIconSource = Qt.resolvedUrl("../../../examples/ubuntu-ui-toolkit-gallery/small_avatar.png")
+            var newIconSource = Qt.resolvedUrl("../../../examples/lomiri-ui-toolkit-gallery/small_avatar.png")
             item1.iconSource = newIconSource
             compare(item1.iconSource, newIconSource, "iconSource can be set")
             item1.iconSource = ""

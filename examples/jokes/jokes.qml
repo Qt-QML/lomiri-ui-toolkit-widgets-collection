@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import QtMultimedia 5.0
 
 /*!
@@ -27,7 +27,7 @@ import QtMultimedia 5.0
 
   Demonstrates following:
      - ActivityIndicator
-     - UbuntuShape
+     - LomiriShape
      - Label
      - i18n
 
@@ -87,7 +87,7 @@ MainView {
         source: "jokes.wav"
     }
 
-    UbuntuShape {
+    LomiriShape {
         color: Theme.palette.normal.base
         radius: "medium"
         anchors.centerIn: parent

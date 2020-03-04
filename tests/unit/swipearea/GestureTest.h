@@ -21,9 +21,9 @@
 
 #include <QtGui/QTouchEvent>
 #include <QtQuick/QQuickItem>
-#include <UbuntuGestures/ubuntugesturesglobal.h>
+#include <LomiriGestures/lomirigesturesglobal.h>
 
-class UbuntuTestCase;
+class LomiriTestCase;
 class QTouchDevice;
 
 UG_FORWARD_DECLARE_CLASS(FakeTimerFactory)
@@ -80,7 +80,7 @@ protected Q_SLOTS:
 
 protected:
     QTouchDevice *m_device;
-    UbuntuTestCase *m_view;
+    LomiriTestCase *m_view;
     TouchRegistry *m_touchRegistry;
     UG_PREPEND_NAMESPACE(FakeTimerFactory)  *m_fakeTimerFactory;
     QString m_qmlFilename;

@@ -15,16 +15,16 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import "pageUtils.js" as Utils
 
 /*!
     \qmltype Page
-    \inqmlmodule Ubuntu.Components
+    \inqmlmodule Lomiri.Components
     \inherits StyledItem
-    \ingroup ubuntu
+    \ingroup lomiri
     \brief A page is the basic Item that represents a single view in
-        an Ubuntu application. It is recommended to use the Page inside
+        an Lomiri application. It is recommended to use the Page inside
         the \l MainView or \l AdaptivePageLayout.
 
         \l MainView provides a header for Pages it includes if no
@@ -39,7 +39,7 @@ import "pageUtils.js" as Utils
         Example:
         \qml
             import QtQuick 2.4
-            import Ubuntu.Components 1.3
+            import Lomiri.Components 1.3
 
             MainView {
                 width: units.gu(48)
@@ -86,7 +86,7 @@ PageTreeNode {
     /*!
       \qmlproperty ActrionContext Page::actionContext
       \readonly
-      \since Ubuntu.Components 1.3
+      \since Lomiri.Components 1.3
       The action context of the page.
       */
     readonly property alias actionContext: localContext
@@ -97,7 +97,7 @@ PageTreeNode {
     }
 
     /*!
-      \since Ubuntu.Components 1.3
+      \since Lomiri.Components 1.3
       The header property for this page. Setting this property will reparent the
       header to the page and disable the \l MainView's application header.
       \qml
@@ -155,7 +155,7 @@ PageTreeNode {
                     titleStr += "\"" + page.title + "\"";
                 }
                 titleStr += ": "
-                print(titleStr + "In Ubuntu.Components 1.3, the use of Page.title, Page.flickable and" +
+                print(titleStr + "In Lomiri.Components 1.3, the use of Page.title, Page.flickable and" +
                       " Page.head is deprecated. Use Page.header and the PageHeader component instead.");
                 internal.showDeprecationWarning = false;
             }

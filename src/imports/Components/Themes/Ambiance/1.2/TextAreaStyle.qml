@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 // frame
 // FIXME: stabilize API
@@ -32,7 +32,7 @@ Item {
       Background fill color
       */
     property color backgroundColor: (styledItem.focus || styledItem.highlighted) ? Theme.palette.selected.field : Theme.palette.normal.field
-    property color errorColor: UbuntuColors.orange
+    property color errorColor: LomiriColors.orange
 
     /*!
       Spacing between the frame and the text editor area
@@ -50,7 +50,7 @@ Item {
     /*!
       Text input background
       */
-    property Component background: UbuntuShape {
+    property Component background: LomiriShape {
         property bool error: (styledItem.hasOwnProperty("errorHighlight") && styledItem.errorHighlight && !styledItem.acceptableInput)
         onErrorChanged: (error) ? visuals.errorColor : visuals.backgroundColor;
         color: visuals.backgroundColor;

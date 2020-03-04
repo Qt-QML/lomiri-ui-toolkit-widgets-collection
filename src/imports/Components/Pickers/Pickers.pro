@@ -1,4 +1,4 @@
-TARGETPATH = Ubuntu/Components/Pickers
+TARGETPATH = Lomiri/Components/Pickers
 
 QML_FILES += 1.2/DatePicker.qml \
              1.2/DayModel.qml \
@@ -31,4 +31,4 @@ QML_FILES += 1.2/DatePicker.qml \
              1.3/SecondsModel.qml \
              1.3/YearModel.qml
 
-load(ubuntu_qml_module)
+load(lomiri_qml_module)

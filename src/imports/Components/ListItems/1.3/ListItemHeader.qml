@@ -19,13 +19,13 @@ import QtQuick 2.4
 /*!
     \qmltype Header
     \deprecated
-    \inqmlmodule Ubuntu.Components.ListItems 1.0
-    \ingroup ubuntu-listitems
+    \inqmlmodule Lomiri.Components.ListItems 1.0
+    \ingroup lomiri-listitems
     \brief Header for grouping list items together
 
     Examples:
     \qml
-        import Ubuntu.Components.ListItems 1.3 as ListItem
+        import Lomiri.Components.ListItems 1.3 as ListItem
         Column {
             ListItem.Header { text: "Title" }
             ListItem.Standard { text: "Item one" }

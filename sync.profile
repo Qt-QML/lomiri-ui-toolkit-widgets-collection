@@ -1,7 +1,7 @@
 %modules = ( # path to module name map
-    "UbuntuGestures" => "$basedir/src/UbuntuGestures",
-    "UbuntuMetrics" => "$basedir/src/UbuntuMetrics",
-    "UbuntuToolkit"  => "$basedir/src/UbuntuToolkit",
+    "LomiriGestures" => "$basedir/src/LomiriGestures",
+    "LomiriMetrics" => "$basedir/src/LomiriMetrics",
+    "LomiriToolkit"  => "$basedir/src/LomiriToolkit",
 );
 %moduleheaders = ( # restrict the module headers to those found in relative path
 );
@@ -9,8 +9,8 @@
 %classnames = (
  #add classnames that are not automatically detected
  #e.g. "someheader.h" => "SomeType"
- "ubuntugesturesmodule.h" => "UbuntuGesturesModule",
- "ubuntutoolkitmodule.h" => "UbuntuToolkitModule"
+ "lomirigesturesmodule.h" => "LomiriGesturesModule",
+ "lomiritoolkitmodule.h" => "LomiriToolkitModule"
 );
 
 # Module dependencies.
@@ -27,5 +27,5 @@
     "qtpim" => "",
 );
 
-#export all classes that are in a Ubuntu* namespace
-$publicclassregexp = "^Ubuntu[A-Za-z0-9]*::[^:]*\$"
+#export all classes that are in a Lomiri* namespace
+$publicclassregexp = "^Lomiri[A-Za-z0-9]*::[^:]*\$"

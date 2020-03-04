@@ -1,6 +1,6 @@
 {
     "name": "unit-converter.bzoltan",
-    "description": "Example application of the Ubuntu UI Toolkit - Unit converter",
+    "description": "Example application of the Lomiri UI Toolkit - Unit converter",
     "architecture": "@CLICK_ARCH@",
     "title": "Unit Converter",
     "hooks": {

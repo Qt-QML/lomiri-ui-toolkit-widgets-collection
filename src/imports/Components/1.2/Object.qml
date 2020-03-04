@@ -19,8 +19,8 @@ import QtQuick 2.4
 /*!
     \qmltype Object
     \internal
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief Internal type used for lightweight objects that can have children.
 */
 

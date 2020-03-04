@@ -2,16 +2,16 @@ TEMPLATE = subdirs
 
 # specify the manifest file, this file is required for click
 # packaging and for the IDE to create runconfigurations
-UBUNTU_MANIFEST_FILE=manifest.json.in
+LOMIRI_MANIFEST_FILE=manifest.json.in
 
 exists($$PWD/../examples.pro) {
-    desktop_file.path = $$[QT_INSTALL_EXAMPLES]/ubuntu-ui-toolkit/examples/$${TARGET}
-    config_files.path = $$[QT_INSTALL_EXAMPLES]/ubuntu-ui-toolkit/examples/$${TARGET}
-    qml_files.path = $$[QT_INSTALL_EXAMPLES]/ubuntu-ui-toolkit/examples/$${TARGET}
-    config_files.files += $${UBUNTU_MANIFEST_FILE}
+    desktop_file.path = $$[QT_INSTALL_EXAMPLES]/lomiri-ui-toolkit/examples/$${TARGET}
+    config_files.path = $$[QT_INSTALL_EXAMPLES]/lomiri-ui-toolkit/examples/$${TARGET}
+    qml_files.path = $$[QT_INSTALL_EXAMPLES]/lomiri-ui-toolkit/examples/$${TARGET}
+    config_files.files += $${LOMIRI_MANIFEST_FILE}
 } else {
-    #load Ubuntu specific features
-    load(ubuntu-click)
+    #load Lomiri specific features
+    load(lomiri-click)
     qml_files.path = /
     config_files.path = /
     desktop_file.path = /

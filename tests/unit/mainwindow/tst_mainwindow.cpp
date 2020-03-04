@@ -37,11 +37,11 @@
 #include <QtQml/QQmlContext>
 #include <QtQml/QQmlComponent>
 
-#include <UbuntuToolkit/ubuntutoolkitmodule.h>
-#include <UbuntuToolkit/private/quickutils_p.h>
-#include <UbuntuToolkit/private/ucapplication_p.h>
-#include <UbuntuToolkit/private/ucmainwindow_p.h>
-#include <UbuntuToolkit/private/ucunits_p.h>
+#include <LomiriToolkit/lomiritoolkitmodule.h>
+#include <LomiriToolkit/private/quickutils_p.h>
+#include <LomiriToolkit/private/ucapplication_p.h>
+#include <LomiriToolkit/private/ucmainwindow_p.h>
+#include <LomiriToolkit/private/ucunits_p.h>
 
 UT_USE_NAMESPACE
 
@@ -56,15 +56,15 @@ public:
 
     QQuickWindow *loadTest(const QString &document)
     {
-        // Can't use UbuntuTestCase: We need a Window root item
+        // Can't use LomiriTestCase: We need a Window root item
         QPointer<QQmlEngine> engine(new QQmlEngine());
-        QString modulePath(UBUNTU_QML_IMPORT_PATH);
+        QString modulePath(LOMIRI_QML_IMPORT_PATH);
         if (!QDir(modulePath).exists()) {
             qWarning("'%s' doesn't exist", qPrintable(modulePath));
             return 0;
         }
         engine->addImportPath(modulePath);
-        UbuntuToolkitModule::initializeContextProperties(engine);
+        LomiriToolkitModule::initializeContextProperties(engine);
         QPointer<QQmlComponent> component(new QQmlComponent(engine));
         component->loadUrl(QUrl::fromLocalFile(document), QQmlComponent::Asynchronous);
         while (component->isLoading())

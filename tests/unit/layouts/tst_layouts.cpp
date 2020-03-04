@@ -24,8 +24,8 @@
 #include <QtQuick/QQuickView>
 #include <QtQuick/private/qquickanchors_p_p.h>
 #include <QtTest/QtTest>
-#include <UbuntuToolkit/private/ucunits_p.h>
-#include <UbuntuToolkit/private/uctheme_p.h>
+#include <LomiriToolkit/private/ucunits_p.h>
+#include <LomiriToolkit/private/uctheme_p.h>
 
 #include "uctestcase.h"
 #include "ullayouts.h"
@@ -59,7 +59,7 @@ public:
 
     QQuickView * loadTest(const QString &file)
     {
-        UbuntuTestCase* testCase = new UbuntuTestCase(file);
+        LomiriTestCase* testCase = new LomiriTestCase(file);
         return qobject_cast<QQuickView*>(testCase);
     }
 
@@ -105,7 +105,7 @@ private Q_SLOTS:
 
     void testCase_NoLayouts()
     {
-        QScopedPointer<UbuntuTestCase> testCase(new UbuntuTestCase("NoLayouts.qml"));
+        QScopedPointer<LomiriTestCase> testCase(new LomiriTestCase("NoLayouts.qml"));
         ULLayouts *layouts = testCase->findItem<ULLayouts*>("layouts");
         QVERIFY(layouts->layoutList().isEmpty());
     }
@@ -366,11 +366,11 @@ private Q_SLOTS:
 
     void testCase_CurrentLayoutChange()
     {
-        UbuntuTestCase::ignoreWarning("CurrentLayoutChange.qml", 30, 13,
+        LomiriTestCase::ignoreWarning("CurrentLayoutChange.qml", 30, 13,
             "QML ConditionalLayout: ERROR: no container specified for layout \"portrait\". ConditionalLayout cannot be activated without a container.");
-        UbuntuTestCase::ignoreWarning("CurrentLayoutChange.qml", 35, 13,
+        LomiriTestCase::ignoreWarning("CurrentLayoutChange.qml", 35, 13,
             "QML ConditionalLayout: ERROR: no container specified for layout \"landscape\". ConditionalLayout cannot be activated without a container.");
-        UbuntuTestCase::ignoreWarning("CurrentLayoutChange.qml", 30, 13,
+        LomiriTestCase::ignoreWarning("CurrentLayoutChange.qml", 30, 13,
             "QML ConditionalLayout: WARNING: Cannot activate layout \"portrait\" with no container specified. Falling back to default layout.");
         QScopedPointer<QQuickView> view(loadTest("CurrentLayoutChange.qml"));
         QVERIFY(view);
@@ -389,9 +389,9 @@ private Q_SLOTS:
 
     void testCase_PositioningOnLayoutChange()
     {
-        UbuntuTestCase::ignoreWarning("PositioningOnLayoutChange.qml", 42, 13,
+        LomiriTestCase::ignoreWarning("PositioningOnLayoutChange.qml", 42, 13,
             "QML ConditionalLayout: WARNING: Cannot activate layout \"landscape\" with no container specified. Falling back to default layout.", 2);
-        UbuntuTestCase::ignoreWarning("PositioningOnLayoutChange.qml", 42, 13,
+        LomiriTestCase::ignoreWarning("PositioningOnLayoutChange.qml", 42, 13,
             "QML ConditionalLayout: ERROR: no container specified for layout \"landscape\". ConditionalLayout cannot be activated without a container.");
         QScopedPointer<QQuickView> view(loadTest("PositioningOnLayoutChange.qml"));
         QVERIFY(view);
@@ -415,7 +415,7 @@ private Q_SLOTS:
 
     void testCase_LaidOutItemsOutsideOfLayout()
     {
-        UbuntuTestCase::ignoreWarning("LaidOutItemsOutsideOfLayout.qml", 44, 5,
+        LomiriTestCase::ignoreWarning("LaidOutItemsOutsideOfLayout.qml", 44, 5,
             "QML Rectangle: ERROR: Item that is not a child of a Layouts component will not be laid out.");
         QScopedPointer<QQuickView> view(loadTest("LaidOutItemsOutsideOfLayout.qml"));
         QVERIFY(view);
@@ -454,7 +454,7 @@ private Q_SLOTS:
 
     void testCase_AnchorFilledReparenting()
     {
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("AnchorFilledReparenting.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("AnchorFilledReparenting.qml"));
         QVERIFY(view);
         QQuickItem *root = view->rootObject();
         QVERIFY(root);
@@ -482,7 +482,7 @@ private Q_SLOTS:
 
     void testCase_AnchorFilledMargins()
     {
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("AnchorFilledMargins.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("AnchorFilledMargins.qml"));
         QVERIFY(view);
         QQuickItem *root = view->rootObject();
         QVERIFY(root);
@@ -513,7 +513,7 @@ private Q_SLOTS:
 
     void testCase_AnchorFilledSeparateMargins()
     {
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("AnchorFilledSeparateMargins.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("AnchorFilledSeparateMargins.qml"));
         QVERIFY(view);
         QQuickItem *root = view->rootObject();
         QVERIFY(root);
@@ -551,7 +551,7 @@ private Q_SLOTS:
 
     void testCase_AnchorCenteredInDefault()
     {
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("AnchorCenteredInDefault.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("AnchorCenteredInDefault.qml"));
         QVERIFY(view);
         QQuickItem *root = view->rootObject();
         QVERIFY(root);
@@ -579,7 +579,7 @@ private Q_SLOTS:
 
     void testCase_AnchorVerticalCenter()
     {
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("AnchorVerticalCenter.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("AnchorVerticalCenter.qml"));
         QVERIFY(view);
         QQuickItem *root = view->rootObject();
         QVERIFY(root);
@@ -609,7 +609,7 @@ private Q_SLOTS:
 
     void testCase_AnchorVerticalCenterOffset()
     {
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("AnchorVerticalCenterOffset.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("AnchorVerticalCenterOffset.qml"));
         QVERIFY(view);
         QQuickItem *root = view->rootObject();
         QVERIFY(root);
@@ -642,7 +642,7 @@ private Q_SLOTS:
 
     void testCase_AnchorHorizontalCenter()
     {
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("AnchorHorizontalCenter.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("AnchorHorizontalCenter.qml"));
         QVERIFY(view);
         QQuickItem *root = view->rootObject();
         QVERIFY(root);
@@ -672,7 +672,7 @@ private Q_SLOTS:
 
     void testCase_AnchorHorizontalCenterOffset()
     {
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("AnchorHorizontalCenterOffset.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("AnchorHorizontalCenterOffset.qml"));
         QVERIFY(view);
         QQuickItem *root = view->rootObject();
         QVERIFY(root);
@@ -705,7 +705,7 @@ private Q_SLOTS:
 
     void testCase_AnchorCenterWithOffset()
     {
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("AnchorCenterWithOffset.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("AnchorCenterWithOffset.qml"));
         QVERIFY(view);
         QQuickItem *root = view->rootObject();
         QVERIFY(root);
@@ -740,7 +740,7 @@ private Q_SLOTS:
 
     void testCase_AnchorLeft()
     {
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("AnchorLeft.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("AnchorLeft.qml"));
         QVERIFY(view);
         QQuickItem *root = view->rootObject();
         QVERIFY(root);
@@ -773,7 +773,7 @@ private Q_SLOTS:
 
     void testCase_AnchorTop()
     {
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("AnchorTop.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("AnchorTop.qml"));
         QVERIFY(view);
         QQuickItem *root = view->rootObject();
         QVERIFY(root);
@@ -806,7 +806,7 @@ private Q_SLOTS:
 
     void testCase_AnchorRight()
     {
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("AnchorRight.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("AnchorRight.qml"));
         QVERIFY(view);
         QQuickItem *root = view->rootObject();
         QVERIFY(root);
@@ -839,7 +839,7 @@ private Q_SLOTS:
 
     void testCase_AnchorBottom()
     {
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("AnchorBottom.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("AnchorBottom.qml"));
         QVERIFY(view);
         QQuickItem *root = view->rootObject();
         QVERIFY(root);
@@ -872,7 +872,7 @@ private Q_SLOTS:
 
     void testCase_AnchorAll()
     {
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("AnchorAll.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("AnchorAll.qml"));
         QVERIFY(view);
         QQuickItem *root = view->rootObject();
         QVERIFY(root);
@@ -918,7 +918,7 @@ private Q_SLOTS:
     // the following tests guard bug #1280359
     void testCase_ItemInstanceAsProperty()
     {
-        UbuntuTestCase::ignoreWarning("ItemInstanceAsProperty.qml", 45, 17,
+        LomiriTestCase::ignoreWarning("ItemInstanceAsProperty.qml", 45, 17,
             "QML ItemLayout: WARNING: item \"object2\" not specified or has been specified for layout by more than one active ItemLayout");
         QScopedPointer<QQuickView> view(loadTest("ItemInstanceAsProperty.qml"));
         QVERIFY(view);
@@ -937,7 +937,7 @@ private Q_SLOTS:
 
     void testCase_DialerCrash()
     {
-        UbuntuTestCase::ignoreWarning("DialerCrash.qml", 45, 17,
+        LomiriTestCase::ignoreWarning("DialerCrash.qml", 45, 17,
             "QML ItemLayout: WARNING: item \"object2\" not specified or has been specified for layout by more than one active ItemLayout");
         QScopedPointer<QQuickView> view(loadTest("DialerCrash.qml"));
         QVERIFY(view);
@@ -974,7 +974,7 @@ private Q_SLOTS:
     // guard bug #1204834 and #1300668
     void testCase_Visibility()
     {
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("Visibility.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("Visibility.qml"));
         QVERIFY(view);
         QQuickItem *root = view->rootObject();
         QVERIFY(root);
@@ -1017,7 +1017,7 @@ private Q_SLOTS:
         QFETCH(QString, layoutFunction);
         QFETCH(QString, layoutName);
 
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("NestedVisibility.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("NestedVisibility.qml"));
         QVERIFY(view);
         QQuickItem *root = view->rootObject();
         QVERIFY(root);

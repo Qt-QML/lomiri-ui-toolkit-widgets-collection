@@ -15,13 +15,13 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components.Private 1.3 as Privates
+import Lomiri.Components.Private 1.3 as Privates
 
 /*!
     \internal
     \qmltype AppHeader
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
 */
 Privates.AppHeaderBase {
     // Note: styleName is set to "PageHeadStyle" in UCAppHeaderBase.

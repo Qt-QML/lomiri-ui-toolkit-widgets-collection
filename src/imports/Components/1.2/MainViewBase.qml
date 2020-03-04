@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2 as Toolkit
-import Ubuntu.PerformanceMetrics 1.0
+import Lomiri.Components 1.2 as Toolkit
+import Lomiri.PerformanceMetrics 1.0
 import QtQuick.Window 2.0
 
 /*! \internal */
@@ -52,8 +52,8 @@ PageTreeNode {
                                    "Ambiance" : "SuruDark"
         onThemeNameChanged: {
             // only change the theme if the current one is a system one.
-            if (themeName !== "" && (Theme.name.search("Ubuntu.Components.Themes") >= 0)) {
-                Theme.name = "Ubuntu.Components.Themes.%1".arg(themeName);
+            if (themeName !== "" && (Theme.name.search("Lomiri.Components.Themes") >= 0)) {
+                Theme.name = "Lomiri.Components.Themes.%1".arg(themeName);
             }
         }
     }
@@ -72,7 +72,7 @@ PageTreeNode {
     onApplicationNameChanged: {
         if (applicationName !== "") {
             i18n.domain = applicationName;
-            UbuntuApplication.applicationName = applicationName
+            LomiriApplication.applicationName = applicationName
         }
     }
 

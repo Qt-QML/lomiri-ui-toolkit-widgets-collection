@@ -18,9 +18,9 @@
 
 import QtQuick 2.4
 import QtTest 1.0
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Styles 1.3
+import Lomiri.Test 1.0
+import Lomiri.Components 1.3
+import Lomiri.Components.Styles 1.3
 import QtQml.Models 2.1
 
 Item {
@@ -91,7 +91,7 @@ Item {
             }
 
             //complex PageHeader example taken from the PageHeader tutorial
-            //https://developer.ubuntu.com/en/blog/2016/02/24/pageheader-tutorial/
+            //https://developer.lomiri.com/en/blog/2016/02/24/pageheader-tutorial/
             MainView {
                 id: mainView_movingHeaderTest
                 width: units.gu(50)
@@ -148,7 +148,7 @@ Item {
                                 width: label.width + units.gu(4)
                                 height: parent.height
                                 Rectangle {
-                                    color: UbuntuColors.slate
+                                    color: LomiriColors.slate
                                     opacity: 0.1
                                     anchors.fill: parent
                                     visible: button.pressed

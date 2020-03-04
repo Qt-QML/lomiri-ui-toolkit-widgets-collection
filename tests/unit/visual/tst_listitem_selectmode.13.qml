@@ -15,9 +15,9 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import QtTest 1.0
-import Ubuntu.Test 1.3
+import Lomiri.Test 1.3
 
 MainView {
     applicationName: "testapp.nik90"
@@ -28,7 +28,7 @@ MainView {
     Page {
         title: i18n.tr("ListView Bug")
 
-        UbuntuListView {
+        LomiriListView {
             id: listView
 
             ListModel {
@@ -79,7 +79,7 @@ MainView {
             }
         }
 
-        UbuntuListView {
+        LomiriListView {
             id: testView
             anchors {
                 fill: parent

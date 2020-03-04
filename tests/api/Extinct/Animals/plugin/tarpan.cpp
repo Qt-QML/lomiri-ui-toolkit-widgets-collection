@@ -22,7 +22,7 @@
  * \qmltype EATarpan
  * \instantiates EATarpan
  * \inqmlmodule Extinct.Animals 1.0
- * \ingroup ubuntu-commandline
+ * \ingroup lomiri-commandline
  * \brief The Tarpan class specifies the behavior of a Eurasian wild horse.
  */
 

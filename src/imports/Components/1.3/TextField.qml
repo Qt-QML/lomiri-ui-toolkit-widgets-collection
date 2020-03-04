@@ -15,18 +15,18 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3 as Ubuntu
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3 as Lomiri
+import Lomiri.Components.Popups 1.3
 
 /*!
     \qmltype TextField
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief The TextField element displays a single line of editable plain text.
     Input constraints can be set through validator or inputMask. Setting echoMode
     to an appropriate value enables TextField to be used as password input field.
 
-    \l {https://design.ubuntu.com/apps/building-blocks/text-input#text-field}{See also the Design Guidelines on the Text Field}.
+    \l {https://design.lomiri.com/apps/building-blocks/text-input#text-field}{See also the Design Guidelines on the Text Field}.
 
     Example:
     \qml
@@ -99,7 +99,7 @@ import Ubuntu.Components.Popups 1.3
     \note During text selection all interactive parent Flickables are turned off.
 */
 
-Ubuntu.ActionItem {
+Lomiri.ActionItem {
     id: control
 
     implicitWidth: units.gu(25)
@@ -533,7 +533,7 @@ Ubuntu.ActionItem {
 
       \qml
       import QtQuick 2.4
-      import Ubuntu.Components 1.3
+      import Lomiri.Components 1.3
       TextField{
           validator: IntValidator{bottom: 11; top: 31;}
           focus: true
@@ -544,7 +544,7 @@ Ubuntu.ActionItem {
 
       \qml
       import QtQuick 2.4
-      import Ubuntu.Components 1.3
+      import Lomiri.Components 1.3
 
       TextField {
           echoMode: TextInput.Password
@@ -858,7 +858,7 @@ Ubuntu.ActionItem {
         enabled: internal.spacing > 0
         preventStealing: false
         // forward mouse events to input so we can handle those uniformly
-        Ubuntu.Mouse.forwardTo: [inputHandler]
+        Lomiri.Mouse.forwardTo: [inputHandler]
         cursorShape: Qt.IBeamCursor
     }
 
@@ -870,14 +870,14 @@ Ubuntu.ActionItem {
         // array of borders in left, top, right, bottom order
         property real spacing: control.__styleInstance.frameSpacing
 
-        property int type: action ? action.parameterType : Ubuntu.Action.None
+        property int type: action ? action.parameterType : Lomiri.Action.None
         onTypeChanged: {
             // Don't undo explicitly specified hints
             if (inputMethodHints != Qt.ImhNone)
                 return
 
-            if (type == Ubuntu.Action.Integer
-             || type == Ubuntu.Action.Real)
+            if (type == Lomiri.Action.Integer
+             || type == Lomiri.Action.Real)
                 inputMethodHints = Qt.ImhDigitsOnly
         }
     }
@@ -936,7 +936,7 @@ Ubuntu.ActionItem {
         }
     }
 
-    Ubuntu.AbstractButton {
+    Lomiri.AbstractButton {
         id: clearButton
         objectName: "clear_button"
         activeFocusOnPress: false
@@ -958,7 +958,7 @@ Ubuntu.ActionItem {
                  !control.readOnly &&
                  control.activeFocus && editor.displayText != ""
 
-        Ubuntu.Icon {
+        Lomiri.Icon {
             id: icon
             anchors.verticalCenter: parent.verticalCenter
             width: units.gu(2.5)
@@ -976,7 +976,7 @@ Ubuntu.ActionItem {
     }
 
     // hint text
-    Ubuntu.Label {
+    Lomiri.Label {
         id: hint
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: editor.horizontalAlignment
@@ -1010,7 +1010,7 @@ Ubuntu.ActionItem {
         // do not allow rebounding
         boundsBehavior: Flickable.StopAtBounds
         // need to forward events as events occurred on topMargin area are not grabbed by the MouseArea.
-        Ubuntu.Mouse.forwardTo: [inputHandler]
+        Lomiri.Mouse.forwardTo: [inputHandler]
 
         clip: true
         contentWidth: editor.contentWidth
@@ -1040,7 +1040,7 @@ Ubuntu.ActionItem {
             persistentSelection: false
 
             // input selection and navigation handling
-            Ubuntu.Mouse.forwardTo: [inputHandler]
+            Lomiri.Mouse.forwardTo: [inputHandler]
             InputHandler {
                 id: inputHandler
                 anchors.fill: parent

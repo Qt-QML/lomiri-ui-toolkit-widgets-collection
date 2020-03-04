@@ -22,15 +22,15 @@ SCRIPT_DIR=`cd $SCRIPT_DIR && pwd`
 source "$SCRIPT_DIR/build_paths.inc" || return 1
 export QML_IMPORT_PATH=$BUILD_DIR/qml
 export QML2_IMPORT_PATH=$BUILD_DIR/qml
-export UBUNTU_UI_TOOLKIT_THEMES_PATH=$BUILD_DIR/qml
-UBUNTU_QML_ROOT=$BUILD_DIR/qml/Ubuntu
-UBUNTU_QML_DIRS=$UBUNTU_QML_ROOT/Components:$UBUNTU_QML_ROOT/Test:$UBUNTU_QML_ROOT/Layouts:$UBUNTU_QML_ROOT/PerformanceMetrics
-export LD_LIBRARY_PATH=$BUILD_DIR/lib:$UBUNTU_QML_DIRS${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+export LOMIRI_UI_TOOLKIT_THEMES_PATH=$BUILD_DIR/qml
+LOMIRI_QML_ROOT=$BUILD_DIR/qml/Lomiri
+LOMIRI_QML_DIRS=$LOMIRI_QML_ROOT/Components:$LOMIRI_QML_ROOT/Test:$LOMIRI_QML_ROOT/Layouts:$LOMIRI_QML_ROOT/PerformanceMetrics
+export LD_LIBRARY_PATH=$BUILD_DIR/lib:$LOMIRI_QML_DIRS${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
 # Build machines may not have initctl and don't need it
 test -f /sbin/initctl || return 0
 # initctl may be available but not working (for example in a lxd container without upstart)
 /sbin/initctl list > /dev/null || return 0
 /sbin/initctl set-env --global QML_IMPORT_PATH=$BUILD_DIR/qml
 /sbin/initctl set-env --global QML2_IMPORT_PATH=$BUILD_DIR/qml
-/sbin/initctl set-env --global UBUNTU_UI_TOOLKIT_THEMES_PATH=$BUILD_DIR/qml
+/sbin/initctl set-env --global LOMIRI_UI_TOOLKIT_THEMES_PATH=$BUILD_DIR/qml
 /sbin/initctl set-env --global LD_LIBRARY_PATH=$BUILD_DIR/lib

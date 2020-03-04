@@ -23,11 +23,11 @@
 #include <QtQml/QQmlEngine>
 #include <QtTest/QTest>
 #include <QtTest/QSignalSpy>
-#include <UbuntuToolkit/ubuntutoolkitmodule.h>
-#include <UbuntuToolkit/private/ucalarm_p_p.h>
-#include <UbuntuToolkit/private/alarmmanager_p_p.h>
-#include <UbuntuToolkit/private/ucalarmmodel_p.h>
-#include <UbuntuToolkit/private/alarmsadapter_p.h>
+#include <LomiriToolkit/lomiritoolkitmodule.h>
+#include <LomiriToolkit/private/ucalarm_p_p.h>
+#include <LomiriToolkit/private/alarmmanager_p_p.h>
+#include <LomiriToolkit/private/ucalarmmodel_p.h>
+#include <LomiriToolkit/private/alarmsadapter_p.h>
 
 #include "uctestcase.h"
 
@@ -112,7 +112,7 @@ private Q_SLOTS:
     void initTestCase()
     {
         engine = new QQmlEngine;
-        UbuntuToolkitModule::initializeContextProperties(engine);
+        LomiriToolkitModule::initializeContextProperties(engine);
 
         AlarmManager::instance();
 
@@ -515,7 +515,7 @@ private Q_SLOTS:
 
     void test_sound_saving() {
         UCAlarm alarm(QDateTime::currentDateTime().addSecs(60), "test_onetime_sound");
-        alarm.setSound(QUrl("file:///usr/share/sounds/ubuntu/ringtones/Celestial.ogg"));
+        alarm.setSound(QUrl("file:///usr/share/sounds/lomiri/ringtones/Celestial.ogg"));
         alarm.save();
         waitForInsert();
 
@@ -528,7 +528,7 @@ private Q_SLOTS:
     // guard bug #1360101
     void test_create_update_and_disable_alarm() {
         UCAlarm alarm(QDateTime::currentDateTime(), UCAlarm::AutoDetect, "test_create_update_and_disable_alarm");
-        alarm.setSound(QUrl("file:///usr/share/sounds/ubuntu/ringtones/Celestial.ogg"));
+        alarm.setSound(QUrl("file:///usr/share/sounds/lomiri/ringtones/Celestial.ogg"));
         alarm.save();
         waitForInsert();
         QVERIFY(containsAlarm(&alarm));
@@ -550,13 +550,13 @@ private Q_SLOTS:
     void test_change_alarm_sound()
     {
         UCAlarm alarm(QDateTime::currentDateTime(), UCAlarm::AutoDetect, "test_change_alarm_fields_sound");
-        alarm.setSound(QUrl("file:///usr/share/sounds/ubuntu/ringtones/Bliss.ogg"));
+        alarm.setSound(QUrl("file:///usr/share/sounds/lomiri/ringtones/Bliss.ogg"));
         alarm.save();
         waitForInsert();
         QVERIFY(containsAlarm(&alarm));
 
         // do the change
-        alarm.setSound(QUrl("file:///usr/share/sounds/ubuntu/ringtones/Sparkle.ogg"));
+        alarm.setSound(QUrl("file:///usr/share/sounds/lomiri/ringtones/Sparkle.ogg"));
         alarm.save();
         waitForUpdate();
         QVERIFY(containsAlarm(&alarm));
@@ -579,7 +579,7 @@ private Q_SLOTS:
         QFETCH(bool, enabled);
 
         UCAlarm alarm(QDateTime::currentDateTime().addDays(1), "test_check_alarm_tags_" + message);
-        alarm.setSound(QUrl("file:///usr/share/sounds/ubuntu/ringtones/Marimbach.ogg"));
+        alarm.setSound(QUrl("file:///usr/share/sounds/lomiri/ringtones/Marimbach.ogg"));
         alarm.setEnabled(enabled);
         alarm.save();
         waitForInsert();

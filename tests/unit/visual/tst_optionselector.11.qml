@@ -16,8 +16,8 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components 1.1
-import Ubuntu.Test 1.0
+import Lomiri.Components 1.1
+import Lomiri.Test 1.0
 
 MainView {
     width: 400
@@ -91,7 +91,7 @@ MainView {
         signalName: "expansionCompleted"
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
          name: "OptionSelectorAPI"
          when: windowShown
 

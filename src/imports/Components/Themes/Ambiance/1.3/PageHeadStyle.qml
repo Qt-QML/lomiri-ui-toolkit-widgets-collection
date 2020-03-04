@@ -15,9 +15,9 @@
  */
 import QtQuick 2.4
 import QtQuick.Window 2.0
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
-import Ubuntu.Components.Styles 1.3 as Style
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
+import Lomiri.Components.Styles 1.3 as Style
 
 Style.PageHeadStyle {
     id: headerStyle
@@ -60,7 +60,7 @@ Style.PageHeadStyle {
                                   styledItem.showDeprecatedWarning
         border {
             width: background.showBorder ? units.gu(0.5) : 0
-            color: background.showBorder ? UbuntuColors.red : "transparent"
+            color: background.showBorder ? LomiriColors.red : "transparent"
         }
     }
 
@@ -191,19 +191,19 @@ Style.PageHeadStyle {
             to: "OUT"
             SequentialAnimation {
                 ParallelAnimation {
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                         target: allContents
                         property: "opacity"
                         from: 1.0
                         to: 0.0
                     }
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                         target: leftAnchor
                         properties: "anchors.leftMargin"
                         from: 0.0
                         to: -units.gu(5)
                     }
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                         target: rightAnchor
                         properties: "anchors.rightMargin"
                         from: 0
@@ -221,19 +221,19 @@ Style.PageHeadStyle {
             to: "IN"
             SequentialAnimation {
                 ParallelAnimation {
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                         target: allContents
                         property: "opacity"
                         from: 0.0
                         to: 1.0
                     }
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                         target: leftAnchor
                         properties: "anchors.leftMargin"
                         from: -units.gu(5)
                         to: 0
                     }
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                         target: rightAnchor
                         properties: "anchors.rightMargin"
                         from: -units.gu(5)

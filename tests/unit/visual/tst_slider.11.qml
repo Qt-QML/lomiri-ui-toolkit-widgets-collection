@@ -16,9 +16,9 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.1
-import Ubuntu.Components.ListItems 1.0
+import Lomiri.Test 1.0
+import Lomiri.Components 1.1
+import Lomiri.Components.ListItems 1.0
 
 MainView {
     width: units.gu(40)
@@ -29,7 +29,7 @@ MainView {
             fill: parent
             margins: units.gu(1)
         }
-        UbuntuListView {
+        LomiriListView {
             id: listView
             width: parent.width
             height: units.gu(20)
@@ -41,7 +41,7 @@ MainView {
                 }
             }
         }
-        UbuntuListView {
+        LomiriListView {
             id: listView2
             width: parent.width
             height: units.gu(20)
@@ -91,7 +91,7 @@ MainView {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "SliderAPI"
         when: windowShown
 

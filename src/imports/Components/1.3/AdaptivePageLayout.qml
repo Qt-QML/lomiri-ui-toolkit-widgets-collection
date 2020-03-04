@@ -16,14 +16,14 @@
 
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Private 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Private 1.3
 
 /*!
   \qmltype AdaptivePageLayout
-  \inqmlmodule Ubuntu.Components
-  \since Ubuntu.Components 1.3
-  \ingroup ubuntu
+  \inqmlmodule Lomiri.Components
+  \since Lomiri.Components 1.3
+  \ingroup lomiri
   \brief View with multiple columns of Pages.
 
   The component provides a flexible way of viewing a stack of pages in one or
@@ -50,7 +50,7 @@ import Ubuntu.Components.Private 1.3
 
   \qml
     import QtQuick 2.4
-    import Ubuntu.Components 1.3
+    import Lomiri.Components 1.3
 
     MainView {
         width: units.gu(100)
@@ -114,7 +114,7 @@ import Ubuntu.Components.Private 1.3
 
   \qml
     import QtQuick 2.4
-    import Ubuntu.Components 1.3
+    import Lomiri.Components 1.3
 
     MainView {
         width: units.gu(100)
@@ -262,7 +262,7 @@ PageTreeNode {
       on desktop or on a device with at least 90 grid units screen width.
       \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.3
+        import Lomiri.Components 1.3
 
         MainView {
             width: units.gu(90)
@@ -932,7 +932,7 @@ PageTreeNode {
                     ColorAnimation {
                         target: verticalDivider
                         property: "color"
-                        duration: UbuntuAnimation.SlowDuration
+                        duration: LomiriAnimation.SlowDuration
                     }
                 }
             }

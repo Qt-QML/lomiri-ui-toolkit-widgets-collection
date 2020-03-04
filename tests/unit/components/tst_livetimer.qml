@@ -16,7 +16,7 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 TestCase {
     name: "LiveTimer"

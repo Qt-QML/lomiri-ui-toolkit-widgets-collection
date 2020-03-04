@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Styles 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Styles 1.3
 import QtQuick.Layouts 1.1
 
 MainView {
@@ -246,9 +246,9 @@ MainView {
                     model: 10
                     ListItem {
                         objectName: "InFlickable"+index
-                        color: UbuntuColors.silk
+                        color: LomiriColors.silk
                         highlightColor: "lime"
-                        divider.colorFrom: UbuntuColors.green
+                        divider.colorFrom: LomiriColors.green
 
                         leadingActions: ListItemActions {
                             actions: leadingArray

@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.3
+import Lomiri.Test 1.0
+import Lomiri.Components 1.3
 
 Item {
     width: 400
@@ -41,7 +41,7 @@ Item {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         id: testCase
         name: "PageNoHeader"
         when: windowShown

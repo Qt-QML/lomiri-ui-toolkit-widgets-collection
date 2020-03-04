@@ -16,7 +16,7 @@
 
 .pragma library
 
-.import Ubuntu.Components 1.2 as Toolkit
+.import Lomiri.Components 1.2 as Toolkit
 
 // Simple positioning on the screen, not relative to a caller Item.
 function SimplePositioning(foreground, area, edgeMargins) {

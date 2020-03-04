@@ -18,7 +18,7 @@ import QtQuick 2.4
 
 /*!
     \qmltype Palette
-    \inqmlmodule Ubuntu.Components.Themes 1.0
+    \inqmlmodule Lomiri.Components.Themes 1.0
     \ingroup theme-module
     \brief Provides the palette of colors from the theme that widgets use to draw themselves.
 
@@ -55,7 +55,7 @@ QtObject {
     /*!
       Color palette to use when the widget is in the disabled (enabled: false)
       state.
-      \since Ubuntu.Components.Themes 1.3
+      \since Lomiri.Components.Themes 1.3
     */
     property PaletteValues disabled: PaletteValues{}
 
@@ -72,13 +72,13 @@ QtObject {
 
     /*!
        Color palette to use when the widget is selected and disabled.
-      \since Ubuntu.Components.Themes 1.3
+      \since Lomiri.Components.Themes 1.3
     */
     property PaletteValues selectedDisabled: PaletteValues{}
 
     /*!
       Color palette values to use when the widget is highlighted.
-      \since Ubuntu.Components.Themes 1.3
+      \since Lomiri.Components.Themes 1.3
       */
     property PaletteValues highlighted: PaletteValues{}
 }

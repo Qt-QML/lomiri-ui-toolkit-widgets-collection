@@ -16,7 +16,7 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components 1.1
+import Lomiri.Components 1.1
 
 TestCase {
     name: "CrossFadeImage"
@@ -78,7 +78,7 @@ TestCase {
     }
 
     function cleanupTest() {
-        fadeDuration = UbuntuAnimation.FastDuration ; // default
+        fadeDuration = LomiriAnimation.FastDuration ; // default
         compare(running, false, "Animation is running after testcase");
     }
 
@@ -106,10 +106,10 @@ TestCase {
 
     function test_fadeDuration(data) {
         crossFadeImage.fadeStyle = data.style;
-        fadeDuration = UbuntuAnimation.SleepyDuration;
+        fadeDuration = LomiriAnimation.SleepyDuration;
         loadImage("demo_image.jpg");
         loadImage("map_icon.png");
-        sleep(UbuntuAnimation.SleepyDuration / 2); // < fadeDuration
+        sleep(LomiriAnimation.SleepyDuration / 2); // < fadeDuration
         compare(running, true, "Animation stopped before 1000 ms");
         waitForAnimation();
         cleanupTest();

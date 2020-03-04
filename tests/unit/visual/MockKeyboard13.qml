@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Object {
     id: inputMethod
@@ -32,7 +32,7 @@ Object {
         visible: inputMethod.visible
 
         parent: QuickUtils.rootItem(inputMethod)
-        color: UbuntuColors.silk
+        color: LomiriColors.silk
         opacity: 0.5
         // Always on top, even modal Dialog overlay
         z: 100
@@ -49,7 +49,7 @@ Object {
 
                 Button {
                     text: modelData
-                    color: UbuntuColors.blue
+                    color: LomiriColors.blue
                     height: (parent.height - units.dp(2)) / 4
                     width: (parent.width - units.dp(2)) / 10
                 }

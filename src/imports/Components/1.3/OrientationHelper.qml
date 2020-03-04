@@ -16,12 +16,12 @@
 
 import QtQuick 2.4
 import QtQuick.Window 2.2
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*!
     \qmltype OrientationHelper
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief The OrientationHelper automatically rotates its children following the
            orientation of the device.
 
@@ -117,8 +117,8 @@ Item {
                 return 0;
 
             var availableHeight = orientationHelper.parent.height;
-            if (d.stateAngle === 0 && UbuntuApplication.inputMethod.visible && anchorToKeyboard)
-                availableHeight -= UbuntuApplication.inputMethod.keyboardRectangle.height / Screen.devicePixelRatio;
+            if (d.stateAngle === 0 && LomiriApplication.inputMethod.visible && anchorToKeyboard)
+                availableHeight -= LomiriApplication.inputMethod.keyboardRectangle.height / Screen.devicePixelRatio;
             return availableHeight;
         }
 
@@ -188,8 +188,8 @@ Item {
                     ScriptAction { script: { d.transitioning = true; } }
                     RotationAnimator {
                         target: orientationHelper
-                        duration: UbuntuAnimation.FastDuration
-                        easing: UbuntuAnimation.StandardEasing
+                        duration: LomiriAnimation.FastDuration
+                        easing: LomiriAnimation.StandardEasing
                         direction: RotationAnimation.Shortest
                         from: d.oldAngle
                         to: d.stateAngle

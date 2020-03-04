@@ -15,13 +15,13 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Themes 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Themes 1.3
 
 SuruDarkNormal {
-    background: UbuntuColors.inkstone
-    base: UbuntuColors.slate
-    baseText: UbuntuColors.silk
-    foreground: UbuntuColors.slate
-    overlay: UbuntuColors.slate
+    background: LomiriColors.inkstone
+    base: LomiriColors.slate
+    baseText: LomiriColors.silk
+    foreground: LomiriColors.slate
+    overlay: LomiriColors.slate
 }

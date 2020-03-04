@@ -18,8 +18,8 @@
 #define UCNAMESPACE_H
 
 #include <QtCore/QObject>
-#include <UbuntuToolkit/ubuntutoolkitglobal.h>
-#include <UbuntuToolkit/private/quickutils_p.h>
+#include <LomiriToolkit/lomiritoolkitglobal.h>
+#include <LomiriToolkit/private/quickutils_p.h>
 
 UT_NAMESPACE_BEGIN
 

@@ -1,6 +1,6 @@
 CXX_MODULE = qml
-TARGET  = UbuntuComponents
-TARGETPATH = Ubuntu/Components
+TARGET  = LomiriComponents
+TARGETPATH = Lomiri/Components
 IMPORT_VERSION = 0.1
 
 include(plugin/plugin.pri)
@@ -14,14 +14,14 @@ QML_FILES += $$ARTWORK_FILES
 QML_FILES += 1.0/Button.qml \
              1.0/Icon.qml \
              1.0/ProgressBar.qml \
-             1.0/UbuntuColors.qml
+             1.0/LomiriColors.qml
 
 #1.1
 QML_FILES += 1.1/Button.qml \
              1.1/Haptics.qml \
              1.1/Icon.qml \
              1.1/ProgressBar.qml \
-             1.1/UbuntuColors.qml
+             1.1/LomiriColors.qml
 
 #1.2
 QML_FILES += 1.2/AbstractButton.qml \
@@ -72,9 +72,9 @@ QML_FILES += 1.2/AbstractButton.qml \
              1.2/ToolbarButton.qml \
              1.2/ToolbarItems.qml \
              1.2/Toolbar.qml \
-             1.2/UbuntuListView11.qml \
-             1.2/UbuntuListView.qml \
-             1.2/UbuntuNumberAnimation.qml
+             1.2/LomiriListView11.qml \
+             1.2/LomiriListView.qml \
+             1.2/LomiriNumberAnimation.qml
 
 #1.3
 QML_FILES += 1.3/ActionBar.qml \
@@ -117,9 +117,9 @@ QML_FILES += 1.3/ActionBar.qml \
              1.3/Toolbar.qml \
              1.3/ToolbarButton.qml \
              1.3/ToolbarItems.qml \
-             1.3/UbuntuColors.qml \
-             1.3/UbuntuListView.qml \
-             1.3/UbuntuNumberAnimation.qml \
+             1.3/LomiriColors.qml \
+             1.3/LomiriListView.qml \
+             1.3/LomiriNumberAnimation.qml \
              1.3/ListItemPopover.qml \
              1.3/PageColumn.qml \
              1.3/PageColumnsLayout.qml \
@@ -134,4 +134,4 @@ OTHER_FILES+= qmldir \
              1.3/MainView.qdoc \
              1.3/Icon.qdoc
 
-load(ubuntu_qml_plugin)
+load(lomiri_qml_plugin)

@@ -16,7 +16,7 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 TestCase {
      name: "ActionAPI"
@@ -55,7 +55,7 @@ TestCase {
 
      function test_iconSource() {
          compare(action.iconSource, "", "iconSource is empty string by default")
-         var newIconSource = Qt.resolvedUrl("../../../examples/ubuntu-ui-toolkit-gallery/small_avatar.png")
+         var newIconSource = Qt.resolvedUrl("../../../examples/lomiri-ui-toolkit-gallery/small_avatar.png")
          action.iconSource = newIconSource
          compare(action.iconSource, newIconSource, "iconSource can be set")
          action.iconSource = ""
@@ -338,7 +338,7 @@ TestCase {
                  "iconSource not properly set with an undefined iconSource from style.");
          compare(actionWithPropertiesFromStyle.numIconSourceChanged, 1,
                  "iconSource did not update exactly once.");
-         var newIconSource = Qt.resolvedUrl("../../../examples/ubuntu-ui-toolkit-gallery/small_avatar.png")
+         var newIconSource = Qt.resolvedUrl("../../../examples/lomiri-ui-toolkit-gallery/small_avatar.png")
          styleProperties.iconSource = newIconSource;
          compare(actionWithPropertiesFromStyle.iconSource, newIconSource,
                  "Failed to update iconSource from style properly.");

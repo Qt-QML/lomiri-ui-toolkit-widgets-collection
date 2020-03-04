@@ -15,7 +15,7 @@
  */
 
 #include <QtQml/QQmlEngine>
-#include <UbuntuToolkit/private/quickutils_p.h>
+#include <LomiriToolkit/private/quickutils_p.h>
 
 #include "uctestcase.h"
 

@@ -15,29 +15,29 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
-import Ubuntu.Components.Themes 0.1
+import Lomiri.Components 1.2
+import Lomiri.Components.Themes 0.1
 
 Palette {
     normal: PaletteValues {
         background: "#EDEDED"
         backgroundText: "#81888888"
         base: Qt.rgba(0, 0, 0, 0.1)
-        baseText: UbuntuColors.lightGrey
-        foreground: UbuntuColors.lightGrey
+        baseText: LomiriColors.lightGrey
+        foreground: LomiriColors.lightGrey
         foregroundText: "#FFFFFF"
         overlay: "#FDFDFD"
-        overlayText: UbuntuColors.lightGrey
+        overlayText: LomiriColors.lightGrey
         field: "#FAFAFA"
-        fieldText: UbuntuColors.darkGrey
+        fieldText: LomiriColors.darkGrey
     }
     selected: PaletteValues {
         background: Qt.rgba(0, 0, 0, 0.05)
-        backgroundText: UbuntuColors.darkGrey
+        backgroundText: LomiriColors.darkGrey
         selection: foreground // unused
-        foreground: Qt.rgba(UbuntuColors.blue.r, UbuntuColors.blue.g, UbuntuColors.blue.b, 0.2)
-        foregroundText: UbuntuColors.darkGrey
+        foreground: Qt.rgba(LomiriColors.blue.r, LomiriColors.blue.g, LomiriColors.blue.b, 0.2)
+        foregroundText: LomiriColors.darkGrey
         field: "#FFFFFF"
-        fieldText: UbuntuColors.darkGrey
+        fieldText: LomiriColors.darkGrey
     }
 }

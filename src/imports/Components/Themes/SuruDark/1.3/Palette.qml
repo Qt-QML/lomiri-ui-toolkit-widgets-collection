@@ -16,8 +16,8 @@
 
 //![0]
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Themes 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Themes 1.3
 
 Palette {
     normal: SuruDarkNormal {}
@@ -26,10 +26,10 @@ Palette {
             // specific disabled colors
             var diff = {
                 raised: "#FFFFFF",
-                positiveText: UbuntuColors.porcelain,
-                negativeText: UbuntuColors.porcelain,
-                activityText: UbuntuColors.inkstone,
-                focusText: UbuntuColors.inkstone,
+                positiveText: LomiriColors.porcelain,
+                negativeText: LomiriColors.porcelain,
+                activityText: LomiriColors.inkstone,
+                focusText: LomiriColors.inkstone,
                 selectionText: "#FFFFFF"
             };
             for (var p in normal) {
@@ -50,17 +50,17 @@ Palette {
     selectedDisabled: SuruDarkSelected {
         Component.onCompleted: {
             var diff = {
-                background: UbuntuColors.inkstone,
+                background: LomiriColors.inkstone,
                 backgroundText: "#FFFFFF",
                 raised: "#FFFFFF",
                 foregroundText: "#FFFFFF",
                 overlayText: "#FFFFFF",
                 fieldText: "#FFFFFF",
                 selectionText: "#FFFFFF",
-                positiveText: UbuntuColors.porcelain,
-                negativeText: UbuntuColors.porcelain,
-                activityText: UbuntuColors.jet,
-                focusText: UbuntuColors.jet,
+                positiveText: LomiriColors.porcelain,
+                negativeText: LomiriColors.porcelain,
+                activityText: LomiriColors.jet,
+                focusText: LomiriColors.jet,
                 position: "#00000000"
             };
             for (var p in selected) {
@@ -75,17 +75,17 @@ Palette {
     }
 
     highlighted: SuruDarkNormal {
-        background: UbuntuColors.slate
-        base: UbuntuColors.slate
-        baseText: UbuntuColors.silk
-        foreground: UbuntuColors.slate
-        raised: UbuntuColors.silk
-        raisedText: UbuntuColors.inkstone
-        raisedSecondaryText: UbuntuColors.ash
+        background: LomiriColors.slate
+        base: LomiriColors.slate
+        baseText: LomiriColors.silk
+        foreground: LomiriColors.slate
+        raised: LomiriColors.silk
+        raisedText: LomiriColors.inkstone
+        raisedSecondaryText: LomiriColors.ash
     }
 
     focused: SuruDarkNormal {
-        background: Qt.rgba(UbuntuColors.lightBlue.r, UbuntuColors.lightBlue.g, UbuntuColors.lightBlue.b, 0.4)
+        background: Qt.rgba(LomiriColors.lightBlue.r, LomiriColors.lightBlue.g, LomiriColors.lightBlue.b, 0.4)
     }
 }
 //![0]

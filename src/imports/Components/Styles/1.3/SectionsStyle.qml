@@ -16,7 +16,7 @@
 import QtQuick 2.4
 /*!
     \qmltype SectionsStyle
-    \inqmlmodule Ubuntu.Components.Styles 1.3
+    \inqmlmodule Lomiri.Components.Styles 1.3
     \ingroup style-api
     \brief Style API for Sections.
 

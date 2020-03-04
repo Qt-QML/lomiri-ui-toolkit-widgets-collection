@@ -1,4 +1,4 @@
-ubuntu-ui-toolkit (1.3.2192~0ubports1) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.2192~0ubports1) xenial; urgency=medium
 
   * debian/changelog: New versioning scheme
   * Updated to latest QtPim
@@ -6,13 +6,13 @@ ubuntu-ui-toolkit (1.3.2192~0ubports1) xenial; urgency=medium
 
  -- Alberto Mardegan <mardy@users.sourceforge.net>  Sun, 23 Sep 2018 11:32:23 +0300
 
-ubuntu-ui-toolkit (1.3.2191+ubports) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.2191+ubports) xenial; urgency=medium
 
   * Imported to UBports
 
  -- UBports auto importer <infra@ubports.com>  Fri, 13 Oct 2017 05:21:11 +0200
 
-ubuntu-ui-toolkit (1.3.2190+17.04.20170327) zesty; urgency=medium
+lomiri-ui-toolkit (1.3.2190+17.04.20170327) zesty; urgency=medium
 
   [ Christian Dywan ]
   * Make AdaptivePageLayout handle layoutDirection out of the box.
@@ -25,7 +25,7 @@ ubuntu-ui-toolkit (1.3.2190+17.04.20170327) zesty; urgency=medium
 
  -- Zoltán Balogh <zoltan.balogh@canonical.com>  Mon, 27 Mar 2017 09:27:32 +0000
 
-ubuntu-ui-toolkit (1.3.2184+17.04.20170306) zesty; urgency=medium
+lomiri-ui-toolkit (1.3.2184+17.04.20170306) zesty; urgency=medium
 
   [ Adnane Belmadiaf ]
   * Add support for CheckBox label when set
@@ -35,7 +35,7 @@ ubuntu-ui-toolkit (1.3.2184+17.04.20170306) zesty; urgency=medium
   * Fix ListItem title/subtitle alignment & elide in RTL mode.
     Fixes LP: #1665944.
   * Fix PageHeader title alignment & elide in RTL mode. Fixes LP: #1665942.
-  * Fix UbuntuListView docs. Fixes LP: #1486940.
+  * Fix LomiriListView docs. Fixes LP: #1486940.
   * Add count prop to OptionSelector. Fixes LP: #1341559.
   * Replace the hardcoded color with a theme color. Fixes LP: #1664758.
   * Fix the import statement for Menu, MenuBar and MenuGroup.
@@ -65,7 +65,7 @@ ubuntu-ui-toolkit (1.3.2184+17.04.20170306) zesty; urgency=medium
 
  -- Zoltán Balogh <zoltan.balogh@canonical.com>  Mon, 06 Mar 2017 16:04:56 +0000
 
-ubuntu-ui-toolkit (1.3.2166+17.04.20170130) zesty; urgency=medium
+lomiri-ui-toolkit (1.3.2166+17.04.20170130) zesty; urgency=medium
 
   [ Andrea Bernabei ]
   * ListItemLayout documentation: fix typo in color usage of a code example.
@@ -94,7 +94,7 @@ ubuntu-ui-toolkit (1.3.2166+17.04.20170130) zesty; urgency=medium
   * This change is done to remove the dependencies with upstart in the tests.
     To start apps with env vars is gonna be used the launch_test_application
     method provided by autopilot in its test base class which is a wrapper for
-    the ubuntu-app-launch tools (API). This change removes all the dependencies
+    the lomiri-app-launch tools (API). This change removes all the dependencies
     with upstart, so all the projects which are using the initctl api and
     fixtures will be impacted. An update in the documentation or in the blog is
     gonna be done also to communicate this change to the developers.
@@ -103,7 +103,7 @@ ubuntu-ui-toolkit (1.3.2166+17.04.20170130) zesty; urgency=medium
   * Add visualRoot property to MainWindow. Fixes LP: #1504551, LP: #1656857.
   * Add python3-debian to control.gles and harden package-sorting.sh.
   * Add organizationName property to MainWindow
-  * Add MainWindow to Ubuntu.Components.Labs.
+  * Add MainWindow to Lomiri.Components.Labs.
     Fixes LP: #1573118, LP: #1587431, LP: #1647415
 
   [ Albert Astals Cid ]
@@ -113,13 +113,13 @@ ubuntu-ui-toolkit (1.3.2166+17.04.20170130) zesty; urgency=medium
 
  -- Zoltán Balogh <zoltan.balogh@canonical.com>  Mon, 30 Jan 2017 11:30:03 +0000
 
-ubuntu-ui-toolkit (1.3.2151+17.04.20161223build1~3) zesty; urgency=medium
+lomiri-ui-toolkit (1.3.2151+17.04.20161223build1~3) zesty; urgency=medium
 
   * No change rebuild
 
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Wed, 04 Jan 2017 08:54:59 +0200
+ -- Timo Jyrinki <timo-jyrinki@lomiri.com>  Wed, 04 Jan 2017 08:54:59 +0200
 
-ubuntu-ui-toolkit (1.3.2151+17.04.20161223) zesty; urgency=medium
+lomiri-ui-toolkit (1.3.2151+17.04.20161223) zesty; urgency=medium
 
   [ Zsombor Egri ]
   * Enable mouse, touchpad and keyboard detection in UITK. Fixes LP: #1536669
@@ -141,7 +141,7 @@ ubuntu-ui-toolkit (1.3.2151+17.04.20161223) zesty; urgency=medium
 
  -- Marco Trevisan (Treviño) <mail@3v1n0.net>  Fri, 23 Dec 2016 14:52:55 +0000
 
-ubuntu-ui-toolkit (1.3.2141+16.10.20161013.5) yakkety; urgency=medium
+lomiri-ui-toolkit (1.3.2141+16.10.20161013.5) yakkety; urgency=medium
 
   [ Zsombor Egri ]
   * Do not show focus frame on ListItem when clicked. Fixes LP: #1628855
@@ -159,7 +159,7 @@ ubuntu-ui-toolkit (1.3.2141+16.10.20161013.5) yakkety; urgency=medium
 
  -- Zoltán Balogh <zoltan.balogh@canonical.com>  Thu, 13 Oct 2016 17:16:31 +0000
 
-ubuntu-ui-toolkit (1.3.2135+16.10.20161003.1) yakkety; urgency=medium
+lomiri-ui-toolkit (1.3.2135+16.10.20161003.1) yakkety; urgency=medium
 
   [ Christian Dywan ]
   * Fix warning about using implicit char* to QString conversion.
@@ -197,7 +197,7 @@ ubuntu-ui-toolkit (1.3.2135+16.10.20161003.1) yakkety; urgency=medium
   * Added public headers extra robustness checks. Made use of the qmake
     headersclean feature to check the robustness of our public headers.
   * Excluded LTTng features from non-Linux builds.
-  * Moved common C++ configs to ubuntu_common.prf. The common config file
+  * Moved common C++ configs to lomiri_common.prf. The common config file
     doesn't add -Werror directly to QMAKE_CXXFLAGS anymore, it sets the
     warnings_are_errors variable so that it is correctly handled by different
     compilers (not just GCC). That allows to remove the
@@ -205,7 +205,7 @@ ubuntu-ui-toolkit (1.3.2135+16.10.20161003.1) yakkety; urgency=medium
     for us. Removed the DEFINES += QT_USE_QSTRINGBUILDER lines since it's
     already handled by qt_module.prf. Set the -Wsuggest-override warning to
     QMAKE_CXXFLAGS_WARN_ON instead of QMAKE_CXXFLAGS directly.
-  * Cleaned up qmake Ubuntu packaging variables. The qtbase packaging for Ubuntu
+  * Cleaned up qmake Lomiri packaging variables. The qtbase packaging for Lomiri
     exports the CFLAGS, CXXFLAGS and LFLAGS variables in the environment before
     running configure so that the qtbase shared libraries can be compiled with
     the required distribution defined compiler flags. That is fine (though I
@@ -227,7 +227,7 @@ ubuntu-ui-toolkit (1.3.2135+16.10.20161003.1) yakkety; urgency=medium
     allows the compiler to optimise our code better by putting all these
     QStrings known at compile time in the .rodata section of the binary as well
     as preventing a bunch of useless processing on them. That also allows us to
-    remove "DEFINES -= QT_ASCII_CAST_WARNINGS" from the UbuntuToolkit pro file.
+    remove "DEFINES -= QT_ASCII_CAST_WARNINGS" from the LomiriToolkit pro file.
 
   [ Zoltán Balogh ]
   * Explicit include of cstdio.
@@ -237,17 +237,17 @@ ubuntu-ui-toolkit (1.3.2135+16.10.20161003.1) yakkety; urgency=medium
   * Qt5.6 fixes QTBUG-41686 and requires x/y to be explicitly passed.
     Fixes LP: #1610230.
   * Qt5.6: fix Scrollbar unit tests
-  * Qt5.6: fix ubuntulistview.10 unit test
+  * Qt5.6: fix lomirilistview.10 unit test
 
  -- Zoltán Balogh <zoltan.balogh@canonical.com>  Mon, 03 Oct 2016 11:39:58 +0000
 
-ubuntu-ui-toolkit (1.3.2104+16.10.20160929) yakkety; urgency=medium
+lomiri-ui-toolkit (1.3.2104+16.10.20160929) yakkety; urgency=medium
 
   * Enable arm64 unit tests on xenial and newer. (LP: #1580172)
 
  -- Timo Jyrinki <timo.jyrinki@canonical.com>  Thu, 29 Sep 2016 10:00:20 +0000
 
-ubuntu-ui-toolkit (1.3.2104+16.10.20160919.3) yakkety; urgency=medium
+lomiri-ui-toolkit (1.3.2104+16.10.20160919.3) yakkety; urgency=medium
 
   [ Andrea Bernabei ]
   * Scrollbar: more hover related bugfixes and unit tests.
@@ -282,7 +282,7 @@ ubuntu-ui-toolkit (1.3.2104+16.10.20160919.3) yakkety; urgency=medium
     be included by the users withour compilation issues. It also removes a bunch
     of direct includes from sources and a few INCLUDEPATHs hacks.See the CODING
     file for more details.
-  * Cleaned up ubuntu_qt_module.prf and the libs using it.
+  * Cleaned up lomiri_qt_module.prf and the libs using it.
     1/ Moved the common config options from the pro files to the prf file to
        avoid duplications and simplify the files.
     2/ Removed the useless "TEMPLATE=lib" and "load(qt_build_config)" lines from
@@ -291,12 +291,12 @@ ubuntu-ui-toolkit (1.3.2104+16.10.20160919.3) yakkety; urgency=medium
        content is "core gui".
     4/ Prefixed headers and sources by $$PWD/ and sorted the lines
        alphabetically.
-    5/ Merged the SOURCES declarations in UbuntuToolkit.pro.
+    5/ Merged the SOURCES declarations in LomiriToolkit.pro.
     6/ Removed the useless "DEFINES += QT_USE_QSTRINGBUILDER" line from
-       UbuntuToolkit.pro since it's done for us by qt_module.prf.
+       LomiriToolkit.pro since it's done for us by qt_module.prf.
     7/ Removed the useless "QMAKE_CXXFLAGS -= -Werror=deprecated-declarations"
-       and "DEFINES -= QT_DEPRECATED_WARNINGS" lines from UbuntuToolkit.pro
-       since it's already done in ubuntu_qt_module.prf.
+       and "DEFINES -= QT_DEPRECATED_WARNINGS" lines from LomiriToolkit.pro
+       since it's already done in lomiri_qt_module.prf.
     8/ Added a few comments.
   * Made use of Qt builtin to check GCC version.
 
@@ -320,14 +320,14 @@ ubuntu-ui-toolkit (1.3.2104+16.10.20160919.3) yakkety; urgency=medium
 
  -- Zoltán Balogh <zoltan.balogh@canonical.com>  Mon, 19 Sep 2016 11:52:07 +0000
 
-ubuntu-ui-toolkit (1.3.2085+16.10.20160915) yakkety; urgency=medium
+lomiri-ui-toolkit (1.3.2085+16.10.20160915) yakkety; urgency=medium
 
   [ Zsombor Egri ]
   * Fix ActionList API break. (LP: #1623841)
 
  -- Zoltán Balogh <zoltan.balogh@canonical.com>  Thu, 15 Sep 2016 15:17:27 +0000
 
-ubuntu-ui-toolkit (1.3.2085+16.10.20160831.4) yakkety; urgency=medium
+lomiri-ui-toolkit (1.3.2085+16.10.20160831.4) yakkety; urgency=medium
 
   [ Zoltan Balogh ]
   * Remove the *.la files from the -dev package; they have been obsolete for
@@ -344,7 +344,7 @@ ubuntu-ui-toolkit (1.3.2085+16.10.20160831.4) yakkety; urgency=medium
 
 
   [ Zsombor Egri ]
-  * SplitView to Ubuntu.Components.Labs.
+  * SplitView to Lomiri.Components.Labs.
   * Get rid of pragma warning, use standard way to mark an argument unused; fix
     build failure related to static const used in qMin(), happening with Qt5.5.1
 
@@ -357,7 +357,7 @@ ubuntu-ui-toolkit (1.3.2085+16.10.20160831.4) yakkety; urgency=medium
 
  -- Zoltán Balogh <zoltan.balogh@canonical.com>  Wed, 31 Aug 2016 16:45:18 +0000
 
-ubuntu-ui-toolkit (1.3.2073+16.10.20160824) yakkety; urgency=medium
+lomiri-ui-toolkit (1.3.2073+16.10.20160824) yakkety; urgency=medium
 
   [ Zsombor Egri ]
   * No need to check the setting anymore when vibrate. Fixes LP: #1433590.
@@ -372,19 +372,19 @@ ubuntu-ui-toolkit (1.3.2073+16.10.20160824) yakkety; urgency=medium
   * Remove unused Q_Q(UCAbtractButton) declaration.
 
   [ Larry Price ]
-  * Address documentation issue in UbuntuListView - pullToRefresh has "enabled"
+  * Address documentation issue in LomiriListView - pullToRefresh has "enabled"
     property. Fixes LP: #1387679
 
   [ Loïc Molinari ]
-  * Added new C++ UbuntuMetrics library.
+  * Added new C++ LomiriMetrics library.
     This library allows the monitoring of various metrics in QtQuick 2
     applications. It allows the logging of different metrics as well as
     overlaying these metrics on top of each QtQuick windows.
-  * Added LTTng support to UbuntuMetrics.
+  * Added LTTng support to LomiriMetrics.
   * Added support for logging generic events. Made use of it to log predefined
     ApplicationMonitor events. Predefined events only define UserInterfaceReady
     for now, as it's needed to track start-up time.
-  * Wrapped libUbuntuMetrics to QML.
+  * Wrapped libLomiriMetrics to QML.
 
   [ Florian Boucault ]
   * Icon, Switch and ProgressBar: enable use of texture atlas.
@@ -397,7 +397,7 @@ ubuntu-ui-toolkit (1.3.2073+16.10.20160824) yakkety; urgency=medium
 
  -- Zoltán Balogh <zoltan.balogh@canonical.com>  Wed, 24 Aug 2016 11:35:29 +0000
 
-ubuntu-ui-toolkit (1.3.2060+16.10.20160814) yakkety; urgency=medium
+lomiri-ui-toolkit (1.3.2060+16.10.20160814) yakkety; urgency=medium
 
   [ Zoltan Balogh ]
   * Fix OptionSelectorTestCase tests.
@@ -464,17 +464,17 @@ ubuntu-ui-toolkit (1.3.2060+16.10.20160814) yakkety; urgency=medium
 
  -- Zoltán Balogh <zoltan.balogh@canonical.com>  Sun, 14 Aug 2016 09:06:46 +0000
 
-ubuntu-ui-toolkit (1.3.2030+16.10.20160726.15) yakkety; urgency=medium
+lomiri-ui-toolkit (1.3.2030+16.10.20160726.15) yakkety; urgency=medium
 
   * More s390x dependencies workarounding until upstart is really fixed.
   * Replace abs with qFabs due to GCC6 breakage (LP: #1610943)
 
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 08 Aug 2016 13:26:34 +0300
+ -- Timo Jyrinki <timo-jyrinki@lomiri.com>  Mon, 08 Aug 2016 13:26:34 +0300
 
-ubuntu-ui-toolkit (1.3.2030+16.10.20160726.2) yakkety; urgency=medium
+lomiri-ui-toolkit (1.3.2030+16.10.20160726.2) yakkety; urgency=medium
   [ William Hua ]
-  * Make qml-module-ubuntu-components-gles depend on
-    qml-module-ubuntu-performancemetrics-gles.
+  * Make qml-module-lomiri-components-gles depend on
+    qml-module-lomiri-performancemetrics-gles.
 
   [ Christian Dywan ]
   * Set default for TextArea.persistentSelection and correct type.
@@ -485,10 +485,10 @@ ubuntu-ui-toolkit (1.3.2030+16.10.20160726.2) yakkety; urgency=medium
 
 
   [ Zsombor Egri ]
-  * Separate plugin for Ubuntu.Components.Labs.
-  * Create separate plugin for Ubuntu.Components.Styles.
-  * Move C++ components into UbuntuToolkit library.
-  * Remove fw-headers from UbuntuGestures and UbuntuToolkit. We are no longer
+  * Separate plugin for Lomiri.Components.Labs.
+  * Create separate plugin for Lomiri.Components.Styles.
+  * Move C++ components into LomiriToolkit library.
+  * Remove fw-headers from LomiriGestures and LomiriToolkit. We are no longer
     supporting them as public C++ API.
 
   [ Zoltán Balogh ]
@@ -501,7 +501,7 @@ ubuntu-ui-toolkit (1.3.2030+16.10.20160726.2) yakkety; urgency=medium
   * Add Header.automaticHeight property. Fixes LP: #1540240
 
   [ Loïc Molinari ]
-  * UbuntuShape - Use reference counting to handle shape textures.
+  * LomiriShape - Use reference counting to handle shape textures.
     The current shape textures handling system requires to search for the
     textures associated to the current graphics context by doing a search in an
     array for each item at each updatePaintNode() call. It also deletes the
@@ -536,13 +536,13 @@ ubuntu-ui-toolkit (1.3.2030+16.10.20160726.2) yakkety; urgency=medium
 
  -- Zoltán Balogh <zoltan.balogh@canonical.com>  Tue, 26 Jul 2016 08:40:14 +0000
 
-ubuntu-ui-toolkit (1.3.2009+16.10.20160615.3build1~1) yakkety; urgency=medium
+lomiri-ui-toolkit (1.3.2009+16.10.20160615.3build1~1) yakkety; urgency=medium
 
   * Rebuild against Qt 5.6.
 
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Wed, 20 Jul 2016 15:20:21 +0300
+ -- Timo Jyrinki <timo-jyrinki@lomiri.com>  Wed, 20 Jul 2016 15:20:21 +0300
 
-ubuntu-ui-toolkit (1.3.2009+16.10.20160615.3) yakkety; urgency=medium
+lomiri-ui-toolkit (1.3.2009+16.10.20160615.3) yakkety; urgency=medium
 
   [ Tim Peeters ]
   * Introduce Styles.SectionsStyle. Fixes LP: #1585548
@@ -570,7 +570,7 @@ ubuntu-ui-toolkit (1.3.2009+16.10.20160615.3) yakkety; urgency=medium
 
  -- Zoltán Balogh <zoltan.balogh@canonical.com>  Wed, 15 Jun 2016 18:32:29 +0000
 
-ubuntu-ui-toolkit (1.3.1995+16.10.20160607.1) yakkety; urgency=medium
+lomiri-ui-toolkit (1.3.1995+16.10.20160607.1) yakkety; urgency=medium
 
   [ Albert Astals Cid ]
   * Initialize two variables
@@ -581,7 +581,7 @@ ubuntu-ui-toolkit (1.3.1995+16.10.20160607.1) yakkety; urgency=medium
     But it's always nice to initialize all members.
 
   [ Zsombor Egri ]
-  * Move PropertyChange into UbuntuToolkit package.
+  * Move PropertyChange into LomiriToolkit package.
 
   [ Christian Dywan ]
   * Merge tests/unit and tests/unit_x11. Fixes LP: #1273696
@@ -597,7 +597,7 @@ ubuntu-ui-toolkit (1.3.1995+16.10.20160607.1) yakkety; urgency=medium
 
  -- Zoltán Balogh <zoltan.balogh@canonical.com>  Tue, 07 Jun 2016 18:25:12 +0000
 
-ubuntu-ui-toolkit (1.3.1988+16.10.20160601) yakkety; urgency=medium
+lomiri-ui-toolkit (1.3.1988+16.10.20160601) yakkety; urgency=medium
 
   [ Christian Dywan ]
   * UCAbstractButton needs to accept key release events. Fixes LP: #1581026
@@ -614,7 +614,7 @@ ubuntu-ui-toolkit (1.3.1988+16.10.20160601) yakkety; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Wed, 01 Jun 2016 11:52:35 +0000
 
-ubuntu-ui-toolkit (1.3.1984+16.10.20160527.2) yakkety; urgency=medium
+lomiri-ui-toolkit (1.3.1984+16.10.20160527.2) yakkety; urgency=medium
 
   [ Christian Dywan ]
   * Slimmer frame for TextFields: 0.5dp. Fixes LP: #1578190.
@@ -637,13 +637,13 @@ ubuntu-ui-toolkit (1.3.1984+16.10.20160527.2) yakkety; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Fri, 27 May 2016 07:08:44 +0000
 
-ubuntu-ui-toolkit (1.3.1979+16.04.20160517.4) yakkety; urgency=medium
+lomiri-ui-toolkit (1.3.1979+16.04.20160517.4) yakkety; urgency=medium
 
   * Rebuild for arm64 gles switch.
 
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Wed, 25 May 2016 06:59:29 +0000
+ -- Timo Jyrinki <timo-jyrinki@lomiri.com>  Wed, 25 May 2016 06:59:29 +0000
 
-ubuntu-ui-toolkit (1.3.1979+16.04.20160517.1) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1979+16.04.20160517.1) xenial; urgency=medium
 
   [ Tim Peeters ]
   * Fix flickable topMargin adjustments by PullToRefreshStyle.
@@ -676,7 +676,7 @@ ubuntu-ui-toolkit (1.3.1979+16.04.20160517.1) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Tue, 17 May 2016 15:50:54 +0000
 
-ubuntu-ui-toolkit (1.3.1960+16.04.20160511.4) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1960+16.04.20160511.4) xenial; urgency=medium
 
   [ Christian Dywan ]
   * Text input focus must always follow main component
@@ -690,7 +690,7 @@ ubuntu-ui-toolkit (1.3.1960+16.04.20160511.4) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Wed, 11 May 2016 19:46:58 +0000
 
-ubuntu-ui-toolkit (1.3.1960+16.04.20160502) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1960+16.04.20160502) xenial; urgency=medium
 
   [ Albert Astals Cid, Gerry Boland, Michał Sawicz ]
   * Enable dynamic changing of grid units instigated by the shell (LP:
@@ -706,7 +706,7 @@ ubuntu-ui-toolkit (1.3.1960+16.04.20160502) xenial; urgency=medium
 
  -- Michał Sawicz <michal.sawicz@canonical.com>  Mon, 02 May 2016 13:29:08 +0000
 
-ubuntu-ui-toolkit (1.3.1960+16.04.20160428.1) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1960+16.04.20160428.1) xenial; urgency=medium
 
   [ Andrea Bernabei ]
   * Scrollbar: new visual update for pressed/hovered states plus handling of
@@ -738,7 +738,7 @@ ubuntu-ui-toolkit (1.3.1960+16.04.20160428.1) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Thu, 28 Apr 2016 11:27:10 +0000
 
-ubuntu-ui-toolkit (1.3.1949+16.04.20160421) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1949+16.04.20160421) xenial; urgency=medium
 
   [ Zoltan Balogh ]
   * Make pep8 happy with all the python scripts of the UITK project.
@@ -761,7 +761,7 @@ ubuntu-ui-toolkit (1.3.1949+16.04.20160421) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Thu, 21 Apr 2016 12:06:31 +0000
 
-ubuntu-ui-toolkit (1.3.1938+16.04.20160416) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1938+16.04.20160416) xenial; urgency=medium
 
   [ Zoltán Balogh ]
   * Install the apparmor file with the UITK showcase gallery example
@@ -769,7 +769,7 @@ ubuntu-ui-toolkit (1.3.1938+16.04.20160416) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Sat, 16 Apr 2016 18:00:00 +0000
 
-ubuntu-ui-toolkit (1.3.1938+16.04.20160414) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1938+16.04.20160414) xenial; urgency=medium
 
   [ Zoltán Balogh ]
   * Fix the toolkit examples for the case when they are used from the
@@ -777,7 +777,7 @@ ubuntu-ui-toolkit (1.3.1938+16.04.20160414) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Thu, 14 Apr 2016 16:30:09 +0000
 
-ubuntu-ui-toolkit (1.3.1938+16.04.20160412) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1938+16.04.20160412) xenial; urgency=medium
 
   [ Tim Peeters ]
   * Hide the PageStack back button when depth == 1. Fixes LP: #1565811
@@ -791,7 +791,7 @@ ubuntu-ui-toolkit (1.3.1938+16.04.20160412) xenial; urgency=medium
     Fixes LP: #1560419, LP: #1560458, LP: #1566231.
 
   [ Zsombor Egri ]
-  * Move MouseTouchAdaptor into UbuntuToolkit library. Fix adaptor code for
+  * Move MouseTouchAdaptor into LomiriToolkit library. Fix adaptor code for
     Xenial. Fixes LP: #1561436
 
   [ Christian Dywan ]
@@ -807,12 +807,12 @@ ubuntu-ui-toolkit (1.3.1938+16.04.20160412) xenial; urgency=medium
 
   [ Timo Jyrinki ]
   * Add latest changes for GLES.
-  * Add back Provides: qtdeclarative5-ubuntu-ui-toolkit-plugin to resolve
+  * Add back Provides: qtdeclarative5-lomiri-ui-toolkit-plugin to resolve
     upgrade issue. Fixes LP: #1568817
   * Fix wrapper script auto-generated by Qt that incorrectly tries to execute
     itself. Fixes LP: #1560000
   * bileto_convert_to_gles: sort and add
-    qml-module-ubuntu-performancemetrics-gles.install. Fixes LP: #1569217
+    qml-module-lomiri-performancemetrics-gles.install. Fixes LP: #1569217
 
   * Add additional Breaks as requested by archive admin.
   * Add latest changes for GLES.
@@ -821,7 +821,7 @@ ubuntu-ui-toolkit (1.3.1938+16.04.20160412) xenial; urgency=medium
   * Fix the UITK test plan script.
 
   [ CI Train Bot ]
-  * Resync trunk. added: examples/ubuntu-ui-toolkit-gallery/po/nb.po
+  * Resync trunk. added: examples/lomiri-ui-toolkit-gallery/po/nb.po
 
   [ Robert Park ]
   * Inline GLES packaging. added: debian/bileto_convert_to_gles
@@ -829,7 +829,7 @@ ubuntu-ui-toolkit (1.3.1938+16.04.20160412) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Tue, 12 Apr 2016 11:12:44 +0000
 
-ubuntu-ui-toolkit (1.3.1918+16.04.20160404-0ubuntu1) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1918+16.04.20160404-0lomiri1) xenial; urgency=medium
 
   [ Benjamin Zeller ]
   * Register expected warning messages in the tree testcase.
@@ -851,14 +851,14 @@ ubuntu-ui-toolkit (1.3.1918+16.04.20160404-0ubuntu1) xenial; urgency=medium
 
   [ Olivier Tilloy ]
   * Fix dependencies of the transitional dummy package
-    qtdeclarative5-ubuntu-ui-toolkit-plugin. Fixes LP: #1553551.
+    qtdeclarative5-lomiri-ui-toolkit-plugin. Fixes LP: #1553551.
 
   [ Christian Dywan ]
   * Rename qtdeclarative5-*-plugin to qml-module-*. Fixes LP: #1342031.
   * Require a qtdeclarative5 known to have the tab fence patch.
-  * Reset previous theme version and use UbuntuTestCase in tst_animator.
+  * Reset previous theme version and use LomiriTestCase in tst_animator.
   * BottomEdge(Hint) focus and close via keyboard. Fixes LP: #1523825
-  * Add 1.3 version of UbuntuTestCase.
+  * Add 1.3 version of LomiriTestCase.
   * No gdb when running unit tests on armv7l.
   * Build-depend on python3-debian for wrap-and-sort.
 
@@ -927,7 +927,7 @@ ubuntu-ui-toolkit (1.3.1918+16.04.20160404-0ubuntu1) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Mon, 04 Apr 2016 04:47:18 +0000
 
-ubuntu-ui-toolkit (1.3.1872+16.04.20160330.2-0ubuntu1) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1872+16.04.20160330.2-0lomiri1) xenial; urgency=medium
 
   [ Tim Peeters ]
   * Set the window color as soon as the window is available, to avoid a
@@ -936,7 +936,7 @@ ubuntu-ui-toolkit (1.3.1872+16.04.20160330.2-0ubuntu1) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Wed, 30 Mar 2016 23:08:38 +0000
 
-ubuntu-ui-toolkit (1.3.1872+16.04.20160314-0ubuntu1) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1872+16.04.20160314-0lomiri1) xenial; urgency=medium
 
   [ Zoltán Balogh ]
   * land the appstart profiler renamed: app-launch-profiler/app-launch-
@@ -946,7 +946,7 @@ ubuntu-ui-toolkit (1.3.1872+16.04.20160314-0ubuntu1) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Mon, 14 Mar 2016 04:36:11 +0000
 
-ubuntu-ui-toolkit (1.3.1872+16.04.20160308-0ubuntu1) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1872+16.04.20160308-0lomiri1) xenial; urgency=medium
 
   [ Timo Jyrinki ]
   * Fix gles unit test skipping.
@@ -1022,13 +1022,13 @@ ubuntu-ui-toolkit (1.3.1872+16.04.20160308-0ubuntu1) xenial; urgency=medium
   [ Andrea Bernabei ]
   * Refer to SlotsLayout.Last instead of SlotsLayout.End in SlotsLayout
     documentation. Fixes LP: #1536170.
-  * Update "Import Statement:" in docs of Ubuntu.Components. Currently
-    Developer's website shows "import Ubuntu.Components 1.2" and "since
-    Ubuntu.Components 1.3" and that is confusing for all app developers.
+  * Update "Import Statement:" in docs of Lomiri.Components. Currently
+    Developer's website shows "import Lomiri.Components 1.2" and "since
+    Lomiri.Components 1.3" and that is confusing for all app developers.
     Fixes LP: #1531817.
   * Fix ListItemLayout multiline labels positioning and add docs about
     aliasing labels properties
-  * UbuntuTestCase flick(): default events delay to 1. Fixes LP: #1549256.
+  * LomiriTestCase flick(): default events delay to 1. Fixes LP: #1549256.
   * Add Scrollbar and ScrollView tests plus implementation fixes.
 
   [ Benjamin Zeller ]
@@ -1040,15 +1040,15 @@ ubuntu-ui-toolkit (1.3.1872+16.04.20160308-0ubuntu1) xenial; urgency=medium
   * Do not leak the incubator pointer in case a QML engine never took care of
     it. Delete the object directly.
   * Move PageWrapper.qml to C++ for 1.3.
-  * Add Ubuntu toolkit shared library
-  * Move ColorUtils to UbuntuToolkit.
+  * Add Lomiri toolkit shared library
+  * Move ColorUtils to LomiriToolkit.
   * Fixes LP: #1540642
   * Make sure objects are initialized with extra properties before they are
     instantiated in the QML engine.
   * Use QQmlProperty::write() instead of QObject::writeProperty()
 
   [ Zsombor Egri ]
-  * Update Palette values for Ubuntu.Components 1.3 and apply the palette on
+  * Update Palette values for Lomiri.Components 1.3 and apply the palette on
     components. First set of visual updates including ListItem, Text inputs,
     CheckBox, Switch, Slider, PageHeader, ActionBar and BottomEdge.
     Fixes LP: #1350915.
@@ -1079,14 +1079,14 @@ ubuntu-ui-toolkit (1.3.1872+16.04.20160308-0ubuntu1) xenial; urgency=medium
     under xvfb we get the wrong parameters warning and tests fail.
 
   [ Robert Ancell ]
-  * Fix documentation typo - Ubunut -> Ubuntu.
+  * Fix documentation typo - Ubunut -> Lomiri.
   * Use new QML package name for qml-module-qtfeedback, drop old QML
     package names.
   * Fix examples using OptionSelectorDelegate that place it in the Toolkit
     namespace but don't have the import to match.
 
   [ Colin Watson ]
-  * Make src/Ubuntu/Test depend on src/Ubuntu/Components, to fix build with
+  * Make src/Lomiri/Test depend on src/Lomiri/Components, to fix build with
     high parallelisation.
 
   [ Pierre Bertet on 2016-02-17
@@ -1097,7 +1097,7 @@ ubuntu-ui-toolkit (1.3.1872+16.04.20160308-0ubuntu1) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Tue, 08 Mar 2016 06:45:42 +0000
 
-ubuntu-ui-toolkit (1.3.1795+16.04.20160106-0ubuntu1) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1795+16.04.20160106-0lomiri1) xenial; urgency=medium
 
   [ Christian Dywan ]
   * Fix typo in runtest.sh: $? is the error code, not $*.
@@ -1118,12 +1118,12 @@ ubuntu-ui-toolkit (1.3.1795+16.04.20160106-0ubuntu1) xenial; urgency=medium
   * Use original Image.source in image extension when no scaling is needed in
     order to keep the formatting which would be otherwise removed from a
     resolved file URL. Fixes LP: #1401920
-  * Move UbuntuListView 1.3 code into one single file. Fixes LP: #1523815
+  * Move LomiriListView 1.3 code into one single file. Fixes LP: #1523815
 
   [ Albert Astals Cid ]
   * Add UCTestExtras::removeTimeConstraintsFromSwipeArea
-    For that needed to move ucswipearea.cpp from UbuntuComponents to
-    UbuntuGestures but made it in a private header so we don't have to care much
+    For that needed to move ucswipearea.cpp from LomiriComponents to
+    LomiriGestures but made it in a private header so we don't have to care much
     for the API/ABI stability for now.
 
   [ Andrea Bernabei ]
@@ -1137,14 +1137,14 @@ ubuntu-ui-toolkit (1.3.1795+16.04.20160106-0ubuntu1) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Wed, 06 Jan 2016 04:27:02 +0000
 
-ubuntu-ui-toolkit (1.3.1778+16.04.20151221-0ubuntu1) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1778+16.04.20151221-0lomiri1) xenial; urgency=medium
 
   [ Tim Peeters ]
   * Fix issue with trigger() for ListItems.Standard. (LP: #1527811)
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Mon, 21 Dec 2015 21:09:04 +0000
 
-ubuntu-ui-toolkit (1.3.1778+16.04.20151217.1-0ubuntu1) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1778+16.04.20151217.1-0lomiri1) xenial; urgency=medium
 
   [ Andrea Bernabei ]
   * Rework Scrollbars and add ScrollView component.
@@ -1192,7 +1192,7 @@ ubuntu-ui-toolkit (1.3.1778+16.04.20151217.1-0ubuntu1) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Thu, 17 Dec 2015 17:13:56 +0000
 
-ubuntu-ui-toolkit (1.3.1761+16.04.20151216.1-0ubuntu1) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1761+16.04.20151216.1-0lomiri1) xenial; urgency=medium
 
   [ Zoltán Balogh ]
   * Drop dependency on qtc plugin script and wait for the shell with a local
@@ -1214,7 +1214,7 @@ ubuntu-ui-toolkit (1.3.1761+16.04.20151216.1-0ubuntu1) xenial; urgency=medium
     when the model of Sections is changed. Fixes: LP: #1513933.
 
   [ Loïc Molinari ]
-  * UbuntuShape - Cleaned up includes.
+  * LomiriShape - Cleaned up includes.
 
   [ Albert Astals Cid ]
   * Simplify logic for emitting draggingChanged/pressedChanged
@@ -1245,7 +1245,7 @@ ubuntu-ui-toolkit (1.3.1761+16.04.20151216.1-0ubuntu1) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Wed, 16 Dec 2015 10:01:47 +0000
 
-ubuntu-ui-toolkit (1.3.1742+16.04.20151209-0ubuntu1) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1742+16.04.20151209-0lomiri1) xenial; urgency=medium
 
   [ Zoltán Balogh ]
   * Enable building the UITK tests in any case.
@@ -1288,7 +1288,7 @@ ubuntu-ui-toolkit (1.3.1742+16.04.20151209-0ubuntu1) xenial; urgency=medium
   * Move MathUtils to Cpp.
 
   [ Loïc Molinari ]
-  * UbuntuShape - Fixed deprecation logging issues.
+  * LomiriShape - Fixed deprecation logging issues.
   * This fix prevents logging a deprecation warning for "image", "color" and
     "gradientColor" properties when the import version is less than 1.3. The
     logging of properties used internally (through the old image wrapper) have
@@ -1333,7 +1333,7 @@ ubuntu-ui-toolkit (1.3.1742+16.04.20151209-0ubuntu1) xenial; urgency=medium
   * Only select visible header label instance in checkPageHeader().
 
   [ Florian Boucault ]
-  * DraggingArea: import Ubuntu.Components so that MathUtils is available and
+  * DraggingArea: import Lomiri.Components so that MathUtils is available and
     no warning is output.
 
   [ Brendan Donegan ]
@@ -1359,7 +1359,7 @@ ubuntu-ui-toolkit (1.3.1742+16.04.20151209-0ubuntu1) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Wed, 09 Dec 2015 14:44:07 +0000
 
-ubuntu-ui-toolkit (1.3.1705+16.04.20151120.1-0ubuntu2) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1705+16.04.20151120.1-0lomiri2) xenial; urgency=medium
 
   * Rebuild against Qt 5.5.1.
   * Cherry-pick required patches from staging branch:
@@ -1367,9 +1367,9 @@ ubuntu-ui-toolkit (1.3.1705+16.04.20151120.1-0ubuntu2) xenial; urgency=medium
     - hack-qt55-int.patch (LP: #1484004)
     - workaround_emit.patch (LP: #1507910)
 
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 20 Nov 2015 15:16:08 +0200
+ -- Timo Jyrinki <timo-jyrinki@lomiri.com>  Fri, 20 Nov 2015 15:16:08 +0200
 
-ubuntu-ui-toolkit (1.3.1705+16.04.20151120.1-0ubuntu1) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1705+16.04.20151120.1-0lomiri1) xenial; urgency=medium
 
   [ Timo Jyrinki ]
   * Update toolkit and gallery po templates and fixes LP: #1517829 (LP:
@@ -1381,14 +1381,14 @@ ubuntu-ui-toolkit (1.3.1705+16.04.20151120.1-0ubuntu1) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Fri, 20 Nov 2015 10:39:29 +0000
 
-ubuntu-ui-toolkit (1.3.1705+16.04.20151118-0ubuntu1) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1705+16.04.20151118-0lomiri1) xenial; urgency=medium
 
   [ Zoltán Balogh ]
   * Update toolkit and gallery po templates
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Wed, 18 Nov 2015 06:13:32 +0000
 
-ubuntu-ui-toolkit (1.3.1705+16.04.20151103-0ubuntu1) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1705+16.04.20151103-0lomiri1) xenial; urgency=medium
 
   [ Zsombor Egri ]
   * Fix Sections sync with PageHeadSections selectedIndex changes. (LP:
@@ -1396,7 +1396,7 @@ ubuntu-ui-toolkit (1.3.1705+16.04.20151103-0ubuntu1) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Tue, 03 Nov 2015 11:16:12 +0000
 
-ubuntu-ui-toolkit (1.3.1705+16.04.20151031-0ubuntu1) xenial; urgency=medium
+lomiri-ui-toolkit (1.3.1705+16.04.20151031-0lomiri1) xenial; urgency=medium
 
   [ CI Train Bot ]
   * Resync trunk. added: po/vi.po
@@ -1410,7 +1410,7 @@ ubuntu-ui-toolkit (1.3.1705+16.04.20151031-0ubuntu1) xenial; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Sat, 31 Oct 2015 04:59:31 +0000
 
-ubuntu-ui-toolkit (1.3.1688+15.10.20151018.1-0ubuntu1) wily; urgency=medium
+lomiri-ui-toolkit (1.3.1688+15.10.20151018.1-0lomiri1) wily; urgency=medium
 
   [ Tim Peeters ]
   * Add delegate property to ActionBar.
@@ -1451,14 +1451,14 @@ ubuntu-ui-toolkit (1.3.1688+15.10.20151018.1-0ubuntu1) wily; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Sun, 18 Oct 2015 03:47:27 +0000
 
-ubuntu-ui-toolkit (1.3.1676+15.10.20151008-0ubuntu1) wily; urgency=medium
+lomiri-ui-toolkit (1.3.1676+15.10.20151008-0lomiri1) wily; urgency=medium
 
   [ Zsombor Egri ]
   * Fix corner case on Label having styled item. (LP: #1503901)
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Thu, 08 Oct 2015 10:57:10 +0000
 
-ubuntu-ui-toolkit (1.3.1676+15.10.20151006.2-0ubuntu1) wily; urgency=medium
+lomiri-ui-toolkit (1.3.1676+15.10.20151006.2-0lomiri1) wily; urgency=medium
 
   [ Zsombor Egri ]
   * StyledItem does no longer fall back to 1.2 style loading on mixed import
@@ -1474,7 +1474,7 @@ ubuntu-ui-toolkit (1.3.1676+15.10.20151006.2-0ubuntu1) wily; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Tue, 06 Oct 2015 09:11:40 +0000
 
-ubuntu-ui-toolkit (1.3.1672+15.10.20151002.1-0ubuntu1) wily; urgency=medium
+lomiri-ui-toolkit (1.3.1672+15.10.20151002.1-0lomiri1) wily; urgency=medium
 
   [ Tim Peeters ]
   * Use the new cpp Header in the internal AppHeader.
@@ -1497,21 +1497,21 @@ ubuntu-ui-toolkit (1.3.1672+15.10.20151002.1-0ubuntu1) wily; urgency=medium
 
   [ Christian Dywan ]
   * Remove ' from ActionList - no separator here.
-  * Accomodate gallery for moving to UbuntuListView and ListItem.
+  * Accomodate gallery for moving to LomiriListView and ListItem.
 
   [ Albert Astals Cid ]
   * Enable Efficient String Construction by default See
     http://blog.qt.io/blog/2011/06/13/string-concatenation-with-qstringbuilder/
 
   [ Loïc Molinari ]
-  * [UbuntuShape] Workaround Adreno 320's shader compiler bug.
+  * [LomiriShape] Workaround Adreno 320's shader compiler bug.
 
   [ CI Train Bot ]
   * No-change rebuild.
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Fri, 02 Oct 2015 16:32:27 +0000
 
-ubuntu-ui-toolkit (1.3.1658+15.10.20151001-0ubuntu1) wily; urgency=medium
+lomiri-ui-toolkit (1.3.1658+15.10.20151001-0lomiri1) wily; urgency=medium
 
   [ Zsombor Egri ]
   * Boosting ListItem performance by removing the workaround brought in for 1.3
@@ -1544,9 +1544,9 @@ ubuntu-ui-toolkit (1.3.1658+15.10.20151001-0ubuntu1) wily; urgency=medium
   * Don't fail if AppHeader doesn't have a useDeprecatedToolbar property
 
   [ Loïc Molinari  ]
-  * [UbuntuShape] Added mipmap based anti-aliasing fallback
+  * [LomiriShape] Added mipmap based anti-aliasing fallback
     Some OpenGL implementations not supporting standard derivatives (like the
-    Ubuntu Touch emulator) need a fallback solution. This change implements
+    Lomiri Touch emulator) need a fallback solution. This change implements
     that using mipmaps. It also implied a change in the way y coordinates are
     computed allowing to make the distance fields version perfectly anti-aliased
     under any rotation. Fixes LP: #1480199, LP: #1494272.
@@ -1556,11 +1556,11 @@ ubuntu-ui-toolkit (1.3.1658+15.10.20151001-0ubuntu1) wily; urgency=medium
 
   [ CI Train Bot ]
   * New rebuild forced.
-  * Resync trunk. added: examples/ubuntu-ui-toolkit-gallery/po/pt.po
+  * Resync trunk. added: examples/lomiri-ui-toolkit-gallery/po/pt.po
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Thu, 01 Oct 2015 19:52:41 +0000
 
-ubuntu-ui-toolkit (1.3.1641+15.10.20150922-0ubuntu1) wily; urgency=medium
+lomiri-ui-toolkit (1.3.1641+15.10.20150922-0lomiri1) wily; urgency=medium
 
   [ Zsombor Egri ]
   * ActionItem visible and enabled internal bindings not broken when the
@@ -1573,7 +1573,7 @@ ubuntu-ui-toolkit (1.3.1641+15.10.20150922-0ubuntu1) wily; urgency=medium
   * Use new launcher path in gallery script and .bzrignore.
   * FragmentShader of Icon shouldn't activate when unwanted.
   * Unit test that popovers block mouse clicks. Fixes LP: #1488540
-  * Install ubuntu-ui-toolkit-launcher under /usr/bin.
+  * Install lomiri-ui-toolkit-launcher under /usr/bin.
   * Register UCApplication and UCFontsUtils so they appear in .api.
   * Cope with different AbstractButton class name in 1.3.
   * Implement click_action_button in ActionSelectionPopover CPO.
@@ -1599,7 +1599,7 @@ ubuntu-ui-toolkit (1.3.1641+15.10.20150922-0ubuntu1) wily; urgency=medium
 
  -- Timo Jyrinki <timo.jyrinki@canonical.com>  Tue, 22 Sep 2015 01:28:56 +0000
 
-ubuntu-ui-toolkit (1.3.1627+15.10.20150908-0ubuntu1) wily; urgency=medium
+lomiri-ui-toolkit (1.3.1627+15.10.20150908-0lomiri1) wily; urgency=medium
 
   [ Zsombor Egri ]
   * Implement list item expansion.
@@ -1626,7 +1626,7 @@ ubuntu-ui-toolkit (1.3.1627+15.10.20150908-0ubuntu1) wily; urgency=medium
   * Include change signals with arguments in .api.
   * A public QML type with no version is an error. Rather than silently breaking
     as QML does normally at least apicheck can make this fatal.
-  * UbuntuShape shouldn't emit redundant deprecation warnings. Fixes LP: #1481791
+  * LomiriShape shouldn't emit redundant deprecation warnings. Fixes LP: #1481791
   * Update .bzrignore to new upstream style layout. Fixes LP: #1433308
   * Revert unnecessary change of Popover minimumWidth. Fixes LP: #1483708
 
@@ -1638,7 +1638,7 @@ ubuntu-ui-toolkit (1.3.1627+15.10.20150908-0ubuntu1) wily; urgency=medium
     Fixes LP: #1485674
 
   [ Albert Astals Cid ]
-  * Properly free shapeTextures[index] The old code assumes that the UbuntuShape
+  * Properly free shapeTextures[index] The old code assumes that the LomiriShape
     will still be around when the opengl context is destroyed, but that seldom
     happens so connect the signal to a lambda that will be there and does the
     cleanup properly. Without this patch testDirectionalDragArea from unity8 was
@@ -1660,7 +1660,7 @@ ubuntu-ui-toolkit (1.3.1627+15.10.20150908-0ubuntu1) wily; urgency=medium
 
  -- Zoltan Balogh <zoltan.balogh@canonical.com>  Tue, 08 Sep 2015 04:10:50 +0000
 
-ubuntu-ui-toolkit (1.3.1603+15.10.20150824.1-0ubuntu1) wily; urgency=medium
+lomiri-ui-toolkit (1.3.1603+15.10.20150824.1-0lomiri1) wily; urgency=medium
 
   [ CI Train Bot ]
   * Resync trunk. added: po/eo.po
@@ -1670,7 +1670,7 @@ ubuntu-ui-toolkit (1.3.1603+15.10.20150824.1-0ubuntu1) wily; urgency=medium
 
  -- CI Train Bot <ci-train-bot@canonical.com>  Mon, 24 Aug 2015 20:49:45 +0000
 
-ubuntu-ui-toolkit (1.3.1603+15.10.20150819.2-0ubuntu1) wily; urgency=medium
+lomiri-ui-toolkit (1.3.1603+15.10.20150819.2-0lomiri1) wily; urgency=medium
 
   [ CI Train Bot ]
   * Resync trunk.
@@ -1681,7 +1681,7 @@ ubuntu-ui-toolkit (1.3.1603+15.10.20150819.2-0ubuntu1) wily; urgency=medium
 
  -- CI Train Bot <ci-train-bot@canonical.com>  Wed, 19 Aug 2015 19:49:50 +0000
 
-ubuntu-ui-toolkit (1.3.1603+15.10.20150812-0ubuntu1) wily; urgency=medium
+lomiri-ui-toolkit (1.3.1603+15.10.20150812-0lomiri1) wily; urgency=medium
 
   [ Tim Peeters ]
   * Use grid units in Icons in the showcase gallery. Fixes LP: #1481489
@@ -1697,9 +1697,9 @@ ubuntu-ui-toolkit (1.3.1603+15.10.20150812-0ubuntu1) wily; urgency=medium
   * Fix packaging question marks / issues. Fixes LP: #1481584
 
   [ Loïc Molinari ]
-  * UbuntuShape - Added support drop shadow aspect support to UbuntuShapeOverlay
+  * LomiriShape - Added support drop shadow aspect support to LomiriShapeOverlay
     Fixes LP: #1480197.
-  * UbuntuShape - Removed content orientation work around.
+  * LomiriShape - Removed content orientation work around.
     The shape was using a workaround to make it render correctly when the
     content orientation was not the native one. This was perfect for the
     OrientationHelper shipped with the toolkit but now that the Shell
@@ -1707,9 +1707,9 @@ ubuntu-ui-toolkit (1.3.1603+15.10.20150812-0ubuntu1) wily; urgency=medium
     rendering issues. Note that the shape will still needs to support
     correct rendering when rotated using the rotation property of the Item,
     but that is a different issue. Fixes LP: #1466656.
-  * UbuntuShape - Added a DropShadow aspect. Fixes LP: #1478129.
+  * LomiriShape - Added a DropShadow aspect. Fixes LP: #1478129.
   * Renamed ShellIcon to ProportionalShape.
-  * UbuntuShape - Added an ShellIcon item. Fixes LP: #1478130
+  * LomiriShape - Added an ShellIcon item. Fixes LP: #1478130
 
   [ Nick Dedekind ]
   * Added LiveTimer.
@@ -1719,7 +1719,7 @@ ubuntu-ui-toolkit (1.3.1603+15.10.20150812-0ubuntu1) wily; urgency=medium
   * Set Qt.IBeamCursor on text component MouseArea's. Fixes LP: #1483823
   * Make automaticOrientation on MainView a no-op. Fixes LP: #1470258
   * Fix warnings on undefine theme.name in gallery
-    examples/ubuntu-ui-toolkit-gallery/ubuntu-ui-toolkit-gallery.qml:48:
+    examples/lomiri-ui-toolkit-gallery/lomiri-ui-toolkit-gallery.qml:48:
       TypeError: Cannot read property of null.
 
   [ Ken VanDine ]
@@ -1727,20 +1727,20 @@ ubuntu-ui-toolkit (1.3.1603+15.10.20150812-0ubuntu1) wily; urgency=medium
     Fixes LP: #1451243
 
   [ CI Train Bot ]
-  * Resync trunk. added: examples/ubuntu-ui-toolkit-gallery/po/uk.po
+  * Resync trunk. added: examples/lomiri-ui-toolkit-gallery/po/uk.po
 
  -- CI Train Bot <ci-train-bot@canonical.com>  Wed, 12 Aug 2015 17:31:20 +0000
 
-ubuntu-ui-toolkit (1.3.1584+15.10.20150730-0ubuntu1) wily; urgency=medium
+lomiri-ui-toolkit (1.3.1584+15.10.20150730-0lomiri1) wily; urgency=medium
 
   [ Florian Boucault ]
   * New BottomEdgeHint component to represent extra features available from the
     bottom edge of an application.
 
   [ Loïc Molinari ]
-  * [UbuntuShape] Added a big radius.
-  * [UbuntuShape] Added relative radius support. Fixes LP: #1478124.
-  * Ensured components, styles, examples and tests use the new UbuntuShape
+  * [LomiriShape] Added a big radius.
+  * [LomiriShape] Added relative radius support. Fixes LP: #1478124.
+  * Ensured components, styles, examples and tests use the new LomiriShape
     properties (not deprecated). Fixes LP: #1437412.
 
   [ Benjamin Zeller ]
@@ -1797,14 +1797,14 @@ ubuntu-ui-toolkit (1.3.1584+15.10.20150730-0ubuntu1) wily; urgency=medium
 
  -- CI Train Bot <ci-train-bot@canonical.com>  Thu, 30 Jul 2015 13:04:18 +0000
 
-ubuntu-ui-toolkit (1.3.1549+15.10.20150710.1-0ubuntu1) wily; urgency=medium
+lomiri-ui-toolkit (1.3.1549+15.10.20150710.1-0lomiri1) wily; urgency=medium
 
   [ Timo Jyrinki ]
   * arch specific deps (LP: #1473035) (LP: #1473035)
 
  -- CI Train Bot <ci-train-bot@canonical.com>  Fri, 10 Jul 2015 06:31:57 +0000
 
-ubuntu-ui-toolkit (1.3.1549+15.10.20150706-0ubuntu1) wily; urgency=medium
+lomiri-ui-toolkit (1.3.1549+15.10.20150706-0lomiri1) wily; urgency=medium
 
   [ Tim Peeters ]
   * Disable header animations to avoid bugs when popping a PageStack in a loop.
@@ -1830,7 +1830,7 @@ ubuntu-ui-toolkit (1.3.1549+15.10.20150706-0ubuntu1) wily; urgency=medium
   * QQmlContextData.url is a method in 5.5.0. Fixes LP: #1461897.
   * OrientationHelper shouldn't move depending on availableHeight. The
     parentChanged/availableHeight change in OrientationHelper is the bug fix
-    itself. The new property UbuntuApplication.inputMethod defaults to
+    itself. The new property LomiriApplication.inputMethod defaults to
     Qt.inputMethod and the unit test overrides it to reproduce the bug (fix)
     regardless of device and input method setup - the mock keyboard is NOT
     expected to be fully functional, buttons are but a placeholder irrelevant
@@ -1849,7 +1849,7 @@ ubuntu-ui-toolkit (1.3.1549+15.10.20150706-0ubuntu1) wily; urgency=medium
 
  -- CI Train Bot <ci-train-bot@canonical.com>  Mon, 06 Jul 2015 18:24:30 +0000
 
-ubuntu-ui-toolkit (1.3.1534+15.10.20150625-0ubuntu1) wily; urgency=medium
+lomiri-ui-toolkit (1.3.1534+15.10.20150625-0lomiri1) wily; urgency=medium
 
   [ Christian Dywan ]
   * Use TextField.write rather than keyboard.type.
@@ -1861,7 +1861,7 @@ ubuntu-ui-toolkit (1.3.1534+15.10.20150625-0ubuntu1) wily; urgency=medium
 
   [ Leonardo Arias Fonseca ]
   * Add url protocols to the fake application.
-  * Adds a dependency to url-dispatcher-tools in ubuntu-ui-toolkit-autopilot.
+  * Adds a dependency to url-dispatcher-tools in lomiri-ui-toolkit-autopilot.
   * Use the test launcher for all the toolkit autopilot tests.
 
   [ Zsombor Egri ]
@@ -1871,13 +1871,13 @@ ubuntu-ui-toolkit (1.3.1534+15.10.20150625-0ubuntu1) wily; urgency=medium
     Fixes LP: #1458845.
 
   [ Loïc Molinari ]
-  * [UbuntuShape] Computed dfdt factors based on window content orientation.
+  * [LomiriShape] Computed dfdt factors based on window content orientation.
   * Previous logic was based on screen orientation which is not in sync with
     OrientationHelper.qml. Fixes LP: #1455567.
 
   [ Timo Jyrinki ]
   * Change -html documentation runtime dependencies into Suggests only to limit
-    ubuntu-sdk download size. We're switching to offering only .qch offline
+    lomiri-sdk download size. We're switching to offering only .qch offline
     documentation in SDK (inside of it), and they're being added to the seed.
     Fixes LP: #1461034.
   * Licensecheck started complaining about a person name, change to Canonical.
@@ -1891,15 +1891,15 @@ ubuntu-ui-toolkit (1.3.1534+15.10.20150625-0ubuntu1) wily; urgency=medium
 
  -- CI Train Bot <ci-train-bot@canonical.com>  Thu, 25 Jun 2015 04:37:52 +0000
 
-ubuntu-ui-toolkit (1.3.1517+15.10.20150523-0ubuntu3) wily; urgency=medium
+lomiri-ui-toolkit (1.3.1517+15.10.20150523-0lomiri3) wily; urgency=medium
 
   * Rebuild against Qt 5.4.2
   * debian/patches/fix_copyright.patch:
     - licensecheck started complaining about a person name, change to Canonical
 
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 12 Jun 2015 07:48:37 +0000
+ -- Timo Jyrinki <timo-jyrinki@lomiri.com>  Fri, 12 Jun 2015 07:48:37 +0000
 
-ubuntu-ui-toolkit (1.3.1517+15.10.20150523-0ubuntu1) wily; urgency=medium
+lomiri-ui-toolkit (1.3.1517+15.10.20150523-0lomiri1) wily; urgency=medium
 
   [ Christian Dywan ]
   * Expose textDocument of TextField. Fixes LP: #1392276
@@ -1918,7 +1918,7 @@ ubuntu-ui-toolkit (1.3.1517+15.10.20150523-0ubuntu1) wily; urgency=medium
 
  -- CI Train Bot <ci-train-bot@canonical.com>  Sat, 23 May 2015 17:24:43 +0000
 
-ubuntu-ui-toolkit (1.3.1510+15.10.20150519-0ubuntu1) wily; urgency=medium
+lomiri-ui-toolkit (1.3.1510+15.10.20150519-0lomiri1) wily; urgency=medium
 
   [ Loïc Molinari ]
   * Set QSGNode debug description on the shape-based nodes to ease renderer
@@ -1940,7 +1940,7 @@ ubuntu-ui-toolkit (1.3.1510+15.10.20150519-0ubuntu1) wily; urgency=medium
     version as the toolkit. Fixes LP: #1447113
   * Fix import versions in entire UITK and examples. Move example code under
     1.3 folder. Fixes LP: #1447113
-  * Separate 1.2 from 1.3 versions in all Ubuntu.Component modules.
+  * Separate 1.2 from 1.3 versions in all Lomiri.Component modules.
     Fixes LP: #1447113
 
   [ Zoltan Balogh ]
@@ -1957,7 +1957,7 @@ ubuntu-ui-toolkit (1.3.1510+15.10.20150519-0ubuntu1) wily; urgency=medium
 
  -- CI Train Bot <ci-train-bot@canonical.com>  Tue, 19 May 2015 10:47:09 +0000
 
-ubuntu-ui-toolkit (1.2.1485+15.04.20150421-0ubuntu1) vivid; urgency=medium
+lomiri-ui-toolkit (1.2.1485+15.04.20150421-0lomiri1) vivid; urgency=medium
 
   [ Christian Dywan ]
   * Christian Dywan's change: Ship generated HTML and JSON docs for
@@ -1977,7 +1977,7 @@ ubuntu-ui-toolkit (1.2.1485+15.04.20150421-0ubuntu1) vivid; urgency=medium
 
  -- CI Train Bot <ci-train-bot@canonical.com>  Tue, 21 Apr 2015 16:31:51 +0000
 
-ubuntu-ui-toolkit (1.2.1485+15.04.20150417.1-0ubuntu1) vivid; urgency=medium
+lomiri-ui-toolkit (1.2.1485+15.04.20150417.1-0lomiri1) vivid; urgency=medium
 
   [ Christian Dywan]
   * Use activeFocus rather than focus to determine that Text* has focus.
@@ -1995,7 +1995,7 @@ ubuntu-ui-toolkit (1.2.1485+15.04.20150417.1-0ubuntu1) vivid; urgency=medium
   * Fixed build.
   * Synchronized license checking script with PBuilder Jenkins.
     Fixes  LP: #1441580.
-  * [UbuntuShape] Added support for resolution independent rendering.
+  * [LomiriShape] Added support for resolution independent rendering.
     Fixes  LP: #1427253.
   * Updated unknown Makefiles in .bzrignore.
 
@@ -2008,7 +2008,7 @@ ubuntu-ui-toolkit (1.2.1485+15.04.20150417.1-0ubuntu1) vivid; urgency=medium
     Fixes  LP: #1434537.
 
   [ Tim Peeters ]
-  * Add UbuntuTestCase.waitForHeaderAnimation().
+  * Add LomiriTestCase.waitForHeaderAnimation().
   * Add visible and locked properties to Page.head.
     Fixes LP: #1402054, LP: #1424592.
   * Create Page 1.3.
@@ -2033,15 +2033,15 @@ ubuntu-ui-toolkit (1.2.1485+15.04.20150417.1-0ubuntu1) vivid; urgency=medium
 
  -- CI Train Bot <ci-train-bot@canonical.com>  Fri, 17 Apr 2015 16:22:53 +0000
 
-ubuntu-ui-toolkit (1.2.1458+15.04.20150422-0ubuntu1) vivid; urgency=medium
+lomiri-ui-toolkit (1.2.1458+15.04.20150422-0lomiri1) vivid; urgency=medium
 
   [ Christian Dywan ]
   * Ship generated HTML and JSON docs for Autopilot helpers, and drop
     python-autopilot build dependency which is in universe.
 
- -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 22 Apr 2015 09:57:40 +0100
+ -- Martin Pitt <martin.pitt@lomiri.com>  Wed, 22 Apr 2015 09:57:40 +0100
 
-ubuntu-ui-toolkit (1.2.1458+15.04.20150327-0ubuntu1) vivid; urgency=medium
+lomiri-ui-toolkit (1.2.1458+15.04.20150327-0lomiri1) vivid; urgency=medium
 
   [ By Tim Peeters ]
   * Remove the deprecated toolbar example from the gallery.
@@ -2071,7 +2071,7 @@ ubuntu-ui-toolkit (1.2.1458+15.04.20150327-0ubuntu1) vivid; urgency=medium
 
  -- CI Train Bot <ci-train-bot@canonical.com>  Fri, 27 Mar 2015 12:35:55 +0000
 
-ubuntu-ui-toolkit (1.2.1450+15.04.20150318-0ubuntu1) vivid; urgency=medium
+lomiri-ui-toolkit (1.2.1450+15.04.20150318-0lomiri1) vivid; urgency=medium
 
   [ Timo Jyrinki ]
   * Clean QML cache after updating package, before reboot. LP: #1431228
@@ -2094,15 +2094,15 @@ ubuntu-ui-toolkit (1.2.1450+15.04.20150318-0ubuntu1) vivid; urgency=medium
 
   [ Loïc Molinari ]
   * Optimized Slider and ProgressBar components. Switched to the native
-    UbuntuShapeOverlay instead of PartialColorizeUbuntuShape to render
+    LomiriShapeOverlay instead of PartialColorizeLomiriShape to render
     the progression in the Slider and ProgressBar components. The
     rendering is now faster since it removes an FBO indirection and
     enables batching by the QtQtuick renderer.
     Fixes LP: #1398370, LP: #1427169
-  * Added a dedicated overlay shape. Made use of the new UbuntuShape
+  * Added a dedicated overlay shape. Made use of the new LomiriShape
     architecture to create an extended shape with efficient overlay
     rendering. Fixes LP: #1396170
-  * Removed misleading statement from UbuntuShape documentation.
+  * Removed misleading statement from LomiriShape documentation.
     Fixes LP: #1430198
   * Renamed the overlayGeometry property to overlayRect. The
     overlayGeometry being of type QRect, using overlayRect instead
@@ -2115,11 +2115,11 @@ ubuntu-ui-toolkit (1.2.1450+15.04.20150318-0ubuntu1) vivid; urgency=medium
   * Fixed embedded QML code snippets indentation. Fixes LP: #1430274
 
   [ Florian Boucault ]
-  * CheckBox: apply clipping to the Ubuntu shape and not to the CheckBox
+  * CheckBox: apply clipping to the Lomiri shape and not to the CheckBox
     itself so that the tick never overflows. Fixes LP: #1430191
 
   [ Daniel Holbach ]
-  * A number of links changed on design.ubuntu.com - let's make sure
+  * A number of links changed on design.lomiri.com - let's make sure
     they're fixed in our docs. Fixes LP: #1428051
 
   [ CI Train Bot ]
@@ -2127,13 +2127,13 @@ ubuntu-ui-toolkit (1.2.1450+15.04.20150318-0ubuntu1) vivid; urgency=medium
 
  -- CI Train Bot <ci-train-bot@canonical.com>  Wed, 18 Mar 2015 12:23:35 +0000
 
-ubuntu-ui-toolkit (1.2.1433+15.04.20150306-0ubuntu2) vivid; urgency=medium
+lomiri-ui-toolkit (1.2.1433+15.04.20150306-0lomiri2) vivid; urgency=medium
 
   * No-change rebuild against Qt 5.4.1.
 
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Wed, 11 Mar 2015 09:01:34 +0200
+ -- Timo Jyrinki <timo-jyrinki@lomiri.com>  Wed, 11 Mar 2015 09:01:34 +0200
 
-ubuntu-ui-toolkit (1.2.1433+15.04.20150306-0ubuntu1) vivid; urgency=medium
+lomiri-ui-toolkit (1.2.1433+15.04.20150306-0lomiri1) vivid; urgency=medium
 
   [ Albert Astals Cid ]
   * Fix infinite icon size grow when asked for a non square icon
@@ -2198,8 +2198,8 @@ ubuntu-ui-toolkit (1.2.1433+15.04.20150306-0ubuntu1) vivid; urgency=medium
     holding two Layouts pre-configurable for fixed or rest of content
     filling behavior.
   [ Loïc Molinari ]
-  * Refactored UbuntuShape base component.
-    The UbuntuShape needed a rework in order to propose more features
+  * Refactored LomiriShape base component.
+    The LomiriShape needed a rework in order to propose more features
     while keeping efficiency high and maintenance easy.
     Fixes LP: #1396098, LP: #1396101, LP: #1396104, LP: #1396113,
     LP: #1396114, LP: #1396119, LP: #1396124, LP: #1396162,
@@ -2207,13 +2207,13 @@ ubuntu-ui-toolkit (1.2.1433+15.04.20150306-0ubuntu1) vivid; urgency=medium
 
  -- CI Train Bot <ci-train-bot@canonical.com>  Fri, 06 Mar 2015 08:23:35 +0000
 
-ubuntu-ui-toolkit (1.1.1403+15.04.20150206-0ubuntu2) vivid; urgency=medium
+lomiri-ui-toolkit (1.1.1403+15.04.20150206-0lomiri2) vivid; urgency=medium
 
   * No-change rebuild against Qt 5.4.0.
 
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Mon, 09 Feb 2015 10:47:17 +0200
+ -- Timo Jyrinki <timo-jyrinki@lomiri.com>  Mon, 09 Feb 2015 10:47:17 +0200
 
-ubuntu-ui-toolkit (1.1.1403+15.04.20150206-0ubuntu1) vivid; urgency=medium
+lomiri-ui-toolkit (1.1.1403+15.04.20150206-0lomiri1) vivid; urgency=medium
 
   [ Albert Astals Cid ]
   * Adapt to behaviour change in handling of QVariants from QML to
@@ -2237,7 +2237,7 @@ ubuntu-ui-toolkit (1.1.1403+15.04.20150206-0ubuntu1) vivid; urgency=medium
 
   [ Benjamin Zeller ]
   * Fix scripts to work in shadowbuild mode.
-  * Shadowbuild support for ubuntu-ui-toolkit.
+  * Shadowbuild support for lomiri-ui-toolkit.
 
   [ Christian Dywan ]
   * Abort export_modules_dir.sh and ergo run_tests.sh if binaries are
@@ -2313,9 +2313,9 @@ ubuntu-ui-toolkit (1.1.1403+15.04.20150206-0ubuntu1) vivid; urgency=medium
     the same ListItemActions instance can be used on both leading and
     trailing side. Fixes LP: #1403005.
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 06 Feb 2015 11:33:33 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 06 Feb 2015 11:33:33 +0000
 
-ubuntu-ui-toolkit (1.1.1376+15.04.20150111-0ubuntu1) vivid; urgency=medium
+lomiri-ui-toolkit (1.1.1376+15.04.20150111-0lomiri1) vivid; urgency=medium
 
   [ Tim Peeters ]
   * Add a preview of the new list items to the UITK component gallery.
@@ -2334,12 +2334,12 @@ ubuntu-ui-toolkit (1.1.1376+15.04.20150111-0ubuntu1) vivid; urgency=medium
     This way we ensure that the contents are correctly hidden, focused and
     removed, without destroying them. Fixes LP: #1341814 LP: #1400297
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Sun, 11 Jan 2015 18:57:02 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Sun, 11 Jan 2015 18:57:02 +0000
 
-ubuntu-ui-toolkit (1.1.1370+15.04.20141217-0ubuntu1) vivid; urgency=medium
+lomiri-ui-toolkit (1.1.1370+15.04.20141217-0lomiri1) vivid; urgency=medium
 
   [ Zoltán Balogh ]
-  * fixing gles dependency for ubuntu-ui-toolkit-autopilot, so we can
+  * fixing gles dependency for lomiri-ui-toolkit-autopilot, so we can
      have functional tests on x86 emulator
 
   [ Christian Dywan ]
@@ -2361,12 +2361,12 @@ ubuntu-ui-toolkit (1.1.1370+15.04.20141217-0ubuntu1) vivid; urgency=medium
   * Resync trunk
   * Resync trunk
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * New rebuild forced
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 17 Dec 2014 09:52:55 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 17 Dec 2014 09:52:55 +0000
 
-ubuntu-ui-toolkit (1.1.1364+15.04.20141209-0ubuntu1) vivid; urgency=medium
+lomiri-ui-toolkit (1.1.1364+15.04.20141209-0lomiri1) vivid; urgency=medium
 
   [ Zsombor Egri ]
   * Theming fixes: application theming, binding loop fix, auto-theming
@@ -2374,10 +2374,10 @@ ubuntu-ui-toolkit (1.1.1364+15.04.20141209-0ubuntu1) vivid; urgency=medium
     SuruDark, SuruGradient is no longer auto-themed.
     Fixes: LP: #1213043, LP: #1277647, LP: #1330510, LP: #1356779,
            LP: #1389792.
-  * ServiceProperties component to Ubuntu.Components 1.1.
+  * ServiceProperties component to Lomiri.Components 1.1.
     Fixes: LP: #1391877.
   * New ListItem component base. Support for leading/trailing actions.
-    Exported in Ubuntu.Components 1.2 UNSTABLE release.
+    Exported in Lomiri.Components 1.2 UNSTABLE release.
     Fixes: LP: #1097728, LP: #1372592, LP: #1383870.
   * removing failing ServiceProperties and app-theming branches
   * Application theming ant other theming related binding loop fixes
@@ -2412,15 +2412,15 @@ ubuntu-ui-toolkit (1.1.1364+15.04.20141209-0ubuntu1) vivid; urgency=medium
   [ Loïc Molinari ]
   * Made the UCAlarmPrivate destructor private.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * New rebuild forced
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 09 Dec 2014 11:47:33 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 09 Dec 2014 11:47:33 +0000
 
-ubuntu-ui-toolkit (1.1.1347+15.04.20141126-0ubuntu1) vivid; urgency=medium
+lomiri-ui-toolkit (1.1.1347+15.04.20141126-0lomiri1) vivid; urgency=medium
 
   [ Zsombor Egri ]
-  * Expose refresh() function in revision 1 (Ubuntu.Components 1.1).
+  * Expose refresh() function in revision 1 (Lomiri.Components 1.1).
     Fixes LP: #1380559
   * Alarm adaptation refactored to support change granular model
     updates. Fixes LP: #1322558, LP: #1360359, LP: #1370649,
@@ -2437,9 +2437,9 @@ ubuntu-ui-toolkit (1.1.1347+15.04.20141126-0ubuntu1) vivid; urgency=medium
     like "All" translated to two different strings in the translated
     language if different contexts are given. Fixes LP: #1394904
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 26 Nov 2014 08:33:25 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 26 Nov 2014 08:33:25 +0000
 
-ubuntu-ui-toolkit (1.1.1341+15.04.20141124-0ubuntu1) vivid; urgency=medium
+lomiri-ui-toolkit (1.1.1341+15.04.20141124-0lomiri1) vivid; urgency=medium
 
   [ Christian Dywan ]
   * Re-introduce NOTIFY to Image under a different name.
@@ -2453,17 +2453,17 @@ ubuntu-ui-toolkit (1.1.1341+15.04.20141124-0ubuntu1) vivid; urgency=medium
   [ Zoltán Balogh ]
   * Updated test plan executer script
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 24 Nov 2014 22:14:25 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 24 Nov 2014 22:14:25 +0000
 
-ubuntu-ui-toolkit (1.1.1338+15.04.20141121-0ubuntu1) vivid; urgency=medium
+lomiri-ui-toolkit (1.1.1338+15.04.20141121-0lomiri1) vivid; urgency=medium
 
   [ Loïc Molinari ]
-  * [UbuntuShape] Added detailed doc for borderSource. Fixes LP: #1354753
+  * [LomiriShape] Added detailed doc for borderSource. Fixes LP: #1354753
   * [Gallery] Fixed bad object naming. Fixes LP: #1240555
 
   [ Chris Gagnoni ]
   * fix compare string in
-    ubuntuuitoolkit.tests.gallery.test_textinput.DisabledTextInputTestCase.
+    lomiriuitoolkit.tests.gallery.test_textinput.DisabledTextInputTestCase.
     Fixes LP: #1388896
 
   [ Christian Dywan ]
@@ -2518,20 +2518,20 @@ ubuntu-ui-toolkit (1.1.1338+15.04.20141121-0ubuntu1) vivid; urgency=medium
   * Remove overloaded signal, we should use the default signals
     whenever we override a property. Fixes LP: #1194778.
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 21 Nov 2014 13:13:53 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 21 Nov 2014 13:13:53 +0000
 
-ubuntu-ui-toolkit (1.1.1311+15.04.20141111-0ubuntu1) vivid; urgency=low
+lomiri-ui-toolkit (1.1.1311+15.04.20141111-0lomiri1) vivid; urgency=low
 
   [ Zsombor Egri ]
   * Zsombor Egri's "Ignore QT_IM_MODULE values like ibus, none or
     compose." for Qt 5.3.2 specific fix.
 
   [ Christian Dywan ]
-  * Update po/ubuntu-ui-toolkit.pot
+  * Update po/lomiri-ui-toolkit.pot
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 11 Nov 2014 06:06:52 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 11 Nov 2014 06:06:52 +0000
 
-ubuntu-ui-toolkit (1.1.1311+15.04.20141102-0ubuntu1) vivid; urgency=medium
+lomiri-ui-toolkit (1.1.1311+15.04.20141102-0lomiri1) vivid; urgency=medium
 
   [ Zoltán Balogh ]
   [ Christian Dywan ]
@@ -2558,14 +2558,14 @@ ubuntu-ui-toolkit (1.1.1311+15.04.20141102-0ubuntu1) vivid; urgency=medium
     Fixes: LP: #1340227.
   * The autopilot helpers to swipe to show more now get the flickable
     containers by default. Fixes: LP: #1365674.
-  * Replaced the tabs for spaces in UbuntuTestCase.
+  * Replaced the tabs for spaces in LomiriTestCase.
    Fixes: LP: #1324469.
    Fixes: LP: #1324469.
 
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Sun, 02 Nov 2014 13:01:56 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Sun, 02 Nov 2014 13:01:56 +0000
 
-ubuntu-ui-toolkit (1.1.1298+15.04.20150209~rtm-0ubuntu1) 14.09; urgency=medium
+lomiri-ui-toolkit (1.1.1298+15.04.20150209~rtm-0lomiri1) 14.09; urgency=medium
 
   [ Zsombor Egri ]
   * isHapticsFeedbackEnabled context property exposed to drive
@@ -2574,28 +2574,28 @@ ubuntu-ui-toolkit (1.1.1298+15.04.20150209~rtm-0ubuntu1) 14.09; urgency=medium
     custom feedback functionaity controlled by system settings. (LP:
     #1391877)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 09 Feb 2015 13:10:45 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 09 Feb 2015 13:10:45 +0000
 
-ubuntu-ui-toolkit (1.1.1298+15.04.20150202~rtm-0ubuntu1) 14.09; urgency=medium
+lomiri-ui-toolkit (1.1.1298+15.04.20150202~rtm-0lomiri1) 14.09; urgency=medium
 
   [ Tim Peeters ]
   * Port "In Progress" translation fix from staging to rtm. (LP:
     #1391617, #1081607)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 02 Feb 2015 09:11:21 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 02 Feb 2015 09:11:21 +0000
 
-ubuntu-ui-toolkit (1.1.1298+15.04.20150116~rtm-0ubuntu1) 14.09; urgency=low
+lomiri-ui-toolkit (1.1.1298+15.04.20150116~rtm-0lomiri1) 14.09; urgency=low
 
   [ Florian Boucault ]
   * ActivityIndicator: make its animation rely solely on the rendering
     thread so that it does not stop spinning if the main thread is
     blocked. (LP: #1411376)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 16 Jan 2015 10:17:50 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 16 Jan 2015 10:17:50 +0000
 
-ubuntu-ui-toolkit (1.1.1298+15.04.20141111.2~rtm-0ubuntu1) 14.09; urgency=low
+lomiri-ui-toolkit (1.1.1298+15.04.20141111.2~rtm-0lomiri1) 14.09; urgency=low
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * New rebuild forced
 
   [ Florian Boucault ]
@@ -2603,11 +2603,11 @@ ubuntu-ui-toolkit (1.1.1298+15.04.20141111.2~rtm-0ubuntu1) 14.09; urgency=low
     making it more in line with the design:
 
   [ Christian Dywan ]
-  * Update po/ubuntu-ui-toolkit.pot
+  * Update po/lomiri-ui-toolkit.pot
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 11 Nov 2014 11:25:44 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 11 Nov 2014 11:25:44 +0000
 
-ubuntu-ui-toolkit (1.1.1298+15.04.20141107.2~rtm-0ubuntu1) 14.09; urgency=low
+lomiri-ui-toolkit (1.1.1298+15.04.20141107.2~rtm-0lomiri1) 14.09; urgency=low
 
   [ Florian Boucault ]
   * TextField: make sure that a long press always works even when the
@@ -2615,11 +2615,11 @@ ubuntu-ui-toolkit (1.1.1298+15.04.20141107.2~rtm-0ubuntu1) 14.09; urgency=low
     (LP: #1384403)
 
   [ Christian Dywan ]
-  * Update po/ubuntu-ui-toolkit.pot
+  * Update po/lomiri-ui-toolkit.pot
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 07 Nov 2014 12:35:11 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 07 Nov 2014 12:35:11 +0000
 
-ubuntu-ui-toolkit (1.1.1298+14.10.20141030~rtm-0ubuntu1) 14.09; urgency=low
+lomiri-ui-toolkit (1.1.1298+14.10.20141030~rtm-0lomiri1) 14.09; urgency=low
 
   [ CI bot ]
   * Resync trunk
@@ -2627,9 +2627,9 @@ ubuntu-ui-toolkit (1.1.1298+14.10.20141030~rtm-0ubuntu1) 14.09; urgency=low
   [ Timo Jyrinki ]
   * Modify test .desktop file (LP: #1382414) (LP: #1382414)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 30 Oct 2014 07:39:12 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 30 Oct 2014 07:39:12 +0000
 
-ubuntu-ui-toolkit (1.1.1298+14.10.20141016.1-0ubuntu1) 14.09; urgency=medium
+lomiri-ui-toolkit (1.1.1298+14.10.20141016.1-0lomiri1) 14.09; urgency=medium
 
   [ Jussi Pakkanen]
   * Remove the thumbnailer image provider here, because thumbnailer
@@ -2682,12 +2682,12 @@ ubuntu-ui-toolkit (1.1.1298+14.10.20141016.1-0ubuntu1) 14.09; urgency=medium
   * Don't allow inserting a line break into readOnly text areas.
     Fixes LP: #1334344
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * New rebuild forced
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 16 Oct 2014 13:01:01 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 16 Oct 2014 13:01:01 +0000
 
-ubuntu-ui-toolkit (1.1.1286+14.10.20141007-0ubuntu2) UNRELEASED; urgency=medium
+lomiri-ui-toolkit (1.1.1286+14.10.20141007-0lomiri2) UNRELEASED; urgency=medium
 
   [ Renato Filho ]
   * Save alarms in invalid time zone. Use invalid time zone to
@@ -2714,17 +2714,17 @@ ubuntu-ui-toolkit (1.1.1286+14.10.20141007-0ubuntu2) UNRELEASED; urgency=medium
 
  -- Zoltán Balogh <zoltan@bakter.hu>  Fri, 10 Oct 2014 11:19:10 +0300
 
-ubuntu-ui-toolkit (1.1.1279.1+14.10.20141014-0ubuntu1) 14.09; urgency=low
+lomiri-ui-toolkit (1.1.1279.1+14.10.20141014-0lomiri1) 14.09; urgency=low
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * New rebuild forced
 
   [ Tim Peeters ]
   * Fix margins in header contents.
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 14 Oct 2014 14:40:58 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 14 Oct 2014 14:40:58 +0000
 
-ubuntu-ui-toolkit (1.1.1279+14.10.20141007-0ubuntu1) 14.09; urgency=medium
+lomiri-ui-toolkit (1.1.1279+14.10.20141007-0lomiri1) 14.09; urgency=medium
 
   [ Michael Sheldon ]
   * Removes the keyboard anchor animation as this is now implemented
@@ -2754,9 +2754,9 @@ ubuntu-ui-toolkit (1.1.1279+14.10.20141007-0ubuntu1) 14.09; urgency=medium
   [ CI bot ]
   * Resync trunk
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 07 Oct 2014 12:09:39 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 07 Oct 2014 12:09:39 +0000
 
-ubuntu-ui-toolkit (1.1.1269+14.10.20141001-0ubuntu1) 14.09; urgency=medium
+lomiri-ui-toolkit (1.1.1269+14.10.20141001-0lomiri1) 14.09; urgency=medium
 
   [ Tim Peeters ]
   * Add Autopilot wait_for_animation() dummy function.
@@ -2764,7 +2764,7 @@ ubuntu-ui-toolkit (1.1.1269+14.10.20141001-0ubuntu1) 14.09; urgency=medium
     PageStack for enabling the animations.
 
   [ Loïc Molinari ]
-  * [UbuntuShape] Removed useless dirty flags.
+  * [LomiriShape] Removed useless dirty flags.
 
   [ Zsombor Egri ]
   *  Use tags as workaround for an alarm and an additional one for a
@@ -2781,12 +2781,12 @@ ubuntu-ui-toolkit (1.1.1269+14.10.20141001-0ubuntu1) 14.09; urgency=medium
   [ CI bot ]
   * Resync trunk
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * New rebuild forced
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 01 Oct 2014 08:21:27 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 01 Oct 2014 08:21:27 +0000
 
-ubuntu-ui-toolkit (1.1.1262+14.10.20140922.2-0ubuntu1) utopic; urgency=medium
+lomiri-ui-toolkit (1.1.1262+14.10.20140922.2-0lomiri1) utopic; urgency=medium
 
   [ Leo Arias ]
   * Add logging to the textfield autopilot helpers Fixes LP: #1361750
@@ -2796,7 +2796,7 @@ ubuntu-ui-toolkit (1.1.1262+14.10.20140922.2-0ubuntu1) utopic; urgency=medium
     dependent. Fixes: LP: #1356636
   * Tweaks for ListItem dividers. Header margins and font weight
     updated.
-  * Exclude UbuntuColors dumped erroneously by qmlplugindump as it
+  * Exclude LomiriColors dumped erroneously by qmlplugindump as it
     would be a C++ type.
   * Organizer audible reminder wasn't updated when Alarm sound
     changed.
@@ -2834,9 +2834,9 @@ ubuntu-ui-toolkit (1.1.1262+14.10.20140922.2-0ubuntu1) utopic; urgency=medium
   [ Christian Dywan ]
   * Change gallery to use launcher to allow -touch argument.
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 22 Sep 2014 15:52:55 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 22 Sep 2014 15:52:55 +0000
 
-ubuntu-ui-toolkit (1.1.1239+14.10.20140908-0ubuntu1) utopic; urgency=medium
+lomiri-ui-toolkit (1.1.1239+14.10.20140908-0lomiri1) utopic; urgency=medium
 
   [ Zsombor Egri ]
   * Use proper QML Singleton structure introduced in Qt 5.2.
@@ -2847,7 +2847,7 @@ ubuntu-ui-toolkit (1.1.1239+14.10.20140908-0ubuntu1) utopic; urgency=medium
     child filtering properly.
   * Organizer audible reminder was not updated when Alarm sound
     changed
-  * Exclude UbuntuColors dumped erroneously by qmlplugindump as it
+  * Exclude LomiriColors dumped erroneously by qmlplugindump as it
     would be a C++ type.
 
   [ Christian Dywan ]
@@ -2878,12 +2878,12 @@ ubuntu-ui-toolkit (1.1.1239+14.10.20140908-0ubuntu1) utopic; urgency=medium
     As a result, the Icon component is much simpler and only requires
     height to be set for rectangular icons. Fixes LP: #1324184
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * New rebuild forced
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 08 Sep 2014 17:53:18 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 08 Sep 2014 17:53:18 +0000
 
-ubuntu-ui-toolkit (1.1.1227+14.10.20140904-0ubuntu1) utopic; urgency=medium
+lomiri-ui-toolkit (1.1.1227+14.10.20140904-0lomiri1) utopic; urgency=medium
 
   [ Zsombor Egri ]
   * Thin divider adjustments.
@@ -2922,15 +2922,15 @@ ubuntu-ui-toolkit (1.1.1227+14.10.20140904-0ubuntu1) utopic; urgency=medium
   [ CI bot ]
   * Resync trunk
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * New rebuild forced
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 04 Sep 2014 07:57:06 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 04 Sep 2014 07:57:06 +0000
 
-ubuntu-ui-toolkit (1.1.1214+14.10.20140826-0ubuntu1) utopic; urgency=medium
+lomiri-ui-toolkit (1.1.1214+14.10.20140826-0lomiri1) utopic; urgency=medium
 
   [ Tim Peeters ]
-  * Push modules/Ubuntu/Components/qmldir in push_to_phone.sh.
+  * Push modules/Lomiri/Components/qmldir in push_to_phone.sh.
   * Add PageStack tests that use the new header.
   * Add tabs unit tests using the new header.
 
@@ -2950,7 +2950,7 @@ ubuntu-ui-toolkit (1.1.1214+14.10.20140826-0ubuntu1) utopic; urgency=medium
   * Add a more stable regression test for bug LP: #1338602
 
   [ Zsombor Egri ]
-  * Introducing Ubuntu Components FocusScope which extends QtQuick
+  * Introducing Lomiri Components FocusScope which extends QtQuick
     FocusScope with the ability to focus by mouse clicks.
   * Slider blocks Flickable while sliding. Fixes LP: #1353966
   * Save alarms data into JSON format. Affects test environments
@@ -2994,12 +2994,12 @@ ubuntu-ui-toolkit (1.1.1214+14.10.20140826-0ubuntu1) utopic; urgency=medium
   * Fix the warning for the emulators module. The warning will now
     only appear if you use the module directly. Fixes LP: #134169
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * New rebuild forced
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 26 Aug 2014 16:59:18 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 26 Aug 2014 16:59:18 +0000
 
-ubuntu-ui-toolkit (1.1.1188+14.10.20140813.4-0ubuntu1) utopic; urgency=medium
+lomiri-ui-toolkit (1.1.1188+14.10.20140813.4-0lomiri1) utopic; urgency=medium
 
   [ Tim Peeters ]
   * Document the default anchors of PageStack. LP: #1349366
@@ -3018,12 +3018,12 @@ ubuntu-ui-toolkit (1.1.1188+14.10.20140813.4-0ubuntu1) utopic; urgency=medium
   [ CI bot ]
   * Resync trunk
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 13 Aug 2014 11:31:54 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 13 Aug 2014 11:31:54 +0000
 
-ubuntu-ui-toolkit (1.1.1181+14.10.20140806-0ubuntu1) utopic; urgency=medium
+lomiri-ui-toolkit (1.1.1181+14.10.20140806-0lomiri1) utopic; urgency=medium
 
   [ Florian Boucault ]
-  * Ubuntu Shape: store geometry before redrawing can occur so that
+  * Lomiri Shape: store geometry before redrawing can occur so that
     the geometry is more reliably respected.
     Fixes: https://bugs.launchpad.net/bugs/1353493
 
@@ -3031,18 +3031,18 @@ ubuntu-ui-toolkit (1.1.1181+14.10.20140806-0ubuntu1) utopic; urgency=medium
   * Square overflow panel style for header pop overs.
     Fixes: https://bugs.launchpad.net/bugs/1336789
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 06 Aug 2014 16:37:33 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 06 Aug 2014 16:37:33 +0000
 
-ubuntu-ui-toolkit (1.1.1179+14.10.20140804-0ubuntu1) utopic; urgency=medium
+lomiri-ui-toolkit (1.1.1179+14.10.20140804-0lomiri1) utopic; urgency=medium
 
   [ Florian Boucault ]
-  * UbuntuShape: removed QML proxy.
+  * LomiriShape: removed QML proxy.
 
   [ Loïc Molinari ]
-  * [UbuntuShape] Implemented QSGMaterial::compare() methods so that
-    Ubuntu shapes can be batched.
+  * [LomiriShape] Implemented QSGMaterial::compare() methods so that
+    Lomiri shapes can be batched.
     Fixes: https://bugs.launchpad.net/bugs/1350863.
-  * Disconnected from old texture provider signals (Ubuntushape)
+  * Disconnected from old texture provider signals (Lomirishape)
 
 
   [ Tim Peeters ]
@@ -3061,9 +3061,9 @@ ubuntu-ui-toolkit (1.1.1179+14.10.20140804-0ubuntu1) utopic; urgency=medium
    * Add "source" property to the Icon component.
      Fixes: https://bugs.launchpad.net/bugs/1284233
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 04 Aug 2014 16:00:56 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 04 Aug 2014 16:00:56 +0000
 
-ubuntu-ui-toolkit (0.1.51+14.10.20140731.1-0ubuntu1) utopic; urgency=medium
+lomiri-ui-toolkit (0.1.51+14.10.20140731.1-0lomiri1) utopic; urgency=medium
   [ Michał Sawicz ]
   * Add "source" property to the Icon component.
 
@@ -3090,8 +3090,8 @@ ubuntu-ui-toolkit (0.1.51+14.10.20140731.1-0ubuntu1) utopic; urgency=medium
   * Placeholder is also shown on focus
 
   [ Martin Pitt ]
-  * Fix installability of ubuntu-ui-toolkit-examples with
-    qtdeclarative5-ubuntu-ui-toolkit-plugin-gles.
+  * Fix installability of lomiri-ui-toolkit-examples with
+    qtdeclarative5-lomiri-ui-toolkit-plugin-gles.
     Fixes: https://bugs.launchpad.net/bugs/1346650
 
   [ Omer Akram ]
@@ -3100,9 +3100,9 @@ ubuntu-ui-toolkit (0.1.51+14.10.20140731.1-0ubuntu1) utopic; urgency=medium
     the property hasClearButton which TextArea does not have.
     Fixes: https://bugs.launchpad.net/bugs/1327354
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 31 Jul 2014 11:12:39 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 31 Jul 2014 11:12:39 +0000
 
-ubuntu-ui-toolkit (0.1.50+14.10.20140724.2-0ubuntu1) utopic; urgency=medium
+lomiri-ui-toolkit (0.1.50+14.10.20140724.2-0lomiri1) utopic; urgency=medium
 
   [ Christian Dywan ]
   * Wrap tempfile.NamedTemporaryFile to discard underscored
@@ -3118,7 +3118,7 @@ ubuntu-ui-toolkit (0.1.50+14.10.20140724.2-0ubuntu1) utopic; urgency=medium
   [ Tim Peeters ]
   * New sizes for icons and touch areas in header.
   * Workaround for large-timestamp autopilot bug
-  * Push modules/Ubuntu/Components/qmldir in push_to_phone.sh
+  * Push modules/Lomiri/Components/qmldir in push_to_phone.sh
   * Various design tweaks:
     - Update CheckBox/Switch colors
     - Use new header by default in UITK gallery
@@ -3127,7 +3127,7 @@ ubuntu-ui-toolkit (0.1.50+14.10.20140724.2-0ubuntu1) utopic; urgency=medium
   * Don't automatically close a Panel when the user presses next
     to it, and update Panel position when its height changes.
   * Support sections in header divider.
-  * Add new colors to UbuntuColors.
+  * Add new colors to LomiriColors.
     Fixes: https://bugs.launchpad.net/bugs/1335826.
 
   [ Renato Filho ]
@@ -3138,7 +3138,7 @@ ubuntu-ui-toolkit (0.1.50+14.10.20140724.2-0ubuntu1) utopic; urgency=medium
   * Work around LP: #1338602, RotationAnimator crashes application
 
   [ Michael Zanetti ]
-  * Add typeString to UbuntuTestCase
+  * Add typeString to LomiriTestCase
 
   [ Ugo Riboni ]
   * Add a boolean property to allow hiding the ProgressBar label.
@@ -3153,39 +3153,39 @@ ubuntu-ui-toolkit (0.1.50+14.10.20140724.2-0ubuntu1) utopic; urgency=medium
   * Remove the hiding of the toolbar on the option selector
     gallery autopilot tests.
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 24 Jul 2014 14:45:50 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 24 Jul 2014 14:45:50 +0000
 
-ubuntu-ui-toolkit (0.1.49+14.10.20140715-0ubuntu1) utopic; urgency=low
+lomiri-ui-toolkit (0.1.49+14.10.20140715-0lomiri1) utopic; urgency=low
 
   [ Dimitri John Ledkov ]
   * Build in parallel by default.
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 15 Jul 2014 11:41:34 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 15 Jul 2014 11:41:34 +0000
 
-ubuntu-ui-toolkit (0.1.49+14.10.20140710-0ubuntu1) utopic; urgency=low
+lomiri-ui-toolkit (0.1.49+14.10.20140710-0lomiri1) utopic; urgency=low
 
   [ Florian Boucault ]
   * Move keyboard anchoring logic of OrientationHelper from MainView to
     OrientationHelper itself. (LP: #1339616)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 10 Jul 2014 12:26:37 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 10 Jul 2014 12:26:37 +0000
 
-ubuntu-ui-toolkit (0.1.49+14.10.20140709-0ubuntu1) utopic; urgency=low
+lomiri-ui-toolkit (0.1.49+14.10.20140709-0lomiri1) utopic; urgency=low
 
   [ Zoltán Balogh ]
   * Match the theme package version with the plugin's binary-package
     version
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 09 Jul 2014 17:49:05 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 09 Jul 2014 17:49:05 +0000
 
-ubuntu-ui-toolkit (0.1.49+14.10.20140707-0ubuntu1) utopic; urgency=medium
+lomiri-ui-toolkit (0.1.49+14.10.20140707-0lomiri1) utopic; urgency=medium
 
   * Increase upstream version to 0.1.49 due to API additions in previous
     release, which did not make it to utopic release.
 
  -- Iain Lane <iain@orangesquash.org.uk>  Tue, 08 Jul 2014 14:41:49 +0100
 
-ubuntu-ui-toolkit (0.1.48+14.10.20140707-0ubuntu1) utopic; urgency=medium
+lomiri-ui-toolkit (0.1.48+14.10.20140707-0lomiri1) utopic; urgency=medium
 
   [ Tim Peeters ]
   * Fix API doc links in UITK gallery.
@@ -3243,7 +3243,7 @@ ubuntu-ui-toolkit (0.1.48+14.10.20140707-0ubuntu1) utopic; urgency=medium
           causes text cursor not to be created.
     Fixes: https://bugs.launchpad.net/bugs/1276176.
   * Exposing touch functions to QML test.
-  * Default font for the toolkit: Ubuntu, medium sized and light
+  * Default font for the toolkit: Lomiri, medium sized and light
     weight. Fixes: https://bugs.launchpad.net/bugs/1263963.
   * Extend launcher to convert mouse to touch events.
     MouseTouchAdaptor taken from unity8 launcher.
@@ -3263,27 +3263,27 @@ ubuntu-ui-toolkit (0.1.48+14.10.20140707-0ubuntu1) utopic; urgency=medium
   [ CI bot ]
   * Resync trunk
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 07 Jul 2014 11:05:59 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 07 Jul 2014 11:05:59 +0000
 
-ubuntu-ui-toolkit (0.1.48+14.10.20140701.2-0ubuntu1) utopic; urgency=medium
+lomiri-ui-toolkit (0.1.48+14.10.20140701.2-0lomiri1) utopic; urgency=medium
 
   [ Michał Sawicz ]
   * Bump version to indicate requirement for new theme icons.
   * Change "not…in" to "…not in" in qmlapicheck.py.
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 01 Jul 2014 15:47:29 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 01 Jul 2014 15:47:29 +0000
 
-ubuntu-ui-toolkit (0.1.47+14.10.20140619-0ubuntu1) utopic; urgency=low
+lomiri-ui-toolkit (0.1.47+14.10.20140619-0lomiri1) utopic; urgency=low
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * New rebuild forced
 
   [ Timo Jyrinki ]
   * Fix empty toolbar bug with Qt 5.3.
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 19 Jun 2014 06:55:24 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 19 Jun 2014 06:55:24 +0000
 
-ubuntu-ui-toolkit (0.1.47+14.10.20140618-0ubuntu1) utopic; urgency=medium
+lomiri-ui-toolkit (0.1.47+14.10.20140618-0lomiri1) utopic; urgency=medium
 
   [Leo Arias ]
   * On the autopilot helper for the header, fix the swipe to show
@@ -3318,7 +3318,7 @@ ubuntu-ui-toolkit (0.1.47+14.10.20140618-0ubuntu1) utopic; urgency=medium
     Fixes: https://bugs.launchpad.net/bugs/1326963.
 
   [ Zsombor Egri]
-  * Adding touch functions to UbuntuTestCase.
+  * Adding touch functions to LomiriTestCase.
   * Qt5.3 related fixes. Fixes:
     https://bugs.launchpad.net/bugs/1324070,
     https://bugs.launchpad.net/bugs/1324088,
@@ -3327,9 +3327,9 @@ ubuntu-ui-toolkit (0.1.47+14.10.20140618-0ubuntu1) utopic; urgency=medium
     Calling shadowed superclass' update() method.
 
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 18 Jun 2014 17:10:43 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 18 Jun 2014 17:10:43 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.10.20140602-0ubuntu1) utopic; urgency=low
+lomiri-ui-toolkit (0.1.46+14.10.20140602-0lomiri1) utopic; urgency=low
 
   [ Christian Dywan ]   
   * Tweak API parsing to include the Button.font property.
@@ -3357,9 +3357,9 @@ ubuntu-ui-toolkit (0.1.46+14.10.20140602-0ubuntu1) utopic; urgency=low
   * Replace split with match to work around failing split()
     function usage.
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 02 Jun 2014 11:33:42 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 02 Jun 2014 11:33:42 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.10.20140527-0ubuntu1) utopic; urgency=medium
+lomiri-ui-toolkit (0.1.46+14.10.20140527-0lomiri1) utopic; urgency=medium
 
   [ Timo Jyrinki ]
   * Allow using the renamed QML packages. Allow also old names
@@ -3374,8 +3374,8 @@ ubuntu-ui-toolkit (0.1.46+14.10.20140527-0ubuntu1) utopic; urgency=medium
 
   [ Christian Dywan ]
   * Skip flaky test_updateAlarm_Repeating.
-  * Skip test_ubuntushape which is flakey and add a FIXME.
-  * Read ubuntu-ui-toolkit.ini from $XDG_CONFIG_HOME.
+  * Skip test_lomirishape which is flakey and add a FIXME.
+  * Read lomiri-ui-toolkit.ini from $XDG_CONFIG_HOME.
   * More unit tests and property corrections for SortFilterModel.
 
   [ Tim Peeters ]
@@ -3393,7 +3393,7 @@ ubuntu-ui-toolkit (0.1.46+14.10.20140527-0ubuntu1) utopic; urgency=medium
   * Label: default font weight is now light.
 
   [ Zsombor Egri ]
-  * Ubuntu Layouts reparents those default layout components which
+  * Lomiri Layouts reparents those default layout components which
     are not subject of layout instead of altering their visible and
     enabled properties.
     Fixes: https://bugs.launchpad.net/bugs/1204834
@@ -3404,9 +3404,9 @@ ubuntu-ui-toolkit (0.1.46+14.10.20140527-0ubuntu1) utopic; urgency=medium
   * Keep a map of windows and associated textures.
     Fixes: https://bugs.launchpad.net/bugs/1296728.
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 27 May 2014 07:51:29 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 27 May 2014 07:51:29 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.10.20140520-0ubuntu1) utopic; urgency=medium
+lomiri-ui-toolkit (0.1.46+14.10.20140520-0lomiri1) utopic; urgency=medium
 
   [ Leo Arias ]
   * Added the swipe_into_view method to autopilot helpers.
@@ -3435,9 +3435,9 @@ ubuntu-ui-toolkit (0.1.46+14.10.20140520-0ubuntu1) utopic; urgency=medium
   [ CI bot ]
   * Resync trunk
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 20 May 2014 08:35:48 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 20 May 2014 08:35:48 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.10.20140516-0ubuntu1) utopic; urgency=medium
+lomiri-ui-toolkit (0.1.46+14.10.20140516-0lomiri1) utopic; urgency=medium
 
   [ Tim Peeters ]
   * Take visibility of actions into account when determining whether
@@ -3470,9 +3470,9 @@ ubuntu-ui-toolkit (0.1.46+14.10.20140516-0ubuntu1) utopic; urgency=medium
     on mobile architectures (less rattling, more realistic).
     Fixes: https://bugs.launchpad.net/bugs/1290201.
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 16 May 2014 11:58:25 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 16 May 2014 11:58:25 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.10.20140512-0ubuntu1) utopic; urgency=low
+lomiri-ui-toolkit (0.1.46+14.10.20140512-0lomiri1) utopic; urgency=low
 
   [ Tim Peeters ]
   * Make it possible to replace the title in the header with a
@@ -3492,9 +3492,9 @@ ubuntu-ui-toolkit (0.1.46+14.10.20140512-0ubuntu1) utopic; urgency=low
   * Text input caret positioning fix for the cases when TextField
     has overlay primary items and when RTL is enabled.
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 12 May 2014 12:27:41 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 12 May 2014 12:27:41 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.10.20140508-0ubuntu1) utopic; urgency=low
+lomiri-ui-toolkit (0.1.46+14.10.20140508-0lomiri1) utopic; urgency=low
 
   [ Christian Dywan ]
   * Export to load modules from source and allow arguments.
@@ -3509,7 +3509,7 @@ ubuntu-ui-toolkit (0.1.46+14.10.20140508-0ubuntu1) utopic; urgency=low
     Fixes: https://bugs.launchpad.net/bugs/1180188.
   * Text input caret handler visuals and functionality.
     Fixes: https://bugs.launchpad.net/bugs/1183257.
-  * Introducing Ubuntu.Components.Styles 1.1 module.
+  * Introducing Lomiri.Components.Styles 1.1 module.
 
   [ Tim Peeters ]
   * Add the possibility to override the back button in the header.
@@ -3529,25 +3529,25 @@ ubuntu-ui-toolkit (0.1.46+14.10.20140508-0ubuntu1) utopic; urgency=low
     listItem, this allows for the animation to occur.
 
   [ Leo Arias ]
-  * Deprecated the ubuntuuitoolkit.emulators namespace. Split the
+  * Deprecated the lomiriuitoolkit.emulators namespace. Split the
     autopilot helpers in smaller files.
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 08 May 2014 10:54:32 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 08 May 2014 10:54:32 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.10.20140502.6-0ubuntu1) utopic; urgency=low
+lomiri-ui-toolkit (0.1.46+14.10.20140502.6-0lomiri1) utopic; urgency=low
 
   [ Zoltán Balogh]
   * Skip tests only for powerpc
 
   [ Christian Dywan ]
   * Use locale format specifier in textfield_numbers. Fixes: (LP: #1311907)
-  * Resolve QList<QQmlError> warnings by porting to UbuntuTestCase.warnings.
+  * Resolve QList<QQmlError> warnings by porting to LomiriTestCase.warnings.
 
   [Andrew Hayzen]
   * Animation of the listItem when cancelItemRemoval() is called
 
   [ Zsombor Egri ]
-  * Introducing Ubuntu.Components.Styles 1.1 module.
+  * Introducing Lomiri.Components.Styles 1.1 module.
   * Text inputs show context menu when right-clicked on desktop. Fixes: (LP: #1276821)
   * Fixes TextField and TextArea selection and scrolling behaviors. Fixes: (LP: #1168914), (LP: #1183255)
   * Dismiss Popovers when any of the mouse buttons is pressed.
@@ -3558,7 +3558,7 @@ ubuntu-ui-toolkit (0.1.46+14.10.20140502.6-0ubuntu1) utopic; urgency=low
   * Mouse filters forwarding fix to proxy items.
   * Fix for arm64 test failure. Fixes: (LP: #1308086)
   * Fix alarm fetching order and interval. Fixes: (LP: #1283212, (LP: #1285958)
-  * Flick and mouse long press simulation added to UbuntuTestCase. Fixes: (LP: #1288937)
+  * Flick and mouse long press simulation added to LomiriTestCase. Fixes: (LP: #1288937)
 
   [ Tim Peeters ]
   * Remove already inherited properties from OptionSelectorDelegate, ValueSelector, Subtitled, Standard and Base list item components.
@@ -3567,21 +3567,21 @@ ubuntu-ui-toolkit (0.1.46+14.10.20140502.6-0ubuntu1) utopic; urgency=low
   * First version of the tabs in a drawer. Fixes: (LP: #1228042), (LP: #1273187)
   * Put the TabBar inside of the HeaderStyle instead of directly in the style. Fixes: (LP: #1292601)
   * Make the panel draggable again instead of opening completely on press.
-  * Create a new entry in CHANGES to record the changes for Ubuntu.Components 1.1.
+  * Create a new entry in CHANGES to record the changes for Lomiri.Components 1.1.
   * Move the property to keep track of the selected tab to the tabs model.
 
   [ Leo Arias ]
-  * Deprecated the ubuntuuitoolkit.emulators namespace. Split the autopilot helpers in smaller files.
+  * Deprecated the lomiriuitoolkit.emulators namespace. Split the autopilot helpers in smaller files.
 
   [ Chris Gagnon ]
   * autopilot emulator for OptionSelector.
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 02 May 2014 16:31:41 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 02 May 2014 16:31:41 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20140408.1-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20140408.1-0lomiri1) trusty; urgency=low
 
   [ Zoltán Balogh ]
-  * Change Ubuntu API links in the docs (LP: #1303535) (LP: #1303535)
+  * Change Lomiri API links in the docs (LP: #1303535) (LP: #1303535)
 
   [ Leo Arias ]
   * Improve the check of tab selection mode by moving to it first.
@@ -3594,27 +3594,27 @@ ubuntu-ui-toolkit (0.1.46+14.04.20140408.1-0ubuntu1) trusty; urgency=low
   * If a Page is inside a Tab and has no title set, get it automatically
     from the Tab. (LP: #1289695)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 08 Apr 2014 14:47:06 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 08 Apr 2014 14:47:06 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20140404.1.is.0.1.46+14.04.20140404-0ubuntu1) trusty; urgency=medium
+lomiri-ui-toolkit (0.1.46+14.04.20140404.1.is.0.1.46+14.04.20140404-0lomiri1) trusty; urgency=medium
 
   * Revert to previous version as it's making gallery-app AP tests
     failing on the CI dashboard
 
- -- Didier Roche <didrocks@ubuntu.com>  Tue, 08 Apr 2014 13:34:12 +0200
+ -- Didier Roche <didrocks@lomiri.com>  Tue, 08 Apr 2014 13:34:12 +0200
 
-ubuntu-ui-toolkit (0.1.46+14.04.20140404.1-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20140404.1-0lomiri1) trusty; urgency=low
 
   [ tpeeters ]
   * Move the property to keep track of the selected tab to the tabs
     model. (LP: #1290121)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 04 Apr 2014 15:08:22 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 04 Apr 2014 15:08:22 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20140404-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20140404-0lomiri1) trusty; urgency=low
 
   [ Michael Zanetti ]
-  * fix collapseOnClick in combination with UbuntuListView (LP:
+  * fix collapseOnClick in combination with LomiriListView (LP:
     #1293996)
 
   [ Leo Arias ]
@@ -3626,9 +3626,9 @@ ubuntu-ui-toolkit (0.1.46+14.04.20140404-0ubuntu1) trusty; urgency=low
   [ Christian Dywan ]
   * Set the window title based on the Header title (LP: #1289695)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 04 Apr 2014 11:03:59 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 04 Apr 2014 11:03:59 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20140331-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20140331-0lomiri1) trusty; urgency=low
 
   [ Zoltán Balogh ]
   * Separate the online and offline documentation and install the QtC
@@ -3656,9 +3656,9 @@ ubuntu-ui-toolkit (0.1.46+14.04.20140331-0ubuntu1) trusty; urgency=low
   [ Christian Dywan ]
   * Treat QML warnings as fatal except for explicitly listed tests
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 31 Mar 2014 18:26:59 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 31 Mar 2014 18:26:59 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20140321.1-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20140321.1-0lomiri1) trusty; urgency=low
 
   [ Bartosz Kosiorek ]
   * Fix selection and coping text from TextFields (LP: 1130369) (LP:
@@ -3675,19 +3675,19 @@ ubuntu-ui-toolkit (0.1.46+14.04.20140321.1-0ubuntu1) trusty; urgency=low
     more HUD from the lower edge
 
   [ Christian Dywan ]
-  * Introduce UbuntuTestCase API for C++ (LP: #1261396)
+  * Introduce LomiriTestCase API for C++ (LP: #1261396)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 21 Mar 2014 11:29:53 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 21 Mar 2014 11:29:53 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20140317-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20140317-0lomiri1) trusty; urgency=low
 
   [ Didier Roche ]
   * remove the doc generation for UITK autopilot emulator. Autopilot is
     in universe for now, it needs MIRing first
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 17 Mar 2014 09:03:08 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 17 Mar 2014 09:03:08 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20140314-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20140314-0lomiri1) trusty; urgency=low
 
   [ CI bot ]
   * Resync trunk
@@ -3695,24 +3695,24 @@ ubuntu-ui-toolkit (0.1.46+14.04.20140314-0ubuntu1) trusty; urgency=low
   [ Colin Watson ]
   * With Qt 5.2, QtDeclarative now supports all architectures, at least
     in principle. Switch back to trying to build everywhere, since
-    ubuntu-ui-toolkit has no intrinsic reason to be non-portable.
+    lomiri-ui-toolkit has no intrinsic reason to be non-portable.
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 14 Mar 2014 15:07:46 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 14 Mar 2014 15:07:46 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20140306.1-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20140306.1-0lomiri1) trusty; urgency=low
 
   [ Zsombor Egri ]
   * DatePicker flaky test fix. (LP: #1287009)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * New rebuild forced
 
   [ Michael Zanetti ]
-  * Make the UbuntuListView tests more stable (LP: #1288597)
+  * Make the LomiriListView tests more stable (LP: #1288597)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 06 Mar 2014 12:46:50 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 06 Mar 2014 12:46:50 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20140304-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20140304-0lomiri1) trusty; urgency=low
 
   [ CI bot ]
   * Ship python3 autopilot emulators/tests.
@@ -3732,11 +3732,11 @@ ubuntu-ui-toolkit (0.1.46+14.04.20140304-0ubuntu1) trusty; urgency=low
   [ Christian Dywan ]
   * The wrapper is intended to make API test more visible in the output
     regardless of failure or success. A semi-related fix increases
-    coverage so that UbuntuTestCase and Layouts are also checked.
+    coverage so that LomiriTestCase and Layouts are also checked.
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 04 Mar 2014 13:01:40 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 04 Mar 2014 13:01:40 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20140301-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20140301-0lomiri1) trusty; urgency=low
 
   [ Zsombor Egri ]
   * StateSaver does no longer save the component states upon
@@ -3756,7 +3756,7 @@ ubuntu-ui-toolkit (0.1.46+14.04.20140301-0ubuntu1) trusty; urgency=low
     #1231265)
 
   [ Michael Zanetti ]
-  * Introduce the almighty UbuntuListView. So far not /that/ mighty tho.
+  * Introduce the almighty LomiriListView. So far not /that/ mighty tho.
     Can only deal with Expandables. (LP: #1169258)
 
   [ CI bot ]
@@ -3764,7 +3764,7 @@ ubuntu-ui-toolkit (0.1.46+14.04.20140301-0ubuntu1) trusty; urgency=low
     find elements not yet created. (LP: #1270200)
 
   [ tpeeters ]
-  * Always use the ubuntu-mobile icon theme in UITK apps. (LP: #1284218)
+  * Always use the lomiri-mobile icon theme in UITK apps. (LP: #1284218)
   * Fix autopilot and unit tests for TabBar.
 
   [ Christian Dywan ]
@@ -3776,9 +3776,9 @@ ubuntu-ui-toolkit (0.1.46+14.04.20140301-0ubuntu1) trusty; urgency=low
   * Use PIPESTATUS to avoid getting the wrong return value (LP:
     #1284699)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Sat, 01 Mar 2014 12:53:03 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Sat, 01 Mar 2014 12:53:03 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20140224-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20140224-0lomiri1) trusty; urgency=low
 
   [ Renato Araujo Oliveira Filho ]
   * [alarms] Filter only alarms of the current week. This is necessary
@@ -3787,9 +3787,9 @@ ubuntu-ui-toolkit (0.1.46+14.04.20140224-0ubuntu1) trusty; urgency=low
     alarm that recurs every day, will be returned infinite times. (LP:
     #1282129)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 24 Feb 2014 21:54:01 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 24 Feb 2014 21:54:01 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20140220-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20140220-0lomiri1) trusty; urgency=low
 
   [ Michael Zanetti ]
   * use data instead of children In ListItems.Base to allow having
@@ -3816,9 +3816,9 @@ ubuntu-ui-toolkit (0.1.46+14.04.20140220-0ubuntu1) trusty; urgency=low
     component got deleted due to or during re-layouting. (LP: #1280359)
   * ItemSelector regression fix. (LP: #1275861)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 20 Feb 2014 10:04:25 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 20 Feb 2014 10:04:25 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20140212-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20140212-0lomiri1) trusty; urgency=low
 
   [ Andrew Hayzen ]
   * Fixed text not aligned at vertical centre if the listitem height has
@@ -3834,7 +3834,7 @@ ubuntu-ui-toolkit (0.1.46+14.04.20140212-0ubuntu1) trusty; urgency=low
 
   [ Timo Jyrinki ]
   * A qtdeclarative5-private-dev packaging change adding a dependency on
-    libqt5v8-5-private-dev has been backported to all Ubuntu versions
+    libqt5v8-5-private-dev has been backported to all Lomiri versions
     now, so this workaround can now be dropped - building both against
     Qt 5.2 and 5.0.2 works.
   * Add #include for QDebug to fix Qt 5.2 build.
@@ -3877,13 +3877,13 @@ ubuntu-ui-toolkit (0.1.46+14.04.20140212-0ubuntu1) trusty; urgency=low
   * Layout tests now wait for the currentLayout change completion. (LP:
     #1266707)
   * Extra QQmlEngine instance removed from plugin, which seemed to cause
-    some race conditions with Qt5.2. As result UbuntuColors got
+    some race conditions with Qt5.2. As result LomiriColors got
     transferred from context property into singleton object, Theme's
     palette creation delayed till its first access. (LP: #1266707)
   * DateUtils test failure fix. (LP: #1273893)
 
   [ Florian Boucault ]
-  * Ubuntu UI Toolkit Gallery: reimplemented in a cleaner way the
+  * Lomiri UI Toolkit Gallery: reimplemented in a cleaner way the
     responsiveness of the UI. That will allow for working right-to-left
     support. (LP: #1172652, #1182599)
   * Added Right-to-Left languages support to most widgets and to the UI
@@ -3910,9 +3910,9 @@ ubuntu-ui-toolkit (0.1.46+14.04.20140212-0ubuntu1) trusty; urgency=low
   * Fix the height of a Page in case its parent is a Loader. (LP:
     #1259917)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 12 Feb 2014 10:56:52 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 12 Feb 2014 10:56:52 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20131216-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20131216-0lomiri1) trusty; urgency=low
 
   [ Zsombor Egri ]
   * Layouting fails with Qt5.2 if the tests and components are not
@@ -3972,12 +3972,12 @@ ubuntu-ui-toolkit (0.1.46+14.04.20131216-0ubuntu1) trusty; urgency=low
   * Use Eventually when checking that the textfield is empty There's
     always a delay so we can't just compare it. (LP: #1259476)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 892
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 16 Dec 2013 08:17:31 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 16 Dec 2013 08:17:31 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20131129-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20131129-0lomiri1) trusty; urgency=low
 
   [ Zsombor Egri ]
   * Tabs to react on model changes when a Repeater is used to populate
@@ -4008,12 +4008,12 @@ ubuntu-ui-toolkit (0.1.46+14.04.20131129-0ubuntu1) trusty; urgency=low
   [ Christian Dywan ]
   * Elaborate on why OrientationHelper's internal must be Item.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 872
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 29 Nov 2013 20:24:58 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 29 Nov 2013 20:24:58 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20131126.1-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20131126.1-0lomiri1) trusty; urgency=low
 
   [ Nic ]
   * Renamed state assignment to correct "expanded" instead of
@@ -4027,16 +4027,16 @@ ubuntu-ui-toolkit (0.1.46+14.04.20131126.1-0ubuntu1) trusty; urgency=low
   * Merge stateWrapper and internal so Screen isn't used in an Object.
     (LP: #1254888)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 862
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 26 Nov 2013 22:25:55 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 26 Nov 2013 22:25:55 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20131126-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20131126-0lomiri1) trusty; urgency=low
 
   [ Loïc Molinari ]
-  * [UbuntuShape] Informed renderer of index and vertex data patterns.
-  * [UbuntuShape] Transformed coordinates of textures packed in atlases.
+  * [LomiriShape] Informed renderer of index and vertex data patterns.
+  * [LomiriShape] Transformed coordinates of textures packed in atlases.
     (LP: #1252736)
 
   [ Jani Monoses ]
@@ -4052,10 +4052,10 @@ ubuntu-ui-toolkit (0.1.46+14.04.20131126-0ubuntu1) trusty; urgency=low
   * Only inspect left hand for keywords and omit identifier. (LP:
     #1250653)
   * Merge pot update scripts and tweak 'make pot'. (LP: #1186250)
-  * Add dependencies and indexes to link Qt5 and Ubuntu.Unity.Action
+  * Add dependencies and indexes to link Qt5 and Lomiri.Unity.Action
     docs. (LP: #1202561)
   * Implement BUILTINS in qmlapicheck to exclude built-in types.
-  * Move ubuntu-ui-toolkit-doc dep from -examples to Recommends This way
+  * Move lomiri-ui-toolkit-doc dep from -examples to Recommends This way
     it's possible to run autopilot tests without docs.
 
   [ Zsombor Egri ]
@@ -4087,12 +4087,12 @@ ubuntu-ui-toolkit (0.1.46+14.04.20131126-0ubuntu1) trusty; urgency=low
   * Support initial value of selectionMode that is not equal to false.
     (LP: #1250194)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 859
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 26 Nov 2013 01:11:34 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 26 Nov 2013 01:11:34 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20131118-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20131118-0lomiri1) trusty; urgency=low
 
   [ Zsombor Egri ]
   * Support for dynamically inserting/moving/removing tabs in Tabs. .
@@ -4113,22 +4113,22 @@ ubuntu-ui-toolkit (0.1.46+14.04.20131118-0ubuntu1) trusty; urgency=low
   * Track magic window with a property signal instead of defining it.
     (LP: #1251436)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 837
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 18 Nov 2013 17:13:33 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 18 Nov 2013 17:13:33 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20131108.4-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20131108.4-0lomiri1) trusty; urgency=low
 
   [ Robert Bruce Park ]
   * (no message)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 830
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 08 Nov 2013 23:11:13 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 08 Nov 2013 23:11:13 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20131108.3-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20131108.3-0lomiri1) trusty; urgency=low
 
   [ Leo Arias ]
   * Add a check for the autopilot version on the emulator init. (LP:
@@ -4148,8 +4148,8 @@ ubuntu-ui-toolkit (0.1.46+14.04.20131108.3-0ubuntu1) trusty; urgency=low
     determine application identifier. HUD will not work properly.
     Provide your application identifier in $APP_ID environment variable.
     QWARN : tst_MainView::testNoWarnings_bug186065()
-    file:///home/tim/dev/ubuntu-ui-
-    toolkit/fix1244660/modules/Ubuntu/Components/MainView.qml:257:
+    file:///home/tim/dev/lomiri-ui-
+    toolkit/fix1244660/modules/Lomiri/Components/MainView.qml:257:
     TypeError: Cannot call method 'hasOwnProperty' of null **
     (process:27191): CRITICAL **: Unable to get session bus: Operation
     was cancelled QWARN : tst_MainView::testNoWarnings_bug186065() Don't
@@ -4166,22 +4166,22 @@ ubuntu-ui-toolkit (0.1.46+14.04.20131108.3-0ubuntu1) trusty; urgency=low
   [ Robert Bruce Park ]
   * (no message)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 828
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 08 Nov 2013 22:02:57 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 08 Nov 2013 22:02:57 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20131106-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20131106-0lomiri1) trusty; urgency=low
 
   [ Leo Arias ]
   * Update the tests to work with autopilot 1.4.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 822
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 06 Nov 2013 05:08:45 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 06 Nov 2013 05:08:45 +0000
 
-ubuntu-ui-toolkit (0.1.46+14.04.20131105.1-0ubuntu1) trusty; urgency=low
+lomiri-ui-toolkit (0.1.46+14.04.20131105.1-0lomiri1) trusty; urgency=low
 
   [ Albert Astals ]
   * Minor optimzations Add const & to foreach to save copies of
@@ -4212,7 +4212,7 @@ ubuntu-ui-toolkit (0.1.46+14.04.20131105.1-0ubuntu1) trusty; urgency=low
   [ Zsombor Egri ]
   * Support for taking themes from XDG_DATA_DIRS as well as from
     ~/.local/share. These paths are also added as import paths.
-    UBUNTU_UI_TOOLKIT_THEMES_PATH overrules these import paths, and can
+    LOMIRI_UI_TOOLKIT_THEMES_PATH overrules these import paths, and can
     have more than one path specified, each separated with column. (LP:
     #1221813)
   * Warnings treated as errors in all types of builds (debug or
@@ -4249,18 +4249,18 @@ ubuntu-ui-toolkit (0.1.46+14.04.20131105.1-0ubuntu1) trusty; urgency=low
   [ Renato Araujo Oliveira Filho ]
   * Implemented emulator for swipe to remove. (LP: #1236464)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 820
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 05 Nov 2013 16:51:13 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 05 Nov 2013 16:51:13 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20131011.2-0ubuntu2) UNRELEASED; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20131011.2-0lomiri2) UNRELEASED; urgency=low
 
   * add sphinx documentation
 
  -- Nicholas Skaggs <nicholas.skaggs@canonical.com>  Tue, 29 Oct 2013 17:28:30 -0400
 
-ubuntu-ui-toolkit (0.1.46+13.10.20131011.2-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20131011.2-0lomiri1) saucy; urgency=low
 
   [ Zsombor Egri ]
   * Tests proving component state saving added, minor fix disabling
@@ -4278,19 +4278,19 @@ ubuntu-ui-toolkit (0.1.46+13.10.20131011.2-0ubuntu1) saucy; urgency=low
   * Added a public function to get the command to launch qmlscene from
     autopilot tests.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 792
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 11 Oct 2013 17:18:50 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 11 Oct 2013 17:18:50 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20131007-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20131007-0lomiri1) saucy; urgency=low
 
   [ Zoltán Balogh ]
   * Add default tools (LP: #1233709). (LP: #1233709)
 
   [ Loïc Molinari ]
   * Added URI handler support.
-  * Fixed UbuntuShape warnings when using a ShaderEffectSource as an
+  * Fixed LomiriShape warnings when using a ShaderEffectSource as an
     image.
 
   [ iftikhar.ahmad@canonical.com ]
@@ -4334,25 +4334,25 @@ ubuntu-ui-toolkit (0.1.46+13.10.20131007-0ubuntu1) saucy; urgency=low
   * index property added to Tab to be able to reference the Tab number.
     Fixes bug #1233402. (LP: #1233402)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 786
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 07 Oct 2013 04:36:33 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 07 Oct 2013 04:36:33 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130925.1-0ubuntu2) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130925.1-0lomiri2) saucy; urgency=low
 
   * Cherry pick changes from the ap-test-fixes-for-updated-autopilot branch
     to fix working with the newer autopilot
 
  -- Łukasz 'sil2100' Zemczak <lukasz.zemczak@canonical.com>  Thu, 03 Oct 2013 11:38:44 +0200
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130925.1-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130925.1-0lomiri1) saucy; urgency=low
 
   [ Timo Jyrinki ]
   * Temporarily disable the jokes example in order to not have
     qtmultimedia dependency from examples that is not used otherwise.
     This lessens the dependency chains of packages. It can be added back
-    after Ubuntu 13.10.
+    after Lomiri 13.10.
   * Fix regression in qmlscene usage (LP: #1229541). (LP: #1229541)
 
   [ Christian Dywan ]
@@ -4369,7 +4369,7 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130925.1-0ubuntu1) saucy; urgency=low
   * Dialer + DialerHand components required for TimePicker. .
 
   [ Leo Arias ]
-  * Added UbuntuUIToolkitAppTestCase as a base test case for the
+  * Added LomiriUIToolkitAppTestCase as a base test case for the
     autopilot tests. (LP: #1227355)
   * Added the autopilot emulator for toggles.
 
@@ -4396,12 +4396,12 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130925.1-0ubuntu1) saucy; urgency=low
     panel-open-close branch. Toolbar behavior changes will be done in a
     following MR.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 765
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 25 Sep 2013 07:08:56 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 25 Sep 2013 07:08:56 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130916-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130916-0lomiri1) saucy; urgency=low
 
   [ Zsombor Egri ]
   * Picker component, a tumbler style value selector.
@@ -4428,30 +4428,30 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130916-0ubuntu1) saucy; urgency=low
   [ Lars Uebernickel ]
   * giconprovider: warn about image://gicon being deprecated.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 748
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 16 Sep 2013 11:35:05 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 16 Sep 2013 11:35:05 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130903.4-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130903.4-0lomiri1) saucy; urgency=low
 
   [ Nicolas d'Offay ]
   * Hide header label if no label is input. Fix for:
-    OptionSelector.qml:205: ReferenceError: UbuntuAnimation is not
+    OptionSelector.qml:205: ReferenceError: LomiriAnimation is not
     defined Fixed containerHeight affecting the entire Selector's height
     even if the contentHeight was less. (LP: #1220130)
 
   [ Guenter Schwann ]
   * Fixes tab switching with open toolbar fixes
-    https://bugs.launchpad.net/ubuntu-ui-toolkit/+bug/1220064. (LP:
+    https://bugs.launchpad.net/lomiri-ui-toolkit/+bug/1220064. (LP:
     #1220064)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 741
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 03 Sep 2013 15:16:50 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 03 Sep 2013 15:16:50 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130903.3-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130903.3-0lomiri1) saucy; urgency=low
 
   [ Zoltán Balogh ]
   * Reverse cherrypicking rev734.
@@ -4473,12 +4473,12 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130903.3-0ubuntu1) saucy; urgency=low
     are commented for now as they were giving inconsistent results on
     phone. .
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 738
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 03 Sep 2013 11:46:19 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 03 Sep 2013 11:46:19 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130830.1-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130830.1-0lomiri1) saucy; urgency=low
 
   [ tpeeters ]
   * Quick fix, completely untested. Might mess up apps with list items
@@ -4489,25 +4489,25 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130830.1-0ubuntu1) saucy; urgency=low
 
   [ iftikhar.ahmad@canonical.com ]
   * ajusted the buttons laytout to make it fit to phone screen size.
-    https://bugs.launchpad.net/ubuntu-ui-toolkit/+bug/1218749 . (LP:
+    https://bugs.launchpad.net/lomiri-ui-toolkit/+bug/1218749 . (LP:
     #1218749)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 731
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 30 Aug 2013 12:44:49 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 30 Aug 2013 12:44:49 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130829.2-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130829.2-0lomiri1) saucy; urgency=low
 
   [ Olivier Tilloy ]
   * Fix a typo in Panel.qml. (LP: #1218331)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 727
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 29 Aug 2013 15:22:45 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 29 Aug 2013 15:22:45 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130829.1-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130829.1-0lomiri1) saucy; urgency=low
 
   [ Michal Hruby ]
   * Add UnityThemeIconProvider - A QQuickImageProvider that loads icons
@@ -4529,79 +4529,79 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130829.1-0ubuntu1) saucy; urgency=low
   * Add UnityThemeIconProvider - A QQuickImageProvider that loads icons
     from the current icon theme, following the xdg icon spec.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 725
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 29 Aug 2013 11:09:48 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 29 Aug 2013 11:09:48 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130829-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130829-0lomiri1) saucy; urgency=low
 
   [ Nicolas d'Offay ]
   * Fixed output issue: CrossFadeImage.qml:39: Unable to assign QSize to
     QSizeF. (LP: #1217848)
-  * Themed UbuntuShape OptionSelector. (LP: #1202170)
+  * Themed LomiriShape OptionSelector. (LP: #1202170)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 722
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 29 Aug 2013 02:45:45 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 29 Aug 2013 02:45:45 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130828.1-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130828.1-0lomiri1) saucy; urgency=low
 
   [ Michael Zanetti ]
   * add a test for PopoverForegroundStyle.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 719
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 28 Aug 2013 11:16:47 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 28 Aug 2013 11:16:47 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130828-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130828-0lomiri1) saucy; urgency=low
 
   * Automatic snapshot from revision 717
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 28 Aug 2013 08:19:49 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 28 Aug 2013 08:19:49 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130827-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130827-0lomiri1) saucy; urgency=low
 
   [ Michael Zanetti ]
-  * Themed UbuntuShape OptionSelector. (LP: #1202170)
+  * Themed LomiriShape OptionSelector. (LP: #1202170)
 
   [ Omer Akram ]
-  * Themed UbuntuShape OptionSelector. (LP: #1202170)
+  * Themed LomiriShape OptionSelector. (LP: #1202170)
 
   [ Nicolas d'Offay ]
-  * Themed UbuntuShape OptionSelector. (LP: #1202170)
+  * Themed LomiriShape OptionSelector. (LP: #1202170)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 714
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 27 Aug 2013 19:11:59 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 27 Aug 2013 19:11:59 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130826.1-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130826.1-0lomiri1) saucy; urgency=low
 
   [ Zsombor Egri ]
   * Alarm backend turned to asynchronous implementation. Status enum and
     corresponding property added to Alarm element to reflect the pending
     operation status.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 712
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 26 Aug 2013 18:34:52 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 26 Aug 2013 18:34:52 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130823-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130823-0lomiri1) saucy; urgency=low
 
   [ Zsombor Egri ]
   * AlarmModel got a role named model to solve ambiguous role accessing
     situations. Test application added.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 710
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 23 Aug 2013 10:10:02 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 23 Aug 2013 10:10:02 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130822.1-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130822.1-0lomiri1) saucy; urgency=low
 
   [ Alexandre Abreu ]
   * Add an actionmanager property that let clients be more flexible with
@@ -4610,12 +4610,12 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130822.1-0ubuntu1) saucy; urgency=low
   [ tpeeters ]
   * Do not trigger a ToolbarButton that is not enabled. (LP: #1202245)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 707
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 22 Aug 2013 18:55:49 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 22 Aug 2013 18:55:49 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130821-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130821-0lomiri1) saucy; urgency=low
 
   [ Michael Zanetti ]
   * Make Popover themable and allow inheriting Popover's default style.
@@ -4625,34 +4625,34 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130821-0ubuntu1) saucy; urgency=low
     actually work.
   * first step for autopilot tests to run on touch devices.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 703
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 21 Aug 2013 16:19:11 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 21 Aug 2013 16:19:11 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130819.3-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130819.3-0lomiri1) saucy; urgency=low
 
   [ Zsombor Egri ]
   * Alarm management QML API.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 699
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 19 Aug 2013 18:37:52 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 19 Aug 2013 18:37:52 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130819-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130819-0lomiri1) saucy; urgency=low
 
   [ tpeeters ]
   * Add a drag threshold to Panel (and Toolbar) so that unintentional
     movements while clicking are not detected as a drag to open/close
     the panel. (LP: #1179569)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 697
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 19 Aug 2013 02:11:54 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 19 Aug 2013 02:11:54 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130815.1-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130815.1-0lomiri1) saucy; urgency=low
 
   [ Leo Arias ]
   * Added a safeguard to prevent the tabs autopilot emulator to loop for
@@ -4663,24 +4663,24 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130815.1-0ubuntu1) saucy; urgency=low
     another page is pushed on the PageStack and a gradient background is
     used. (LP: #1209403)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 695
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 15 Aug 2013 06:33:50 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 15 Aug 2013 06:33:50 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130812-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130812-0lomiri1) saucy; urgency=low
 
   [ Timo Jyrinki ]
-  * Depend on ttf-ubuntu-font-family from the qtdeclarative5-ubuntu-ui-
-    toolkit-plugin (LP: #1181176) qtdeclarative5-ubuntu-ui-toolkit-
-    plugin has Label.qml which uses Ubuntu font directly. (LP: #1181176)
+  * Depend on ttf-lomiri-font-family from the qtdeclarative5-lomiri-ui-
+    toolkit-plugin (LP: #1181176) qtdeclarative5-lomiri-ui-toolkit-
+    plugin has Label.qml which uses Lomiri font directly. (LP: #1181176)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 691
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 12 Aug 2013 06:46:52 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 12 Aug 2013 06:46:52 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130809.2-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130809.2-0lomiri1) saucy; urgency=low
 
   [ Kaleo ]
   * Updated visual design of ActivityIndicator.
@@ -4693,52 +4693,52 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130809.2-0ubuntu1) saucy; urgency=low
   * Moved the ActionSelectionPopover autopilot emulator from the
     filemanager app. Added tests. (LP: #1205205)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 689
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 09 Aug 2013 15:36:16 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 09 Aug 2013 15:36:16 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130808.2-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130808.2-0lomiri1) saucy; urgency=low
 
   * New rebuild forced
   * Automatic snapshot from revision 682
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 08 Aug 2013 10:00:11 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 08 Aug 2013 10:00:11 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130808.1-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130808.1-0lomiri1) saucy; urgency=low
 
   [ Leo Arias ]
   * Fixed the opening of tabs on the autopilot test Emulators. (LP:
     #1206251)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 681
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 08 Aug 2013 06:05:03 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 08 Aug 2013 06:05:03 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130807-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130807-0lomiri1) saucy; urgency=low
 
   [ Zsombor Egri ]
   * InverseMouseArea derives now from MouseArea being in this way kept
     in sync with the MouseArea behavior. No API change other than base
     class and the extra API it brings occured. (LP: #1207426)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 678
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 07 Aug 2013 04:02:21 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 07 Aug 2013 04:02:21 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130806-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130806-0lomiri1) saucy; urgency=low
 
   [ Guenter Schwann ]
   * During tests, make sure the toolbar does not move before opening it.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 676
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 06 Aug 2013 07:38:20 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 06 Aug 2013 07:38:20 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130805-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130805-0lomiri1) saucy; urgency=low
 
   [ Kaleo ]
   * Popover: updated show/hide animations to match design. Slider's
@@ -4747,12 +4747,12 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130805-0ubuntu1) saucy; urgency=low
     is not worked out yet. Simple placeholder animation for now. (LP:
     #1195866)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 674
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 05 Aug 2013 04:02:18 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 05 Aug 2013 04:02:18 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130802-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130802-0lomiri1) saucy; urgency=low
 
   [ tpeeters ]
   * Restructure tab bar code and improve autopilot tests: - Split up
@@ -4765,12 +4765,12 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130802-0ubuntu1) saucy; urgency=low
   * Add bool properties alwaysSelectionMode and animate to TabBar for
     greater control of its behavior. (LP: #1204121, #1203685)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 671
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 02 Aug 2013 04:02:19 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 02 Aug 2013 04:02:19 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130731-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130731-0lomiri1) saucy; urgency=low
 
   [ Ugo Riboni ]
   * Make InverseMouseArea and MouseArea behave the same way when the
@@ -4784,12 +4784,12 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130731-0ubuntu1) saucy; urgency=low
   [ Christian Dywan ]
   * Ignore generated qml.xml files.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 668
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 31 Jul 2013 04:02:34 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 31 Jul 2013 04:02:34 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130730-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130730-0lomiri1) saucy; urgency=low
 
   [ Kaleo ]
   * OrientationHelper: report the current orientation of the application
@@ -4798,12 +4798,12 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130730-0ubuntu1) saucy; urgency=low
     fixed by ensuring that setWindowContextProperty is called in the
     same thread (the main thread). (LP: #1187321, #1205556)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 663
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 30 Jul 2013 04:02:22 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 30 Jul 2013 04:02:22 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130729-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130729-0lomiri1) saucy; urgency=low
 
   [ Kaleo ]
   * OrientationHelper: report the current orientation of the application
@@ -4818,23 +4818,23 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130729-0ubuntu1) saucy; urgency=low
   [ Michał Sawicz ]
   * Depend on devscripts for licensecheck.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 661
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 29 Jul 2013 04:02:12 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 29 Jul 2013 04:02:12 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130726.1-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130726.1-0lomiri1) saucy; urgency=low
 
   [ Zoltán Balogh ]
   * The UI Toolkit has theme with artworks what should be under creative
     common license.
 
   [ Leo Arias ]
-  * Renamed the UbuntuUiToolkit python package to ubuntuuitoolkit. (LP:
+  * Renamed the LomiriUiToolkit python package to lomiriuitoolkit. (LP:
     #1204281)
 
   [ Juhapekka Piiroinen ]
-  * Added Ubuntu Test module which contains UbuntuTestCase.
+  * Added Lomiri Test module which contains LomiriTestCase.
   * Use qmltestrunner for qml tests.
   * Adds missing dependency to devscripts which is required for the make
     license which uses licensecheck. (LP: #1205259)
@@ -4853,12 +4853,12 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130726.1-0ubuntu1) saucy; urgency=low
   * Refactor checklicense and include CSS files This also makes the test
     work on precise. (LP: #1195250)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 657
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 26 Jul 2013 12:23:40 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 26 Jul 2013 12:23:40 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130725-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130725-0lomiri1) saucy; urgency=low
 
   [ Leo Arias ]
   * Added fixes for the static errors detected by pyflakes, to the
@@ -4870,12 +4870,12 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130725-0ubuntu1) saucy; urgency=low
     branch by Juhapekka that fixes the remaining pep8 errors. (LP:
     #1204674)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 648
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 25 Jul 2013 06:01:15 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 25 Jul 2013 06:01:15 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130722-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130722-0lomiri1) saucy; urgency=low
 
   [ Kaleo ]
   * Popover rendering improvements: - created a reusable component used
@@ -4903,26 +4903,26 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130722-0ubuntu1) saucy; urgency=low
   [ Christian Dywan ]
   * Ignore test results, executables and mo files.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 645
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 22 Jul 2013 04:03:04 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 22 Jul 2013 04:03:04 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130719-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130719-0lomiri1) saucy; urgency=low
 
   [ Kaleo ]
-  * [Theme] Accept relative paths in UBUNTU_UI_TOOLKIT_THEMES_PATH. (LP:
+  * [Theme] Accept relative paths in LOMIRI_UI_TOOLKIT_THEMES_PATH. (LP:
     #1201842)
 
   [ Leo Arias ]
   * Isolated and cleaned the button tests. (LP: #1201822)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 637
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 19 Jul 2013 05:26:49 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 19 Jul 2013 05:26:49 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130718-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130718-0lomiri1) saucy; urgency=low
 
   [ Kaleo ]
   * Popover: added manual test program.
@@ -4947,23 +4947,23 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130718-0ubuntu1) saucy; urgency=low
   * Make sure that the keyboard does not obscure the contents of main
     window. (LP: #1131249)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 633
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 18 Jul 2013 06:07:54 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 18 Jul 2013 06:07:54 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130716-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130716-0lomiri1) saucy; urgency=low
 
   [ Kaleo ]
   * Dialog: removed clipping that not clipping anything.
   * Removed unused PointerStyleShader.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 626
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 16 Jul 2013 04:01:54 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 16 Jul 2013 04:01:54 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130714-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130714-0lomiri1) saucy; urgency=low
 
   [ Kaleo ]
   * MainView: new API to choose the background colors. That requires: -
@@ -4981,12 +4981,12 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130714-0ubuntu1) saucy; urgency=low
   * Fix bug where Header did not get linked to the new Flickable when
     Page.flickable is automatically detected. (LP: #1200642, #1192591)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 623
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Sun, 14 Jul 2013 04:02:43 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Sun, 14 Jul 2013 04:02:43 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130712-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130712-0lomiri1) saucy; urgency=low
 
   [ Kaleo ]
   * Removed unused artwork.
@@ -4996,15 +4996,15 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130712-0ubuntu1) saucy; urgency=low
     always reached. (LP: #1199662)
 
   [ Loïc Molinari ]
-  * [UbuntuShape] Prevented dangling nodes in the scene graph. (LP:
+  * [LomiriShape] Prevented dangling nodes in the scene graph. (LP:
     #1180794)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 618
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 12 Jul 2013 04:02:24 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 12 Jul 2013 04:02:24 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130711-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130711-0lomiri1) saucy; urgency=low
 
   [ Kaleo ]
   * Introduce new theme color palette API centralising the definition of
@@ -5018,17 +5018,17 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130711-0ubuntu1) saucy; urgency=low
 
   [ Loïc Molinari ]
   * Added support for -Werror flagged debug builds and fixed warnings.
-  * [UbuntuShape] Fixed alignment support.
+  * [LomiriShape] Fixed alignment support.
 
   [ tpeeters ]
   * Add API tests for MainView.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 613
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 11 Jul 2013 04:02:09 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 11 Jul 2013 04:02:09 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130710.1-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130710.1-0lomiri1) saucy; urgency=low
 
   [ Kaleo ]
   * ListItems Base & Standard: prevent the icon from going taller than
@@ -5039,12 +5039,12 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130710.1-0ubuntu1) saucy; urgency=low
     qmlscene with either environment variable set or with a command line
     parameter.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 605
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 10 Jul 2013 12:48:26 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 10 Jul 2013 12:48:26 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130710-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130710-0lomiri1) saucy; urgency=low
 
   [ Kaleo ]
   * Add a CrossFadeImage component which crossfades when its source is
@@ -5054,9 +5054,9 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130710-0ubuntu1) saucy; urgency=low
     new BriskDuration is introduced at 333ms.
   * GIconProvider: avoid using QPixmap which is not re-entrant. Fixes
     crashes. (LP: #1197784)
-  * Fine tuned UbuntuAnimation.StandardEasing to match design.
-    Introduced new standard Ubuntu easing
-    UbuntuAnimation.StandardEasingReverse.
+  * Fine tuned LomiriAnimation.StandardEasing to match design.
+    Introduced new standard Lomiri easing
+    LomiriAnimation.StandardEasingReverse.
   * Panel.animating: do not rely on comparing real values that sometimes
     have rounding errors. (LP: #1199550)
 
@@ -5065,27 +5065,27 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130710-0ubuntu1) saucy; urgency=low
     updated.
 
   [ Loïc Molinari ]
-  * [UbuntuShape] Moved content flagging before implicit sizing to
+  * [LomiriShape] Moved content flagging before implicit sizing to
     prevent assertion.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 602
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 10 Jul 2013 06:23:17 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 10 Jul 2013 06:23:17 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130709-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130709-0lomiri1) saucy; urgency=low
 
   [ Kaleo ]
   * Pass import paths from main QQmlEngine to QQuickUtils' QQmlEngine.
     Fixes case where qmlscene is passed import paths via the -I
     argument.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 593
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 09 Jul 2013 04:02:55 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 09 Jul 2013 04:02:55 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130705.3-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130705.3-0lomiri1) saucy; urgency=low
 
   [ Kaleo ]
   * Latest fix in ButtonStyle had 3 typos. Fixing them. .
@@ -5095,12 +5095,12 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130705.3-0ubuntu1) saucy; urgency=low
   [ Christian Dywan ]
   * Include alias types in qmlapicheck. (LP: #1192540)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 589
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 05 Jul 2013 18:09:33 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 05 Jul 2013 18:09:33 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130705-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130705-0lomiri1) saucy; urgency=low
 
   [ Kaleo ]
   * Reintroduced QML proxy for ShapeItem C++ class in order to
@@ -5111,12 +5111,12 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130705-0ubuntu1) saucy; urgency=low
   * Added workaround for QML buggy support for color props in ternary
     ops. (LP: #1197802)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 584
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 05 Jul 2013 04:01:41 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 05 Jul 2013 04:01:41 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130703.1-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130703.1-0lomiri1) saucy; urgency=low
 
   [ Zsombor Egri ]
   * Fix for re-parenting items that are anchor filled to an item in
@@ -5126,9 +5126,9 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130703.1-0ubuntu1) saucy; urgency=low
     (LP: #1183265)
   * Calculator example which turns from simple calculator (phone
     portrait mode) into scientific one (phone landscape mode) reflecting
-    the use of Ubuntu.Layouts. .
+    the use of Lomiri.Layouts. .
   * Removing common.pri from Layouts.pro and Layouts\plugin.pro causing
-    qmake warnings when Ubuntu UI toolkit project is opened in
+    qmake warnings when Lomiri UI toolkit project is opened in
     QtCreator.
 
   [ Leo Arias ]
@@ -5137,7 +5137,7 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130703.1-0ubuntu1) saucy; urgency=low
   * Added the Toolbar Autopilot emulator. (LP: #1177341)
 
   [ Juhapekka Piiroinen ]
-  * Fixed broken ubuntu-ui-toolkit-gallery.qmlproject file, which had an
+  * Fixed broken lomiri-ui-toolkit-gallery.qmlproject file, which had an
     invalid value in mainFile field.
 
   [ tpeeters ]
@@ -5154,21 +5154,21 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130703.1-0ubuntu1) saucy; urgency=low
     (coverage.prf) which works the same way as before.
   * Removed antiquated TextCustom class.
   * Removed unused old-style tabs delegate.
-  * Removed UbuntuShape.qml and transferred code & documentation to
+  * Removed LomiriShape.qml and transferred code & documentation to
     shapeitem.cpp ShapeItem: renamed baseColor property into color.
-  * UbuntuShape: simplified gradient implementation; gradientColor is
+  * LomiriShape: simplified gradient implementation; gradientColor is
     now the same as color by default. .
   * Simplified theming infrastructure. There are no stylesheets anymore
     (.qmltheme file), only delegates remain. A theme is a QML module
     containing delegates whose names are standardized. The default theme
     is called 'Ambiance' and available from QML through 'import
-    Ubuntu.Components.Themes.Ambiance 0.1'. The name of the current
-    theme is set in ~/.config/ubuntu-ui-toolkit/theme.ini Writing a new
+    Lomiri.Components.Themes.Ambiance 0.1'. The name of the current
+    theme is set in ~/.config/lomiri-ui-toolkit/theme.ini Writing a new
     theme is done by creating a QML module and adding it in the
-    Ubuntu/Components/Themes folder. A theme inherits from another theme
+    Lomiri/Components/Themes folder. A theme inherits from another theme
     by containing a text file name 'parent_theme' whose first and only
     line is the name of the parent theme. * Moved themes/ directory to
-    Ubuntu/Components/Themes so that themes are importable. * Simplified
+    Lomiri/Components/Themes so that themes are importable. * Simplified
     ThemeEngine and ThemeSettings class, removed the rest of the theming
     infrastructure (ItemStyle, Style, QmlThemeLoader, Selector,
     StyleCache). * Adapted all widgets to use the simplified theming
@@ -5183,109 +5183,109 @@ ubuntu-ui-toolkit (0.1.46+13.10.20130703.1-0ubuntu1) saucy; urgency=low
     delegates so that they match their widget's name (e.g.
     EditorCursorDelegate.qml renamed to TextCursorDelegate.qml since
     it's the delegate of TextCursor.qml) * Renamed UITK_THEME_PATH into
-    UBUNTU_UI_TOOLKIT_THEMES_PATH. (LP: #1152160, #1152161, #1152162,
+    LOMIRI_UI_TOOLKIT_THEMES_PATH. (LP: #1152160, #1152161, #1152162,
     #1185950, #1081038, #1167998, #1137210, #1152154, #1152158)
-  * New UbuntuColors singleton defining the standard Ubuntu color
+  * New LomiriColors singleton defining the standard Lomiri color
     palette. (LP: #1098209)
-  * debian/control: specify same architecture for ubuntu-ui-toolkit-
-    theme as for qtdeclarative5-ubuntu-ui-toolkit-plugin so that the
+  * debian/control: specify same architecture for lomiri-ui-toolkit-
+    theme as for qtdeclarative5-lomiri-ui-toolkit-plugin so that the
     files end up in the same folder. (LP: #1197164)
   * Button: - implementation clean up - updated visual design - new
     'gradient' property.
   * When looking up the plugin's directory
-    (UbuntuComponentsPlugin::baseUrl), a case was omitted: if another
-    Ubuntu/Components directory exists and is present in the
+    (LomiriComponentsPlugin::baseUrl), a case was omitted: if another
+    Lomiri/Components directory exists and is present in the
     QML2_IMPORT_PATH then the lookup failed. This fix is temporary until
     Qt 5.1. (LP: #1197293)
   * Reverted revisions 562 & 569 that broke the autopilot tests. Fixed
     button related autopilot test. (LP: #1197355)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 580
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 03 Jul 2013 19:53:27 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 03 Jul 2013 19:53:27 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130628-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130628-0lomiri1) saucy; urgency=low
 
   [ Kaleo ]
   * Button: do not display a background when the color set is fully
     transparent.
-  * TextField: new clear icon imported from the icon theme (lp:ubuntu-
+  * TextField: new clear icon imported from the icon theme (lp:lomiri-
     themes).
 
   [ Christian Dywan ]
   * Implement bread crumbs in API docs. (LP: #1168026)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 560
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 28 Jun 2013 04:01:36 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 28 Jun 2013 04:01:36 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130627-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130627-0lomiri1) saucy; urgency=low
 
   [ Sebastien Bacher ]
   * List.Item.Standard: set the height and verticalCenter of the
     control. (LP: #1190196)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 555
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 27 Jun 2013 04:01:22 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 27 Jun 2013 04:01:22 +0000
 
-ubuntu-ui-toolkit (0.1.46+13.10.20130626-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46+13.10.20130626-0lomiri1) saucy; urgency=low
 
   [ Zsombor Egri ]
   * [layouts] Layout factoring.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 552
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 26 Jun 2013 04:01:25 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 26 Jun 2013 04:01:25 +0000
 
-ubuntu-ui-toolkit (0.1.46daily13.06.20-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46daily13.06.20-0lomiri1) saucy; urgency=low
 
   [ tpeeters ]
   * Replace ToolbarActions by ToolbarItems and use ActionItem as a
     visual representation of Actions. (LP: #1177123)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 550
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 20 Jun 2013 04:01:27 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 20 Jun 2013 04:01:27 +0000
 
-ubuntu-ui-toolkit (0.1.46daily13.06.19-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46daily13.06.19-0lomiri1) saucy; urgency=low
 
   [ Sebastien Bacher ]
   * ListItem.Standard: use the correct import in the example.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 548
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 19 Jun 2013 04:01:25 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 19 Jun 2013 04:01:25 +0000
 
-ubuntu-ui-toolkit (0.1.46daily13.06.18-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46daily13.06.18-0lomiri1) saucy; urgency=low
 
   [ Nicolas d'Offay ]
   * Added alias to expose animation running and exposed orientationAngle
     in OrientationHelper.qml.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 545
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 18 Jun 2013 04:01:14 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 18 Jun 2013 04:01:14 +0000
 
-ubuntu-ui-toolkit (0.1.46daily13.06.17-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46daily13.06.17-0lomiri1) saucy; urgency=low
 
   [ tpeeters ]
   * Add ActionItem component that copies the Action API, but adds a
     visual representation of the Action.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 542
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 17 Jun 2013 04:02:19 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 17 Jun 2013 04:02:19 +0000
 
-ubuntu-ui-toolkit (0.1.46daily13.06.14-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46daily13.06.14-0lomiri1) saucy; urgency=low
 
   [ tpeeters ]
   * Tools are now Items: - Make ToolbarActions a subclass of Item - Move
@@ -5293,12 +5293,12 @@ ubuntu-ui-toolkit (0.1.46daily13.06.14-0ubuntu1) saucy; urgency=low
     ToolbarActions - Allow the tools properties of Toolbar and Page to
     be any Item.
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 540
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 14 Jun 2013 04:02:15 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 14 Jun 2013 04:02:15 +0000
 
-ubuntu-ui-toolkit (0.1.46daily13.06.05.1-0ubuntu1) saucy; urgency=low
+lomiri-ui-toolkit (0.1.46daily13.06.05.1-0lomiri1) saucy; urgency=low
 
   [ Zoltán Balogh ]
   * update the example app for the latest UI Toolkit.
@@ -5310,8 +5310,8 @@ ubuntu-ui-toolkit (0.1.46daily13.06.05.1-0ubuntu1) saucy; urgency=low
     description for usage instructions. (LP: #1155634). (LP: #1155634)
 
   [ Loïc Molinari ]
-  * [UbuntuShape] Correctly stored the current material. (LP: #1132771)
-  * [UbuntuShape] Ensured the texture is available in updatePaintNode().
+  * [LomiriShape] Correctly stored the current material. (LP: #1132771)
+  * [LomiriShape] Ensured the texture is available in updatePaintNode().
     (LP: #1171437)
 
   [ Kaleo ]
@@ -5324,8 +5324,8 @@ ubuntu-ui-toolkit (0.1.46daily13.06.05.1-0ubuntu1) saucy; urgency=low
     #1130120)
   * Added documentation for bitmap suffixes in the resolution
     independence page. (LP: #1092051)
-  * Revamped component showcase now called 'Ubuntu UI Toolkit Gallery'.
-    Works on Ubuntu Touch. (LP: #1130603)
+  * Revamped component showcase now called 'Lomiri UI Toolkit Gallery'.
+    Works on Lomiri Touch. (LP: #1130603)
   * Benchmarks for time critical components.
   * Added ListItem.ValueSelector example. Fixed incorrect 'Multi value'
     label. (LP: #1172663)
@@ -5335,10 +5335,10 @@ ubuntu-ui-toolkit (0.1.46daily13.06.05.1-0ubuntu1) saucy; urgency=low
     by setting 'automaticOrientation' to true. New component
     OrientationHelper for applications that do not use MainView but
     still need an easy way to automatically rotate.
-  * UbuntuShape: fix slight distortion of image when set. This
+  * LomiriShape: fix slight distortion of image when set. This
     distortion was quite disturbing when the content has text in it, as
     it is often the case in Popups and Popovers. (LP: #1170878)
-  * Use standard animation ubuntu snap beat for popups fade in.
+  * Use standard animation lomiri snap beat for popups fade in.
   * Removed unnecessary clipping from Tabs, Popover, Dialog and
     MainView.
   * All ListItems: set default contents right and left margins to 2 gu.
@@ -5349,18 +5349,18 @@ ubuntu-ui-toolkit (0.1.46daily13.06.05.1-0ubuntu1) saucy; urgency=low
     is no split.
   * ListItems: constrain size of the icon by default. Deprecated private
     properties __iconWidth and __iconHeight.
-  * Ubuntu UI Toolkit Gallery tweaks: - Made window wider and left
+  * Lomiri UI Toolkit Gallery tweaks: - Made window wider and left
     column the width of the phone: 40gu. - Removed 'slider.' from Slider
     example's labels. - Renamed 'Switches' into 'Toggles'. Renamed
     'Progress Bars' into 'Progress and activity'. - Use resolution
     independence for navigation example screenshots.
   * Support source with quotes in .sci files. (LP: #1080719)
-  * Reverted unjustified changes to ubuntu-ui-toolkit-gallery.desktop.
+  * Reverted unjustified changes to lomiri-ui-toolkit-gallery.desktop.
   * Popover: simplified computation of height: - contentHeight to be the
     height of the content not of the delegate - delegate to always be
     the height of the Popover. (LP: #1178227)
-  * New UbuntuAnimation durations and easing constants. New
-    UbuntuNumberAnimation.
+  * New LomiriAnimation durations and easing constants. New
+    LomiriNumberAnimation.
   * Document type for alias properties of the following classes: -
     TextArea - TextField - ListItems.Empty - ListItems.SingleValue -
     Popups.Dialog - Popups.Popover - Popups.SheetBase. (LP: #1169919)
@@ -5370,7 +5370,7 @@ ubuntu-ui-toolkit (0.1.46daily13.06.05.1-0ubuntu1) saucy; urgency=low
   [ Timo Jyrinki ]
   * Fix autopilot tests and add autopilot package. (LP: #1169556) (LP:
     #1170659) This branch makes the five autopilot tests to run again
-    with newest autopilot packages, and adds a ubuntu-ui-toolkit-
+    with newest autopilot packages, and adds a lomiri-ui-toolkit-
     autopilot package to install for CI or other purposes. The tests are
     runnable both from an installed package or source directory. (LP:
     #1170659, #1169556)
@@ -5380,7 +5380,7 @@ ubuntu-ui-toolkit (0.1.46daily13.06.05.1-0ubuntu1) saucy; urgency=low
     plugins dependency. The split multimedia plugins only as recommends
     to be on the safe side during the transition period to 5.0.2.
   * Port to autopilot 1.3 and update test content to match UI.
-  * Depend on dpkg-dev from ubuntu-ui-toolkit-autopilot, as long as
+  * Depend on dpkg-dev from lomiri-ui-toolkit-autopilot, as long as
     dpkg-architecture is used.
   * Offer symlinks for qmlscene via 'qmlrunner' package. See package
     description for usage instructions. (LP: #1155634). (LP: #1155634)
@@ -5448,7 +5448,7 @@ ubuntu-ui-toolkit (0.1.46daily13.06.05.1-0ubuntu1) saucy; urgency=low
     theme file in an app having a Popover instantiated. (LP: #1175394)
   * [theming] Removing deprecated functionality.
   * [theming] Changing stateful libraries to stateless to decrease time
-    spent each time Ubuntu.Components module is imported. (LP: #1170638)
+    spent each time Lomiri.Components module is imported. (LP: #1170638)
   * [theming] FontUtils converted from stateful JS library to native
     module due to its dependency to "units" context property.
   * [inversemaousearea] Fixing sensingArea not updated on phablet. (LP:
@@ -5500,7 +5500,7 @@ ubuntu-ui-toolkit (0.1.46daily13.06.05.1-0ubuntu1) saucy; urgency=low
   [ tpeeters ]
   * Disable swiping to switch tabs by default. This is a preparation for
     the complete removal of the swipe-to-switch-tabs functionality cf.
-    https://bugs.launchpad.net/ubuntu-ui-toolkit/+bug/1166709.
+    https://bugs.launchpad.net/lomiri-ui-toolkit/+bug/1166709.
   * Disable events on disabled controls inside list items. (LP:
     #1166982)
   * Add a new Panel component that can be swiped in and out from an edge
@@ -5560,12 +5560,12 @@ ubuntu-ui-toolkit (0.1.46daily13.06.05.1-0ubuntu1) saucy; urgency=low
     (LP: #1167232)
   * Enable UI Toolkit translations in Launchpad. (LP: #1175724)
 
-  [ Ubuntu daily release ]
+  [ Lomiri daily release ]
   * Automatic snapshot from revision 537
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 05 Jun 2013 09:06:50 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 05 Jun 2013 09:06:50 +0000
 
-ubuntu-ui-toolkit (0.1.46daily13.06.04ubuntu.unity.next-0ubuntu1) raring; urgency=low
+lomiri-ui-toolkit (0.1.46daily13.06.04lomiri.unity.next-0lomiri1) raring; urgency=low
 
   [ Kaleo ]
   * Reduced size of the x-large font size per design.
@@ -5574,32 +5574,32 @@ ubuntu-ui-toolkit (0.1.46daily13.06.04ubuntu.unity.next-0ubuntu1) raring; urgenc
   * When the clear button is not visible, ensure the text can use its
     space. (LP: #1186247)
 
-  [ Ubuntu daily release ]
-  * Automatic snapshot from revision 531 (ubuntu-unity/next)
+  [ Lomiri daily release ]
+  * Automatic snapshot from revision 531 (lomiri-unity/next)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 04 Jun 2013 04:02:44 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 04 Jun 2013 04:02:44 +0000
 
-ubuntu-ui-toolkit (0.1.46daily13.06.02ubuntu.unity.next-0ubuntu1) raring; urgency=low
+lomiri-ui-toolkit (0.1.46daily13.06.02lomiri.unity.next-0lomiri1) raring; urgency=low
 
   [ tpeeters ]
   * Enable UI Toolkit translations in Launchpad. (LP: #1175724)
 
-  [ Ubuntu daily release ]
-  * Automatic snapshot from revision 528 (ubuntu-unity/next)
+  [ Lomiri daily release ]
+  * Automatic snapshot from revision 528 (lomiri-unity/next)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Sun, 02 Jun 2013 04:02:42 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Sun, 02 Jun 2013 04:02:42 +0000
 
-ubuntu-ui-toolkit (0.1.46daily13.05.31ubuntu.unity.next-0ubuntu1) raring; urgency=low
+lomiri-ui-toolkit (0.1.46daily13.05.31lomiri.unity.next-0lomiri1) raring; urgency=low
 
   [ Olivier Tilloy ]
   * Added property TextField.inputMethodHints. (LP: #1185392)
 
-  [ Ubuntu daily release ]
-  * Automatic snapshot from revision 525 (ubuntu-unity/next)
+  [ Lomiri daily release ]
+  * Automatic snapshot from revision 525 (lomiri-unity/next)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 31 May 2013 04:02:58 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 31 May 2013 04:02:58 +0000
 
-ubuntu-ui-toolkit (0.1.46daily13.05.29.1ubuntu.unity.next-0ubuntu1) raring; urgency=low
+lomiri-ui-toolkit (0.1.46daily13.05.29.1lomiri.unity.next-0lomiri1) raring; urgency=low
 
   [ Zsombor Egri ]
   * [inversemousearea] Default sensing area not set on the proper time.
@@ -5613,12 +5613,12 @@ ubuntu-ui-toolkit (0.1.46daily13.05.29.1ubuntu.unity.next-0ubuntu1) raring; urge
   [ Christian Dywan ]
   * Save qdoc error log and fail if it's not empty. (LP: #1185402)
 
-  [ Ubuntu daily release ]
-  * Automatic snapshot from revision 523 (ubuntu-unity/next)
+  [ Lomiri daily release ]
+  * Automatic snapshot from revision 523 (lomiri-unity/next)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 29 May 2013 19:55:27 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 29 May 2013 19:55:27 +0000
 
-ubuntu-ui-toolkit (0.1.46daily13.05.29ubuntu.unity.next-0ubuntu1) raring; urgency=low
+lomiri-ui-toolkit (0.1.46daily13.05.29lomiri.unity.next-0lomiri1) raring; urgency=low
 
   [ Zsombor Egri ]
   * [inversemaousearea] Fixing sensingArea not updated on phablet. (LP:
@@ -5638,12 +5638,12 @@ ubuntu-ui-toolkit (0.1.46daily13.05.29ubuntu.unity.next-0ubuntu1) raring; urgenc
   [ Kaleo ]
   * Added new API to retrieve command line arguments: Arguments.
 
-  [ Ubuntu daily release ]
-  * Automatic snapshot from revision 519 (ubuntu-unity/next)
+  [ Lomiri daily release ]
+  * Automatic snapshot from revision 519 (lomiri-unity/next)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 29 May 2013 04:02:36 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 29 May 2013 04:02:36 +0000
 
-ubuntu-ui-toolkit (0.1.46daily13.05.24ubuntu.unity.next-0ubuntu1) raring; urgency=low
+lomiri-ui-toolkit (0.1.46daily13.05.24lomiri.unity.next-0lomiri1) raring; urgency=low
 
   [ tpeeters ]
   * revert changes to PageWrapperUtils.jp from revision 501 because it
@@ -5657,12 +5657,12 @@ ubuntu-ui-toolkit (0.1.46daily13.05.24ubuntu.unity.next-0ubuntu1) raring; urgenc
     flicked vertically, so that manual setting of anchors is no longer
     needed for flickables that only flick horizontally (calendar-app).
 
-  [ Ubuntu daily release ]
-  * Automatic snapshot from revision 511 (ubuntu-unity/next)
+  [ Lomiri daily release ]
+  * Automatic snapshot from revision 511 (lomiri-unity/next)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 24 May 2013 04:02:24 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 24 May 2013 04:02:24 +0000
 
-ubuntu-ui-toolkit (0.1.46daily13.05.23.2ubuntu.unity.next-0ubuntu1) raring; urgency=low
+lomiri-ui-toolkit (0.1.46daily13.05.23.2lomiri.unity.next-0lomiri1) raring; urgency=low
 
   [ Zoltán Balogh ]
   * Offer symlinks for qmlscene via 'qmlrunner' package. See package
@@ -5673,7 +5673,7 @@ ubuntu-ui-toolkit (0.1.46daily13.05.23.2ubuntu.unity.next-0ubuntu1) raring; urge
     theme file in an app having a Popover instantiated. (LP: #1175394)
   * [theming] Removing deprecated functionality.
   * [theming] Changing stateful libraries to stateless to decrease time
-    spent each time Ubuntu.Components module is imported. (LP: #1170638)
+    spent each time Lomiri.Components module is imported. (LP: #1170638)
   * [theming] FontUtils converted from stateful JS library to native
     module due to its dependency to "units" context property.
 
@@ -5682,14 +5682,14 @@ ubuntu-ui-toolkit (0.1.46daily13.05.23.2ubuntu.unity.next-0ubuntu1) raring; urge
     follow its properties .
 
   [ Kaleo ]
-  * New UbuntuAnimation durations and easing constants. New
-    UbuntuNumberAnimation.
+  * New LomiriAnimation durations and easing constants. New
+    LomiriNumberAnimation.
   * Document type for alias properties of the following classes: -
     TextArea - TextField - ListItems.Empty - ListItems.SingleValue -
     Popups.Dialog - Popups.Popover - Popups.SheetBase. (LP: #1169919)
 
   [ Timo Jyrinki ]
-  * Depend on dpkg-dev from ubuntu-ui-toolkit-autopilot, as long as
+  * Depend on dpkg-dev from lomiri-ui-toolkit-autopilot, as long as
     dpkg-architecture is used.
   * Offer symlinks for qmlscene via 'qmlrunner' package. See package
     description for usage instructions. (LP: #1155634). (LP: #1155634)
@@ -5713,12 +5713,12 @@ ubuntu-ui-toolkit (0.1.46daily13.05.23.2ubuntu.unity.next-0ubuntu1) raring; urge
   [ Christian Dywan ]
   * Introduce QML API check; if API changes, check components.api.new.
 
-  [ Ubuntu daily release ]
-  * Automatic snapshot from revision 508 (ubuntu-unity/next)
+  [ Lomiri daily release ]
+  * Automatic snapshot from revision 508 (lomiri-unity/next)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 23 May 2013 10:56:50 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 23 May 2013 10:56:50 +0000
 
-ubuntu-ui-toolkit (0.1.46daily13.05.14ubuntu.unity.next-0ubuntu1) raring; urgency=low
+lomiri-ui-toolkit (0.1.46daily13.05.14lomiri.unity.next-0lomiri1) raring; urgency=low
 
   [ Zsombor Egri ]
   * [Theming] custom styling objects which are owned by other styled
@@ -5756,12 +5756,12 @@ ubuntu-ui-toolkit (0.1.46daily13.05.14ubuntu.unity.next-0ubuntu1) raring; urgenc
   [ Christian Dywan ]
   * Docs need a base URL in qdocconf file (LP: #1175389)
 
-  [ Ubuntu daily release ]
-  * Automatic snapshot from revision 487 (ubuntu-unity/next)
+  [ Lomiri daily release ]
+  * Automatic snapshot from revision 487 (lomiri-unity/next)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 14 May 2013 04:02:02 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 14 May 2013 04:02:02 +0000
 
-ubuntu-ui-toolkit (0.1.46daily13.05.01ubuntu.unity.next-0ubuntu1) raring; urgency=low
+lomiri-ui-toolkit (0.1.46daily13.05.01lomiri.unity.next-0lomiri1) raring; urgency=low
 
   [Zoltan Balogh]
   * Component gallery app is moved to examples
@@ -5775,8 +5775,8 @@ ubuntu-ui-toolkit (0.1.46daily13.05.01ubuntu.unity.next-0ubuntu1) raring; urgenc
     (LP: #1081038)
 
   [ Loïc Molinari ]
-  * [UbuntuShape] Image's fillMode works only first time (LP: #1171437)
-  * [UbuntuShape] after first unloading of Image, UbuntuShape is black
+  * [LomiriShape] Image's fillMode works only first time (LP: #1171437)
+  * [LomiriShape] after first unloading of Image, LomiriShape is black
     (LP: #1132771)
 
   [ tpeeters <tim.peeters@canonical.com>, Juhapekka Piiroinen ]
@@ -5788,7 +5788,7 @@ ubuntu-ui-toolkit (0.1.46daily13.05.01ubuntu.unity.next-0ubuntu1) raring; urgenc
   [ Kaleo ]
   * remove phone component showcase demo (LP: #1130603)
   * Missing list item examples in new gallery (LP: #1172663)
-  * [UbuntuShape] image content is slightly distorted by the shape (LP:
+  * [LomiriShape] image content is slightly distorted by the shape (LP:
     #1170878)
 
   [ Timo Jyrinki ]
@@ -5803,58 +5803,58 @@ ubuntu-ui-toolkit (0.1.46daily13.05.01ubuntu.unity.next-0ubuntu1) raring; urgenc
   * [toolbar] Provide abstract component for edge swipe (LP: #1163395)
   * [toolbar] Need a more generic toolbar component (LP: #1131209)
 
-  [ Ubuntu daily release ]
-  * Automatic snapshot from revision 459 (ubuntu-unity/next)
+  [ Lomiri daily release ]
+  * Automatic snapshot from revision 459 (lomiri-unity/next)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 01 May 2013 07:51:21 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 01 May 2013 07:51:21 +0000
 
-ubuntu-ui-toolkit (0.1.45) raring; urgency=low
+lomiri-ui-toolkit (0.1.45) raring; urgency=low
 
   * New release
 
  -- Florian Boucault <florian.boucault@canonical.com>  Fri, 26 Apr 2013 10:05:09 -0300
 
-ubuntu-ui-toolkit (0.1.44) raring; urgency=low
+lomiri-ui-toolkit (0.1.44) raring; urgency=low
 
   * New release
 
  -- Tim Peeters <tim.peeters@canonical.com>  Tue, 23 Apr 2013 16:33:20 +0200
 
-ubuntu-ui-toolkit (0.1.43daily13.04.23ubuntu.unity.next-0ubuntu1) raring; urgency=low
+lomiri-ui-toolkit (0.1.43daily13.04.23lomiri.unity.next-0lomiri1) raring; urgency=low
 
   [ Kaleo ]
-  * [ubuntu-ui-toolkit] Image.sourceSize does not work for images using
+  * [lomiri-ui-toolkit] Image.sourceSize does not work for images using
     the @px notation (LP: #1130120)
   * Resolution independence docs don't mention the @size suffix (LP:
     #1092051)
 
-  [ Ubuntu daily release ]
-  * Automatic snapshot from revision 436 (ubuntu-unity/next)
+  [ Lomiri daily release ]
+  * Automatic snapshot from revision 436 (lomiri-unity/next)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 23 Apr 2013 04:03:26 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Tue, 23 Apr 2013 04:03:26 +0000
 
-ubuntu-ui-toolkit (0.1.43daily13.04.22ubuntu.unity.next-0ubuntu1) raring; urgency=low
+lomiri-ui-toolkit (0.1.43daily13.04.22lomiri.unity.next-0lomiri1) raring; urgency=low
 
   [ Zsombor Egri ]
   * Auto expanding TextArea should not eat flick events (LP: #1144077)
 
-  [ Ubuntu daily release ]
-  * Automatic snapshot from revision 433 (ubuntu-unity/next)
+  [ Lomiri daily release ]
+  * Automatic snapshot from revision 433 (lomiri-unity/next)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 22 Apr 2013 04:01:54 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Mon, 22 Apr 2013 04:01:54 +0000
 
-ubuntu-ui-toolkit (0.1.43daily13.04.19ubuntu.unity.next-0ubuntu1) raring; urgency=low
+lomiri-ui-toolkit (0.1.43daily13.04.19lomiri.unity.next-0lomiri1) raring; urgency=low
 
   [ Zsombor Egri ]
   * [TextArea] setting color property disables styling (LP: #1169601)
   * Re-enabling a TextField doesn't work (LP: #1164634)
 
-  [ Ubuntu daily release ]
-  * Automatic snapshot from revision 430 (ubuntu-unity/next)
+  [ Lomiri daily release ]
+  * Automatic snapshot from revision 430 (lomiri-unity/next)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 19 Apr 2013 04:09:00 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Fri, 19 Apr 2013 04:09:00 +0000
 
-ubuntu-ui-toolkit (0.1.43) raring; urgency=low
+lomiri-ui-toolkit (0.1.43) raring; urgency=low
 
   * Fix for text inputs staying disabled after being re-enabled. The previous
     workaround for removing input panel was blocking re-enabling a
@@ -5868,17 +5868,17 @@ ubuntu-ui-toolkit (0.1.43) raring; urgency=low
 
  -- Ken VanDine <ken.vandine@canonical.com>  Thu, 18 Apr 2013 10:18:52 -0400
 
-ubuntu-ui-toolkit (0.1.42daily13.04.18ubuntu.unity.next-0ubuntu1) raring; urgency=low
+lomiri-ui-toolkit (0.1.42daily13.04.18lomiri.unity.next-0lomiri1) raring; urgency=low
 
   [ Zsombor Egri ]
   * [textarea] TextArea focus is not handled correctly (LP: #1163371)
 
-  [ Ubuntu daily release ]
-  * Automatic snapshot from revision 426 (ubuntu-unity/next)
+  [ Lomiri daily release ]
+  * Automatic snapshot from revision 426 (lomiri-unity/next)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 18 Apr 2013 05:25:55 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Thu, 18 Apr 2013 05:25:55 +0000
 
-ubuntu-ui-toolkit (0.1.42daily13.04.17ubuntu.unity.next-0ubuntu1) raring; urgency=low
+lomiri-ui-toolkit (0.1.42daily13.04.17lomiri.unity.next-0lomiri1) raring; urgency=low
 
   [ Timo Jyrinki ]
   * Automatic snapshot from revision 421 (bootstrap)
@@ -5887,16 +5887,16 @@ ubuntu-ui-toolkit (0.1.42daily13.04.17ubuntu.unity.next-0ubuntu1) raring; urgenc
     - Slide to delete behaviour should use SDK component (LP: #1099455)
     - Memory leaks (LP: #1152151)
 
-  [ Ubuntu daily release ]
-  * Automatic snapshot from revision 422 (ubuntu-unity/next)
+  [ Lomiri daily release ]
+  * Automatic snapshot from revision 422 (lomiri-unity/next)
 
- -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 17 Apr 2013 04:01:52 +0000
+ -- Lomiri daily release <ps-jenkins@lists.canonical.com>  Wed, 17 Apr 2013 04:01:52 +0000
 
-ubuntu-ui-toolkit (0.1.42) raring; urgency=low
+lomiri-ui-toolkit (0.1.42) raring; urgency=low
 
   [ Loïc Minier ]
-  * Drop ubuntu-sdk package; now generated from sdk ubuntu-touch seed in
-    ubuntu-touch-meta package.
+  * Drop lomiri-sdk package; now generated from sdk lomiri-touch seed in
+    lomiri-touch-meta package.
 
   [ Timo Jyrinki ]
   * Sync with raring packaging, separate meta also in the PPA again
@@ -5905,14 +5905,14 @@ ubuntu-ui-toolkit (0.1.42) raring; urgency=low
     - Fix the clamping of sheet width on narrow screens.
     - Added "make license" target
     - Added online and offline API documentation configurations, both with
-      Ubuntu styling.
+      Lomiri styling.
 
   [ Tim Peeters ]
   * Rewrite of theming engine. See CHANGES for details and deprecated APIs.
 
  -- Tim Peeters <tim.peeters@canonical.com>  Fri, 12 Apr 2013 13:58:19 +0200
 
-ubuntu-ui-toolkit (0.1.41) raring; urgency=low
+lomiri-ui-toolkit (0.1.41) raring; urgency=low
 
   * Update documentation html styles
   * Automatic license checking for source files
@@ -5920,14 +5920,14 @@ ubuntu-ui-toolkit (0.1.41) raring; urgency=low
 
  -- Tim Peeters <tim.peeters@canonical.com>  Wed, 10 Apr 2013 19:16:52 +0200
 
-ubuntu-ui-toolkit (0.1.40) raring; urgency=low
+lomiri-ui-toolkit (0.1.40) raring; urgency=low
 
   * Improve header and toolbar documentation for MainView/Page/PageStack/Tabs.
   * Fix bug in header (hide it when the header is empty)
 
  -- Tim Peeters <tim.peeters@canonical.com>  Fri, 05 Apr 2013 15:12:25 +0200
 
-ubuntu-ui-toolkit (0.1.39) quantal; urgency=low
+lomiri-ui-toolkit (0.1.39) quantal; urgency=low
 
   * New Icon component that displays icons from the icon theme.
   * Added libqt5svg5 as a dependency thus allowing use of SVGs in icon themes.
@@ -5935,14 +5935,14 @@ ubuntu-ui-toolkit (0.1.39) quantal; urgency=low
 
  -- Florian Boucault <florian.boucault@canonical.com>  Mon, 01 Apr 2013 10:03:49 -0300
 
-ubuntu-ui-toolkit (0.1.38) raring; urgency=low
+lomiri-ui-toolkit (0.1.38) raring; urgency=low
 
-  * Drop ubuntu-sdk package; now generated from sdk ubuntu-touch seed in
-    ubuntu-touch-meta package.
+  * Drop lomiri-sdk package; now generated from sdk lomiri-touch seed in
+    lomiri-touch-meta package.
 
- -- Loïc Minier <loic.minier@ubuntu.com>  Thu, 21 Mar 2013 03:07:40 +0100
+ -- Loïc Minier <loic.minier@lomiri.com>  Thu, 21 Mar 2013 03:07:40 +0100
 
-ubuntu-ui-toolkit (0.1.37) raring; urgency=low
+lomiri-ui-toolkit (0.1.37) raring; urgency=low
 
   * Compatibility Breaks
     - Page, PageStack and Tabs automatically determine their anchors and height
@@ -5958,7 +5958,7 @@ ubuntu-ui-toolkit (0.1.37) raring; urgency=low
 
  -- Tim Peeters <tim.peeters@canonical.com>  Wed, 20 Mar 2013 19:15:08 +0100
 
-ubuntu-ui-toolkit (0.1.36.2-0ubuntu2) raring; urgency=low
+lomiri-ui-toolkit (0.1.36.2-0lomiri2) raring; urgency=low
 
   * debian/control
     - libqt5v8-5-dev only supports amd64, i386 and armhf so setting
@@ -5966,24 +5966,24 @@ ubuntu-ui-toolkit (0.1.36.2-0ubuntu2) raring; urgency=low
 
  -- Ken VanDine <ken.vandine@canonical.com>  Wed, 20 Mar 2013 12:44:41 -0400
 
-ubuntu-ui-toolkit (0.1.36.2-0ubuntu1) raring; urgency=low
+lomiri-ui-toolkit (0.1.36.2-0lomiri1) raring; urgency=low
 
   * New snapshot release (LP: #1157191)
   * Add more recommended packages
   * Co-exist better with PPAs
 
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Wed, 13 Mar 2013 11:21:06 +0200
+ -- Timo Jyrinki <timo-jyrinki@lomiri.com>  Wed, 13 Mar 2013 11:21:06 +0200
 
-ubuntu-ui-toolkit (0.1.36.1-0ubuntu1) raring; urgency=low
+lomiri-ui-toolkit (0.1.36.1-0lomiri1) raring; urgency=low
 
   * debian/control:
     - drop qtpim5-dev dep on the metapackage, not supported upstream and not
       in distro
 
- -- Didier Roche <didrocks@ubuntu.com>  Wed, 27 Feb 2013 10:19:43 +0100
+ -- Didier Roche <didrocks@lomiri.com>  Wed, 27 Feb 2013 10:19:43 +0100
 
-ubuntu-ui-toolkit (0.1.36-0ubuntu1) raring; urgency=low
+lomiri-ui-toolkit (0.1.36-0lomiri1) raring; urgency=low
 
   * Initial release
 
- -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Tue, 26 Feb 2013 09:52:05 +0200
+ -- Timo Jyrinki <timo-jyrinki@lomiri.com>  Tue, 26 Feb 2013 09:52:05 +0200

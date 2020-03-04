@@ -1,4 +1,4 @@
-module Ubuntu.Components.Themes.Ambiance
+module Lomiri.Components.Themes.Ambiance
 internal ActivityIndicatorStyle ./1.2/ActivityIndicatorStyle.qml
 internal ButtonStyle ./1.2/ButtonStyle.qml
 internal DialogForegroundStyle ./1.2/DialogForegroundStyle.qml

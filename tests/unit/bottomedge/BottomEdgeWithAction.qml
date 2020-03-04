@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Item {
     id: holder
@@ -36,7 +36,7 @@ Item {
             objectName: "default"
             width: bottomEdge.width
             height: bottomEdge.height
-            color: UbuntuColors.blue
+            color: LomiriColors.blue
         }
     }
 }

@@ -16,14 +16,14 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components 1.1
+import Lomiri.Components 1.1
 
 TestCase {
      name: "TabAPI"
 
      function test_iconSource() {
         compare(tab.iconSource,"","iconSource is not set by default")
-        var newIcon = Qt.resolvedUrl("../../../examples/ubuntu-ui-toolkit-gallery/small_avatar.png")
+        var newIcon = Qt.resolvedUrl("../../../examples/lomiri-ui-toolkit-gallery/small_avatar.png")
         tab.iconSource = newIcon
         compare(tab.iconSource,newIcon,"Can set/get iconSource")
      }

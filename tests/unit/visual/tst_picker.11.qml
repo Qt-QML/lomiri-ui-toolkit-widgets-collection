@@ -16,9 +16,9 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.1
-import Ubuntu.Components.Pickers 1.0
+import Lomiri.Test 1.0
+import Lomiri.Components 1.1
+import Lomiri.Components.Pickers 1.0
 
 Item {
     id: testSuite
@@ -142,7 +142,7 @@ Item {
         id: spy
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         id: testCase
         name: "PickerAPI"
         when: windowShown

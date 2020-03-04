@@ -1,7 +1,7 @@
 C++ coding style
 ================
 
-The Ubuntu UI Toolkit follows the Qt conventions, see:
+The Lomiri UI Toolkit follows the Qt conventions, see:
 
   - https://wiki.qt.io/Coding_Conventions
   - https://wiki.qt.io/Qt_Coding_Style
@@ -15,7 +15,7 @@ Header inclusion
 1/ When including Qt or UITK headers, always prefix with the project name. Use:
 
     #include <QtCore/QMap>
-    #include <UbuntuMetrics/applicationmonitor.h>
+    #include <LomiriMetrics/applicationmonitor.h>
 
    not
 
@@ -44,7 +44,7 @@ Header inclusion
     #include <QtCore/private/qobject_p.h>
     #include <QtGui/QWindow>
     #include <QtGui/private/qcolor_p.h>
-    #include <UbuntuMetrics/applicationmonitor.h>
+    #include <LomiriMetrics/applicationmonitor.h>
 
     // Other libraries headers.
     #include <gst/gst.h>

@@ -16,8 +16,8 @@
 
 //![0]
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Themes.SuruDark 1.1 as Suru
+import Lomiri.Components 1.3
+import Lomiri.Components.Themes.SuruDark 1.1 as Suru
 
 Suru.Palette {
     normal.background: "#A21E1C"

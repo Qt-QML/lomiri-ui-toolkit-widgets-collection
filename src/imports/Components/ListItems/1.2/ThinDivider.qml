@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 /*!
     \qmltype ThinDivider
-    \inqmlmodule Ubuntu.Components.ListItems 1.0
-    \ingroup ubuntu-listitems
+    \inqmlmodule Lomiri.Components.ListItems 1.0
+    \ingroup lomiri-listitems
     \brief Narrow line used as a divider between ListItems.
 
     ListItems will usually include this line at the bottom of the item
@@ -29,7 +29,7 @@ import Ubuntu.Components 1.2
 
     Examples:
     \qml
-        import Ubuntu.Components.ListItems 1.0 as ListItem
+        import Lomiri.Components.ListItems 1.0 as ListItem
         Column {
             width: 250
             ListItem.ThinDivider {} //can be used as header for list

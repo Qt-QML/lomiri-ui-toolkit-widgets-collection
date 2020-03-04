@@ -16,7 +16,7 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components.ListItems 1.0 as ListItem
+import Lomiri.Components.ListItems 1.0 as ListItem
 
 TestCase {
      name: "ListItemsValueSelectorAPI"
@@ -35,7 +35,7 @@ TestCase {
          compare(listItemValueSelector.icon,undefined,"icon is not set by default")
 
          // test with url
-         var newIcon = Qt.resolvedUrl("../../../examples/ubuntu-ui-toolkit-gallery/small_avatar.png")
+         var newIcon = Qt.resolvedUrl("../../../examples/lomiri-ui-toolkit-gallery/small_avatar.png")
          listItemValueSelector.icon = newIcon
          compare(listItemValueSelector.icon,newIcon,"set/get from url")
      }

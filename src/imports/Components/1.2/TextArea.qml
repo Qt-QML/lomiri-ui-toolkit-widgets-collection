@@ -15,13 +15,13 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2 as Ubuntu
-import Ubuntu.Components.Popups 1.0
+import Lomiri.Components 1.2 as Lomiri
+import Lomiri.Components.Popups 1.0
 
 /*!
     \qmltype TextArea
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief The TextArea item displays a block of editable, scrollable, formatted
     text.
 
@@ -91,7 +91,7 @@ import Ubuntu.Components.Popups 1.0
     \note During text selection all interactive parent Flickables are turned off.
   */
 
-Ubuntu.StyledItem {
+Lomiri.StyledItem {
     id: control
     implicitWidth: units.gu(30)
     implicitHeight: (autoSize) ? internal.minimumSize : internal.linesHeight(4)
@@ -732,7 +732,7 @@ Ubuntu.StyledItem {
         acceptedButtons: Qt.LeftButton | Qt.RightButton
         // activate input when pressed on the frame
         preventStealing: false
-        Ubuntu.Mouse.forwardTo: [inputHandler]
+        Lomiri.Mouse.forwardTo: [inputHandler]
     }
 
     //internals
@@ -766,7 +766,7 @@ Ubuntu.StyledItem {
                 var max = (control.maximumLineCount <= 0) ?
                             control.lineCount :
                             Math.min(control.maximumLineCount, control.lineCount);
-                control.height = linesHeight(Ubuntu.MathUtils.clamp(control.lineCount, 1, max));
+                control.height = linesHeight(Lomiri.MathUtils.clamp(control.lineCount, 1, max));
             }
         }
     }
@@ -861,7 +861,7 @@ Ubuntu.StyledItem {
             onLineCountChanged: internal.frameSize()
 
             // input selection and navigation handling
-            Ubuntu.Mouse.forwardTo: [inputHandler]
+            Lomiri.Mouse.forwardTo: [inputHandler]
             InputHandler {
                 id: inputHandler
                 anchors.fill: parent

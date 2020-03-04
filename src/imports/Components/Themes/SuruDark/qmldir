@@ -1,4 +1,4 @@
-module Ubuntu.Components.Themes.SuruDark
+module Lomiri.Components.Themes.SuruDark
 
 #version 1.1
 Palette 1.1 ./1.2/Palette.qml

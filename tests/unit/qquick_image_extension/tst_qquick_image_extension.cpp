@@ -19,9 +19,9 @@
 #include <QtQml/QQmlEngine>
 #include <QtQuick/private/qquickimagebase_p.h>
 #include <QtTest/QtTest>
-#include <UbuntuToolkit/ubuntutoolkitmodule.h>
+#include <LomiriToolkit/lomiritoolkitmodule.h>
 #define protected public
-#include <UbuntuToolkit/private/ucqquickimageextension_p.h>
+#include <LomiriToolkit/private/ucqquickimageextension_p.h>
 #undef protected
 #include <QtCore/private/qabstractfileengine_p.h>
 #include <QQuickView>
@@ -60,7 +60,7 @@ private Q_SLOTS:
     void init()
     {
         engine = new QQmlEngine;
-        UbuntuToolkitModule::initializeContextProperties(engine);
+        LomiriToolkitModule::initializeContextProperties(engine);
     }
 
     void cleanup()

@@ -18,8 +18,8 @@ import QtQuick 2.4
 
 /*!
     \qmltype ProgressBar
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief The ProgressBar component visually indicates the progress of a process of
     determinate or indeterminate duration.
 
@@ -65,10 +65,10 @@ AnimatedItem {
     property real value: 0.5
 
     /*!
-      \since Ubuntu.Components 1.1
+      \since Lomiri.Components 1.1
       \deprecated
       Specifies if the value of the progress is visible. The current visuals in
-      Ubuntu Components 1.3 do not support this feature.
+      Lomiri Components 1.3 do not support this feature.
     */
     property bool showProgressPercentage: true
 

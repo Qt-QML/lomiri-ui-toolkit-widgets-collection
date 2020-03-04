@@ -14,10 +14,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 import QtQuick 2.4
-import Ubuntu.Components 1.2
-import Ubuntu.Components.Popups 1.0
-import Ubuntu.Components.ListItems 1.0 as ListItem
-import Ubuntu.Components.Styles 1.2 as Style
+import Lomiri.Components 1.2
+import Lomiri.Components.Popups 1.0
+import Lomiri.Components.ListItems 1.0 as ListItem
+import Lomiri.Components.Styles 1.2 as Style
 
 Style.PageHeadStyle {
     id: headerStyle
@@ -61,7 +61,7 @@ Style.PageHeadStyle {
     /*!
       The text color of the selected section.
      */
-    property color selectedSectionColor: UbuntuColors.orange
+    property color selectedSectionColor: LomiriColors.orange
 
     /*!
       The background color of the pressed section.
@@ -203,19 +203,19 @@ Style.PageHeadStyle {
             to: "OUT"
             SequentialAnimation {
                 ParallelAnimation {
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                         target: allContents
                         property: "opacity"
                         from: 1.0
                         to: 0.0
                     }
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                         target: leftAnchor
                         properties: "anchors.leftMargin"
                         from: 0.0
                         to: -units.gu(5)
                     }
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                         target: rightAnchor
                         properties: "anchors.rightMargin"
                         from: 0
@@ -233,19 +233,19 @@ Style.PageHeadStyle {
             to: "IN"
             SequentialAnimation {
                 ParallelAnimation {
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                         target: allContents
                         property: "opacity"
                         from: 0.0
                         to: 1.0
                     }
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                         target: leftAnchor
                         properties: "anchors.leftMargin"
                         from: -units.gu(5)
                         to: 0
                     }
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                         target: rightAnchor
                         properties: "anchors.rightMargin"
                         from: -units.gu(5)
@@ -541,7 +541,7 @@ Style.PageHeadStyle {
                         // Ensure the popover closes when actions change and
                         // the list item below may be destroyed before its
                         // onClicked is executed. See bug
-                        // https://bugs.launchpad.net/ubuntu-ui-toolkit/+bug/1326963
+                        // https://bugs.launchpad.net/lomiri-ui-toolkit/+bug/1326963
                         Connections {
                             target: styledItem.config
                             onActionsChanged: {

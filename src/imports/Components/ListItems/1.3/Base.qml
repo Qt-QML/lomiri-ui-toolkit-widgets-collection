@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*!
     \qmltype Base
-    \inqmlmodule Ubuntu.Components.ListItems 1.0
-    \ingroup ubuntu-listitems
+    \inqmlmodule Lomiri.Components.ListItems 1.0
+    \ingroup lomiri-listitems
     \brief Parent class of various list item classes that can have
         an icon and a progression symbol.
     \note \b{The component is deprecated. Use ListItem component instead.}
@@ -56,11 +56,11 @@ Empty {
 
       If both fallbackIconSource and fallbackIconName are defined, fallbackIconName will be ignored.
 
-      \note The complete list of icons available in Ubuntu is not published yet.
+      \note The complete list of icons available in Lomiri is not published yet.
             For now please refer to the folders where the icon themes are installed:
             \list
-              \li Ubuntu Touch: \l file:/usr/share/icons/suru
-              \li Ubuntu Desktop: \l file:/usr/share/icons/ubuntu-mono-dark
+              \li Lomiri Touch: \l file:/usr/share/icons/suru
+              \li Lomiri Desktop: \l file:/usr/share/icons/lomiri-mono-dark
             \endlist
             These 2 separate icon themes will be merged soon.
     */

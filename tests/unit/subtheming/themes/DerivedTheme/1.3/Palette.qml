@@ -15,15 +15,15 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Themes.Ambiance 1.3 as Suru
+import Lomiri.Components 1.3
+import Lomiri.Components.Themes.Ambiance 1.3 as Suru
 
 Suru.Palette {
-    normal.selection: UbuntuColors.orange
-    selected.selection: UbuntuColors.lightGrey
+    normal.selection: LomiriColors.orange
+    selected.selection: LomiriColors.lightGrey
     selected.base: "lightblue"
     selected.baseText: "pink"
     selected.overlay: "#ABCDEF"
     selected.overlayText: "#FEDCBA"
-    selected.fieldText: UbuntuColors.red
+    selected.fieldText: LomiriColors.red
 }

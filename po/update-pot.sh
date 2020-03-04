@@ -18,7 +18,7 @@
 #~    update-pot.sh [DOMAIN] [SOURCE_DIR] [PO_DIR]
 #~
 #~  Example:
-#~    update-pot.sh ubuntu-ui-toolkit modules po
+#~    update-pot.sh lomiri-ui-toolkit modules po
 
 set -e
 if [ -z "$3" ]; then

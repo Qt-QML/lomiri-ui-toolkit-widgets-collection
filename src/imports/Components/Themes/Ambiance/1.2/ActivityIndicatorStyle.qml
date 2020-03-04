@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 Image {
     id: container
@@ -33,6 +33,6 @@ Image {
         from: 0
         to: 360
         loops: Animation.Infinite
-        duration: UbuntuAnimation.SleepyDuration
+        duration: LomiriAnimation.SleepyDuration
     }
 }

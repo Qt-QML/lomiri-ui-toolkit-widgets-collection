@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*!
     \qmltype PageHeader
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief The PageHeader shows a title with a leading and a trailing
         \l ActionBar that add action buttons to the header.
 
@@ -30,9 +30,9 @@ import Ubuntu.Components 1.3
         PageHeader {
             title: "Colors"
             StyleHints {
-                foregroundColor: UbuntuColors.orange
+                foregroundColor: LomiriColors.orange
                 backgroundColor: "black"
-                dividerColor: UbuntuColors.slate
+                dividerColor: LomiriColors.slate
             }
         }
     \endqml
@@ -70,7 +70,7 @@ Header {
           title: "Welcome"
           contents: Rectangle {
               anchors.fill: parent
-              color: UbuntuColors.red
+              color: LomiriColors.red
               Label {
                   anchors.centerIn: parent
                   text: header.title
@@ -142,7 +142,7 @@ Header {
       \l AdaptivePageLayout and other navigation components to configure the
       back action for the \l Page.
       Application developers should not set this property, because the
-      value may be overridden by Ubuntu components that have navigation.
+      value may be overridden by Lomiri components that have navigation.
       Instead, set \l leadingActionBar's actions property.
      */
     property list<Action> navigationActions

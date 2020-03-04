@@ -16,13 +16,13 @@
 
 /*!
     \qmltype OptionSelectorDelegate
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu-components
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri-components
     \brief OptionSelector delegate which can display text, subtext and an image from a custom model.
 
     Examples:
     \qml
-        import Ubuntu.Components 1.2
+        import Lomiri.Components 1.2
         Column {
             width: 250
             OptionSelector {
@@ -42,8 +42,8 @@
 */
 
 import QtQuick 2.4
-import Ubuntu.Components.ListItems 1.0 as ListItem
-import Ubuntu.Components 1.2 as Toolkit
+import Lomiri.Components.ListItems 1.0 as ListItem
+import Lomiri.Components 1.2 as Toolkit
 
 ListItem.Empty {
     id: option
@@ -152,10 +152,10 @@ ListItem.Empty {
     transitions: [ Transition {
             from: "dividerExpanded"
             to: "dividerCollapsed"
-            Toolkit.UbuntuNumberAnimation {
+            Toolkit.LomiriNumberAnimation {
                 target: option.divider
                 properties: "opacity"
-                duration: Toolkit.UbuntuAnimation.SlowDuration
+                duration: Toolkit.LomiriAnimation.SlowDuration
             }
         }
     ]
@@ -197,9 +197,9 @@ ListItem.Empty {
                 properties: "opacity"
                 from : 1.0
                 to: 0.0
-                duration: Toolkit.UbuntuAnimation.FastDuration
+                duration: Toolkit.LomiriAnimation.FastDuration
             }
-            PauseAnimation { duration: Toolkit.UbuntuAnimation.BriskDuration - Toolkit.UbuntuAnimation.FastDuration }
+            PauseAnimation { duration: Toolkit.LomiriAnimation.BriskDuration - Toolkit.LomiriAnimation.FastDuration }
             PropertyAction {
                 target: image
                 property: "source"
@@ -210,7 +210,7 @@ ListItem.Empty {
                 properties: "opacity"
                 from : 0.0
                 to: 1.0
-                duration: Toolkit.UbuntuAnimation.FastDuration
+                duration: Toolkit.LomiriAnimation.FastDuration
             }
         }, PropertyAnimation {
             id: optionExpansion
@@ -219,19 +219,19 @@ ListItem.Empty {
             properties: "opacity"
             from : 0.0
             to: 1.0
-            duration: Toolkit.UbuntuAnimation.SlowDuration
+            duration: Toolkit.LomiriAnimation.SlowDuration
         }, SequentialAnimation {
             id: deselectedImageCollapse
 
-            PauseAnimation { duration: Toolkit.UbuntuAnimation.BriskDuration }
+            PauseAnimation { duration: Toolkit.LomiriAnimation.BriskDuration }
             PropertyAnimation {
                 target: image
                 properties: "opacity"
                 from : 1.0
                 to: 0.0
-                duration: Toolkit.UbuntuAnimation.FastDuration
+                duration: Toolkit.LomiriAnimation.FastDuration
             }
-            PauseAnimation { duration: Toolkit.UbuntuAnimation.FastDuration }
+            PauseAnimation { duration: Toolkit.LomiriAnimation.FastDuration }
             PropertyAction {
                 target: image
                 property: "source"
@@ -242,7 +242,7 @@ ListItem.Empty {
                 properties: "opacity"
                 from : 0.0
                 to: 1.0
-                duration: Toolkit.UbuntuAnimation.FastDuration
+                duration: Toolkit.LomiriAnimation.FastDuration
             }
         }, SequentialAnimation {
             id: selectedImageCollapse
@@ -252,17 +252,17 @@ ListItem.Empty {
                 properties: "opacity"
                 from : 0.0
                 to: 1.0
-                duration: Toolkit.UbuntuAnimation.FastDuration
+                duration: Toolkit.LomiriAnimation.FastDuration
             }
-            PauseAnimation { duration: Toolkit.UbuntuAnimation.BriskDuration - Toolkit.UbuntuAnimation.FastDuration }
+            PauseAnimation { duration: Toolkit.LomiriAnimation.BriskDuration - Toolkit.LomiriAnimation.FastDuration }
             PropertyAnimation {
                 target: image
                 properties: "opacity"
                 from : 1.0
                 to: 0.0
-                duration: Toolkit.UbuntuAnimation.FastDuration
+                duration: Toolkit.LomiriAnimation.FastDuration
             }
-            PauseAnimation { duration: Toolkit.UbuntuAnimation.FastDuration }
+            PauseAnimation { duration: Toolkit.LomiriAnimation.FastDuration }
             PropertyAction {
                 target: image
                 property: "source"
@@ -273,7 +273,7 @@ ListItem.Empty {
                 properties: "opacity"
                 from : 0.0
                 to: 1.0
-                duration: Toolkit.UbuntuAnimation.FastDuration
+                duration: Toolkit.LomiriAnimation.FastDuration
             }
         }, PropertyAnimation {
                 id: optionCollapse
@@ -281,7 +281,7 @@ ListItem.Empty {
                 properties: "opacity"
                 from : 1.0
                 to: 0.0
-                duration: Toolkit.UbuntuAnimation.SlowDuration
+                duration: Toolkit.LomiriAnimation.SlowDuration
         }
     ]
 
@@ -346,9 +346,9 @@ ListItem.Empty {
         Behavior on opacity {
             enabled: listView.expanded
 
-            Toolkit.UbuntuNumberAnimation {
+            Toolkit.LomiriNumberAnimation {
                 properties: "opacity"
-                duration: Toolkit.UbuntuAnimation.FastDuration
+                duration: Toolkit.LomiriAnimation.FastDuration
             }
         }
 

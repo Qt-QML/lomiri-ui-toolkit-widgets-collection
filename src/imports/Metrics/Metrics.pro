@@ -1,7 +1,7 @@
 CXX_MODULE = qml
-TARGET  = UbuntuMetrics
-TARGETPATH = Ubuntu/Metrics
+TARGET  = LomiriMetrics
+TARGETPATH = Lomiri/Metrics
 IMPORT_VERSION = 1.0
-QT += qml UbuntuMetrics
+QT += qml LomiriMetrics
 SOURCES += plugin.cpp
-load(ubuntu_qml_plugin)
+load(lomiri_qml_plugin)

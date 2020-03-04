@@ -15,11 +15,11 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.3
+import Lomiri.Test 1.0
+import Lomiri.Components 1.3
 
 // NOTE: Other parts of the page head API are tested with autopilot in
-// ubuntuuitoolkit.tests.components.test_header
+// lomiriuitoolkit.tests.components.test_header
 
 Item {
     width: units.gu(50)
@@ -106,7 +106,7 @@ Item {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "HeaderBackButton"
         when: windowShown
         id: testCase

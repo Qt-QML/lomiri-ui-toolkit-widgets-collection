@@ -19,14 +19,14 @@
 #include <QtQml/QQmlContext>
 #include <QtQml/QQmlEngine>
 #include <QtTest/QtTest>
-#include <UbuntuToolkit/ubuntutoolkitmodule.h>
-#include <UbuntuToolkit/private/quickutils_p.h>
-#include <UbuntuToolkit/private/uclabel_p.h>
-#include <UbuntuToolkit/private/ucstyleditembase_p_p.h>
-#include <UbuntuToolkit/private/ucunits_p.h>
+#include <LomiriToolkit/lomiritoolkitmodule.h>
+#include <LomiriToolkit/private/quickutils_p.h>
+#include <LomiriToolkit/private/uclabel_p.h>
+#include <LomiriToolkit/private/ucstyleditembase_p_p.h>
+#include <LomiriToolkit/private/ucunits_p.h>
 #define private public
 #define protected public
-#include <UbuntuToolkit/private/uctheme_p.h>
+#include <LomiriToolkit/private/uctheme_p.h>
 #undef protected
 #undef private
 
@@ -35,12 +35,12 @@
 
 UT_USE_NAMESPACE
 
-class ThemeTestCase : public UbuntuTestCase
+class ThemeTestCase : public LomiriTestCase
 {
     Q_OBJECT
 public:
     ThemeTestCase(const QString& file, bool assertOnFailure = true, QWindow* parent = 0)
-        : UbuntuTestCase(file, QQuickView::SizeViewToRootObject, assertOnFailure, parent)
+        : LomiriTestCase(file, QQuickView::SizeViewToRootObject, assertOnFailure, parent)
     {
     }
 
@@ -95,13 +95,13 @@ private Q_SLOTS:
     void initTestCase()
     {
         m_xdgDataPath = QLatin1String(getenv("XDG_DATA_DIRS"));
-        m_themesPath = QLatin1String(getenv("UBUNTU_UI_TOOLKIT_THEMES_PATH"));
+        m_themesPath = QLatin1String(getenv("LOMIRI_UI_TOOLKIT_THEMES_PATH"));
         qputenv("SUPPRESS_DEPRECATED_NOTE", "yes");
     }
 
     void cleanup()
     {
-        qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", m_themesPath.toLatin1());
+        qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", m_themesPath.toLatin1());
         qputenv("XDG_DATA_DIRS", m_xdgDataPath.toLocal8Bit());
         UCTheme::previousVersion = 0;
     }
@@ -109,14 +109,14 @@ private Q_SLOTS:
     void test_default_theme()
     {
         QQmlEngine engine;
-        UbuntuToolkitModule::initializeContextProperties(&engine);
+        LomiriToolkitModule::initializeContextProperties(&engine);
         UCTheme::defaultTheme(&engine);
     }
 
     void test_default_name()
     {
         UCTheme theme;
-        QCOMPARE(theme.name(), QString("Ubuntu.Components.Themes.Ambiance"));
+        QCOMPARE(theme.name(), QString("Lomiri.Components.Themes.Ambiance"));
     }
 
     void test_name_set()
@@ -131,17 +131,17 @@ private Q_SLOTS:
     void test_name_reset()
     {
         UCTheme theme;
-        theme.setName("Ubuntu.Components.Themes.SuruDark");
-        QCOMPARE(theme.name(), QString("Ubuntu.Components.Themes.SuruDark"));
+        theme.setName("Lomiri.Components.Themes.SuruDark");
+        QCOMPARE(theme.name(), QString("Lomiri.Components.Themes.SuruDark"));
         // reset
         theme.resetName();
-        QCOMPARE(theme.name(), QString("Ubuntu.Components.Themes.Ambiance"));
+        QCOMPARE(theme.name(), QString("Lomiri.Components.Themes.Ambiance"));
     }
 
     void test_create_without_engine()
     {
-#if !defined(UBUNTUTOOLKIT_NO_NAMESPACE)
-        QTest::ignoreMessage(QtCriticalMsg, "The item UbuntuToolkit::UCLabel was created without a valid QML Engine. Styling will not be possible.");
+#if !defined(LOMIRITOOLKIT_NO_NAMESPACE)
+        QTest::ignoreMessage(QtCriticalMsg, "The item LomiriToolkit::UCLabel was created without a valid QML Engine. Styling will not be possible.");
 #else
         QTest::ignoreMessage(QtCriticalMsg, "The item UCLabel was created without a valid QML Engine. Styling will not be possible.");
 #endif
@@ -183,7 +183,7 @@ private Q_SLOTS:
         qputenv("QV4_MM_AGGRESSIVE_GC", "1");
 
         QQmlEngine engine;
-        UbuntuToolkitModule::initializeContextProperties(&engine);
+        LomiriToolkitModule::initializeContextProperties(&engine);
         UCTheme *theme0 = UCTheme::defaultTheme(&engine);
 
         UCTheme *theme1 = new UCTheme(&engine);
@@ -208,7 +208,7 @@ private Q_SLOTS:
         if (!warning.isEmpty()) {
             ThemeTestCase::ignoreWarning(parentName, 20, 1, warning);
         }
-        qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "./themes");
+        qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "./themes");
 
         QScopedPointer<ThemeTestCase> view(new ThemeTestCase(parentName));
         view->setTheme("TestModule.TestTheme", view->rootObject());
@@ -245,7 +245,7 @@ private Q_SLOTS:
         QTest::newRow("No variables")
                 << "" << ""
                 << QString() << "TestStyle"
-                << "QML SimpleItem: Warning: Style TestStyle.qml not found in theme Ubuntu.Components.Themes.Ambiance" << false;
+                << "QML SimpleItem: Warning: Style TestStyle.qml not found in theme Lomiri.Components.Themes.Ambiance" << false;
     }
 
     void test_relative_theme_paths_environment_variables()
@@ -261,7 +261,7 @@ private Q_SLOTS:
             ThemeTestCase::ignoreWarning("SimpleItem.qml", 20, 1, warning);
         }
 
-        qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", themePath.toLocal8Bit());
+        qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", themePath.toLocal8Bit());
         qputenv("XDG_DATA_DIRS", xdgPath.toLocal8Bit());
 
         QScopedPointer<ThemeTestCase> view(new ThemeTestCase("SimpleItem.qml"));
@@ -275,36 +275,36 @@ private Q_SLOTS:
 
     void test_import_path()
     {
-        if (!QFile(QLibraryInfo::location(QLibraryInfo::Qml2ImportsPath) + "/Ubuntu/Components").exists())
+        if (!QFile(QLibraryInfo::location(QLibraryInfo::Qml2ImportsPath) + "/Lomiri/Components").exists())
             QSKIP("This can only be tested if the UITK is installed");
 
-        qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "");
+        qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "");
         qputenv("XDG_DATA_DIRS", "");
         qputenv("QML2_IMPORT_PATH", "");
 
         UCTheme theme;
-        QCOMPARE(theme.name(), QString("Ubuntu.Components.Themes.Ambiance"));
+        QCOMPARE(theme.name(), QString("Lomiri.Components.Themes.Ambiance"));
     }
 
     void test_bogus_import_path_set()
     {
-        if (!QFile(QLibraryInfo::location(QLibraryInfo::Qml2ImportsPath) + "/Ubuntu/Components").exists())
+        if (!QFile(QLibraryInfo::location(QLibraryInfo::Qml2ImportsPath) + "/Lomiri/Components").exists())
             QSKIP("This can only be tested if the UITK is installed");
 
-        qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "");
+        qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "");
         qputenv("XDG_DATA_DIRS", "");
         qputenv("QML2_IMPORT_PATH", "/no/plugins/here");
 
         UCTheme theme;
-        QCOMPARE(theme.name(), QString("Ubuntu.Components.Themes.Ambiance"));
+        QCOMPARE(theme.name(), QString("Lomiri.Components.Themes.Ambiance"));
     }
 
     void test_multiple_import_paths_set()
     {
-        if (!QFile(QLibraryInfo::location(QLibraryInfo::Qml2ImportsPath) + "/Ubuntu/Components").exists())
+        if (!QFile(QLibraryInfo::location(QLibraryInfo::Qml2ImportsPath) + "/Lomiri/Components").exists())
             QSKIP("This can only be tested if the UITK is installed");
 
-        qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "");
+        qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "");
         qputenv("XDG_DATA_DIRS", "");
         qputenv("QML2_IMPORT_PATH", "/no/plugins/here");
 
@@ -314,7 +314,7 @@ private Q_SLOTS:
 
     void test_theme_not_root_theme()
     {
-        qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", ".");
+        qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", ".");
 
         QScopedPointer<ThemeTestCase> view(new ThemeTestCase("SimpleItem.qml"));
         view->setTheme("CustomModule.TestTheme", view->rootObject());
@@ -327,7 +327,7 @@ private Q_SLOTS:
 
     void test_theme_reset_name()
     {
-        qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "./themes");
+        qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "./themes");
 
         QScopedPointer<ThemeTestCase> view(new ThemeTestCase("SimpleItem.qml"));
         view->setTheme("TestModule.TestTheme", view->rootObject());
@@ -335,7 +335,7 @@ private Q_SLOTS:
         QCOMPARE(theme->name(), QString("TestModule.TestTheme"));
         // reset
         theme->resetName();
-        QCOMPARE(theme->name(), QString("Ubuntu.Components.Themes.Ambiance"));
+        QCOMPARE(theme->name(), QString("Lomiri.Components.Themes.Ambiance"));
     }
 
     void test_parent_change_when_assinged()
@@ -379,8 +379,8 @@ private Q_SLOTS:
         // change mainItem.theme.name should trigger parentChanged on testSet
         QSignalSpy parentChangeSpy(testSet, SIGNAL(parentThemeChanged()));
         QSignalSpy themeChangeSpy(mainItem, SIGNAL(themeChanged()));
-        mainItem->getTheme()->setName("Ubuntu.Components.Themes.SuruDark");
-        UbuntuTestCase::waitForSignal(&themeChangeSpy);
+        mainItem->getTheme()->setName("Lomiri.Components.Themes.SuruDark");
+        LomiriTestCase::waitForSignal(&themeChangeSpy);
         parentChangeSpy.wait(200);
         QCOMPARE(parentChangeSpy.count(), 1);
         QCOMPARE(testSet->parentTheme(), mainItem->getTheme());
@@ -392,15 +392,15 @@ private Q_SLOTS:
     {
         QScopedPointer<ThemeTestCase> view(new ThemeTestCase("TestMain.qml"));
         QSignalSpy themeChaneSpy(view->rootObject(), SIGNAL(themeChanged()));
-        view->setGlobalTheme("Ubuntu.Components.Themes.SuruDark");
-        UbuntuTestCase::waitForSignal(&themeChaneSpy);
+        view->setGlobalTheme("Lomiri.Components.Themes.SuruDark");
+        LomiriTestCase::waitForSignal(&themeChaneSpy);
         // verify theme changes
         UCStyledItemBase *styled = qobject_cast<UCStyledItemBase*>(view->rootObject());
         QVERIFY(styled);
-        QCOMPARE(styled->getTheme()->name(), QString("Ubuntu.Components.Themes.SuruDark"));
+        QCOMPARE(styled->getTheme()->name(), QString("Lomiri.Components.Themes.SuruDark"));
         // a deeper item's style name
         styled = view->findItem<UCStyledItemBase*>("secondLevelStyled");
-        QCOMPARE(styled->getTheme()->name(), QString("Ubuntu.Components.Themes.SuruDark"));
+        QCOMPARE(styled->getTheme()->name(), QString("Lomiri.Components.Themes.SuruDark"));
     }
 
     // changing StyledItem.theme.name for different items within a tree where
@@ -419,10 +419,10 @@ private Q_SLOTS:
         // change theme name (theme)
         UCStyledItemBase *styled = view->findItem<UCStyledItemBase*>(itemName);
         QSignalSpy themeChangeSpy(styled, SIGNAL(themeChanged()));
-        styled->getTheme()->setName("Ubuntu.Components.Themes.SuruDark");
-        UbuntuTestCase::waitForSignal(&themeChangeSpy);
+        styled->getTheme()->setName("Lomiri.Components.Themes.SuruDark");
+        LomiriTestCase::waitForSignal(&themeChangeSpy);
         UCTheme *theme = view->globalTheme();
-        QCOMPARE(theme->name(), QString("Ubuntu.Components.Themes.SuruDark"));
+        QCOMPARE(theme->name(), QString("Lomiri.Components.Themes.SuruDark"));
     }
 
     void test_theme_change_data()
@@ -433,8 +433,8 @@ private Q_SLOTS:
         QTest::addColumn<QStringList>("expectedStyleNames"); // list of expected style names on the tested items
         QTest::addColumn< QList<bool> >("sameTheme"); // list of theme vs styledItem.theme camparison results expected
 
-        QString suru("Ubuntu.Components.Themes.SuruDark");
-        QString ambiance("Ubuntu.Components.Themes.Ambiance");
+        QString suru("Lomiri.Components.Themes.SuruDark");
+        QString ambiance("Lomiri.Components.Themes.Ambiance");
         QTest::newRow("Suru on mainStyled")
                 << suru << ""
                 << (QStringList() << "firstLevelStyled" << "secondLevelStyled" << "firstLevelLoaderStyled")
@@ -470,7 +470,7 @@ private Q_SLOTS:
         // set the style on the item
         QSignalSpy themeChangeSpy(styledItem, SIGNAL(themeChanged()));
         styledItem->setTheme(theme);
-        UbuntuTestCase::waitForSignal(&themeChangeSpy);
+        LomiriTestCase::waitForSignal(&themeChangeSpy);
         // test on the items
         for (int i = 0; i < testItems.count(); i++) {
             QString itemName = testItems[i];
@@ -490,8 +490,8 @@ private Q_SLOTS:
         QTest::addColumn<QString>("sourceItemName");
         QTest::addColumn<QString>("newParentItemName");
 
-        QString suru("Ubuntu.Components.Themes.SuruDark");
-        QString ambiance("Ubuntu.Components.Themes.Ambiance");
+        QString suru("Lomiri.Components.Themes.SuruDark");
+        QString ambiance("Lomiri.Components.Themes.Ambiance");
         QTest::newRow("Move item out of Suru sub-themed")
                 << "firstLevelStyled" << "secondLevelStyled"
                 << (QStringList() << ambiance << suru << ambiance)
@@ -518,11 +518,11 @@ private Q_SLOTS:
         QCOMPARE(testItem->getTheme()->name(), testStyledItemThemes[0]);
 
         UCTheme *theme = view->findItem<UCTheme*>("Theme");
-        theme->setName("Ubuntu.Components.Themes.SuruDark");
+        theme->setName("Lomiri.Components.Themes.SuruDark");
         UCStyledItemBase *suruItem = view->findItem<UCStyledItemBase*>(suruStyledItem);
         QSignalSpy themeChangeSpy(suruItem, SIGNAL(themeChanged()));
         suruItem->setTheme(theme);
-        UbuntuTestCase::waitForSignal(&themeChangeSpy);
+        LomiriTestCase::waitForSignal(&themeChangeSpy);
         QCOMPARE(testItem->getTheme()->name(), testStyledItemThemes[1]);
 
         // get items and reparent
@@ -564,8 +564,8 @@ private Q_SLOTS:
         QCOMPARE(firstTheme->getPaletteColor("normal", "background"), QColor("blue"));
         // change the theme
         QSignalSpy themeChaneSpy(view->rootObject(), SIGNAL(themeChanged()));
-        view->setGlobalTheme("Ubuntu.Components.Themes.SuruDark");
-        UbuntuTestCase::waitForSignal(&themeChaneSpy);
+        view->setGlobalTheme("Lomiri.Components.Themes.SuruDark");
+        LomiriTestCase::waitForSignal(&themeChaneSpy);
         QCOMPARE(firstTheme->getPaletteColor("normal", "background"), QColor("blue"));
     }
 
@@ -650,14 +650,14 @@ private Q_SLOTS:
         QString warning(QString("<Unknown File>: QML QQmlEngine: %1:24 Cannot assign to non-existent property \"imaginary\"\n").arg(url));
         QTest::ignoreMessage(QtWarningMsg, warning.toUtf8());
 
-        qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "./themes");
+        qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "./themes");
         QScopedPointer<ThemeTestCase> view(new ThemeTestCase("SimpleItem.qml"));
         view->setTheme("BuggyTheme", view->rootObject());
     }
 
     void test_removing_closest_parent_styled()
     {
-        qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "");
+        qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "");
         qputenv("XDG_DATA_DIRS", "./themes:./themes/TestModule");
         QScopedPointer<ThemeTestCase> view(new ThemeTestCase("ReparentStyledItemFollowsNewPathOnly.qml"));
         UCTheme *suruTheme = view->findItem<UCTheme*>("suruTheme");
@@ -670,7 +670,7 @@ private Q_SLOTS:
         // set the theme for root
         QSignalSpy themeChangeSpy(root, SIGNAL(themeChanged()));
         root->setTheme(suruTheme);
-        UbuntuTestCase::waitForSignal(&themeChangeSpy);
+        LomiriTestCase::waitForSignal(&themeChangeSpy);
         QCOMPARE(root->getTheme(), movableItem->getTheme());
 
         // set the parent item of the test item to 0
@@ -683,7 +683,7 @@ private Q_SLOTS:
 
     void test_reparented_styleditem_special_case()
     {
-        qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "");
+        qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "");
         qputenv("XDG_DATA_DIRS", "./themes:./themes/TestModule");
         QScopedPointer<ThemeTestCase> view(new ThemeTestCase("ReparentStyledItemFollowsNewPathOnly.qml"));
         UCStyledItemBase *root = static_cast<UCStyledItemBase*>(view->rootObject());
@@ -692,9 +692,9 @@ private Q_SLOTS:
         UCStyledItemBase *movableItem = view->findItem<UCStyledItemBase*>("movable");
 
         // check the themes
-        QCOMPARE(root->getTheme()->name(), QString("Ubuntu.Components.Themes.Ambiance"));
+        QCOMPARE(root->getTheme()->name(), QString("Lomiri.Components.Themes.Ambiance"));
         QCOMPARE(customThemedItem->getTheme()->name(), QString("CustomTheme"));
-        QCOMPARE(movableItem->getTheme()->name(), QString("Ubuntu.Components.Themes.Ambiance"));
+        QCOMPARE(movableItem->getTheme()->name(), QString("Lomiri.Components.Themes.Ambiance"));
 
         // move the movableItem under customThemedItem
         movableItem->setParentItem(customThemedItem);
@@ -703,7 +703,7 @@ private Q_SLOTS:
         // set a new theme for the root, and make sure our theme stays the same
         QSignalSpy themeChangeSpy(root, SIGNAL(themeChanged()));
         root->setTheme(suruTheme);
-        UbuntuTestCase::waitForSignal(&themeChangeSpy);
+        LomiriTestCase::waitForSignal(&themeChangeSpy);
         QCOMPARE(movableItem->getTheme()->name(), QString("CustomTheme"));
     }
 
@@ -724,7 +724,7 @@ private Q_SLOTS:
         QFETCH(QString, document);
         QFETCH(QString, testValue);
 
-        qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "");
+        qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "");
         qputenv("XDG_DATA_DIRS", "./themes:./themes/TestModule");
         QScopedPointer<ThemeTestCase> view(new ThemeTestCase(document));
         UCStyledItemBase *styledItem = qobject_cast<UCStyledItemBase*>(view->rootObject());
@@ -733,11 +733,11 @@ private Q_SLOTS:
         QCOMPARE(newProperty, testValue);
         // NOTE TestTheme resets the theme therefore the theming will look for the tested style under Ambiance theme
         // which will cause a warning; therefore we mark the warning to be ignored
-        ThemeTestCase::ignoreWarning(document, 19, 1, "QML StyledItem: Warning: Style TestStyle.qml not found in theme Ubuntu.Components.Themes.Ambiance");
+        ThemeTestCase::ignoreWarning(document, 19, 1, "QML StyledItem: Warning: Style TestStyle.qml not found in theme Lomiri.Components.Themes.Ambiance");
     }
 
     void test_mixed_versions() {
-        ThemeTestCase::ignoreWarning("OtherVersion.qml", 19, 1, "QML StyledItem: Mixing of Ubuntu.Components module versions 1.3 and 1.2 detected!");
+        ThemeTestCase::ignoreWarning("OtherVersion.qml", 19, 1, "QML StyledItem: Mixing of Lomiri.Components module versions 1.3 and 1.2 detected!");
         QScopedPointer<ThemeTestCase> view(new ThemeTestCase("OtherVersion.qml"));
         QCoreApplication::processEvents();
         UCStyledItemBase *newStyled = static_cast<UCStyledItemBase*>(view->rootObject());
@@ -748,7 +748,7 @@ private Q_SLOTS:
 
     void test_deprecated_theme()
     {
-        qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "");
+        qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "");
         qputenv("XDG_DATA_DIRS", "./themes:./themes/TestModule:" + m_themesPath.toLatin1());
         QScopedPointer<ThemeTestCase> view(new ThemeTestCase("DeprecatedTheme.qml"));
     }
@@ -787,7 +787,7 @@ private Q_SLOTS:
         UCTheme *theme = button->property("theme").value<UCTheme*>();
         QVERIFY(theme);
 
-        theme->setName("Ubuntu.Components.Themes.SuruDark");
+        theme->setName("Lomiri.Components.Themes.SuruDark");
         QVERIFY(button->findChild<QQuickItem*>("TestStyle"));
     }
 
@@ -807,7 +807,7 @@ private Q_SLOTS:
 
     void test_stylename_extension_failure()
     {
-        ThemeTestCase::ignoreWarning("DeprecatedTheme.qml", 19, 1, "QML StyledItem: Warning: Style OptionSelectorStyle.qml.qml not found in theme Ubuntu.Components.Themes.SuruGradient");
+        ThemeTestCase::ignoreWarning("DeprecatedTheme.qml", 19, 1, "QML StyledItem: Warning: Style OptionSelectorStyle.qml.qml not found in theme Lomiri.Components.Themes.SuruGradient");
         QScopedPointer<ThemeTestCase> view(new ThemeTestCase("DeprecatedTheme.qml"));
         view->rootObject()->setProperty("styleName", "OptionSelectorStyle.qml");
     }
@@ -916,11 +916,11 @@ private Q_SLOTS:
     }
 
     void test_derived_theme_fallback_should_use_proper_style_bug1555797() {
-        qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "");
+        qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "");
         qputenv("XDG_DATA_DIRS", "./themes:./themes/TestModule");
 
         QQmlEngine engine;
-        UbuntuToolkitModule::initializeContextProperties(&engine);
+        LomiriToolkitModule::initializeContextProperties(&engine);
         QScopedPointer<UCTheme> theme(new UCTheme);
         theme->setName("DerivedTheme");
 

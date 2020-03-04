@@ -1,5 +1,5 @@
 include(../test-include-x11.pri)
-QT += core-private qml-private quick-private gui-private UbuntuGestures UbuntuGestures_private UbuntuToolkit
+QT += core-private qml-private quick-private gui-private LomiriGestures LomiriGestures_private LomiriToolkit
 
 SOURCES += \
     tst_bottomedge.cpp

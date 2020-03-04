@@ -40,8 +40,8 @@ ULLayouts *ULConditionalLayoutPrivate::layouts()
 /*!
  * \qmltype ConditionalLayout
  * \instantiates ULConditionalLayout
- * \inqmlmodule Ubuntu.Layouts 1.0
- * \ingroup ubuntu-layouts
+ * \inqmlmodule Lomiri.Layouts 1.0
+ * \ingroup lomiri-layouts
  * \brief ConditionalLayout defines the layout of a given form factor.
  *
  * ConditionalLayout is a non-visual element defining the actual layout to be applied

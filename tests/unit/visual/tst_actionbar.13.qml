@@ -16,8 +16,8 @@
 
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.3
+import Lomiri.Test 1.0
+import Lomiri.Components 1.3
 
 Item {
     id: root
@@ -168,12 +168,12 @@ Item {
             styleName: root.actionBarStyleName
             StyleHints {
                 ignoreUnknownProperties: false
-                backgroundColor: UbuntuColors.blue
+                backgroundColor: LomiriColors.blue
                 buttons {
                     foregroundColor: "white"
-                    disabledForegroundColor: UbuntuColors.silk
-                    pressedBackgroundColor: UbuntuColors.ash
-                    disabledBackgroundColor: UbuntuColors.slate
+                    disabledForegroundColor: LomiriColors.silk
+                    pressedBackgroundColor: LomiriColors.ash
+                    disabledBackgroundColor: LomiriColors.slate
                 }
             }
         }
@@ -204,7 +204,7 @@ Item {
             delegate: Button {
                 action: modelData
                 width: units.gu(14)
-                strokeColor: UbuntuColors.purple
+                strokeColor: LomiriColors.purple
                 objectName: "custom_delegate_button_" + index
             }
             styleName: root.actionBarStyleName
@@ -228,14 +228,14 @@ Item {
                 height: greenButtonsBar.height
                 activeFocusOnTab: true
                 StyleHints {
-                    foregroundColor: UbuntuColors.green
+                    foregroundColor: LomiriColors.green
                 }
             }
             styleName: root.actionBarStyleName
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         id: actionBarTestCase
         name: "ActionBarApi"
         when: windowShown
@@ -374,7 +374,7 @@ Item {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         id: scrollingActionBarTestCase
         name: "ScrollingActionBarApi"
         when: windowShown
@@ -474,7 +474,7 @@ Item {
                        "Leading scroll button is not visible initially.");
 
             mouseClick(leadingScrollButton, leadingScrollButton.width/2, leadingScrollButton.height/2);
-            wait(UbuntuAnimation.FastDuration + 100); // wait for scrolling animation.
+            wait(LomiriAnimation.FastDuration + 100); // wait for scrolling animation.
             verify(listView.contentX < x, "Clicking the leading scroll button does not scroll to the left.");
 
             x = listView.contentX;
@@ -482,7 +482,7 @@ Item {
                        "Trailing scroll button is not visible after scrolling to the left.");
 
             mouseClick(trailingScrollButton, trailingScrollButton.width/2, trailingScrollButton.height/2);
-            wait(UbuntuAnimation.FastDuration + 100); // wait for scrolling animation.
+            wait(LomiriAnimation.FastDuration + 100); // wait for scrolling animation.
             verify(listView.contentX > x, "Clicking the leading scroll button does not scroll to the left.");
 
             // revert to the initial position:

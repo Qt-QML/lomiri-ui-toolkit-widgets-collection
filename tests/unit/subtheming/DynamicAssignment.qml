@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 StyledItem {
     objectName: "main"
@@ -26,7 +26,7 @@ StyledItem {
 
     ThemeSettings {
         objectName: "testSet"
-        name: "Ubuntu.Components.Themes.SuruDark"
+        name: "Lomiri.Components.Themes.SuruDark"
     }
 
     Item {

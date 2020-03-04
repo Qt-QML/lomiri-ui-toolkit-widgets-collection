@@ -16,25 +16,25 @@
 
 import QtQuick 2.4
 import "internalPopupUtils.js" as InternalPopupUtils
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 /*!
     \qmltype Popover
     \inherits PopupBase
-    \inqmlmodule Ubuntu.Components.Popups 1.0
-    \ingroup ubuntu-popups
+    \inqmlmodule Lomiri.Components.Popups 1.0
+    \ingroup lomiri-popups
     \brief A popover allows an application to present additional content without changing the view.
         A popover has a fixed width and automatic height, depending on is contents.
         It can be closed by clicking anywhere outside of the popover area.
 
-    \l {https://design.ubuntu.com/apps/building-blocks/dialog#popover}{See also the Design Guidelines on Popovers}.
+    \l {https://design.lomiri.com/apps/building-blocks/dialog#popover}{See also the Design Guidelines on Popovers}.
 
     Example:
     \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
-        import Ubuntu.Components.ListItems 1.0 as ListItem
-        import Ubuntu.Components.Popups 1.0
+        import Lomiri.Components 1.2
+        import Lomiri.Components.ListItems 1.0 as ListItem
+        import Lomiri.Components.Popups 1.0
 
         Rectangle {
             color: Theme.palette.normal.background

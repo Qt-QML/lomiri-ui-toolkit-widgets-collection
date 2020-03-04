@@ -16,8 +16,8 @@
 
 import QtQuick 2.4
 import QtTest 1.0
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.3
+import Lomiri.Test 1.0
+import Lomiri.Components 1.3
 import QtQuick.Window 2.2
 
 Item {
@@ -25,7 +25,7 @@ Item {
     width: units.gu(40)
     height: units.gu(71)
 
-    UbuntuListView {
+    LomiriListView {
         id: testView
         anchors.fill: parent
         model: 50
@@ -47,7 +47,7 @@ Item {
         signalName: "currentItemChanged"
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         when: windowShown
 
         function cleanup() {

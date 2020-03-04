@@ -17,7 +17,7 @@
 #include "testplugin.h"
 
 #include <QtQml/QtQml>
-#include <UbuntuToolkit/private/mousetouchadaptor_p.h>
+#include <LomiriToolkit/private/mousetouchadaptor_p.h>
 
 #include "uctestextras.h"
 

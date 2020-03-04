@@ -12,5 +12,5 @@ QML_FILES += \
     test.qml \
     digger.js \
 
-load(ubuntu_qml_plugin)
+load(lomiri_qml_plugin)
 

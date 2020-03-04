@@ -15,13 +15,13 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*!
     \qmltype Sections
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
-    \since Ubuntu.Components 1.3
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
+    \since Lomiri.Components 1.3
     \brief Display a list of sections that the user can select. By tapping
         on a section name the \l selectedIndex will be updated, and the
         associated \l Action is triggered.

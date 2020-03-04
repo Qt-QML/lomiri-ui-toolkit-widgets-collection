@@ -15,14 +15,14 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3 as Toolkit
-import Ubuntu.PerformanceMetrics 1.0
+import Lomiri.Components 1.3 as Toolkit
+import Lomiri.PerformanceMetrics 1.0
 import QtQuick.Window 2.2
 
 /*!
     \qmltype MainView
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \inherits StyledItem
     \brief MainView is the root Item that should be used for all applications.
 
@@ -30,7 +30,7 @@ import QtQuick.Window 2.2
     inside the MainView:
     \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.3
+        import Lomiri.Components 1.3
 
         MainView {
             width: units.gu(48)
@@ -63,7 +63,7 @@ import QtQuick.Window 2.2
     the PageHeader to automatically hide and show the header when the user scrolls up or down:
     \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.3
+        import Lomiri.Components 1.3
 
         MainView {
             width: units.gu(48)
@@ -126,8 +126,8 @@ Toolkit.MainViewBase {
         anchors {
             fill: parent
             bottomMargin: mainView.anchorToKeyboard &&
-                UbuntuApplication.inputMethod.visible ?
-                    UbuntuApplication.inputMethod.keyboardRectangle.height : 0
+                LomiriApplication.inputMethod.visible ?
+                    LomiriApplication.inputMethod.keyboardRectangle.height : 0
         }
 
         Item {

@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Item {
     id: switchStyle
@@ -47,16 +47,16 @@ Item {
     FocusShape {
     }
 
-    UbuntuShape {
+    LomiriShape {
         id: background
-        aspect: UbuntuShape.Inset
+        aspect: LomiriShape.Inset
         anchors.fill: parent
         backgroundColor: switchStyle.backgroundColor
         clip: true
 
-        UbuntuShape {
+        LomiriShape {
             id: thumb
-            aspect: UbuntuShape.Inset
+            aspect: LomiriShape.Inset
             states: [
                 State {
                     name: "checked"
@@ -83,14 +83,14 @@ Item {
                     enabled: animated
                     AnchorAnimation {
                         targets: thumb
-                        duration: UbuntuAnimation.FastDuration
-                        easing: UbuntuAnimation.StandardEasing
+                        duration: LomiriAnimation.FastDuration
+                        easing: LomiriAnimation.StandardEasing
                     }
                     ColorAnimation {
                         target: thumb
                         properties: "backgroundColor"
-                        duration: UbuntuAnimation.FastDuration
-                        easing: UbuntuAnimation.StandardEasing
+                        duration: LomiriAnimation.FastDuration
+                        easing: LomiriAnimation.StandardEasing
                     }
                 }
             ]

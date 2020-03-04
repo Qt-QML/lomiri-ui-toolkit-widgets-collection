@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 AmbianceNormal {
-    background: UbuntuColors.porcelain
-    base: UbuntuColors.ash
-    baseText: UbuntuColors.jet
-    foreground: UbuntuColors.ash
-    overlay: UbuntuColors.porcelain
+    background: LomiriColors.porcelain
+    base: LomiriColors.ash
+    baseText: LomiriColors.jet
+    foreground: LomiriColors.ash
+    overlay: LomiriColors.porcelain
 }

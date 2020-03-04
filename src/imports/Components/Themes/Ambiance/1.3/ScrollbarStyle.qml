@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*
   The visuals handle both active and passive modes. This behavior is driven yet by
@@ -96,9 +96,9 @@ Item {
     property real thumbThickness: units.gu(1)
     property real indicatorThickness : units.dp(3)
 
-    property PropertyAnimation scrollbarThicknessAnimation: UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration }
-    property PropertyAnimation scrollbarFadeInAnimation: UbuntuNumberAnimation { duration: UbuntuAnimation.SlowDuration }
-    property PropertyAnimation scrollbarFadeOutAnimation: UbuntuNumberAnimation { duration: UbuntuAnimation.SlowDuration }
+    property PropertyAnimation scrollbarThicknessAnimation: LomiriNumberAnimation { duration: LomiriAnimation.SnapDuration }
+    property PropertyAnimation scrollbarFadeInAnimation: LomiriNumberAnimation { duration: LomiriAnimation.SlowDuration }
+    property PropertyAnimation scrollbarFadeOutAnimation: LomiriNumberAnimation { duration: LomiriAnimation.SlowDuration }
     property int scrollbarFadeOutPause: 3000
     property int scrollbarCollapsePause: 1000
 
@@ -437,7 +437,7 @@ Item {
         objectName: "scrollAnimation"
 
         //duration and easing coming from UX spec
-        duration: UbuntuAnimation.SlowDuration
+        duration: LomiriAnimation.SlowDuration
         easing.type: Easing.InOutCubic
         target: flickableItem
         property: scrollbarUtils.propContent

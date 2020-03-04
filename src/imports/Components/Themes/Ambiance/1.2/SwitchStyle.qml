@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 Item {
     id: switchStyle
@@ -44,7 +44,7 @@ Item {
     /*!
       The background color of the thumb when the switch is checked.
      */
-    property color checkedThumbColor: UbuntuColors.green
+    property color checkedThumbColor: LomiriColors.green
 
     /*!
       The background color of the thumb when the switch is not checked.
@@ -71,13 +71,13 @@ Item {
      */
     property url uncheckedIconSource: "image://theme/close"
 
-    UbuntuShape {
+    LomiriShape {
         id: background
         anchors.fill: parent
         color: switchStyle.backgroundColor
         clip: true
 
-        UbuntuShape {
+        LomiriShape {
             id: thumb
             states: [
                 State {
@@ -106,33 +106,33 @@ Item {
                 Transition {
                     from: "unchecked"
                     to: "checked"
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                         target: thumb
                         properties: "x"
-                        duration: UbuntuAnimation.FastDuration
-                        easing: UbuntuAnimation.StandardEasing
+                        duration: LomiriAnimation.FastDuration
+                        easing: LomiriAnimation.StandardEasing
                     }
                     ColorAnimation {
                         target: thumb
                         properties: "color"
-                        duration: UbuntuAnimation.FastDuration
-                        easing: UbuntuAnimation.StandardEasing
+                        duration: LomiriAnimation.FastDuration
+                        easing: LomiriAnimation.StandardEasing
                     }
                 },
                 Transition {
                     from: "checked"
                     to: "unchecked"
-                    UbuntuNumberAnimation {
+                    LomiriNumberAnimation {
                         target: thumb
                         properties: "x"
-                        duration: UbuntuAnimation.FastDuration
-                        easing: UbuntuAnimation.StandardEasing
+                        duration: LomiriAnimation.FastDuration
+                        easing: LomiriAnimation.StandardEasing
                     }
                     ColorAnimation {
                         target: thumb
                         properties: "color"
-                        duration: UbuntuAnimation.FastDuration
-                        easing: UbuntuAnimation.StandardEasing
+                        duration: LomiriAnimation.FastDuration
+                        easing: LomiriAnimation.StandardEasing
                     }
                 }
             ]

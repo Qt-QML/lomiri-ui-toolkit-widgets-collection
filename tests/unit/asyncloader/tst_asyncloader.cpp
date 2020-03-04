@@ -18,7 +18,7 @@
 
 #include <QtQml/QQmlEngine>
 #include <QtTest/QtTest>
-#include <UbuntuToolkit/private/asyncloader_p.h>
+#include <LomiriToolkit/private/asyncloader_p.h>
 
 #include "uctestcase.h"
 #include "uctestextras.h"
@@ -153,7 +153,7 @@ private Q_SLOTS:
         QFETCH(int, mode);
         QFETCH(QList<int>, statuses);
 
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("TestApp.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("TestApp.qml"));
         AsyncLoader loader;
         LoaderSpy spy(&loader);
         QScopedPointer<QQmlComponent> component;
@@ -176,8 +176,8 @@ private Q_SLOTS:
     void test_load_with_error()
     {
         QUrl document = QUrl::fromLocalFile("FaultyDocument.qml");
-        UbuntuTestCase::ignoreWarning("FaultyDocument.qml", 20, "Label is not a type");
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("TestApp.qml"));
+        LomiriTestCase::ignoreWarning("FaultyDocument.qml", 20, "Label is not a type");
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("TestApp.qml"));
         AsyncLoader loader;
         LoaderSpy spy(&loader);
         loader.load(document, view->rootContext());
@@ -223,7 +223,7 @@ private Q_SLOTS:
         QFETCH(QString, document);
         QFETCH(int, mode);
 
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("TestApp.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("TestApp.qml"));
         AsyncLoader loader;
         ResetLoaderSpy spy(&loader);
         QScopedPointer<QQmlComponent> component;
@@ -272,10 +272,10 @@ private Q_SLOTS:
         QFETCH(int, when);
         QFETCH(bool, success);
 
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("TestApp.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("TestApp.qml"));
         AsyncLoader loader;
         if (when == (int)AsyncLoader::Error) {
-            UbuntuTestCase::ignoreWarning("FaultyDocument.qml", 20, "Label is not a type");
+            LomiriTestCase::ignoreWarning("FaultyDocument.qml", 20, "Label is not a type");
         }
 
         SecondLoaderSpy spy(&loader, (AsyncLoader::LoadingStatus)when, QUrl::fromLocalFile(doc2), view->rootContext());

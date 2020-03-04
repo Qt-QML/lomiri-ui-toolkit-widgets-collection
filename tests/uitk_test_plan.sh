@@ -23,7 +23,7 @@ COMISSION_SILO=false
 COMISSION_FLASH=false
 COMISSION_BOOTSTRAP=false
 DONOTRUNTESTS=false
-PPA="ubuntu-sdk-team/staging"
+PPA="lomiri-sdk-team/staging"
 TIMESTAMP=`date +"%Y_%m_%d-%H_%M_%S"`
 DATESTAMP=`date +"%Y_%m_%d"`
 LOGFILENAME="ap-${TIMESTAMP}"
@@ -31,9 +31,9 @@ OUTPUTDIR=$HOME
 FILTER=.*
 RTM=true
 REVISION=105
-DISTRO="ubuntu" 
+DISTRO="lomiri" 
 SERIES="vivid"
-CHANNEL="ubuntu-touch/rc-proposed/${DISTRO}"
+CHANNEL="lomiri-touch/rc-proposed/${DISTRO}"
 PASSWORD="0000"
 BOOTTIME=250
 ONLYCOMPARE=false
@@ -47,37 +47,37 @@ declare -a TEST_SUITE=(
     " -p mediaplayer-app-autopilot mediaplayer_app"
     " -p dialer-app-autopilot dialer_app"
     " -p reminders-app-autopilot reminders"
-    " -p ubuntu-ui-toolkit-autopilot ubuntuuitoolkit"
+    " -p lomiri-ui-toolkit-autopilot lomiriuitoolkit"
     " -p webbrowser-app-autopilot webbrowser_app"
     " -p address-book-app-autopilot address_book_app" 
     " sudoku_app"
-    " ubuntu_calculator_app"
+    " lomiri_calculator_app"
     " dropping_letters_app"
-    " ubuntu_weather_app"
-    " -p ubuntu-system-settings-autopilot ubuntu_system_settings"
+    " lomiri_weather_app"
+    " -p lomiri-system-settings-autopilot lomiri_system_settings"
     " music_app"
     " gallery_app"
     " -p messaging-app-autopilot messaging_app"
     " camera_app"
 #   " filemanager"
-#   " ubuntu_terminal_app"
+#   " lomiri_terminal_app"
     " -n lomiri"
-#   " ubuntu_clock_app"
+#   " lomiri_clock_app"
 #   " shorts_app"
 #   " online_accounts_ui"
 )
 
 
-UITK_PACKAGES="qtdeclarative5-ubuntu-ui-toolkit-plugin \
-               ubuntu-ui-toolkit-autopilot \
-               ubuntu-ui-toolkit-theme"
+UITK_PACKAGES="qtdeclarative5-lomiri-ui-toolkit-plugin \
+               lomiri-ui-toolkit-autopilot \
+               lomiri-ui-toolkit-theme"
 #UITK_PACKAGES="lomiri lomiri-common lomiri-private"
 #UITK_PACKAGES="qtmir-android qtdeclarative5-qtmir-plugin"
 
 
 AP_PACKAGES="address-book-service-dummy \
              python3-lxml \
-             ubuntu-ui-toolkit-autopilot \
+             lomiri-ui-toolkit-autopilot \
              gallery-app-autopilot \
              reminders-app-autopilot \
              address-book-app-autopilot \
@@ -88,16 +88,16 @@ AP_PACKAGES="address-book-service-dummy \
              webbrowser-app-autopilot \
              mediaplayer-app-autopilot \
              lomiri-webapps-qml-autopilot \
-             ubuntu-system-settings-autopilot\
-             ubuntu-html5-ui-toolkit-autopilot \
-             ubuntu-system-settings-online-accounts-autopilot \
+             lomiri-system-settings-autopilot\
+             lomiri-html5-ui-toolkit-autopilot \
+             lomiri-system-settings-online-accounts-autopilot \
              messaging-app-autopilot \
              lomiri"
 
 declare -a UNREGISTERED_APPS=(
-	"com.ubuntu.terminal"
-	"com.ubuntu.calculator"
-	"com.ubuntu.shorts"
+	"com.lomiri.terminal"
+	"com.lomiri.calculator"
+	"com.lomiri.shorts"
 )
 
 function echo(){
@@ -203,14 +203,14 @@ function reset {
 function device_comission {
     if [ ${COMISSION_BOOTSTRAP} == true ]; then
         # bootstrap the device with the latest image
-	ubuntu-device-flash touch --serial=${SERIALNUMBER} --channel=${CHANNEL} --wipe --bootstrap --developer-mode --password=0000
+	lomiri-device-flash touch --serial=${SERIALNUMBER} --channel=${CHANNEL} --wipe --bootstrap --developer-mode --password=0000
     elif [ ${COMISSION_FLASH} == true ]; then
         adb -s ${SERIALNUMBER} wait-for-device
         # Avoid https://bugs.launchpad.net/gallery-app/+bug/1363190
-        adb -s ${SERIALNUMBER} shell "echo ${PASSWORD} |sudo -S rm -rf /userdata/user-data/phablet/.cache/com.ubuntu.gallery 2>&1|grep -v password"
+        adb -s ${SERIALNUMBER} shell "echo ${PASSWORD} |sudo -S rm -rf /userdata/user-data/phablet/.cache/com.lomiri.gallery 2>&1|grep -v password"
         # flash the latest image
         echo -e "Flashing \e[31m${CHANNEL}\e[0m"
-        ubuntu-device-flash touch --serial=${SERIALNUMBER} --channel=${CHANNEL} ${WIPE} --developer-mode --password=${PASSWORD}
+        lomiri-device-flash touch --serial=${SERIALNUMBER} --channel=${CHANNEL} ${WIPE} --developer-mode --password=${PASSWORD}
     fi
     if [[ ${COMISSION_BOOTSTRAP} == true || ${COMISSION_FLASH} == true ]]; then
 	    sleep_indicator ${BOOTTIME}
@@ -234,9 +234,9 @@ function device_comission {
             adb -s ${SERIALNUMBER} shell "echo ${PASSWORD}|sudo -S click unregister ${APP_TO_UNREGISTER} 2>&1|grep -v password"
         done
 	echo -e "Configure permissions for applications"
-	fix_permissions com.ubuntu.camera_camera PulseAudio
-	fix_permissions com.ubuntu.camera_camera CameraService
-	fix_permissions com.ubuntu.clock_clock UbuntuLocationService
+	fix_permissions com.lomiri.camera_camera PulseAudio
+	fix_permissions com.lomiri.camera_camera CameraService
+	fix_permissions com.lomiri.clock_clock LomiriLocationService
 	echo -e "phablet-click-test-setup  \e[31m${DISTRO} ${SERIES}\e[0m"
 	phablet-click-test-setup -s ${SERIALNUMBER} --distribution=${DISTRO} --series=${SERIES} 2>&1 || fatal_failure "phablet-click-test-setup has failed" 
 	echo "Sleep after phablet-click-test-setup";
@@ -286,8 +286,8 @@ function device_comission {
            adb -s ${SERIALNUMBER} shell "echo ${PASSWORD}|sudo -S apt-get update 2>&1|grep -v password > /dev/null"
         fi
     fi
-    adb -s ${SERIALNUMBER} shell rm -rf /home/phablet/autopilot/ubuntuuitoolkit
-    UITK_VERSION=`adb -s ${SERIALNUMBER} shell "stty cols 250; dpkg -l"|grep qtdeclarative5-ubuntu-ui-toolkit-plugin|awk '{print $3}'`
+    adb -s ${SERIALNUMBER} shell rm -rf /home/phablet/autopilot/lomiriuitoolkit
+    UITK_VERSION=`adb -s ${SERIALNUMBER} shell "stty cols 250; dpkg -l"|grep qtdeclarative5-lomiri-ui-toolkit-plugin|awk '{print $3}'`
     echo -e "Original UITK version:\t\e[31m${UITK_VERSION}\e[0m"
     echo "Updating APT";
     adb -s ${SERIALNUMBER} shell "echo ${PASSWORD} |sudo -S apt-get update  2>&1|grep -v password > /dev/null"
@@ -299,7 +299,7 @@ function device_comission {
         echo "Install the UITK packages"
         adb -s ${SERIALNUMBER} shell "echo ${PASSWORD}|sudo -S apt-get install --yes --force-yes ${UITK_PACKAGES} 2>&1 |grep -v password > /dev/null"
     fi
-    UITK_VERSION=`adb -s ${SERIALNUMBER} shell "stty cols 250; dpkg -l"|grep qtdeclarative5-ubuntu-ui-toolkit-plugin|awk '{print $3}'`
+    UITK_VERSION=`adb -s ${SERIALNUMBER} shell "stty cols 250; dpkg -l"|grep qtdeclarative5-lomiri-ui-toolkit-plugin|awk '{print $3}'`
     echo -e "New UITK version:\t\e[31m${UITK_VERSION}\e[0m"
     # Update APT
     adb -s ${SERIALNUMBER} shell "echo ${PASSWORD} |sudo -S apt-get update 2>&1|grep -v password > /dev/null"
@@ -391,8 +391,8 @@ while getopts ":hrintduc:slqwbvi:o:p:e:f:a:" opt; do
             ;;
         u)
             RTM=false
-            CHANNEL="ubuntu-touch/devel-proposed/ubuntu"
-            DISTRO="ubuntu"
+            CHANNEL="lomiri-touch/devel-proposed/lomiri"
+            DISTRO="lomiri"
             SERIES="xenial"
             ;;
         w)
@@ -423,12 +423,12 @@ while getopts ":hrintduc:slqwbvi:o:p:e:f:a:" opt; do
             echo -e "\t-p : Source PPA for the UITK. Default $PPA. Use -p archive to test stock image or -p [0-9]* to set a silo."
             echo -e "\t-f : Filter for the test suite. Default $FILTER"
             echo -e "\t-a : Start the test suite from the given test."
-            echo -e "\t-u : Provision the Development release of Ubuntu, Xenial. Default is vivid-overlay (formerly RTM)."
-            echo -e "\t-w : dist-upgrade to the whole PPA instead of just Ubuntu UI Toolkit. Default is only UITK."
+            echo -e "\t-u : Provision the Development release of Lomiri, Xenial. Default is vivid-overlay (formerly RTM)."
+            echo -e "\t-w : dist-upgrade to the whole PPA instead of just Lomiri UI Toolkit. Default is only UITK."
             echo -e "\t-q : Provision the device for normal use with the ${PPA} enabled"
             echo ""
             echo "By default tihe uitk_test_plan.sh flashes the latest vivid-overlay image on the device, installs the click application"
-            echo "tests, configures the ppa:ubuntu-sdk-team/staging PPA, installs the UITK from the PPA and executes the test plan."
+            echo "tests, configures the ppa:lomiri-sdk-team/staging PPA, installs the UITK from the PPA and executes the test plan."
             echo ""
 	    echo "Provision the device for normal use without wipeing the userdata"
 	    echo -e "\t$ ./uitk_test_plan.sh -q"
@@ -442,20 +442,20 @@ while getopts ":hrintduc:slqwbvi:o:p:e:f:a:" opt; do
             echo "Validate the UITK from teh archive on an vivid-overlay image"
             echo -e "\t$ ./uitk_test_plan.sh -c -p archive"
             echo ""
-            echo "Validate the UITK from a specific CI silo on an Ubuntu Xenial image"
+            echo "Validate the UITK from a specific CI silo on an Lomiri Xenial image"
             echo -e "\t$ ./uitk_test_plan.sh -c -p 001 -u"
             echo ""
             echo "Provision the device for manual testing with the latest vivid-overlay image"
             echo -e "\t$ ./uitk_test_plan.sh -c -p archive -n"
             echo ""
-            echo "Provision the device for manual testing with the latest Ubuntu Xenial image"
+            echo "Provision the device for manual testing with the latest Lomiri Xenial image"
             echo -e "\t$ ./uitk_test_plan.sh -c -p archive -u -n"
             echo ""
             echo "Run the test plan on an already provisioned device"
             echo -e "\t$ ./uitk_test_plan.sh"
             echo ""
             echo "Run only the UITK tests on an already provisioned device"
-            echo -e "\t$ ./uitk_test_plan.sh -f ubuntuuitoolkit"
+            echo -e "\t$ ./uitk_test_plan.sh -f lomiriuitoolkit"
             echo ""
             echo "Compare the archive test results with the silo 001 results"
             echo -e "\t$ ./uitk_test_plan.sh -d -p 001"

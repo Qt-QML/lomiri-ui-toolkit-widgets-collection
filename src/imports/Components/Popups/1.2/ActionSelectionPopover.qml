@@ -15,14 +15,14 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
-import Ubuntu.Components.ListItems 1.0
+import Lomiri.Components 1.2
+import Lomiri.Components.ListItems 1.0
 
 /*!
     \qmltype ActionSelectionPopover
     \inherits Popover
-    \inqmlmodule Ubuntu.Components.Popups 1.0
-    \ingroup ubuntu-popups
+    \inqmlmodule Lomiri.Components.Popups 1.0
+    \ingroup lomiri-popups
     \brief A special popover presenting actions to the user. The popover is closed
         automatically when the action is chosen.
 

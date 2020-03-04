@@ -14,9 +14,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
-import Ubuntu.Components.Styles 1.3 as Style
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
+import Lomiri.Components.Styles 1.3 as Style
 
 Style.ActionBarStyle {
     id: actionBarStyle
@@ -80,13 +80,13 @@ Style.ActionBarStyle {
             ScriptAction {
                 script: fadeIn.target.opacity = 0.0;
             }
-            UbuntuNumberAnimation {
+            LomiriNumberAnimation {
                 id: opacityAnimation
                 from: 0.0
                 to: 1.0
                 property: "opacity"
                 alwaysRunToEnd: true
-                duration: UbuntuAnimation.BriskDuration
+                duration: LomiriAnimation.BriskDuration
             }
             ScriptAction {
                 script: fadeIn.destroy()
@@ -183,7 +183,7 @@ Style.ActionBarStyle {
                 // Ensure the popover closes when actions change and
                 // the list item below may be destroyed before its
                 // onClicked is executed. See bug
-                // https://bugs.launchpad.net/ubuntu-ui-toolkit/+bug/1326963
+                // https://bugs.launchpad.net/lomiri-ui-toolkit/+bug/1326963
                 Connections {
                     target: styledItem
                     onActionsChanged: {

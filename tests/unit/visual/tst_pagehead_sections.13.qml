@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Test 1.0
+import Lomiri.Components 1.3
+import Lomiri.Test 1.0
 
 Item {
     width: units.gu(50)
@@ -62,7 +62,7 @@ Item {
                 anchors.fill: parent
                 model: 50
                 delegate: ListItem {
-                    UbuntuShape {
+                    LomiriShape {
                         id: shape
                         anchors {
                             left: parent.left
@@ -91,7 +91,7 @@ Item {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "PageHeadSectionsAPI"
         when: windowShown
         id: testCase

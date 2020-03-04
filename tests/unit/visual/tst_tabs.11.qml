@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.2
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.1
+import Lomiri.Test 1.0
+import Lomiri.Components 1.1
 
 MainView {
     id: mainView
@@ -121,7 +121,7 @@ MainView {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "TabsAPINewHeader"
         when: windowShown
 

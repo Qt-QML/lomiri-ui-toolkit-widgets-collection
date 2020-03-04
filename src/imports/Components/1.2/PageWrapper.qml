@@ -20,8 +20,8 @@ import "PageWrapperUtils.js" as Utils
 /*!
     \internal
     \qmltype PageWrapper
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief Internal class used by \l PageStack
 */
 PageTreeNode {

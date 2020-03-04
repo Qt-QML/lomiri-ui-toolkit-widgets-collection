@@ -19,10 +19,10 @@
 #include "pangaea.h"
 
 /*!
- * \qmltype Ubuntu
+ * \qmltype Lomiri
  * \instantiates EAPangaea
  * \inqmlmodule Extinct.Animals 1.2
- * \ingroup ubuntu
+ * \ingroup lomiri
  * \since Extinct.Animals 1.2
  * \brief Provides global object with different enums.
  *

@@ -2,15 +2,15 @@ TEMPLATE = subdirs
 
 # Libraries
 
-src_gestures_lib.subdir = UbuntuGestures
+src_gestures_lib.subdir = LomiriGestures
 src_gestures_lib.target = sub-gestures-lib
 SUBDIRS += src_gestures_lib
 
-src_metrics_lib.subdir = UbuntuMetrics
+src_metrics_lib.subdir = LomiriMetrics
 src_metrics_lib.target = sub-metrics-lib
 SUBDIRS += src_metrics_lib
 
-src_toolkit_lib.subdir = UbuntuToolkit
+src_toolkit_lib.subdir = LomiriToolkit
 src_toolkit_lib.target = sub-toolkit-lib
 src_toolkit_lib.depends = sub-gestures-lib sub-metrics-lib
 SUBDIRS += src_toolkit_lib
@@ -18,7 +18,7 @@ SUBDIRS += src_toolkit_lib
 # Plugins
 
 linux {
-    src_metrics_lttng_plugin.subdir = UbuntuMetrics/lttng
+    src_metrics_lttng_plugin.subdir = LomiriMetrics/lttng
     src_metrics_lttng_plugin.target = sub-metrics-lttng-plugin
     SUBDIRS += src_metrics_lttng_plugin
 }

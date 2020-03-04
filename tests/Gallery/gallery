@@ -3,4 +3,4 @@
 . `dirname ${BASH_SOURCE[0]}`/../../export_qml_dir.sh || exit 1
 
 SCRIPT_DIRECTORY=`dirname $0`
-QT_LOGGING_CONF=$SCRIPT_DIRECTORY/gallery-logging.config $BUILD_DIR/ubuntu-ui-toolkit-launcher/ubuntu-ui-toolkit-launcher $@ $SCRIPT_DIRECTORY/../../examples/ubuntu-ui-toolkit-gallery/ubuntu-ui-toolkit-gallery.qml
+QT_LOGGING_CONF=$SCRIPT_DIRECTORY/gallery-logging.config $BUILD_DIR/lomiri-ui-toolkit-launcher/lomiri-ui-toolkit-launcher $@ $SCRIPT_DIRECTORY/../../examples/lomiri-ui-toolkit-gallery/lomiri-ui-toolkit-gallery.qml

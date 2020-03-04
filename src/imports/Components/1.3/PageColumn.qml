@@ -18,9 +18,9 @@ import QtQuick 2.4
 
 /*!
   \qmltype PageColumn
-  \inqmlmodule Ubuntu.Components
-  \since Ubuntu.Components 1.3
-  \ingroup ubuntu
+  \inqmlmodule Lomiri.Components
+  \since Lomiri.Components 1.3
+  \ingroup lomiri
   \brief Component configuring the metrics of a column in AdaptivePageLayout.
 
   */

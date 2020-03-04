@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components.Styles 1.3 as Styles
-import Ubuntu.Components 1.3
+import Lomiri.Components.Styles 1.3 as Styles
+import Lomiri.Components 1.3
 
 Styles.ListItemStyle {
 
@@ -171,8 +171,8 @@ Styles.ListItemStyle {
                 reversible: true
                 enabled: listItemStyle.animatePanels
                 OpacityAnimator {
-                    easing: UbuntuAnimation.StandardEasing
-                    duration: UbuntuAnimation.FastDuration
+                    easing: LomiriAnimation.StandardEasing
+                    duration: LomiriAnimation.FastDuration
                 }
             }
         }
@@ -217,12 +217,12 @@ Styles.ListItemStyle {
                 enabled: listItemStyle.animatePanels
                 ParallelAnimation {
                     OpacityAnimator {
-                        easing: UbuntuAnimation.StandardEasing
-                        duration: UbuntuAnimation.FastDuration
+                        easing: LomiriAnimation.StandardEasing
+                        duration: LomiriAnimation.FastDuration
                     }
                     ScaleAnimator {
-                        easing: UbuntuAnimation.StandardEasing
-                        duration: UbuntuAnimation.FastDuration
+                        easing: LomiriAnimation.StandardEasing
+                        duration: LomiriAnimation.FastDuration
                     }
                 }
             }
@@ -273,8 +273,8 @@ Styles.ListItemStyle {
             PropertyAnimation {
                 target: styledItem.contentItem
                 properties: "anchors.leftMargin"
-                easing: UbuntuAnimation.StandardEasing
-                duration: UbuntuAnimation.FastDuration
+                easing: LomiriAnimation.StandardEasing
+                duration: LomiriAnimation.FastDuration
             }
         }
     }
@@ -320,8 +320,8 @@ Styles.ListItemStyle {
             PropertyAnimation {
                 target: styledItem.contentItem
                 properties: "anchors.rightMargin"
-                easing: UbuntuAnimation.StandardEasing
-                duration: UbuntuAnimation.FastDuration
+                easing: LomiriAnimation.StandardEasing
+                duration: LomiriAnimation.FastDuration
             }
         }
     }
@@ -467,11 +467,11 @@ Styles.ListItemStyle {
             reversible: true
             enabled: listItemStyle.animatePanels
             ParallelAnimation {
-                UbuntuNumberAnimation {
+                LomiriNumberAnimation {
                     target: listItemStyle.flickable
                     property: "contentY"
                 }
-                UbuntuNumberAnimation {
+                LomiriNumberAnimation {
                     target: styledItem
                     property: "height"
                 }
@@ -482,7 +482,7 @@ Styles.ListItemStyle {
             to: "expandedNoFlickable"
             reversible: true
             enabled: listItemStyle.animatePanels
-            UbuntuNumberAnimation {
+            LomiriNumberAnimation {
                 target: styledItem
                 property: "height"
             }

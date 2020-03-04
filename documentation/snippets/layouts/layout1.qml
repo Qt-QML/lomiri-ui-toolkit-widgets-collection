@@ -16,8 +16,8 @@
 
 //![0]
 import QtQuick 2.4
-import Ubuntu.Components 1.2
-import Ubuntu.Layouts 1.0
+import Lomiri.Components 1.2
+import Lomiri.Layouts 1.0
 
 Item {
     id: root

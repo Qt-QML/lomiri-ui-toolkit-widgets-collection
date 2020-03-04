@@ -18,8 +18,8 @@ import QtQuick 2.4
 
 /*!
     \qmltype Tab
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief Component to represent a single tab in a \l Tabs environment.
 
     Examples: See \l Tabs.
@@ -50,7 +50,7 @@ PageTreeNode {
       Example:
       \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
+        import Lomiri.Components 1.2
         MainView {
             width: units.gu(40)
             height: units.gu(50)

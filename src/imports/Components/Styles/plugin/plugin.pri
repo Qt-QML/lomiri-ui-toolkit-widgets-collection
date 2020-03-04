@@ -1,4 +1,4 @@
-QT *= qml quick UbuntuToolkit UbuntuToolkit_private
+QT *= qml quick LomiriToolkit LomiriToolkit_private
 
 INCLUDEPATH+=$$PWD
 

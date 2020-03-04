@@ -16,10 +16,10 @@
 
 import QtQuick 2.2
 import QtTest 1.0
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Pickers 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Test 1.0
+import Lomiri.Components 1.3
+import Lomiri.Components.Pickers 1.3
+import Lomiri.Components.Popups 1.3
 
 Item {
     id: main
@@ -37,7 +37,7 @@ Item {
         }
         spacing: units.gu(1)
 
-        UbuntuListView {
+        LomiriListView {
             id: listView
             width: units.gu(50)
             height: units.gu(20)
@@ -225,7 +225,7 @@ Item {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "FocusingTests"
         when: windowShown
 

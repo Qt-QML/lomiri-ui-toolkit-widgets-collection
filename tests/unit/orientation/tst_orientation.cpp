@@ -40,7 +40,7 @@ private Q_SLOTS:
 
     void test_defaults()
     {
-        QScopedPointer<UbuntuTestCase> testCase(new UbuntuTestCase("Defaults.qml"));
+        QScopedPointer<LomiriTestCase> testCase(new LomiriTestCase("Defaults.qml"));
         QQuickItem *helper = testCase->findItem<QQuickItem*>("helper");
         QCOMPARE(helper->property("automaticOrientation").toBool(), true);
         // No warnings expected
@@ -49,7 +49,7 @@ private Q_SLOTS:
 
     void test_manualAngle()
     {
-        QScopedPointer<UbuntuTestCase> testCase(new UbuntuTestCase("ManualAngle.qml"));
+        QScopedPointer<LomiriTestCase> testCase(new LomiriTestCase("ManualAngle.qml"));
         QQuickItem *helper = testCase->findItem<QQuickItem*>("helper");
         // No warning about "window" being undefined must appear
         QSKIP("FIXME: We have no valid effectiveness tests for OrientationHelper. See bug #1626063.");

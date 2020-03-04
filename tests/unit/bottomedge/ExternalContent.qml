@@ -16,12 +16,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Rectangle {
     objectName: "external"
     width: parent ? parent.width : 0
     height: parent ? parent.height : 0
-    color: UbuntuColors.silk
+    color: LomiriColors.silk
 }
 

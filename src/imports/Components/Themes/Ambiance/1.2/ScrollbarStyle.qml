@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 /*
   The visuals handle both active and passive modes. This behavior is driven yet by
@@ -63,12 +63,12 @@ Item {
     property real overlayOpacityWhenShown: 0.6
     property real overlayOpacityWhenHidden: 0.0
 
-    property PropertyAnimation scrollbarFadeInAnimation: UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration }
-    property PropertyAnimation scrollbarFadeOutAnimation: UbuntuNumberAnimation { duration: UbuntuAnimation.SlowDuration }
+    property PropertyAnimation scrollbarFadeInAnimation: LomiriNumberAnimation { duration: LomiriAnimation.SnapDuration }
+    property PropertyAnimation scrollbarFadeOutAnimation: LomiriNumberAnimation { duration: LomiriAnimation.SlowDuration }
     property int scrollbarFadeOutPause: 300
-    property PropertyAnimation sliderAnimation: UbuntuNumberAnimation {}
-    property PropertyAnimation thumbConnectorFading: UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration }
-    property PropertyAnimation thumbFading: UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration }
+    property PropertyAnimation sliderAnimation: LomiriNumberAnimation {}
+    property PropertyAnimation thumbConnectorFading: LomiriNumberAnimation { duration: LomiriAnimation.SnapDuration }
+    property PropertyAnimation thumbFading: LomiriNumberAnimation { duration: LomiriAnimation.SnapDuration }
 
     property color sliderColor: Theme.palette.normal.base
     property real sliderRadius: units.gu(0.5)

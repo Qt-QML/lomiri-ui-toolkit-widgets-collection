@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*!
     \qmltype DialerHand
-    \inqmlmodule Ubuntu.Components.Pickers 1.0
-    \ingroup ubuntu-pickers
+    \inqmlmodule Lomiri.Components.Pickers 1.0
+    \ingroup lomiri-pickers
     \brief DialerHand represents a value selector on a Dialer.
     \deprecated
 

@@ -16,13 +16,13 @@
 
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*!
   \qmltype Captions
-  \inqmlmodule Ubuntu.Components
-  \ingroup ubuntu-listitem
-  \since Ubuntu.Components 1.2
+  \inqmlmodule Lomiri.Components
+  \ingroup lomiri-listitem
+  \since Lomiri.Components 1.2
   \brief Container providing captionStyles for a twin-label column that can be used in
   RowLayout or GridLayout.
 
@@ -37,7 +37,7 @@ import Ubuntu.Components 1.3
 
   \qml
   import QtQuick 2.4
-  import Ubuntu.Components 1.3
+  import Lomiri.Components 1.3
 
   ListItem {
       RowLayout {
@@ -49,7 +49,7 @@ import Ubuntu.Components 1.3
                Component.onCompleted: subtitle.Layout.alignment = Qt.AlignRight
            }
            Captions {
-               captionStyle: Ubuntu.SummaryCaptionStyle
+               captionStyle: Lomiri.SummaryCaptionStyle
                title.text: "Text"
                subtitle.text: "Text"
            }
@@ -77,14 +77,14 @@ ColumnLayout {
       The property configures the arrangement and font sizes of the Labels in the
       component. It can take the following values:
       \list
-        \li \b Ubuntu.TitleCaptionStyle - (default) typical configuration for a left aligned
+        \li \b Lomiri.TitleCaptionStyle - (default) typical configuration for a left aligned
             twin-label setup, where the text covers the remaining area on a list
             layout.
-        \li \b Ubuntu.SummaryCaptionStyle - configuration for a right-aligned twin label setup,
+        \li \b Lomiri.SummaryCaptionStyle - configuration for a right-aligned twin label setup,
             with 6 grid units width.
       \endlist
       */
-    property int captionStyle: Ubuntu.TitleCaptionStyle
+    property int captionStyle: Lomiri.TitleCaptionStyle
 
     /*!
       \qmlproperty Label title
@@ -102,11 +102,11 @@ ColumnLayout {
 
     clip: true
     spacing: units.gu(0.5)
-    Layout.fillWidth: (captionStyle == Ubuntu.TitleCaptionStyle)
-    Layout.alignment: Qt.AlignVCenter | ((captionStyle == Ubuntu.SummaryCaptionStyle) ? Qt.AlignRight : Qt.AlignLeft)
+    Layout.fillWidth: (captionStyle == Lomiri.TitleCaptionStyle)
+    Layout.alignment: Qt.AlignVCenter | ((captionStyle == Lomiri.SummaryCaptionStyle) ? Qt.AlignRight : Qt.AlignLeft)
     Layout.minimumWidth: 0
-    Layout.maximumWidth: (captionStyle == Ubuntu.SummaryCaptionStyle) ? units.gu(6) : parent.width
-    Layout.preferredWidth: (captionStyle == Ubuntu.SummaryCaptionStyle) ? Layout.maximumWidth : 0
+    Layout.maximumWidth: (captionStyle == Lomiri.SummaryCaptionStyle) ? units.gu(6) : parent.width
+    Layout.preferredWidth: (captionStyle == Lomiri.SummaryCaptionStyle) ? Layout.maximumWidth : 0
     Layout.minimumHeight: 0
     Layout.maximumHeight: parent ? parent.height : childrenRect.height
     Layout.preferredHeight: childrenRect.height
@@ -129,10 +129,10 @@ ColumnLayout {
             left: parent.left
             right: parent.right
         }
-        textSize: (captionStyle == Ubuntu.SummaryCaptionStyle) ? Label.Small : Label.Medium
-        horizontalAlignment: (captionStyle == Ubuntu.SummaryCaptionStyle) ? Text.AlignRight : Text.AlignLeft
+        textSize: (captionStyle == Lomiri.SummaryCaptionStyle) ? Label.Small : Label.Medium
+        horizontalAlignment: (captionStyle == Lomiri.SummaryCaptionStyle) ? Text.AlignRight : Text.AlignLeft
         visible: text !== ""
-        elide: (captionStyle == Ubuntu.TitleCaptionStyle) ? Text.ElideRight : Text.ElideNone
+        elide: (captionStyle == Lomiri.TitleCaptionStyle) ? Text.ElideRight : Text.ElideNone
     }
     Label {
         id: subtitleLabel
@@ -141,10 +141,10 @@ ColumnLayout {
             right: parent.right
         }
         textSize: Label.Small
-        horizontalAlignment: (captionStyle == Ubuntu.SummaryCaptionStyle) ? Text.AlignRight : Text.AlignLeft
+        horizontalAlignment: (captionStyle == Lomiri.SummaryCaptionStyle) ? Text.AlignRight : Text.AlignLeft
         visible: text !== ""
-        maximumLineCount: (captionStyle == Ubuntu.TitleCaptionStyle) ? 2 : 1
-        wrapMode: (captionStyle == Ubuntu.TitleCaptionStyle) ? Text.Wrap : Text.NoWrap
-        elide: (captionStyle == Ubuntu.TitleCaptionStyle) ? Text.ElideRight : Text.ElideNone
+        maximumLineCount: (captionStyle == Lomiri.TitleCaptionStyle) ? 2 : 1
+        wrapMode: (captionStyle == Lomiri.TitleCaptionStyle) ? Text.Wrap : Text.NoWrap
+        elide: (captionStyle == Lomiri.TitleCaptionStyle) ? Text.ElideRight : Text.ElideNone
     }
 }

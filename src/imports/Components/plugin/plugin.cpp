@@ -17,31 +17,31 @@
 #include "plugin.h"
 
 #include <QtQml/QQmlEngine>
-#include <UbuntuToolkit/ubuntutoolkitmodule.h>
-#include <UbuntuGestures/ubuntugesturesmodule.h>
+#include <LomiriToolkit/lomiritoolkitmodule.h>
+#include <LomiriGestures/lomirigesturesmodule.h>
 
 #include "ucnamespace.h"
 
-UbuntuComponentsPlugin::~UbuntuComponentsPlugin()
+LomiriComponentsPlugin::~LomiriComponentsPlugin()
 {
-    UT_PREPEND_NAMESPACE(UbuntuToolkitModule)::undefineModule();
-    UG_PREPEND_NAMESPACE(UbuntuGesturesModule)::undefineModule();
+    UT_PREPEND_NAMESPACE(LomiriToolkitModule)::undefineModule();
+    UG_PREPEND_NAMESPACE(LomiriGesturesModule)::undefineModule();
 }
 
-void UbuntuComponentsPlugin::registerTypes(const char *uri)
+void LomiriComponentsPlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("Ubuntu.Components"));
+    Q_ASSERT(uri == QLatin1String("Lomiri.Components"));
     Q_UNUSED(uri);
 
-    qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespace)>(uri, 1, 2, "Ubuntu");
-    qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespaceV13)>(uri, 1, 3, "Ubuntu");
+    qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespace)>(uri, 1, 2, "Lomiri");
+    qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespaceV13)>(uri, 1, 3, "Lomiri");
 
-    UG_PREPEND_NAMESPACE(UbuntuGesturesModule)::defineModule(uri);
-    UT_PREPEND_NAMESPACE(UbuntuToolkitModule)::defineModule();
+    UG_PREPEND_NAMESPACE(LomiriGesturesModule)::defineModule(uri);
+    UT_PREPEND_NAMESPACE(LomiriToolkitModule)::defineModule();
 }
 
-void UbuntuComponentsPlugin::initializeEngine(QQmlEngine *engine, const char *uri)
+void LomiriComponentsPlugin::initializeEngine(QQmlEngine *engine, const char *uri)
 {
-    UT_PREPEND_NAMESPACE(UbuntuToolkitModule)::initializeModule(engine, baseUrl());
+    UT_PREPEND_NAMESPACE(LomiriToolkitModule)::initializeModule(engine, baseUrl());
     QQmlExtensionPlugin::initializeEngine(engine, uri);
 }

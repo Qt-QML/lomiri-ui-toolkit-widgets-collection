@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 /*!
     \qmltype PopupBase
-    \inqmlmodule Ubuntu.Components.Popups 1.0
-    \ingroup ubuntu-popups
+    \inqmlmodule Lomiri.Components.Popups 1.0
+    \ingroup lomiri-popups
     \brief The base class for all dialogs, sheets and popovers. Do not use directly.
 
     Examples: See subclasses.

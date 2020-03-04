@@ -18,8 +18,8 @@ import QtQuick 2.4
 
 /*!
     \qmltype Tabs
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief The Tabs class provides an environment where multible \l Tab
     children can be added, and the user is presented with a tab
     bar with tab buttons to select different tab pages.
@@ -31,8 +31,8 @@ import QtQuick 2.4
     Example:
     \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
-        import Ubuntu.Components.ListItems 1.0 as ListItem
+        import Lomiri.Components 1.2
+        import Lomiri.Components.ListItems 1.0 as ListItem
 
         MainView {
             width: units.gu(48)
@@ -95,14 +95,14 @@ import QtQuick 2.4
     is declared inside the Tabs at the end, because otherwise the shuffling of
     the order of children by the Repeater can cause incorrect ordering of the tabs.
 
-    The \l {http://design.ubuntu.com/apps/global-patterns/navigation}{Navigation Patterns} specify that
+    The \l {http://design.lomiri.com/apps/global-patterns/navigation}{Navigation Patterns} specify that
     a tabs header should never be combined with the back button of a \l PageStack. The only way to
     combine Tabs and \l PageStack that avoids this is by pushing the Tabs as the first page on the
     \l PageStack, and pushing other pages on top of that, as is shown in the following example:
 
     \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
+        import Lomiri.Components 1.2
 
         MainView {
             id: mainView

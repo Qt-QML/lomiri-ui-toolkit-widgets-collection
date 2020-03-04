@@ -15,9 +15,9 @@
  */
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.2
-import Ubuntu.Components.Popups 1.0
+import Lomiri.Test 1.0
+import Lomiri.Components 1.2
+import Lomiri.Components.Popups 1.0
 
 MainView {
     id: main
@@ -89,7 +89,7 @@ MainView {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         id: testCase
         name: "PopoverTests"
         when: windowShown
@@ -167,7 +167,7 @@ MainView {
             return [
                 { tag: "Moving pointerTarget", button: pressMe, otherButton: pushMe, dir: "down" },
                 // FIXME: { tag: "Moving parent", button: pushMe, otherButton: pressMe, dir: "up" },
-                // https://bugs.launchpad.net/ubuntu/+source/ubuntu-ui-toolkit/+bug/1427557
+                // https://bugs.launchpad.net/lomiri/+source/lomiri-ui-toolkit/+bug/1427557
             ]
         }
         function test_popover_follows_pointerTarget_bug1199502(data) {

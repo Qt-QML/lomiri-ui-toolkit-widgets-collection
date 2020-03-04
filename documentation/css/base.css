@@ -1,9 +1,9 @@
 /**
-* Ubuntu Developer base stylesheet
+* Lomiri Developer base stylesheet
 *
 * A base stylesheet containing site-wide styles
 *
-* @project Ubuntu Developer
+* @project Lomiri Developer
 * @version 1.0
 * @author Canonical Web Team: Steve Edwards
 * @copyright 2011 Canonical Ltd.
@@ -155,7 +155,7 @@ time {
 	color: #dd4814;
 	float: left;
 }
-.header-navigation .logo-ubuntu {
+.header-navigation .logo-lomiri {
 	margin-top: 12px;
 	float: left;
 }

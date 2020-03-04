@@ -19,8 +19,8 @@
 #include <QtCore/QSysInfo>
 #include <QtCore/private/qobject_p.h>
 #include <QtGui/qpa/qwindowsysteminterface.h>
-#include <UbuntuToolkit/private/mousetouchadaptor_p.h>
-#include <UbuntuGestures/private/ucswipearea_p_p.h>
+#include <LomiriToolkit/private/mousetouchadaptor_p.h>
+#include <LomiriGestures/private/ucswipearea_p_p.h>
 
 #include "uctestcase.h"
 
@@ -47,8 +47,8 @@ UCTestExtras *UCTestExtras::m_testExtras = 0;
 /*!
  * \qmltype TestExtras
  * \instantiates UCTestExtras
- * \inqmlmodule Ubuntu.Test 1.0
- * \ingroup ubuntu-test
+ * \inqmlmodule Lomiri.Test 1.0
+ * \ingroup lomiri-test
  * \brief Singleton type providing additional test functions.
  *
  * The component provides additional test functions like touch handling, registering
@@ -276,10 +276,10 @@ void UCTestExtras::mouseDrag(QQuickItem *item, const QPoint &from, const QPoint 
  * point defining the move. A minimum of 5 points are needed to properly produce a drag.
  * \qml
  * import Qt.Test 1.0
- * import Ubuntu.Test 1.0
+ * import Lomiri.Test 1.0
  * Item {
  *     id: testItem
- *     UbuntuTestCase {
+ *     LomiriTestCase {
  *
  *         function test_vertical_drag_upwards() {
  *             var points = [];
@@ -326,10 +326,10 @@ void UCTestExtras::touchDragWithPoints(int touchId, QQuickItem *item, QList<QPoi
  * point defining the move. A minimum of 5 points are needed to properly produce a drag.
  * \qml
  * import Qt.Test 1.0
- * import Ubuntu.Test 1.0
+ * import Lomiri.Test 1.0
  * Item {
  *     id: testItem
- *     UbuntuTestCase {
+ *     LomiriTestCase {
  *
  *         function test_vertical_drag_upwards() {
  *             var points = [];

@@ -15,14 +15,14 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 // FIXME: In the example code below, replace the delegate
 //  by the new text button when it becomes available.
 /*!
     \qmltype Toolbar
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief Toolbar that can be used as an extension for the edit mode header.
     Example:
     \qml
@@ -35,7 +35,7 @@ import Ubuntu.Components 1.3
                 width: label.width + units.gu(4)
                 height: parent.height
                 Rectangle {
-                    color: UbuntuColors.slate
+                    color: LomiriColors.slate
                     opacity: 0.1
                     anchors.fill: parent
                     visible: button.pressed

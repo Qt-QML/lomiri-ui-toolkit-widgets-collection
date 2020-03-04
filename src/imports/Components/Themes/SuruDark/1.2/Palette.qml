@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
-import Ubuntu.Components.Themes 0.1
+import Lomiri.Components 1.2
+import Lomiri.Components.Themes 0.1
 
 Palette {
     normal: PaletteValues {
@@ -34,9 +34,9 @@ Palette {
     selected: PaletteValues {
         background: "#88D6D6D6" // FIXME: not from design
         backgroundText: "#FFFFFF"
-        selection: Qt.rgba(UbuntuColors.blue.r, UbuntuColors.blue.g, UbuntuColors.blue.b, 0.2)
-        foreground: UbuntuColors.orange
-        foregroundText: UbuntuColors.darkGrey
+        selection: Qt.rgba(LomiriColors.blue.r, LomiriColors.blue.g, LomiriColors.blue.b, 0.2)
+        foreground: LomiriColors.orange
+        foregroundText: LomiriColors.darkGrey
         field: "#FFFFFF"
         fieldText: "#888888"
     }

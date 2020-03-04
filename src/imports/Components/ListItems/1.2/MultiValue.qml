@@ -18,14 +18,14 @@ import QtQuick 2.4
 
 /*!
     \qmltype MultiValue
-    \inqmlmodule Ubuntu.Components.ListItems 1.0
-    \ingroup ubuntu-listitems
+    \inqmlmodule Lomiri.Components.ListItems 1.0
+    \ingroup lomiri-listitems
     \brief List item displaying multiple values.
     \note \b{The component is deprecated. Use ListItem component instead.}
 
     Examples:
     \qml
-        import Ubuntu.Components.ListItems 1.0 as ListItem
+        import Lomiri.Components.ListItems 1.0 as ListItem
         Column {
             ListItem.MultiValue {
                 text: "Label"

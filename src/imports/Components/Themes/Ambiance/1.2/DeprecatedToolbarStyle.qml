@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 Item {
     id: visuals
@@ -39,7 +39,7 @@ Item {
         source: Qt.resolvedUrl("../artwork/toolbar_dropshadow.png")
         opacity: styledItem.opened || styledItem.animating ? 0.5 : 0.0
         Behavior on opacity {
-            UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration }
+            LomiriNumberAnimation { duration: LomiriAnimation.SnapDuration }
         }
     }
 }

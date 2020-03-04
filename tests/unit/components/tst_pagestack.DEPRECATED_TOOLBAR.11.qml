@@ -16,7 +16,7 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components 1.1
+import Lomiri.Components 1.1
 
 // pagestack tests for the new header are in
 // unit/visual/tst_pagestack_new_header.qml

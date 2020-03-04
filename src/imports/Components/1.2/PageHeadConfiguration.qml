@@ -15,13 +15,13 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 /*!
     \qmltype PageHeadConfiguration
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
-    \since Ubuntu.Components 1.1
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
+    \since Lomiri.Components 1.1
     \brief Page.head is used to configure the header for a \l Page.
 
     For examples how to use Page.head, see \l Page.
@@ -84,7 +84,7 @@ Object {
         Page {
             title: "Invisible title"
             head.contents: Rectangle {
-                color: UbuntuColors.orange
+                color: LomiriColors.orange
                 height: units.gu(5)
                 width: parent ? parent.width - units.gu(2) : undefined
             }
@@ -122,7 +122,7 @@ Object {
       Example:
       \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
+        import Lomiri.Components 1.2
 
         MainView {
             id: mainView

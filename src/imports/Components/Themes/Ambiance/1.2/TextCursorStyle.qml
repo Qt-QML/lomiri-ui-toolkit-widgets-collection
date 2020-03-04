@@ -15,9 +15,9 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
-// FIXME : move the API into Ubuntu.Components.Style
+// FIXME : move the API into Lomiri.Components.Style
 Item {
     id: cursorStyle
     /*!
@@ -56,7 +56,7 @@ Item {
             objectName: "text_cursor_style_" + styledItem.positionProperty
             width: cursorWidth
             // FIXME: Extend the palette and use palette values here
-            color: UbuntuColors.blue
+            color: LomiriColors.blue
             visible: blinkTimer.timerShowCursor || !blinkTimer.running
             Timer {
                 id: blinkTimer

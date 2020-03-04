@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.2
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.1
+import Lomiri.Test 1.0
+import Lomiri.Components 1.1
 
 Item {
     width: units.gu(50)
@@ -47,7 +47,7 @@ Item {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "HeaderSelectionPreset"
         when: windowShown
         id: testCase

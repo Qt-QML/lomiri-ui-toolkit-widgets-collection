@@ -1,5 +1,5 @@
-module Ubuntu.Components.Styles
-plugin UbuntuComponentsStyles
+module Lomiri.Components.Styles
+plugin LomiriComponentsStyles
 typeinfo plugins.qmltypes
 ComboButtonStyle 1.1 1.2/ComboButtonStyle.qml
 PullToRefreshStyle 1.1 1.2/PullToRefreshStyle.qml

@@ -15,13 +15,13 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Item {
     id: bubbleShape
 
     /*!
-      Do not use an UbuntuShape but a Rectangle as the background of the BubbleShape.
+      Do not use an LomiriShape but a Rectangle as the background of the BubbleShape.
      */
     property bool square: false
 
@@ -63,16 +63,16 @@ Item {
             property: "opacity"
             from: 0.0
             to: 1.0
-            duration: UbuntuAnimation.FastDuration
-            easing: UbuntuAnimation.StandardEasing
+            duration: LomiriAnimation.FastDuration
+            easing: LomiriAnimation.StandardEasing
         }
         NumberAnimation {
             target: scaleTransform
             property: (direction === "up" || direction === "down") ? "yScale" : "xScale"
             from: 0.91
             to: 1.0
-            duration: UbuntuAnimation.FastDuration
-            easing: UbuntuAnimation.StandardEasing
+            duration: LomiriAnimation.FastDuration
+            easing: LomiriAnimation.StandardEasing
         }
         onStopped: showCompleted()
     }
@@ -83,8 +83,8 @@ Item {
         property: "opacity"
         from: 1.0
         to: 0.0
-        duration: UbuntuAnimation.FastDuration
-        easing: UbuntuAnimation.StandardEasing
+        duration: LomiriAnimation.FastDuration
+        easing: LomiriAnimation.StandardEasing
         onStopped: hideCompleted()
     }
 
@@ -107,9 +107,9 @@ Item {
         opacity: 0.8
     }
 
-    UbuntuShape {
+    LomiriShape {
         anchors.fill: parent
-        aspect: UbuntuShape.Flat
+        aspect: LomiriShape.Flat
         backgroundColor: bubbleShape.color
         source: bubbleShape.clipContent ? shapeSource : null
         visible: !square

@@ -18,7 +18,7 @@ import QtQuick 2.4
 
 /*!
     \qmltype Palette
-    \inqmlmodule Ubuntu.Components.Themes 0.1
+    \inqmlmodule Lomiri.Components.Themes 0.1
     \ingroup theming
     \brief Palette of colors from the theme that widgets use to draw themselves.
 

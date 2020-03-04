@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 1.2
-import Ubuntu.Components.ListItems 1.0 as ListItem
+import Lomiri.Components 1.2
+import Lomiri.Components.ListItems 1.0 as ListItem
 
 Rectangle {
     color: "white"

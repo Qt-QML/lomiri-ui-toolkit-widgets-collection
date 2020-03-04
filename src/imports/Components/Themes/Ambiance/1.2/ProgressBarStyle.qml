@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 Item {
     id: progressBarStyle
 
-    property color foregroundColor: UbuntuColors.orange
+    property color foregroundColor: LomiriColors.orange
     property color foregroundTextColor: '#FFFFFF'
     property color backgroundColor: Theme.palette.normal.base
     property color backgroundTextColor: Theme.palette.normal.baseText
@@ -30,7 +30,7 @@ Item {
     implicitWidth: units.gu(38)
     implicitHeight: units.gu(4)
 
-    UbuntuShapeOverlay {
+    LomiriShapeOverlay {
         id: background
         anchors.fill: parent
         backgroundColor: progressBarStyle.backgroundColor
@@ -48,18 +48,18 @@ Item {
         anchors.centerIn: background
         fontSize: "medium"
         color: backgroundTextColor
-        text: progressBar.indeterminate ? i18n.dtr("ubuntu-ui-toolkit", "In Progress")
+        text: progressBar.indeterminate ? i18n.dtr("lomiri-ui-toolkit", "In Progress")
               : "%1%".arg(Number(progressBarStyle.progress * 100.0).toFixed(0))
         visible: !progressBar.hasOwnProperty("showProgressPercentage") || progressBar.showProgressPercentage
 
         SequentialAnimation on opacity {
             loops: Animation.Infinite
             running: progressBar.indeterminate
-            UbuntuNumberAnimation {
-                to: 0.2; duration: UbuntuAnimation.BriskDuration
+            LomiriNumberAnimation {
+                to: 0.2; duration: LomiriAnimation.BriskDuration
             }
-            UbuntuNumberAnimation {
-                to: 1.0; duration: UbuntuAnimation.BriskDuration
+            LomiriNumberAnimation {
+                to: 1.0; duration: LomiriAnimation.BriskDuration
             }
         }
     }

@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 
 Popover {
     id: popover
@@ -26,14 +26,14 @@ Popover {
     property bool password: target && target.hasOwnProperty('echoMode') && target.echoMode == TextInput.Password
     property list<Action> actions: [
         Action {
-            text: i18n.dtr('ubuntu-ui-toolkit', "Select All")
+            text: i18n.dtr('lomiri-ui-toolkit', "Select All")
             iconName: "edit-select-all"
             enabled: target && target.text !== "" && target.selectedText === ""
             visible: target && (target.selectedText === "" || popover.password)
             onTriggered: target.selectAll()
         },
         Action {
-            text: i18n.dtr('ubuntu-ui-toolkit', "Cut")
+            text: i18n.dtr('lomiri-ui-toolkit', "Cut")
             iconName: "edit-cut"
             // If paste/editing is not possible, then disable also "Cut" operation
             // It is applicable for ReadOnly's TextFields and TextAreas
@@ -45,7 +45,7 @@ Popover {
             }
         },
         Action {
-            text: i18n.dtr('ubuntu-ui-toolkit', "Copy")
+            text: i18n.dtr('lomiri-ui-toolkit', "Copy")
             iconName: "edit-copy"
             visible: popover.canCopy
             onTriggered: {
@@ -54,7 +54,7 @@ Popover {
             }
         },
         Action {
-            text: i18n.dtr('ubuntu-ui-toolkit', "Paste")
+            text: i18n.dtr('lomiri-ui-toolkit', "Paste")
             iconName: "edit-paste"
             enabled: target && target.canPaste
             onTriggered: {

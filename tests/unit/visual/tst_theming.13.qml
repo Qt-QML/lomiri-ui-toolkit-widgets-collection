@@ -16,15 +16,15 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components 1.3
-import Ubuntu.Test 1.0
+import Lomiri.Components 1.3
+import Lomiri.Test 1.0
 
 MainView {
     id: mainView
     width: units.gu(50)
     height: units.gu(10)
 
-    UbuntuTestCase {
+    LomiriTestCase {
         when: windowShown
 
         SignalSpy {
@@ -39,8 +39,8 @@ MainView {
 
         function test_backgroundcolor_change_data() {
             return [
-                {tag: "Light color", oldTheme: "Ubuntu.Components.Themes.SuruDark", newTheme: "Ubuntu.Components.Themes.Ambiance", color: "white"},
-                {tag: "Dark color", oldTheme: "Ubuntu.Components.Themes.Ambiance", newTheme: "Ubuntu.Components.Themes.SuruDark", color: "blue"},
+                {tag: "Light color", oldTheme: "Lomiri.Components.Themes.SuruDark", newTheme: "Lomiri.Components.Themes.Ambiance", color: "white"},
+                {tag: "Dark color", oldTheme: "Lomiri.Components.Themes.Ambiance", newTheme: "Lomiri.Components.Themes.SuruDark", color: "blue"},
             ];
         }
         function test_backgroundcolor_change(data) {

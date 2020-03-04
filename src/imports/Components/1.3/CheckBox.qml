@@ -15,16 +15,16 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 /*!
     \qmltype CheckBox
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief CheckBox is a component with two states, checked or unchecked. It can
     be used to set boolean options. The behavior is the same as \l Switch, the
     only difference is the graphical style.
 
-    \l {https://design.ubuntu.com/apps/building-blocks/selection}{See also the Design Guidelines on selection}.
+    \l {https://design.lomiri.com/apps/building-blocks/selection}{See also the Design Guidelines on selection}.
 
     Example:
     \qml

@@ -18,8 +18,8 @@ import QtQuick 2.4
 
 /*!
     \qmltype ActivityIndicator
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief The ActivityIndicator component visually indicates that a task of
     unknown duration is in progress, e.g. busy indication, connection in progress
     indication, etc.

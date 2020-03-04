@@ -15,14 +15,14 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components.Popups 1.0
-import Ubuntu.Components 1.2 as Toolkit
+import Lomiri.Components.Popups 1.0
+import Lomiri.Components 1.2 as Toolkit
 
 /*!
     \qmltype ComboButton
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
-    \brief Ubuntu button providing a drop-down panel visualizing custom options.
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
+    \brief Lomiri button providing a drop-down panel visualizing custom options.
 
     The component is composed of three main blocks: \b {main button}, \b {dropdown}
     and \b {combo list}.
@@ -42,7 +42,7 @@ import Ubuntu.Components 1.2 as Toolkit
         list will be expanded only to the height of the content.
         \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
+        import Lomiri.Components 1.2
         ComboButton {
             text: "smaller content"
             Rectangle {
@@ -58,7 +58,7 @@ import Ubuntu.Components 1.2 as Toolkit
         itself.
         \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
+        import Lomiri.Components 1.2
         ComboButton {
             text: "long scrolled content"
             Column {
@@ -77,8 +77,8 @@ import Ubuntu.Components 1.2 as Toolkit
         the content will be filling the entire combo list area defined.
         \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
-        import Ubuntu.Components.ListItems 1.0
+        import Lomiri.Components 1.2
+        import Lomiri.Components.ListItems 1.0
         ComboButton {
             text: "listview"
             ListView {
@@ -95,7 +95,7 @@ import Ubuntu.Components 1.2 as Toolkit
         bind its height to the \l comboListHeight property.
         \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
+        import Lomiri.Components 1.2
         ComboButton {
             id: combo
             text: "smaller content"
@@ -109,7 +109,7 @@ import Ubuntu.Components 1.2 as Toolkit
         expandedHeight should be set to -1.
         \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
+        import Lomiri.Components 1.2
         ComboButton {
             text: "auto-sized content"
             expandedHeight: -1
@@ -135,7 +135,7 @@ import Ubuntu.Components 1.2 as Toolkit
 
     \qml
     import QtQuick 2.4
-    import Ubuntu.Components 1.2
+    import Lomiri.Components 1.2
 
     ComboButton {
         id: combo
@@ -143,7 +143,7 @@ import Ubuntu.Components 1.2 as Toolkit
         expanded: true
         expandedHeight: units.gu(30)
         onClicked: expanded = false
-        UbuntuListView {
+        LomiriListView {
             width: parent.width
             height: combo.comboListHeight
             model: 20
@@ -202,8 +202,8 @@ Toolkit.Button {
       that can be used to size the combo list content.
       \qml
       import QtQuick 2.4
-      import Ubuntu.Components 1.2
-      import Ubuntu.Components.ListItems 0.1
+      import Lomiri.Components 1.2
+      import Lomiri.Components.ListItems 0.1
       ComboButton {
           id: combo
           text: "Full comboList size"

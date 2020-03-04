@@ -2,7 +2,7 @@ include(../../test-include.pri)
 QT += gui
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
 
-DOMAIN = ubuntu-ui-toolkit
+DOMAIN = lomiri-ui-toolkit
 mo.target = mo
 mo.commands = set -e;
 mo.commands += msgfmt $${PWD}/po/en_US.po -o $${PWD}/$${DOMAIN}/share/locale/en/LC_MESSAGES/$${DOMAIN}.mo;

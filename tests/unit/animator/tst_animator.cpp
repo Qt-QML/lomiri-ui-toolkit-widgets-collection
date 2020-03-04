@@ -15,7 +15,7 @@
  */
 
 /*
- * Test to prevent regressions for bug: https://bugs.launchpad.net/ubuntu-ui-toolkit/+bug/1338602
+ * Test to prevent regressions for bug: https://bugs.launchpad.net/lomiri-ui-toolkit/+bug/1338602
  * Activity Indicator crashes in QML/Widget mixed applications
  */
 
@@ -25,7 +25,7 @@
 #include <QtCore/QTimer>
 #include <QtQuick/QQuickView>
 #include <QtTest/QTest>
-#include <UbuntuToolkit/private/uctheme_p.h>
+#include <LomiriToolkit/private/uctheme_p.h>
 
 #include "uctestcase.h"
 
@@ -51,7 +51,7 @@ private Q_SLOTS:
         UCTheme::previousVersion = 0;
         qputenv("SUPPRESS_DEPRECATED_NOTE", qPrintable(suppressDeprecatedNote));
         QEventLoop l;
-        QScopedPointer<UbuntuTestCase> w(new UbuntuTestCase(filename));
+        QScopedPointer<LomiriTestCase> w(new LomiriTestCase(filename));
 
         int countdown = 20;
 

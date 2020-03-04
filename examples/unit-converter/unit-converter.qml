@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import "conversion.js" as Converter
 
 /*!
@@ -85,7 +85,7 @@ MainView {
         id: pageContent
         Page {
             header: PageHeader {
-                title: "Ubuntu header"
+                title: "Lomiri header"
                 leadingActionBar.actions: [
                     Action {
                         text: "Lengths"

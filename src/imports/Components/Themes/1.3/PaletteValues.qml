@@ -18,7 +18,7 @@ import QtQuick 2.4
 
 /*!
     \qmltype PaletteValues
-    \inqmlmodule Ubuntu.Components.Themes 1.0
+    \inqmlmodule Lomiri.Components.Themes 1.0
     \ingroup theme-module
     \brief Color values used for a given widget state.
 */
@@ -34,12 +34,12 @@ QtObject {
     property color backgroundText
     /*!
        Color applied to secondary content on the \l background color.
-       \since Ubuntu.Components.Themes 1.3
+       \since Lomiri.Components.Themes 1.3
     */
     property color backgroundSecondaryText
     /*!
        Color applied to tertiary content on the \l background color.
-       \since Ubuntu.Components.Themes 1.3
+       \since Lomiri.Components.Themes 1.3
     */
     property color backgroundTertiaryText
 
@@ -65,17 +65,17 @@ QtObject {
 
     /*!
        Color applied to widgets on top of any layer, background or base.
-       \since Ubuntu.Components.Themes 1.3
+       \since Lomiri.Components.Themes 1.3
     */
     property color raised
     /*!
        Color applied to elements placed on top of the \l raised color.
-       \since Ubuntu.Components.Themes 1.3
+       \since Lomiri.Components.Themes 1.3
     */
     property color raisedText
     /*!
        Color applied to seconday elements placed on top of the \l raised color.
-       \since Ubuntu.Components.Themes 1.3
+       \since Lomiri.Components.Themes 1.3
     */
     property color raisedSecondaryText
 
@@ -91,7 +91,7 @@ QtObject {
     property color overlayText
     /*!
        Color applied to secondary elements placed on top of the \l overlay color.
-       \since Ubuntu.Components.Themes 1.3
+       \since Lomiri.Components.Themes 1.3
     */
     property color overlaySecondaryText
 
@@ -107,35 +107,35 @@ QtObject {
 
     /*!
        Colour applied to the positive actions.
-       \since Ubuntu.Components.Themes 1.3
+       \since Lomiri.Components.Themes 1.3
     */
     property color positive
     /*!
        Color applied to elements placed on top of the \l positive color.
-       \since Ubuntu.Components.Themes 1.3
+       \since Lomiri.Components.Themes 1.3
     */
     property color positiveText
 
     /*!
        Colour applied to the negative actions.
-       \since Ubuntu.Components.Themes 1.3
+       \since Lomiri.Components.Themes 1.3
     */
     property color negative
     /*!
        Color applied to elements placed on top of the \l negative color.
-       \since Ubuntu.Components.Themes 1.3
+       \since Lomiri.Components.Themes 1.3
     */
     property color negativeText
 
     /*!
        Colour applied to the activity colors. Typical example is progress indication,
        activity indication.
-       \since Ubuntu.Components.Themes 1.3
+       \since Lomiri.Components.Themes 1.3
     */
     property color activity
     /*!
        Color applied to elements placed on top of the \l activity color.
-       \since Ubuntu.Components.Themes 1.3
+       \since Lomiri.Components.Themes 1.3
     */
     property color activityText
 
@@ -145,7 +145,7 @@ QtObject {
     property color selection
     /*!
        Color applied to elements placed on top of the \l selection color.
-       \since Ubuntu.Components.Themes 1.3
+       \since Lomiri.Components.Themes 1.3
     */
     property color selectionText
 

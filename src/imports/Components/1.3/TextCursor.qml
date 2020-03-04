@@ -15,10 +15,10 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3 as Ubuntu
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3 as Lomiri
+import Lomiri.Components.Popups 1.3
 
-Ubuntu.StyledItem {
+Lomiri.StyledItem {
     id: cursorItem
 
     height: cursorRectangle.height
@@ -183,14 +183,14 @@ Ubuntu.StyledItem {
                     draggedItem.moveToCaret();
                 }
             }
-            Ubuntu.Mouse.forwardTo: [dragger]
-            Ubuntu.Mouse.onClicked: openPopover()
-            Ubuntu.Mouse.onPressAndHold: {
+            Lomiri.Mouse.forwardTo: [dragger]
+            Lomiri.Mouse.onClicked: openPopover()
+            Lomiri.Mouse.onPressAndHold: {
                 handler.main.selectWord();
                 handler.pressAndHold(-1, false);
             }
-            Ubuntu.Mouse.onDoubleClicked: handler.main.selectWord()
-            Ubuntu.Mouse.enabled: enabled
+            Lomiri.Mouse.onDoubleClicked: handler.main.selectWord()
+            Lomiri.Mouse.enabled: enabled
 
             // Visible touch target area for debugging purposes
             Rectangle {

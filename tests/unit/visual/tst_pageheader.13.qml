@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Test 1.0
+import Lomiri.Components 1.3
+import Lomiri.Test 1.0
 
 Rectangle {
     // Wrap the root Item to work around bug #1504755 which
@@ -51,7 +51,7 @@ Rectangle {
             objectName: "alternative_contents"
 
             anchors.fill: parent
-            color: UbuntuColors.red
+            color: LomiriColors.red
 
             Label {
                 anchors.centerIn: parent
@@ -116,7 +116,7 @@ Rectangle {
                 bottom: parent ? parent.bottom : undefined
             }
             height: units.gu(4)
-            color: UbuntuColors.orange
+            color: LomiriColors.orange
             Label {
                 anchors.centerIn: parent
                 text: "Mock extension"
@@ -149,16 +149,16 @@ Rectangle {
                                                  ? "black"
                                                  : theme.palette.disabled.backgroundText
                 subtitleColor: customColorsSwitch.checked
-                               ? UbuntuColors.red
+                               ? LomiriColors.red
                                : theme.palette.normal.backgroundTertiaryText
                 backgroundColor: customColorsSwitch.checked
-                                 ? UbuntuColors.blue
+                                 ? LomiriColors.blue
                                  : theme.palette.normal.background
                 buttons.pressedBackgroundColor: customColorsSwitch.checked
-                                                ? UbuntuColors.green
+                                                ? LomiriColors.green
                                                 : theme.palette.highlighted.background
                 dividerColor: customColorsSwitch.checked
-                              ? UbuntuColors.red
+                              ? LomiriColors.red
                               : theme.palette.normal.base
             }
         }
@@ -282,7 +282,7 @@ Rectangle {
             }
         }
 
-        UbuntuTestCase {
+        LomiriTestCase {
             name: "PageHeader"
             when: windowShown
             id: testCase
@@ -495,7 +495,7 @@ Rectangle {
 
             function wait_for_animation() {
                 // One or more action fading animations with a duration
-                // of UbuntuAnimation.BriskDuration = 333ms.
+                // of LomiriAnimation.BriskDuration = 333ms.
                 wait(500);
             }
             function check_number_of_action_slots(widthGU, numberOfSlots) {

@@ -22,7 +22,7 @@
  * \qmltype Smilodon
  * \instantiates EASmilodon
  * \inqmlmodule Extinct.Animals 1.0
- * \ingroup ubuntu-commandline
+ * \ingroup lomiri-commandline
  * \brief The Smilodon class specifies the behavior of an extinct big cat.
  *
  * \sa Andrewsarchus

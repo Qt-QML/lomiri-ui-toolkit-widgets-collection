@@ -44,7 +44,7 @@ private Q_SLOTS:
 
     void initTestCase()
     {
-        QString modules(UBUNTU_QML_IMPORT_PATH);
+        QString modules(LOMIRI_QML_IMPORT_PATH);
         QVERIFY(QDir(modules).exists());
 
         quickView = new QQuickView(0);
@@ -73,12 +73,12 @@ private Q_SLOTS:
         QTest::addColumn<QUrl>("theme");
 
         QTest::newRow("new theming, subtheming enabled, no theme change") << "StyledItemNewTheming.qml" << QUrl();
-        QTest::newRow("new theming, subtheming enabled, with theme change") << "StyledItemNewTheming.qml" << QUrl("Ubuntu.Components.Themes.SuruDark");
-        QTest::newRow("old theming, subtheming enabled") << "StyledItemOldTheming.qml" << QUrl("Ubuntu.Components.Themes.SuruDark");
+        QTest::newRow("new theming, subtheming enabled, with theme change") << "StyledItemNewTheming.qml" << QUrl("Lomiri.Components.Themes.SuruDark");
+        QTest::newRow("old theming, subtheming enabled") << "StyledItemOldTheming.qml" << QUrl("Lomiri.Components.Themes.SuruDark");
         QTest::newRow("subtheming, no changes on themes") << "Styling.qml" << QUrl();
-        QTest::newRow("subtheming, change mid item") << "Styling.qml" << QUrl("Ubuntu.Components.Themes.SuruDark");
-        QTest::newRow("Palette configuration of one color") << "PaletteConfigurationOneColor.qml" << QUrl("Ubuntu.Components.Themes.SuruDark");
-        QTest::newRow("Palette configuration of all colors") << "PaletteConfigurationAllColors.qml" << QUrl("Ubuntu.Components.Themes.SuruDark");
+        QTest::newRow("subtheming, change mid item") << "Styling.qml" << QUrl("Lomiri.Components.Themes.SuruDark");
+        QTest::newRow("Palette configuration of one color") << "PaletteConfigurationOneColor.qml" << QUrl("Lomiri.Components.Themes.SuruDark");
+        QTest::newRow("Palette configuration of all colors") << "PaletteConfigurationAllColors.qml" << QUrl("Lomiri.Components.Themes.SuruDark");
     }
     void benchmark_theming()
     {
@@ -108,8 +108,8 @@ private Q_SLOTS:
         QTest::newRow("grid with Text") << "TextGrid.qml" << QUrl();
         QTest::newRow("grid with Label 1.2") << "LabelGrid.qml" << QUrl();
         QTest::newRow("grid with Label 1.3") << "LabelGrid13.qml" << QUrl();
-        QTest::newRow("grid with UbuntuShape") << "UbuntuShapeGrid.qml" << QUrl();
-        QTest::newRow("grid with UbuntuShapePair") << "PairOfUbuntuShapeGrid.qml" << QUrl();
+        QTest::newRow("grid with LomiriShape") << "LomiriShapeGrid.qml" << QUrl();
+        QTest::newRow("grid with LomiriShapePair") << "PairOfLomiriShapeGrid.qml" << QUrl();
         QTest::newRow("grid with Button") << "ButtonGrid.qml" << QUrl();
         QTest::newRow("grid with Slider") << "SliderGrid.qml" << QUrl();
         QTest::newRow("list with QtQuick Item") << "ItemList.qml" << QUrl();
@@ -155,8 +155,8 @@ private Q_SLOTS:
     {
         QTest::addColumn<QString>("document");
 
-        QTest::newRow("importing Ubuntu.Components") << "TextWithImportGrid.qml";
-        QTest::newRow("importing Ubuntu.Components.Popups") << "TextWithImportGrid.qml";
+        QTest::newRow("importing Lomiri.Components") << "TextWithImportGrid.qml";
+        QTest::newRow("importing Lomiri.Components.Popups") << "TextWithImportGrid.qml";
     }
 
     void benchmark_import()

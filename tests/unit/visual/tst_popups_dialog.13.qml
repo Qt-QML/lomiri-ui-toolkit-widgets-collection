@@ -16,9 +16,9 @@
 
 import QtQuick 2.4
 import QtTest 1.0
-import Ubuntu.Test 1.3
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Test 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 
 MainView {
     id: main
@@ -33,7 +33,7 @@ MainView {
         onClicked: PopupUtils.open(dialog)
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         id: test
         name: "Popups.Dialog"
         when: windowShown

@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 Item {
     id: dialogForegroundStyle
 
-    UbuntuShape {
+    LomiriShape {
         id: background
         anchors.fill: parent
         color: "white"

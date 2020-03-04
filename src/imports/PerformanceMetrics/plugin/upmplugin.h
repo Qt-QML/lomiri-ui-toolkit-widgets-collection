@@ -21,7 +21,7 @@
 
 #include <QtQml/QQmlExtensionPlugin>
 
-class UbuntuPerformanceMetricsPlugin : public QQmlExtensionPlugin
+class LomiriPerformanceMetricsPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface")

@@ -15,19 +15,19 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components.ListItems 1.0 as ListItem
-import Ubuntu.Components 1.2 as Toolkit
+import Lomiri.Components.ListItems 1.0 as ListItem
+import Lomiri.Components 1.2 as Toolkit
 
 /*!
     \qmltype OptionSelector
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu-components
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri-components
     \brief Component displaying either a single selected value or expanded multiple choice with an optional image and subtext when not expanded, when expanding it opens a
     listing of all the possible values for selection with an additional option of always being expanded. If multiple choice is selected the list is expanded automatically.
 
     Examples:
     \qml
-        import Ubuntu.Components 1.2
+        import Lomiri.Components 1.2
         Column {
             spacing: units.gu(3)
 
@@ -245,9 +245,9 @@ ListItem.Empty {
 
             transitions: [ Transition {
                     SequentialAnimation {
-                        Toolkit.UbuntuNumberAnimation {
+                        Toolkit.LomiriNumberAnimation {
                             properties: "height"
-                            duration: Toolkit.UbuntuAnimation.BriskDuration
+                            duration: Toolkit.LomiriAnimation.BriskDuration
                         }
                         ScriptAction {
                             script: {
@@ -286,9 +286,9 @@ ListItem.Empty {
                 delegate: optionSelector.delegate
 
                 Behavior on contentY {
-                    Toolkit.UbuntuNumberAnimation {
+                    Toolkit.LomiriNumberAnimation {
                         properties: "contentY"
-                        duration: Toolkit.UbuntuAnimation.BriskDuration
+                        duration: Toolkit.LomiriAnimation.BriskDuration
                     }
                 }
             }

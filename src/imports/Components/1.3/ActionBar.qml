@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*!
     \qmltype ActionBar
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief Show a row of buttons that trigger actions. When the
         number of visible actions specified is larger than
         \l numberOfSlots, an overflow button will be shown which
@@ -88,7 +88,7 @@ StyledItem {
                 delegate: Button {
                     action: modelData
                     width: units.gu(14)
-                    strokeColor: UbuntuColors.purple
+                    strokeColor: LomiriColors.purple
                 }
             }
       \endqml

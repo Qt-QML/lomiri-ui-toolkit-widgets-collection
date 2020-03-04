@@ -1,0 +1,2 @@
+usr/lib/*/libLomiriMetrics.so.*
+usr/lib/*/qt5/plugins/lomiri/metrics/libumlttng.so

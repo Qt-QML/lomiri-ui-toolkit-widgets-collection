@@ -15,13 +15,13 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2 as Components
+import Lomiri.Components 1.2 as Components
 
 /*!
     \internal
     \qmltype AppHeader
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
 */
 Components.StyledItem {
     id: header
@@ -50,7 +50,7 @@ Components.StyledItem {
     Behavior on y {
         enabled: animate && !(header.flickable && header.flickable.moving)
         SmoothedAnimation {
-            duration: Components.UbuntuAnimation.BriskDuration
+            duration: Components.LomiriAnimation.BriskDuration
         }
     }
 

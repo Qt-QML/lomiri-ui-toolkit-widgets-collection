@@ -16,8 +16,8 @@
 
 import QtQuick 2.4
 import QtTest 1.0
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.3
+import Lomiri.Test 1.0
+import Lomiri.Components 1.3
 import QtQuick.Window 2.2
 
 Item {
@@ -103,7 +103,7 @@ Item {
         height: units.gu(2)
         border {
             width: units.dp(3)
-            color: topFocusItem.activeFocus ? UbuntuColors.orange : UbuntuColors.silk
+            color: topFocusItem.activeFocus ? LomiriColors.orange : LomiriColors.silk
         }
     }
     Loader {
@@ -128,7 +128,7 @@ Item {
         height: units.gu(2)
         border {
             width: units.dp(3)
-            color: bottomFocusItem.activeFocus ? UbuntuColors.orange : UbuntuColors.silk
+            color: bottomFocusItem.activeFocus ? LomiriColors.orange : LomiriColors.silk
         }
     }
 

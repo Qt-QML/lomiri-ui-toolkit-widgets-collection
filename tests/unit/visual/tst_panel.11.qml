@@ -16,8 +16,8 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components 1.1
-import Ubuntu.Test 1.0
+import Lomiri.Components 1.1
+import Lomiri.Test 1.0
 
 Item {
     width: 200
@@ -38,7 +38,7 @@ Item {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         id: testCase
         name: "PanelAPI"
         when: windowShown

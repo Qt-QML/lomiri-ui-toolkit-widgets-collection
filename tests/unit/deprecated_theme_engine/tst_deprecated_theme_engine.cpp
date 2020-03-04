@@ -20,9 +20,9 @@
 #include <QtQml/QQmlComponent>
 #include <QtQuick/private/qquicktext_p.h>
 #include <QtTest/QtTest>
-#include <UbuntuToolkit/ubuntutoolkitmodule.h>
-#include <UbuntuToolkit/private/ucdeprecatedtheme_p.h>
-#include <UbuntuToolkit/private/uctheme_p.h>
+#include <LomiriToolkit/lomiritoolkitmodule.h>
+#include <LomiriToolkit/private/ucdeprecatedtheme_p.h>
+#include <LomiriToolkit/private/uctheme_p.h>
 
 #include "uctestcase.h"
 
@@ -30,12 +30,12 @@ UT_USE_NAMESPACE
 
 Q_DECLARE_METATYPE(QList<QQmlError>)
 
-class ThemeTestCase : public UbuntuTestCase
+class ThemeTestCase : public LomiriTestCase
 {
     Q_OBJECT
 public:
     ThemeTestCase(const QString& file, QWindow* parent = 0)
-        : UbuntuTestCase(file, QQuickView::SizeViewToRootObject, true, parent)
+        : LomiriTestCase(file, QQuickView::SizeViewToRootObject, true, parent)
     {
     }
 
@@ -78,7 +78,7 @@ private:
     }
     void initDeprecatedTheme(QQmlEngine &engine)
     {
-        UbuntuToolkitModule::initializeContextProperties(&engine);
+        LomiriToolkitModule::initializeContextProperties(&engine);
     }
 
 private Q_SLOTS:
@@ -114,7 +114,7 @@ void tst_UCDeprecatedTheme::testNameDefault()
 {
     QQmlEngine engine;
     initDeprecatedTheme(engine);
-    QCOMPARE(instance(engine)->name(), QString("Ubuntu.Components.Themes.Ambiance"));
+    QCOMPARE(instance(engine)->name(), QString("Lomiri.Components.Themes.Ambiance"));
 }
 
 void tst_UCDeprecatedTheme::testNameSet()
@@ -138,7 +138,7 @@ void tst_UCDeprecatedTheme::testCreateStyleComponent()
     else if (styleName == "NotExistingTestStyle.qml")
         ThemeTestCase::ignoreWarning(parentName, 20, 1, "QML Parent: Warning: Style NotExistingTestStyle.qml not found in theme TestModule.TestTheme");
 
-    qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", ".");
+    qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", ".");
 
     QScopedPointer<ThemeTestCase> view(new ThemeTestCase(parentName));
     QVERIFY(view);
@@ -158,7 +158,7 @@ void tst_UCDeprecatedTheme::testCreateStyleComponent_data() {
 
 void tst_UCDeprecatedTheme::testThemesRelativePath()
 {
-    qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "../tst_theme_engine");
+    qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "../tst_theme_engine");
 
     QScopedPointer<ThemeTestCase> view(new ThemeTestCase("Parent.qml"));
     QVERIFY(view);
@@ -170,7 +170,7 @@ void tst_UCDeprecatedTheme::testThemesRelativePath()
 
 void tst_UCDeprecatedTheme::testThemesRelativePathWithParent()
 {
-    qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "./themes:./themes/TestModule");
+    qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "./themes:./themes/TestModule");
 
     QScopedPointer<ThemeTestCase> view(new ThemeTestCase("Parent.qml"));
     QVERIFY(view);
@@ -182,7 +182,7 @@ void tst_UCDeprecatedTheme::testThemesRelativePathWithParent()
 
 void tst_UCDeprecatedTheme::testThemesRelativePathWithParentXDGDATA()
 {
-    qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "");
+    qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "");
     qputenv("XDG_DATA_DIRS", "./themes:./themes/TestModule");
 
     QScopedPointer<ThemeTestCase> view(new ThemeTestCase("Parent.qml"));
@@ -195,9 +195,9 @@ void tst_UCDeprecatedTheme::testThemesRelativePathWithParentXDGDATA()
 
 void tst_UCDeprecatedTheme::testThemesRelativePathWithParentNoVariablesSet()
 {
-    ThemeTestCase::ignoreWarning("Parent.qml", 20, 1, "QML Parent: Warning: Style TestStyle.qml not found in theme Ubuntu.Components.Themes.Ambiance");
+    ThemeTestCase::ignoreWarning("Parent.qml", 20, 1, "QML Parent: Warning: Style TestStyle.qml not found in theme Lomiri.Components.Themes.Ambiance");
 
-    qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "");
+    qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "");
     qputenv("XDG_DATA_DIRS", "");
 
     QScopedPointer<ThemeTestCase> view(new ThemeTestCase("Parent.qml"));
@@ -207,7 +207,7 @@ void tst_UCDeprecatedTheme::testThemesRelativePathWithParentNoVariablesSet()
 
 void tst_UCDeprecatedTheme::testThemesRelativePathWithParentOneXDGPathSet()
 {
-    qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "");
+    qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "");
     qputenv("XDG_DATA_DIRS", "../tst_theme_engine");
 
     QScopedPointer<ThemeTestCase> view(new ThemeTestCase("Parent.qml"));
@@ -220,38 +220,38 @@ void tst_UCDeprecatedTheme::testThemesRelativePathWithParentOneXDGPathSet()
 
 void tst_UCDeprecatedTheme::testNoImportPathSet()
 {
-    if (!QFile(QLibraryInfo::location(QLibraryInfo::Qml2ImportsPath) + "/Ubuntu/Components").exists())
+    if (!QFile(QLibraryInfo::location(QLibraryInfo::Qml2ImportsPath) + "/Lomiri/Components").exists())
         QSKIP("This can only be tested if the UITK is installed");
 
-    qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "");
+    qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "");
     qputenv("XDG_DATA_DIRS", "");
     qputenv("QML2_IMPORT_PATH", "");
 
     QQmlEngine engine;
     initDeprecatedTheme(engine);
-    QCOMPARE(instance(engine)->name(), QString("Ubuntu.Components.Themes.Ambiance"));
+    QCOMPARE(instance(engine)->name(), QString("Lomiri.Components.Themes.Ambiance"));
 }
 
 void tst_UCDeprecatedTheme::testBogusImportPathSet()
 {
-    if (!QFile(QLibraryInfo::location(QLibraryInfo::Qml2ImportsPath) + "/Ubuntu/Components").exists())
+    if (!QFile(QLibraryInfo::location(QLibraryInfo::Qml2ImportsPath) + "/Lomiri/Components").exists())
         QSKIP("This can only be tested if the UITK is installed");
 
-    qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "");
+    qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "");
     qputenv("XDG_DATA_DIRS", "");
     qputenv("QML2_IMPORT_PATH", "/no/plugins/here");
 
     QQmlEngine engine;
     initDeprecatedTheme(engine);
-    QCOMPARE(instance(engine)->name(), QString("Ubuntu.Components.Themes.Ambiance"));
+    QCOMPARE(instance(engine)->name(), QString("Lomiri.Components.Themes.Ambiance"));
 }
 
 void tst_UCDeprecatedTheme::testMultipleImportPathsSet()
 {
-    if (!QFile(QLibraryInfo::location(QLibraryInfo::Qml2ImportsPath) + "/Ubuntu/Components").exists())
+    if (!QFile(QLibraryInfo::location(QLibraryInfo::Qml2ImportsPath) + "/Lomiri/Components").exists())
         QSKIP("This can only be tested if the UITK is installed");
 
-    qputenv("UBUNTU_UI_TOOLKIT_THEMES_PATH", "");
+    qputenv("LOMIRI_UI_TOOLKIT_THEMES_PATH", "");
     qputenv("XDG_DATA_DIRS", "");
     qputenv("QML2_IMPORT_PATH", "/no/plugins/here:.");
 

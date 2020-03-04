@@ -16,13 +16,13 @@
 
 import QtQuick 2.4
 import "../1.2/stack.js" as Stack
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Private 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Private 1.3
 
 /*!
     \qmltype PageStack
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief A stack of \l Page items that is used for inter-Page navigation.
         Pages on the stack can be popped, and new Pages can be pushed.
         The page on top of the stack is the visible one.
@@ -39,7 +39,7 @@ import Ubuntu.Components.Private 1.3
     undefined:
     \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.3
+        import Lomiri.Components 1.3
 
         MainView {
             width: units.gu(40)
@@ -58,7 +58,7 @@ import Ubuntu.Components.Private 1.3
 
             Rectangle {
                 id: rect
-                color: UbuntuColors.red
+                color: LomiriColors.red
                 anchors {
                     left: parent.left
                     right: parent.right
@@ -78,8 +78,8 @@ import Ubuntu.Components.Private 1.3
     Example:
     \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.3
-        import Ubuntu.Components.ListItems 1.3 as ListItem
+        import Lomiri.Components 1.3
+        import Lomiri.Components.ListItems 1.3 as ListItem
 
         MainView {
             width: units.gu(48)
@@ -98,7 +98,7 @@ import Ubuntu.Components.Private 1.3
                         anchors.fill: parent
                         ListItem.Standard {
                             text: i18n.tr("Page one")
-                            onClicked: pageStack.push(page1, {color: UbuntuColors.orange})
+                            onClicked: pageStack.push(page1, {color: LomiriColors.orange})
                             progression: true
                         }
                         ListItem.Standard {

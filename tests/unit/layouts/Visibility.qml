@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 1.3
-import Ubuntu.Layouts 1.0
+import Lomiri.Components 1.3
+import Lomiri.Layouts 1.0
 
 MainView {
     id: main
@@ -58,7 +58,7 @@ MainView {
                     ConditionalLayout {
                         name: "wide"
                         when: layouts.width < units.gu(60)
-                        UbuntuShape {
+                        LomiriShape {
                             width: units.gu(20)
                             height: units.gu(20)
                             backgroundColor: "red"
@@ -70,7 +70,7 @@ MainView {
                 // This is a default layout.
                 // When using a PageStack and layouts is not empty, it won't display or switch to the default layout.
                 // However it only works when putting it into the layouts list with an inversed condition.
-                UbuntuShape {
+                LomiriShape {
                     objectName: "DefaultLayout"
                     width: units.gu(20)
                     height: units.gu(20)

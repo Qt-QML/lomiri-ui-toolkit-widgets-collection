@@ -15,13 +15,13 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2 // for Action
+import Lomiri.Components 1.2 // for Action
 
 /*!
     \qmltype PageHeadState
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
-    \since Ubuntu.Components 1.1
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
+    \since Lomiri.Components 1.1
     \brief PageHeadState is a helper component to make it easier to
         configure the page header when changing states.
 
@@ -29,7 +29,7 @@ import Ubuntu.Components 1.2 // for Action
    enables the user to enter search/input mode:
    \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
+        import Lomiri.Components 1.2
 
         MainView {
             id: mainView

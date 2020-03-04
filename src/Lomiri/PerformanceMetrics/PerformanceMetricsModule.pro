@@ -1,0 +1,27 @@
+TEMPLATE=aux
+
+CONFIG+=lomiri_qml_module
+
+uri = Lomiri.PerformanceMetrics
+installPath = $$[QT_INSTALL_QML]/$$replace(uri, \\., /)
+
+# Components
+QML_FILES = *.qml
+
+# qmldir
+QMLDIR_FILE = qmldir
+
+# define deployment for found deployables
+qmldir_file.installPath = $$installPath
+qmldir_file.files = $$QMLDIR_FILE
+qml_files.installPath = $$installPath
+qml_files.files = $$QML_FILES
+
+!cross_compile {
+    plugins_qmltypes.path = $$installPath
+    plugins_qmltypes.files = plugins.qmltypes
+    plugins_qmltypes.extra = $$[QT_INSTALL_BINS]/qmlplugindump -notrelocatable Lomiri.PerformanceMetrics 0.1 ../../ > $(INSTALL_ROOT)/$$installPath/plugins.qmltypes
+
+    INSTALLS += plugins_qmltypes
+}
+LOMIRI_QML_MODULE_FILES += qmldir_file qml_files

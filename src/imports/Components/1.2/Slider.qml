@@ -17,12 +17,12 @@
 // FIXME(loicm) Add support for keyboard shortcuts (basically left/right).
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 /*!
     \qmltype Slider
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief Slider is a component to select a value from a continuous range of
      values.
 
@@ -30,7 +30,7 @@ import Ubuntu.Components 1.2
     styles should take this into account when defining the visuals, and
     alter these values to align the graphics' sizes.
 
-    \l {https://design.ubuntu.com/apps/building-blocks/selection#slider}{See also the Design Guidelines on Sliders}.
+    \l {https://design.lomiri.com/apps/building-blocks/selection#slider}{See also the Design Guidelines on Sliders}.
 
     Example:
     \qml

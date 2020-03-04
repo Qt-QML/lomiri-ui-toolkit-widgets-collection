@@ -20,7 +20,7 @@
 #include <QtCore/QSharedPointer>
 #include <QtCore/QVariant>
 #include <QtTest/QTest>
-#include <UbuntuToolkit/private/tree_p.h>
+#include <LomiriToolkit/private/tree_p.h>
 
 UT_USE_NAMESPACE
 

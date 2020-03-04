@@ -16,7 +16,7 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components 1.1
+import Lomiri.Components 1.1
 
 TestCase {
     name: "ButtonAPI"
@@ -35,7 +35,7 @@ TestCase {
         var newText = "Hello action!"
         action1.text = newText
         compare(actionButton.text, newText, "action can be used to define text")
-        var newIcon = Qt.resolvedUrl("../../../examples/ubuntu-ui-toolkit-gallery/small_avatar.png")
+        var newIcon = Qt.resolvedUrl("../../../examples/lomiri-ui-toolkit-gallery/small_avatar.png")
         action1.iconSource = newIcon
         compare(actionButton.iconSource, newIcon, "action can be used to define iconSource")
     }
@@ -54,7 +54,7 @@ TestCase {
     }
 
     function test_font() {
-        verify(button.font === Qt.font({family: "Ubuntu", pixelSize: FontUtils.sizeToPixels("medium")}), "Default font differs");
+        verify(button.font === Qt.font({family: "Lomiri", pixelSize: FontUtils.sizeToPixels("medium")}), "Default font differs");
     }
 
     function test_hovered() {
@@ -63,7 +63,7 @@ TestCase {
 
     function test_iconSource() {
         compare(button.iconSource,"","iconSource is not set by default")
-        var newIcon = Qt.resolvedUrl("../../../examples/ubuntu-ui-toolkit-gallery/small_avatar.png")
+        var newIcon = Qt.resolvedUrl("../../../examples/lomiri-ui-toolkit-gallery/small_avatar.png")
         button.iconSource = newIcon
         compare(button.iconSource,newIcon,"Can set/get iconSource")
     }

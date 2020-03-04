@@ -17,8 +17,8 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 1.3
-import Ubuntu.Layouts 1.0
+import Lomiri.Components 1.3
+import Lomiri.Layouts 1.0
 
 Grid {
     id: buttonGrid

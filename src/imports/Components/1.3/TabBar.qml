@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3 as Toolkit
+import Lomiri.Components 1.3 as Toolkit
 
 /*!
     \qmltype TabBar
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \deprecated
     \brief Tab bar that will be shown in the header when \l Tabs is active.
         This component does not need to be instantiated by the developer, it is

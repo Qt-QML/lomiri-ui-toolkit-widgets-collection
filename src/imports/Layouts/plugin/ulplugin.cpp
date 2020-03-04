@@ -33,7 +33,7 @@ void PluginPlugin::registerTypeVersions(const char *uri, int major, int minor)
 
 void PluginPlugin::registerTypes(const char *uri)
 {
-    // @uri Ubuntu.Layouts
+    // @uri Lomiri.Layouts
     registerTypeVersions(uri, 0, 1);
     registerTypeVersions(uri, 1, 0);
 }

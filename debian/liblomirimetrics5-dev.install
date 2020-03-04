@@ -1,0 +1,13 @@
+usr/include/*/qt5/LomiriMetrics/LomiriMetrics
+usr/include/*/qt5/LomiriMetrics/LomiriMetricsDepends
+usr/include/*/qt5/LomiriMetrics/LomiriMetricsVersion
+usr/include/*/qt5/LomiriMetrics/applicationmonitor.h
+usr/include/*/qt5/LomiriMetrics/events.h
+usr/include/*/qt5/LomiriMetrics/logger.h
+usr/include/*/qt5/LomiriMetrics/lomirimetricsglobal.h
+usr/include/*/qt5/LomiriMetrics/lomirimetricsversion.h
+usr/lib/*/libLomiriMetrics.prl
+usr/lib/*/libLomiriMetrics.so
+usr/lib/*/pkgconfig/LomiriMetrics.pc
+usr/lib/*/qt5/mkspecs/modules/qt_lib_LomiriMetrics.pri
+usr/lib/*/qt5/mkspecs/modules/qt_lib_LomiriMetrics_private.pri

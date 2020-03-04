@@ -15,24 +15,24 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 /*!
     \qmltype Standard
-    \inqmlmodule Ubuntu.Components.ListItems 1.0
-    \ingroup ubuntu-listitems
+    \inqmlmodule Lomiri.Components.ListItems 1.0
+    \ingroup lomiri-listitems
     \brief The standard list item class. It shows a basic list item
         with a label (text), and optionally an icon, a progression arrow,
         and it can have an embedded Item (\l control) that can be used
         for including Buttons, Switches etc. inside the list item.
     \note \b{The component is deprecated. Use ListItem component instead.}
 
-    \l {http://design.ubuntu.com/apps/building-blocks/list-items}{See also the Design Guidelines on List Items}.
+    \l {http://design.lomiri.com/apps/building-blocks/list-items}{See also the Design Guidelines on List Items}.
 
     Examples:
     \qml
-        import Ubuntu.Components 1.2
-        import Ubuntu.Components.ListItems 1.0 as ListItem
+        import Lomiri.Components 1.2
+        import Lomiri.Components.ListItems 1.0 as ListItem
         Column {
             ListItem.Standard {
                 text: "Selectable standard list item"
@@ -88,11 +88,11 @@ Empty {
 
       If both fallbackIconSource and fallbackIconName are defined, fallbackIconName will be ignored.
 
-      \note The complete list of icons available in Ubuntu is not published yet.
+      \note The complete list of icons available in Lomiri is not published yet.
             For now please refer to the folders where the icon themes are installed:
             \list
-              \li Ubuntu Touch: \l file:/usr/share/icons/suru
-              \li Ubuntu Desktop: \l file:/usr/share/icons/ubuntu-mono-dark
+              \li Lomiri Touch: \l file:/usr/share/icons/suru
+              \li Lomiri Desktop: \l file:/usr/share/icons/lomiri-mono-dark
             \endlist
             These 2 separate icon themes will be merged soon.
     */

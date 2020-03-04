@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import Qt.labs.folderlistmodel 2.1
 
 MainView {
@@ -31,7 +31,7 @@ MainView {
                 title: 'Unit Tests'
             }
 
-            UbuntuListView {
+            LomiriListView {
                 id: testsListView
                 anchors.fill: parent
                 model: FolderListModel {

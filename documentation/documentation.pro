@@ -19,13 +19,13 @@ generate_docs.commands = cd $$ROOT_SOURCE_DIR; SRC=$$ROOT_SOURCE_DIR/documentati
 #install the online docs only when building outside of Qt
 !qt_submodule_build{
     install_docs.files = $$shadowed($$ROOT_SOURCE_DIR)/documentation/html
-    install_docs.path = /usr/share/ubuntu-ui-toolkit/doc
+    install_docs.path = /usr/share/lomiri-ui-toolkit/doc
     install_docs.CONFIG += no_check_exist directory no_build
     install_docs.depends = docs
     INSTALLS += install_docs
 }
 
-install_qch.files = $$shadowed($$ROOT_SOURCE_DIR)/documentation/ubuntuuserinterfacetoolkit.qch
+install_qch.files = $$shadowed($$ROOT_SOURCE_DIR)/documentation/lomiriuserinterfacetoolkit.qch
 install_qch.path =  $$[QT_INSTALL_DOCS]
 install_qch.CONFIG += no_check_exist no_build
 install_qch.depends = docs

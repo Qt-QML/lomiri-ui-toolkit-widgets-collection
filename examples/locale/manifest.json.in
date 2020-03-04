@@ -1,6 +1,6 @@
 {
     "name": "locale.bzoltan",
-    "description": "Example application of the Ubuntu UI Toolkit - Locale",
+    "description": "Example application of the Lomiri UI Toolkit - Locale",
     "architecture": "@CLICK_ARCH@",
     "title": "Locale",
     "hooks": {
@@ -11,5 +11,5 @@
     },
     "version": "0.1",
     "maintainer": "Zoltán Balogh <zoltan@bakter.hu>",
-    "framework": "ubuntu-sdk-15.04"
+    "framework": "lomiri-sdk-15.04"
 }

@@ -34,9 +34,9 @@ namespace C {
 #include <QtTest/QTest>
 #include <QtTest/QtTestGui>
 #include <QtTest/QSignalSpy>
-#include <UbuntuToolkit/ubuntutoolkitmodule.h>
-#include <UbuntuToolkit/private/ucunits_p.h>
-#include <UbuntuToolkit/private/i18n_p.h>
+#include <LomiriToolkit/lomiritoolkitmodule.h>
+#include <LomiriToolkit/private/ucunits_p.h>
+#include <LomiriToolkit/private/i18n_p.h>
 
 UT_USE_NAMESPACE
 
@@ -77,18 +77,18 @@ private Q_SLOTS:
     {
         // Set test locale folder in the environment
         // Using setenv because QProcessEnvironment ignores changes
-        QString testAppDir(QDir::currentPath() + "/ubuntu-ui-toolkit");
+        QString testAppDir(QDir::currentPath() + "/lomiri-ui-toolkit");
         setenv("APP_DIR", testAppDir.toUtf8(), 1);
 
         // Verify that we set it correctly
-        QVERIFY(QFileInfo(testAppDir + "/share/locale/en/LC_MESSAGES/ubuntu-ui-toolkit.mo").exists());
+        QVERIFY(QFileInfo(testAppDir + "/share/locale/en/LC_MESSAGES/lomiri-ui-toolkit.mo").exists());
 
-        QString modules(UBUNTU_QML_IMPORT_PATH);
+        QString modules(LOMIRI_QML_IMPORT_PATH);
         QVERIFY(QDir(modules).exists());
 
         view = new QQuickView;
         QQmlEngine *quickEngine = view->engine();
-        UbuntuToolkitModule::initializeContextProperties(quickEngine);
+        LomiriToolkitModule::initializeContextProperties(quickEngine);
 
         view->setGeometry(0,0, UCUnits::instance()->gu(40), UCUnits::instance()->gu(30));
         //add modules folder so we have access to the plugin from QML
@@ -105,8 +105,8 @@ private Q_SLOTS:
     void testCase_RelativeTime()
     {
         QQmlEngine engine;
-        UbuntuToolkitModule::initializeContextProperties(&engine);
-        UbuntuI18n* i18n = UbuntuI18n::instance();
+        LomiriToolkitModule::initializeContextProperties(&engine);
+        LomiriI18n* i18n = LomiriI18n::instance();
         // By default no domain is set
         QCOMPARE(i18n->domain(), QString(""));
 
@@ -152,14 +152,14 @@ private Q_SLOTS:
 
         // Was the locale folder detected and set?
         QString boundDomain(C::bindtextdomain(i18n->domain().toUtf8(), ((const char*)0)));
-        QString testAppDir(QDir::currentPath() + "/ubuntu-ui-toolkit");
+        QString testAppDir(QDir::currentPath() + "/lomiri-ui-toolkit");
         QString expectedLocalePath(QDir(testAppDir).filePath("share/locale"));
         QCOMPARE(boundDomain, expectedLocalePath);
         // Is the domain gettext uses correct?
         QString gettextDomain(C::textdomain(((const char*)0)));
         QCOMPARE(gettextDomain, i18n->domain());
         // Is the compiled en_US message catalog in the right location?
-        QString messageCatalog(boundDomain + "/en/LC_MESSAGES/ubuntu-ui-toolkit.mo");
+        QString messageCatalog(boundDomain + "/en/LC_MESSAGES/lomiri-ui-toolkit.mo");
         QVERIFY(QFileInfo(messageCatalog).exists());
 
         // Check if system has en_US locale, otherwise gettext won't work

@@ -19,8 +19,8 @@ import "../1.2" as Internals
 
 /*!
     \qmltype ProgressBar
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief The ProgressBar component visually indicates the progress of a process of
     determinate or indeterminate duration.
 

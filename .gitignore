@@ -17,7 +17,7 @@ tests/*.xml
 plugins.qmltypes
 *.mo
 apicheck/apicheck
-ubuntu-ui-toolkit-launcher/ubuntu-ui-toolkit-launcher
+lomiri-ui-toolkit-launcher/lomiri-ui-toolkit-launcher
 build_paths.inc
 
 components.api.new
@@ -54,7 +54,7 @@ tests/unit/testparser/testparser
 tests/unit/theme/theme
 tests/unit/touchregistry/touchregistry
 tests/unit/tree/tree
-tests/unit/ubuntu_shape/ubuntu_shape
+tests/unit/lomiri_shape/lomiri_shape
 tests/unit/units/dpr1/dpr1
 tests/unit/units/dpr2/dpr2
 tests/unit/units/dpr3/dpr3

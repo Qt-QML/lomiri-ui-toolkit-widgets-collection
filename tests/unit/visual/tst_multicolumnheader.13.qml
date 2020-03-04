@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.3
+import Lomiri.Test 1.0
+import Lomiri.Components 1.3
 
 MainView {
     id: root
@@ -144,7 +144,7 @@ MainView {
             id: headContentsPage
             head.contents: Rectangle {
                 id: headRectangle
-                color: UbuntuColors.orange
+                color: LomiriColors.orange
                 anchors.fill: parent
             }
         }
@@ -153,7 +153,7 @@ MainView {
             header: PageHeader {
                 title: "Page with header"
                 StyleHints {
-                    backgroundColor: UbuntuColors.blue
+                    backgroundColor: LomiriColors.blue
                     foregroundColor: "white"
                 }
             }
@@ -165,7 +165,7 @@ MainView {
                     bottom: parent.bottom
                     margins: units.gu(2)
                 }
-                color: UbuntuColors.warmGrey
+                color: LomiriColors.warmGrey
                 Button {
                     anchors.centerIn: parent
                     text: "Add sections to next column."
@@ -178,7 +178,7 @@ MainView {
             header: PageHeader {
                 title: "Page with no automatic header height"
                 StyleHints {
-                    backgroundColor: UbuntuColors.green
+                    backgroundColor: LomiriColors.green
                     foregroundColor: "white"
                     contentHeight: units.gu(7) // 1 GU more than the default
                 }
@@ -192,7 +192,7 @@ MainView {
                     bottom: parent.bottom
                     margins: units.gu(2)
                 }
-                color: UbuntuColors.warmGrey
+                color: LomiriColors.warmGrey
                 Button {
                     anchors.centerIn: parent
                     text: "Add sections to next column."
@@ -202,7 +202,7 @@ MainView {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         when: windowShown
 
         function resize_single_column_width() {

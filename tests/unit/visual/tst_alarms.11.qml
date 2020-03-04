@@ -16,8 +16,8 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.1
+import Lomiri.Test 1.0
+import Lomiri.Components 1.1
 
 Item {
     id: root
@@ -54,7 +54,7 @@ Item {
 
     property Alarm workAlarm: testAlarm
 
-    UbuntuTestCase {
+    LomiriTestCase {
         id: testCase
         name: "AlarmAPI"
         when: windowShown

@@ -21,8 +21,8 @@
 #include <QtQuick/QQuickView>
 #include <QtTest/QtTest>
 #include <QtQuick/private/qquickevents_p_p.h>
-#include <UbuntuToolkit/private/inversemouseareatype_p.h>
-#include <UbuntuToolkit/private/ucunits_p.h>
+#include <LomiriToolkit/private/inversemouseareatype_p.h>
+#include <LomiriToolkit/private/ucunits_p.h>
 
 #include "uctestcase.h"
 #include "uctestextras.h"
@@ -32,17 +32,17 @@
 using QTest::QTouchEventSequence;
 UT_USE_NAMESPACE
 
-class InverseMouseAreaTest : public UbuntuTestCase
+class InverseMouseAreaTest : public LomiriTestCase
 {
     Q_OBJECT
 public:
     InverseMouseAreaTest(const QString& file)
-        : UbuntuTestCase(file)
+        : LomiriTestCase(file)
     {
         setGeometry(0, 0, 240, 320);
         //add modules folder so we have access to the plugin from QML
         QStringList imports = engine()->importPathList();
-        imports.prepend(QDir(UBUNTU_QML_IMPORT_PATH).absolutePath());
+        imports.prepend(QDir(LOMIRI_QML_IMPORT_PATH).absolutePath());
         engine()->setImportPathList(imports);
     }
 };
@@ -74,7 +74,7 @@ private Q_SLOTS:
     {
         // make sure we have a touch device installed
         UCTestExtras::registerTouchDevice();
-        QString modules(UBUNTU_QML_IMPORT_PATH);
+        QString modules(LOMIRI_QML_IMPORT_PATH);
         QVERIFY(QDir(modules).exists());
     }
 

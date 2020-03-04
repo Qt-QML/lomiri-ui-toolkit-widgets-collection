@@ -15,14 +15,14 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 /*!
     \qmltype DefaultSheet
     \deprecated
     \inherits SheetBase
-    \inqmlmodule Ubuntu.Components.Popups 1.0
-    \ingroup ubuntu-popups
+    \inqmlmodule Lomiri.Components.Popups 1.0
+    \ingroup lomiri-popups
     \brief The Default Sheet allows an application to insert a content view over the focused view
         without disrupting the navigation pattern (tabs state or drill-down path are maintained. When
         the sheet is dismissed the user continues the journey from the point (s)he left it).
@@ -33,8 +33,8 @@ import Ubuntu.Components 1.2
 
     Example:
     \qml
-        import Ubuntu.Components 1.2
-        import Ubuntu.Components.Popups 1.0
+        import Lomiri.Components 1.2
+        import Lomiri.Components.Popups 1.0
 
         Item {
             Component {
@@ -82,7 +82,7 @@ SheetBase {
     signal doneClicked
 
     __leftButton: Button {
-        text: i18n.dtr("ubuntu-ui-toolkit", "Close")
+        text: i18n.dtr("lomiri-ui-toolkit", "Close")
         visible: !doneButton
         /*! \internal */
         onClicked: {
@@ -92,8 +92,8 @@ SheetBase {
     }
 
     __rightButton: Button {
-        text: i18n.dtr("ubuntu-ui-toolkit", "Done")
-        color: UbuntuColors.orange
+        text: i18n.dtr("lomiri-ui-toolkit", "Done")
+        color: LomiriColors.orange
         visible: doneButton
         /*! \internal */
         onClicked: {

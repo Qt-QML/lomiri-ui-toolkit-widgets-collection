@@ -1,4 +1,4 @@
-module Ubuntu.Components.Popups
+module Lomiri.Components.Popups
 
 Dialog 0.1 1.2/Dialog.qml
 PopupBase 0.1 1.2/PopupBase.qml

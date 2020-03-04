@@ -16,8 +16,8 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Labs 1.0
+import Lomiri.Components 1.3
+import Lomiri.Components.Labs 1.0
 
 TestCase {
     name: "MenuAPI"

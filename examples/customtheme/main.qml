@@ -15,7 +15,7 @@
  */
 //![0]
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 MainView {
     id: mainView
@@ -46,7 +46,7 @@ MainView {
                 text: i18n.tr("Set Ambiance theme")
 
                 onClicked: {
-                    theme.name = "Ubuntu.Components.Themes.Ambiance";
+                    theme.name = "Lomiri.Components.Themes.Ambiance";
                 }
             }
             Button {
@@ -54,7 +54,7 @@ MainView {
                 text: i18n.tr("Set SuruDark theme")
 
                 onClicked: {
-                    theme.name = "Ubuntu.Components.Themes.SuruDark";
+                    theme.name = "Lomiri.Components.Themes.SuruDark";
                 }
             }
             Button {

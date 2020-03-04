@@ -16,7 +16,7 @@
 
 #include <QtTest/QtTest>
 #define private public
-#include <UbuntuToolkit/private/lomirithemeiconprovider_p.h>
+#include <LomiriToolkit/private/lomirithemeiconprovider_p.h>
 #undef private
 
 UT_USE_NAMESPACE

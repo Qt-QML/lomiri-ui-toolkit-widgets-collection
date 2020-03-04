@@ -16,13 +16,13 @@
 
 import QtQuick 2.4
 import QtTest 1.0
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.2
+import Lomiri.Test 1.0
+import Lomiri.Components 1.2
 
 /*
  * Common test case functions for ListItem. A CPO for unit tests.
  */
-UbuntuTestCase {
+LomiriTestCase {
     when: windowShown
 
     SignalSpy {

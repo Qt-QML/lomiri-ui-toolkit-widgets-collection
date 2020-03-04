@@ -19,7 +19,7 @@
 #include <QtCore/QString>
 #include <QtTest/QTest>
 #define protected public
-#include <UbuntuToolkit/private/ucargument_p.h>
+#include <LomiriToolkit/private/ucargument_p.h>
 #undef protected
 
 UT_USE_NAMESPACE

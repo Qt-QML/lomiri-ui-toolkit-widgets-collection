@@ -16,8 +16,8 @@
 
 /*!
   \qmltype dateUtils
-  \inqmlmodule Ubuntu.Components
-  \ingroup ubuntu
+  \inqmlmodule Lomiri.Components
+  \ingroup lomiri
   \brief Various date utility functions.
  */
 

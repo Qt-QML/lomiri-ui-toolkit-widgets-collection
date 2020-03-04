@@ -16,26 +16,26 @@
 
 import QtQuick 2.4
 import QtQuick.Window 2.2
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import "internalPopupUtils.js" as InternalPopupUtils
 
 /*!
     \qmltype Dialog
     \inherits PopupBase
-    \inqmlmodule Ubuntu.Components.Popups 1.0
-    \ingroup ubuntu-popups
+    \inqmlmodule Lomiri.Components.Popups 1.0
+    \ingroup lomiri-popups
     \brief The Dialog caters for cases in which the application requires the user to determine
         between optional actions. The Dialog will interrupt the user flow and lock the view
         for further interaction before the user has selected a desired action.
         It can only be closed by selecting an optional action confirming or cancelling the operation.
 
-    \l {http://design.ubuntu.com/apps/building-blocks/dialog}{See also the Design Guidelines on Dialogs}.
+    \l {http://design.lomiri.com/apps/building-blocks/dialog}{See also the Design Guidelines on Dialogs}.
 
     Example:
     \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.3
-        import Ubuntu.Components.Popups 1.3
+        import Lomiri.Components 1.3
+        import Lomiri.Components.Popups 1.3
 
         Item {
             width: units.gu(80)
@@ -52,12 +52,12 @@ import "internalPopupUtils.js" as InternalPopupUtils
                      }
                      Button {
                          text: "overwrite previous version"
-                         color: UbuntuColors.orange
+                         color: LomiriColors.orange
                          onClicked: PopupUtils.close(dialogue)
                      }
                      Button {
                          text: "save a copy"
-                         color: UbuntuColors.orange
+                         color: LomiriColors.orange
                          onClicked: PopupUtils.close(dialogue)
                      }
                  }
@@ -126,33 +126,33 @@ PopupBase {
 
     /*!
       \qmlproperty real contentWidth
-      \since Ubuntu.Components 1.3
+      \since Lomiri.Components 1.3
       Specifies the width of the dialog content.
       */
     property alias contentWidth: foreground.width
 
     /*!
       \qmlproperty real contentHeight
-      \since Ubuntu.Components 1.3
+      \since Lomiri.Components 1.3
       Specifies the height of the dialog content.
       */
     property alias contentHeight: foreground.height
 
     /*!
       \qmlproperty ThemeSettings theme
-      \since Ubuntu.Components 1.3
+      \since Lomiri.Components 1.3
       Configure the theme of the Dialog foreground and all its subcomponents.
       Example:
       \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.3
-        import Ubuntu.Components.Popups 1.3
+        import Lomiri.Components 1.3
+        import Lomiri.Components.Popups 1.3
         MainView {
             width: units.gu(40)
             height: units.gu(71)
 
             // make sure the main theme is Ambiance
-            theme.name: "Ubuntu.Components.Themes.Ambiance"
+            theme.name: "Lomiri.Components.Themes.Ambiance"
 
             Component {
                 id: dialogComponent
@@ -161,7 +161,7 @@ PopupBase {
                     title: "Input dialog"
                     // the dialog and its children will use SuruDark
                     theme: ThemeSettings {
-                        name: "Ubuntu.Components.Themes.SuruDark"
+                        name: "Lomiri.Components.Themes.SuruDark"
                     }
                     TextField {
                         placeholderText: "enter text"
@@ -186,7 +186,7 @@ PopupBase {
     /*!
       \qmlproperty string styleName
       The style name of the foreground of the Dialog.
-      \since Ubuntu.Components 1.3
+      \since Lomiri.Components 1.3
       \sa StyledItem::styleName
      */
     property alias styleName: foreground.styleName
@@ -195,7 +195,7 @@ PopupBase {
       \qmlproperty Component style
       The style of the foreground of the Dialog.
       This property takes precedence over \l styleName
-      \since Ubuntu.Components 1.3
+      \since Lomiri.Components 1.3
       \sa StyledItem::style
      */
     property alias style: foreground.style
@@ -203,7 +203,7 @@ PopupBase {
     __foreground: foreground
     __eventGrabber.enabled: modal
     __dimBackground: modal
-    fadingAnimation: UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration }
+    fadingAnimation: LomiriNumberAnimation { duration: LomiriAnimation.SnapDuration }
 
     StyledItem {
         id: foreground
@@ -223,7 +223,7 @@ PopupBase {
         property real margins: units.gu(4)
         property real itemSpacing: units.gu(2)
         property Item dismissArea: dialog.dismissArea
-        property real keyboardHeight: dialog.anchorToKeyboard && UbuntuApplication.inputMethod.visible ? UbuntuApplication.inputMethod.keyboardRectangle.height / Screen.devicePixelRatio : 0
+        property real keyboardHeight: dialog.anchorToKeyboard && LomiriApplication.inputMethod.visible ? LomiriApplication.inputMethod.keyboardRectangle.height / Screen.devicePixelRatio : 0
 
         height: Math.min(contentsColumn.height + foreground.margins, dialog.height - keyboardHeight)
 

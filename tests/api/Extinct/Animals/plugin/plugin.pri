@@ -3,7 +3,7 @@ equals(QT_MAJOR_VERSION, 5):lessThan(QT_MINOR_VERSION, 2) {
     QT *= v8-private
 }
 
-DEFINES += UBUNTU_QML_IMPORT_PATH='\\"$${ROOT_BUILD_DIR}/qml\\"'
+DEFINES += LOMIRI_QML_IMPORT_PATH='\\"$${ROOT_BUILD_DIR}/qml\\"'
 
 TARGET = $$qtLibraryTarget($$TARGET)
 uri = Extinct.Animals

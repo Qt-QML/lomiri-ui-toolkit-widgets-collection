@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 /*!
     \qmltype PickerDelegate
-    \inqmlmodule Ubuntu.Components.Pickers 1.0
-    \ingroup ubuntu-pickers
+    \inqmlmodule Lomiri.Components.Pickers 1.0
+    \ingroup lomiri-pickers
     \brief PickerDelegate component serves as base for Picker delegates.
 
     PickerDelegate is a holder component for delegates used in a Picker element.

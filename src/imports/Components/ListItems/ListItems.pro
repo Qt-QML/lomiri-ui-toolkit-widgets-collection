@@ -1,4 +1,4 @@
-TARGETPATH = Ubuntu/Components/ListItems
+TARGETPATH = Lomiri/Components/ListItems
 
 QML_FILES += 1.2/Base.qml \
              1.2/Caption.qml \
@@ -39,4 +39,4 @@ QML_FILES += 1.2/Base.qml \
              1.3/ThinDivider.qml \
              1.3/ValueSelector.qml \
 
-load(ubuntu_qml_module)
+load(lomiri_qml_module)

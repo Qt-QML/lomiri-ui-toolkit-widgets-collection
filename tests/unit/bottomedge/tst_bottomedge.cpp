@@ -14,18 +14,18 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <UbuntuGestures/private/ucswipearea_p_p.h>
-#include <UbuntuToolkit/private/ucaction_p.h>
-#include <UbuntuToolkit/private/ucbottomedge_p.h>
-#include <UbuntuToolkit/private/ucbottomedge_p_p.h>
-#include <UbuntuToolkit/private/ucbottomedgehint_p.h>
-#include <UbuntuToolkit/private/ucbottomedgeregion_p.h>
-#include <UbuntuToolkit/private/ucbottomedgeregion_p_p.h>
-#include <UbuntuToolkit/private/ucheader_p.h>
-#include <UbuntuToolkit/private/ucunits_p.h>
+#include <LomiriGestures/private/ucswipearea_p_p.h>
+#include <LomiriToolkit/private/ucaction_p.h>
+#include <LomiriToolkit/private/ucbottomedge_p.h>
+#include <LomiriToolkit/private/ucbottomedge_p_p.h>
+#include <LomiriToolkit/private/ucbottomedgehint_p.h>
+#include <LomiriToolkit/private/ucbottomedgeregion_p.h>
+#include <LomiriToolkit/private/ucbottomedgeregion_p_p.h>
+#include <LomiriToolkit/private/ucheader_p.h>
+#include <LomiriToolkit/private/ucunits_p.h>
 #define private public
-#include <UbuntuToolkit/private/quickutils_p.h>
-#include <UbuntuToolkit/private/ucbottomedgestyle_p.h>
+#include <LomiriToolkit/private/quickutils_p.h>
+#include <LomiriToolkit/private/ucbottomedgestyle_p.h>
 #undef private
 #include <QtTest/QtTest>
 
@@ -42,12 +42,12 @@ do {\
         return returnValue;\
 } while (0)
 
-class BottomEdgeTestCase : public UbuntuTestCase
+class BottomEdgeTestCase : public LomiriTestCase
 {
     Q_OBJECT
 public:
     BottomEdgeTestCase(const QString& file, ResizeMode resize = SizeViewToRootObject, bool assertOnFailure = true, QWindow* parent = 0)
-        : UbuntuTestCase(file, resize, assertOnFailure, parent)
+        : LomiriTestCase(file, resize, assertOnFailure, parent)
     {
         // make sure we disable the mouse
         QuickUtils::instance()->m_mouseAttached = false;
@@ -161,7 +161,7 @@ private Q_SLOTS:
 
         QSignalSpy spy(testItem, SIGNAL(implicitHeightChanged()));
         testItem->setParentItem(newParent);
-        UbuntuTestCase::waitForSignal(&spy);
+        LomiriTestCase::waitForSignal(&spy);
 
         // change the implicit height so we are sure we don't get the height change triggered
         testItem->setImplicitHeight(0);
@@ -189,7 +189,7 @@ private Q_SLOTS:
         QScopedPointer<BottomEdgeTestCase> test(new BottomEdgeTestCase("BottomEdgeInItem.qml"));
         test->testItem()->hint()->setStatus(UCBottomEdgeHint::Locked);
         UCBottomEdgeHint *hint = test->testItem()->hint();
-        QTest::mouseClick(test->testItem()->hint()->window(), Qt::LeftButton, 0, UbuntuTestCase::centerOf(hint, true).toPoint());
+        QTest::mouseClick(test->testItem()->hint()->window(), Qt::LeftButton, 0, LomiriTestCase::centerOf(hint, true).toPoint());
         QTRY_COMPARE_WITH_TIMEOUT(test->testItem()->status(), UCBottomEdge::Committed, 1000);
     }
 
@@ -204,7 +204,7 @@ private Q_SLOTS:
         UCTestExtras::touchDrag(0, hint, QPoint(hint->width() / 2, hint->height()), QPoint(0, -hint->height()));
         QTRY_COMPARE_WITH_TIMEOUT(hint->status(), UCBottomEdgeHint::Active, 1000);
 
-        UCTestExtras::touchClick(0, hint, UbuntuTestCase::centerOf(hint).toPoint());
+        UCTestExtras::touchClick(0, hint, LomiriTestCase::centerOf(hint).toPoint());
         QTRY_COMPARE_WITH_TIMEOUT(test->testItem()->status(), UCBottomEdge::Committed, 1000);
     }
 
@@ -217,7 +217,7 @@ private Q_SLOTS:
         QSignalSpy actionSpy(action, SIGNAL(triggered(QVariant)));
         QSignalSpy hintSpy(hint, SIGNAL(triggered(QVariant)));
 
-        QTest::mouseClick(test->testItem()->hint()->window(), Qt::LeftButton, 0, UbuntuTestCase::centerOf(hint, true).toPoint());
+        QTest::mouseClick(test->testItem()->hint()->window(), Qt::LeftButton, 0, LomiriTestCase::centerOf(hint, true).toPoint());
         QTRY_COMPARE_WITH_TIMEOUT(test->testItem()->status(), UCBottomEdge::Committed, 1000);
 
         QCOMPARE(actionSpy.count(), 0);
@@ -548,7 +548,7 @@ private Q_SLOTS:
         QFETCH(QString, xName);
 
         if (!warning.isEmpty()) {
-            UbuntuTestCase::ignoreWarning(document, 26, 5, warning, 1);
+            LomiriTestCase::ignoreWarning(document, 26, 5, warning, 1);
         }
         QScopedPointer<BottomEdgeTestCase> test(new BottomEdgeTestCase(document));
         UCBottomEdge *bottomEdge = test->testItem();
@@ -649,7 +649,7 @@ private Q_SLOTS:
         } else {
             UCTestExtras::touchDrag(0, bottomEdge, from, delta);
         }
-        UbuntuTestCase::waitForSignal(&dragEnded);
+        LomiriTestCase::waitForSignal(&dragEnded);
     }
 
     void test_alternative_content_for_default_commit_region()
@@ -805,10 +805,10 @@ private Q_SLOTS:
     void test_overlapping_regions()
     {
         QString document("OverlappingRegions.qml");
-        UbuntuTestCase::ignoreWarning(document, 34, 9, "QML BottomEdgeRegion: Region intersects the one from index 0 having from: 0.2 and to: 0.5", 1);
-        UbuntuTestCase::ignoreWarning(document, 37, 9, "QML BottomEdgeRegion: Region intersects the one from index 0 having from: 0.2 and to: 0.5", 1);
-        UbuntuTestCase::ignoreWarning(document, 37, 9, "QML BottomEdgeRegion: Region at index 1 contains this region. This region will never activate.", 1);
-        UbuntuTestCase::ignoreWarning(document, 41, 9, "QML BottomEdgeRegion: Region at index 1 contains this region. This region will never activate.", 1);
+        LomiriTestCase::ignoreWarning(document, 34, 9, "QML BottomEdgeRegion: Region intersects the one from index 0 having from: 0.2 and to: 0.5", 1);
+        LomiriTestCase::ignoreWarning(document, 37, 9, "QML BottomEdgeRegion: Region intersects the one from index 0 having from: 0.2 and to: 0.5", 1);
+        LomiriTestCase::ignoreWarning(document, 37, 9, "QML BottomEdgeRegion: Region at index 1 contains this region. This region will never activate.", 1);
+        LomiriTestCase::ignoreWarning(document, 41, 9, "QML BottomEdgeRegion: Region at index 1 contains this region. This region will never activate.", 1);
         QScopedPointer<BottomEdgeTestCase> test(new BottomEdgeTestCase(document));
     }
 

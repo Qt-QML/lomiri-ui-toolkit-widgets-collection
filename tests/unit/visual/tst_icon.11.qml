@@ -16,8 +16,8 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components 1.1
-import Ubuntu.Test 1.0
+import Lomiri.Components 1.1
+import Lomiri.Test 1.0
 
 Item {
     width: units.gu(50)
@@ -73,7 +73,7 @@ Item {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "Icon"
         when: windowShown
 
@@ -121,7 +121,7 @@ Item {
             compare(icon.name, 'search');
             compare(shader.visible, false);
             compare(shader.status, ShaderEffect.Uncompiled)
-            icon.color = UbuntuColors.orange;
+            icon.color = LomiriColors.orange;
             shaderSpy.wait();
             compare(shader.log, '')
             // https://bugreports.qt.io/browse/QTBUG-49713
@@ -130,7 +130,7 @@ Item {
             compare(shader.keyColorOut, icon.color);
             compare(shader.visible, true);
             compare(shader.source, image);
-            icon.keyColor = UbuntuColors.purple;
+            icon.keyColor = LomiriColors.purple;
             compare(shader.keyColorIn, icon.keyColor);
             // Unsetting the icon name should disable the shader
             icon.name = '';

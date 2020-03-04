@@ -16,25 +16,25 @@
 
 import QtQuick 2.4
 import "internalPopupUtils.js" as InternalPopupUtils
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*!
     \qmltype Popover
     \inherits PopupBase
-    \inqmlmodule Ubuntu.Components.Popups 1.0
-    \ingroup ubuntu-popups
+    \inqmlmodule Lomiri.Components.Popups 1.0
+    \ingroup lomiri-popups
     \brief A popover allows an application to present additional content without changing the view.
         A popover has a fixed width and automatic height, depending on is contents.
         It can be closed by clicking anywhere outside of the popover area.
 
-    \l {https://design.ubuntu.com/apps/building-blocks/dialog#popover}{See also the Design Guidelines on Popovers}.
+    \l {https://design.lomiri.com/apps/building-blocks/dialog#popover}{See also the Design Guidelines on Popovers}.
 
     Example:
     \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.3
-        import Ubuntu.Components.Popups 1.3
-        import Ubuntu.Components.ListItems 1.3 as Old_ListItem
+        import Lomiri.Components 1.3
+        import Lomiri.Components.Popups 1.3
+        import Lomiri.Components.ListItems 1.3 as Old_ListItem
         Rectangle {
             color: theme.palette.normal.background
             width: units.gu(80)
@@ -212,7 +212,7 @@ PopupBase {
 
     /*!
       \qmlproperty ThemeSettings theme
-      \since Ubuntu.Components 1.3
+      \since Lomiri.Components 1.3
       Configure the theme of the Popover foreground and all its subcomponents.
       \sa StyledItem::theme, Dialog::theme
      */
@@ -221,7 +221,7 @@ PopupBase {
     /*!
       \qmlproperty string styleName
       The style name of the foreground of the Popover.
-      \since Ubuntu.Components 1.3
+      \since Lomiri.Components 1.3
       \sa StyledItem::styleName
      */
     property alias styleName: foreground.styleName
@@ -230,7 +230,7 @@ PopupBase {
       \qmlproperty Component style
       The style of the foreground of the Popover.
       This property takes precedence over \l styleName
-      \since Ubuntu.Components 1.3
+      \since Lomiri.Components 1.3
       \sa StyledItem::style
      */
     property alias style: foreground.style

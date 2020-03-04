@@ -18,14 +18,14 @@ import QtQuick 2.4
 
 /*!
     \qmltype SingleValue
-    \inqmlmodule Ubuntu.Components.ListItems 1.0
-    \ingroup ubuntu-listitems
+    \inqmlmodule Lomiri.Components.ListItems 1.0
+    \ingroup lomiri-listitems
     \brief A list item displaying a single value
     \note \b{The component is deprecated. Use ListItem component instead.}
 
     Examples:
     \qml
-        import Ubuntu.Components.ListItems 1.0 as ListItem
+        import Lomiri.Components.ListItems 1.0 as ListItem
         Column {
             ListItem.SingleValue {
                 text: "Label"

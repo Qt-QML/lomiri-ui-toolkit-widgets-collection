@@ -4,8 +4,8 @@ Exec=qmlscene $@ jokes.qml
 Icon=qmlscene
 Terminal=false
 Type=Application
-X-Ubuntu-Touch=true
-X-Ubuntu-Gettext-Domain=com.ubuntu.developer.bzoltan.jokes
+X-Lomiri-Touch=true
+X-Lomiri-Gettext-Domain=com.lomiri.developer.bzoltan.jokes
 Icon=jokes.png
 
 

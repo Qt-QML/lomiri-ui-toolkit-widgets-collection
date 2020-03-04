@@ -1,4 +1,4 @@
-TARGETPATH = Ubuntu/Components/Themes
+TARGETPATH = Lomiri/Components/Themes
 
 
 QML_FILES += 1.2/Palette.qml \
@@ -6,4 +6,4 @@ QML_FILES += 1.2/Palette.qml \
              1.3/Palette.qml \
              1.3/PaletteValues.qml \
 
-load(ubuntu_qml_module)
+load(lomiri_qml_module)

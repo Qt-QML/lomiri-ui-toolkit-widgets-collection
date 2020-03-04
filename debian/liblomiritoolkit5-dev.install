@@ -1,0 +1,12 @@
+usr/include/*/qt5/LomiriToolkit/LomiriToolkit
+usr/include/*/qt5/LomiriToolkit/LomiriToolkitDepends
+usr/include/*/qt5/LomiriToolkit/LomiriToolkitModule
+usr/include/*/qt5/LomiriToolkit/LomiriToolkitVersion
+usr/include/*/qt5/LomiriToolkit/lomiritoolkitglobal.h
+usr/include/*/qt5/LomiriToolkit/lomiritoolkitmodule.h
+usr/include/*/qt5/LomiriToolkit/lomiritoolkitversion.h
+usr/lib/*/libLomiriToolkit.prl
+usr/lib/*/libLomiriToolkit.so
+usr/lib/*/pkgconfig/LomiriToolkit.pc
+usr/lib/*/qt5/mkspecs/modules/qt_lib_LomiriToolkit.pri
+usr/lib/*/qt5/mkspecs/modules/qt_lib_LomiriToolkit_private.pri

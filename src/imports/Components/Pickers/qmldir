@@ -1,4 +1,4 @@
-module Ubuntu.Components.Pickers
+module Lomiri.Components.Pickers
 Picker 0.1 1.2/Picker.qml
 PickerDelegate 0.1 1.2/PickerDelegate.qml
 Dialer 0.1 1.2/Dialer.qml

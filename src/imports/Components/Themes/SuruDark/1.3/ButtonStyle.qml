@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.9
-import Ubuntu.Components.Themes.Ambiance 1.3 as Ambiance
+import Lomiri.Components.Themes.Ambiance 1.3 as Ambiance
 
 Ambiance.ButtonStyle {
     property color defaultColor: "#888888"

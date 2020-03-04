@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 1.1
+import Lomiri.Components 1.1
 
 Item {
     property var boolArray: [false, false]
@@ -26,5 +26,5 @@ Item {
     objectName: "testItem"
     StateSaver.properties: "boolArray, intArray, realArray, stringArray"
 
-    Component.onCompleted: UbuntuApplication.applicationName = "SimpleApp"
+    Component.onCompleted: LomiriApplication.applicationName = "SimpleApp"
 }

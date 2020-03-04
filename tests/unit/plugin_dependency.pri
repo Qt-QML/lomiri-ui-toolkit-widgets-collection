@@ -1,20 +1,20 @@
 PLUGIN_SRC = $$PWD/../../src/imports
-PLUGIN_BLD = $$shadowed($$PWD)/../../qml/Ubuntu
+PLUGIN_BLD = $$shadowed($$PWD)/../../qml/Lomiri
 
-COMPONENTS_PATH = ../../../qml/Ubuntu/Components
+COMPONENTS_PATH = ../../../qml/Lomiri/Components
 INCLUDEPATH += $$PLUGIN_SRC/Components/plugin
 INCLUDEPATH += $$PLUGIN_SRC/Layouts/plugin
 INCLUDEPATH += $$PLUGIN_SRC/Test/plugin
-PRE_TARGETDEPS =  $$PLUGIN_BLD/Components/libUbuntuComponents.so
-PRE_TARGETDEPS += $$PLUGIN_BLD/Test/libUbuntuTest.so
-LIBS += -L$$PLUGIN_BLD/Components -lUbuntuComponents
-LIBS += -L$$PLUGIN_BLD/Test -lUbuntuTest
-LIBS += -L$${ROOT_BUILD_DIR}/lib -lUbuntuGestures
-LIBS += -L$$PLUGIN_BLD/UbuntuToolkit -lUbuntuToolkit
+PRE_TARGETDEPS =  $$PLUGIN_BLD/Components/libLomiriComponents.so
+PRE_TARGETDEPS += $$PLUGIN_BLD/Test/libLomiriTest.so
+LIBS += -L$$PLUGIN_BLD/Components -lLomiriComponents
+LIBS += -L$$PLUGIN_BLD/Test -lLomiriTest
+LIBS += -L$${ROOT_BUILD_DIR}/lib -lLomiriGestures
+LIBS += -L$$PLUGIN_BLD/LomiriToolkit -lLomiriToolkit
 DEFINES += QUICK_TEST_SOURCE_DIR=\"\\\"$$_PRO_FILE_PWD_\\\"\"
 QMAKE_CXXFLAGS += -Werror
 
-DEFINES+=UBUNTU_COMPONENT_PATH='\\"$${ROOT_BUILD_DIR}/qml/Ubuntu/Components\\"'
-DEFINES+=UBUNTU_QML_IMPORT_PATH='\\"$${ROOT_BUILD_DIR}/qml\\"'
-DEFINES+=UBUNTU_SOURCE_ROOT='\\"$${ROOT_SOURCE_DIR}\\"'
-DEFINES+=UBUNTU_BUILD_ROOT='\\"$${ROOT_BUILD_DIR}\\"'
+DEFINES+=LOMIRI_COMPONENT_PATH='\\"$${ROOT_BUILD_DIR}/qml/Lomiri/Components\\"'
+DEFINES+=LOMIRI_QML_IMPORT_PATH='\\"$${ROOT_BUILD_DIR}/qml\\"'
+DEFINES+=LOMIRI_SOURCE_ROOT='\\"$${ROOT_SOURCE_DIR}\\"'
+DEFINES+=LOMIRI_BUILD_ROOT='\\"$${ROOT_BUILD_DIR}\\"'

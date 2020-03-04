@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*!
     \qmltype ScrollView
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \inherits StyledItem
     \brief ScrollView is a scrollable view that features scrollbars and scrolling via keyboard keys.
 
@@ -42,7 +42,7 @@ import Ubuntu.Components 1.3
 
     \qml
     import QtQuick 2.4
-    import Ubuntu.Components 1.3
+    import Lomiri.Components 1.3
 
     ScrollView {
         width: units.gu(40)

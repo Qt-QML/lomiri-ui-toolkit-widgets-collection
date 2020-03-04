@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 1.1
-import Ubuntu.Components.Pickers 1.0
+import Lomiri.Components 1.1
+import Lomiri.Components.Pickers 1.0
 
 MainView {
     width: units.gu(40)

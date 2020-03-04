@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
-import Ubuntu.Components.ListItems 1.0
+import Lomiri.Components 1.2
+import Lomiri.Components.ListItems 1.0
 
 Item {
     id: control
@@ -32,7 +32,7 @@ Item {
     /*!
       Highlight color.
       */
-    property color highlightColor: UbuntuColors.orange
+    property color highlightColor: LomiriColors.orange
     /*!
       Scale of the highlight item
       */
@@ -58,7 +58,7 @@ Item {
     anchors.fill: parent
 
     // frame
-    UbuntuShape {
+    LomiriShape {
         anchors.fill: parent
         radius: "medium"
         image: shapeSource

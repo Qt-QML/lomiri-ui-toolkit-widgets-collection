@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Item {
     id: holder
@@ -31,7 +31,7 @@ Item {
             objectName: "defaultContent"
             width: holder.width
             height: holder.height
-            color: UbuntuColors.green
+            color: LomiriColors.green
         }
 
         BottomEdgeRegion {
@@ -40,7 +40,7 @@ Item {
                 objectName: "regionContent"
                 width: holder.width - units.gu(20)
                 height: holder.height
-                color: UbuntuColors.red
+                color: LomiriColors.red
             }
         }
     }

@@ -18,9 +18,9 @@ import QtQuick 2.4
 
 /*!
   \qmltype PageColumnsLayout
-  \inqmlmodule Ubuntu.Components
-  \since Ubuntu.Components 1.3
-  \ingroup ubuntu
+  \inqmlmodule Lomiri.Components
+  \since Lomiri.Components 1.3
+  \ingroup lomiri
   \brief Component configuring a layout in an AdaptivePageLayout component.
 
   The component specifies the column configuration of a specific layout. The layout
@@ -31,7 +31,7 @@ import QtQuick 2.4
 
   \qml
     import QtQuick 2.4
-    import Ubuntu.Components 1.3
+    import Lomiri.Components 1.3
 
     MainView {
         width: units.gu(100)

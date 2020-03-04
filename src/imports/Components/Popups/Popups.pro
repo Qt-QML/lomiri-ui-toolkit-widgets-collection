@@ -1,4 +1,4 @@
-TARGETPATH = Ubuntu/Components/Popups
+TARGETPATH = Lomiri/Components/Popups
 
 QML_FILES += 1.2/ActionSelectionPopover.qml \
              1.2/ComposerSheet.qml \
@@ -19,4 +19,4 @@ QML_FILES += 1.2/ActionSelectionPopover.qml \
              1.3/popupUtils.js \
              1.3/SheetBase.qml
 
-load(ubuntu_qml_module)
+load(lomiri_qml_module)

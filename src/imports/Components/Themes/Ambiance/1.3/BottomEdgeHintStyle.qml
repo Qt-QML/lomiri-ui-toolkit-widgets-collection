@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.ListItems 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.ListItems 1.3
 
 Item {
     id: bottomEdgeHintStyle
@@ -83,7 +83,7 @@ Item {
             from: "*"
             to: "Active"
             reversible: true
-            UbuntuNumberAnimation {
+            LomiriNumberAnimation {
                 targets: [h1, h2]
                 properties: "anchors.verticalCenterOffset, anchors.topMargin"
             }
@@ -92,10 +92,10 @@ Item {
             from: "*"
             to: "Hidden"
             reversible: true
-            UbuntuNumberAnimation {
+            LomiriNumberAnimation {
                 target: styledItem
                 property: "opacity"
-                duration: UbuntuAnimation.SlowDuration
+                duration: LomiriAnimation.SlowDuration
             }
         }
     ]

@@ -15,10 +15,10 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import QtGraphicalEffects 1.0
 
-// FIXME: Replace this once UbuntuShape support for gradients and shading has landed
+// FIXME: Replace this once LomiriShape support for gradients and shading has landed
 Rectangle {
     anchors.fill: parent
     radius: width / 2
@@ -73,7 +73,7 @@ Rectangle {
     }
 
     // center item
-    // FIXME: Replace this once UbuntuShape support for gradients and shading has landed
+    // FIXME: Replace this once LomiriShape support for gradients and shading has landed
     Rectangle {
         parent: styledItem.centerItem.parent
         anchors.fill: parent

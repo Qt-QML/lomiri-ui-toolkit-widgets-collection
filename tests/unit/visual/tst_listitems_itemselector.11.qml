@@ -16,9 +16,9 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components 1.1
-import Ubuntu.Components.ListItems 1.0 as ListItem
-import Ubuntu.Test 1.0
+import Lomiri.Components 1.1
+import Lomiri.Components.ListItems 1.0 as ListItem
+import Lomiri.Test 1.0
 
 Item {
     width: 400
@@ -78,7 +78,7 @@ Item {
         ListElement { name: "Name 4"; description: "Description 4"; image: "../../resources/optionselector/test.png" }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
          name: "ItemSelectorAPI"
          when: windowShown
 

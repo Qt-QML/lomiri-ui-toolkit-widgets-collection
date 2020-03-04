@@ -21,10 +21,10 @@
 #include <QtQuick/private/qquickmousearea_p.h>
 #include <QtQml/QQmlEngine>
 #include <QtTest/QtTest>
-#include <UbuntuGestures/private/ucswipearea_p_p.h>
+#include <LomiriGestures/private/ucswipearea_p_p.h>
 #define protected public
 #define private public
-#include <UbuntuGestures/private/touchregistry_p.h>
+#include <LomiriGestures/private/touchregistry_p.h>
 #undef protected
 #undef private
 

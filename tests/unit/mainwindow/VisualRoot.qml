@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Labs 1.0
+import Lomiri.Components 1.3
+import Lomiri.Components.Labs 1.0
 
 MainWindow {
     objectName: "visualRoot"

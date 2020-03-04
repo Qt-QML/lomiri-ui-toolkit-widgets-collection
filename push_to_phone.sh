@@ -47,9 +47,9 @@ if [ -z "$ARCH" ]; then
     echo Developer mode enabled? Screen unlocked?
     exit 1
 fi
-echo Ready to push Ubuntu.Components for $ARCH to device
+echo Ready to push Lomiri.Components for $ARCH to device
 
-DEST=/usr/lib/$ARCH/qt5/qml/Ubuntu/Components
+DEST=/usr/lib/$ARCH/qt5/qml/Lomiri/Components
 RUN=$XDG_RUNTIME_DIR/$(basename $0)
 STONE=/tmp/$(basename $0)
 
@@ -64,29 +64,29 @@ phablet-config -s $SERIAL writable-image || exit 1
 rm -Rf $RUN
 mkdir -p $RUN
 echo '#!/bin/sh' > $RUN/copy.sh
-echo echo Updating Ubuntu.Components... >> $RUN/copy.sh
+echo echo Updating Lomiri.Components... >> $RUN/copy.sh
 echo cd $STONE >> $RUN/copy.sh
 echo DEST=$DEST >> $RUN/copy.sh
 
 cd modules || exit 1
 # Copy selectively to avoid pushing binaries (arch conflict) and sources (unneeded)
-for i in $(ls Ubuntu/Components/*.qml Ubuntu/Components/*.js Ubuntu/Components/qmldir 2>/dev/null); do
+for i in $(ls Lomiri/Components/*.qml Lomiri/Components/*.js Lomiri/Components/qmldir 2>/dev/null); do
     echo modules/$i '->' $STONE/c
     adb push $i $STONE/c/$i || exit 1
 done
 cd ..
-echo cp -R c/Ubuntu/Components/* "\$DEST || exit 1" >> $RUN/copy.sh
+echo cp -R c/Lomiri/Components/* "\$DEST || exit 1" >> $RUN/copy.sh
 
 for i in 10 11 ListItems Pickers Popups Styles Themes artwork; do
-    adb push modules/Ubuntu/Components/$i/ $STONE/$i || exit 1
+    adb push modules/Lomiri/Components/$i/ $STONE/$i || exit 1
     echo cp -R $i/* "\$DEST"/$i >> $RUN/copy.sh || exit 1
 done
 
 # Autopilot tests should always match the Toolkit
-adb push tests/autopilot/ubuntuuitoolkit/ $STONE/ap || exit 1
-echo cp -R ap/* /usr/lib/python3/dist-packages/ubuntuuitoolkit >> $RUN/copy.sh || exit 1
-adb push examples/ubuntu-ui-toolkit-gallery/ $STONE/ex >> $RUN/copy.sh || exit 1
-echo cp -R ex/* /usr/lib/ubuntu-ui-toolkit/examples/ubuntu-ui-toolkit-gallery
+adb push tests/autopilot/lomiriuitoolkit/ $STONE/ap || exit 1
+echo cp -R ap/* /usr/lib/python3/dist-packages/lomiriuitoolkit >> $RUN/copy.sh || exit 1
+adb push examples/lomiri-ui-toolkit-gallery/ $STONE/ex >> $RUN/copy.sh || exit 1
+echo cp -R ex/* /usr/lib/lomiri-ui-toolkit/examples/lomiri-ui-toolkit-gallery
 
 # For launching the gallery easily
 echo cp ex/*.desktop /usr/share/applications/ >> $RUN/copy.sh || exit 1

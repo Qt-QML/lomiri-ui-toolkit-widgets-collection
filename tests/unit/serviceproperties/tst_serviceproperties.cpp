@@ -18,7 +18,7 @@
 #include <QtCore/QString>
 #include <QtTest/QSignalSpy>
 #include <QtTest/QTest>
-#include <UbuntuToolkit/private/ucserviceproperties_p_p.h>
+#include <LomiriToolkit/private/ucserviceproperties_p_p.h>
 
 #include "uctestcase.h"
 
@@ -35,7 +35,7 @@ private:
 
     QString error;
 
-    // FIXME use UbuntuTestCase::ignoreWaring in Vivid
+    // FIXME use LomiriTestCase::ignoreWaring in Vivid
     void ignoreWarning(const QString& fileName, uint line, uint column, const QString& message, uint occurences=1)
     {
         for (uint i = 0; i < occurences; i++) {
@@ -51,7 +51,7 @@ private Q_SLOTS:
     void initTestCase()
     {
         // check if the connection is possible, otherwise we must skip all tests
-        QScopedPointer<UbuntuTestCase> test(new UbuntuTestCase("IncomingCallVibrateWatcher.qml"));
+        QScopedPointer<LomiriTestCase> test(new LomiriTestCase("IncomingCallVibrateWatcher.qml"));
         UCServiceProperties *watcher = static_cast<UCServiceProperties*>(test->rootObject()->property("service").value<QObject*>());
         QVERIFY(watcher);
         if (watcher->status() == UCServiceProperties::Synchronizing ||
@@ -75,7 +75,7 @@ private Q_SLOTS:
         if (!error.isEmpty()) {
             QSKIP(qPrintable(error));
         }
-        QScopedPointer<UbuntuTestCase> test(new UbuntuTestCase("IncomingCallVibrateWatcher.qml"));
+        QScopedPointer<LomiriTestCase> test(new LomiriTestCase("IncomingCallVibrateWatcher.qml"));
         UCServiceProperties *watcher = static_cast<UCServiceProperties*>(test->rootObject()->property("service").value<QObject*>());
         QVERIFY(watcher);
 
@@ -120,7 +120,7 @@ private Q_SLOTS:
         if (warning) {
             ignoreWarning("InvalidPropertyWatcher.qml", 22, 5, "QML ServiceProperties: No such property 'ThisIsAnInvalidPropertyToWatch'");
         }
-        QScopedPointer<UbuntuTestCase> test(new UbuntuTestCase("InvalidPropertyWatcher.qml"));
+        QScopedPointer<LomiriTestCase> test(new LomiriTestCase("InvalidPropertyWatcher.qml"));
         UCServiceProperties *watcher = static_cast<UCServiceProperties*>(test->rootObject()->property("service").value<QObject*>());
         QVERIFY(watcher);
         // error should contain the warning
@@ -144,7 +144,7 @@ private Q_SLOTS:
         if (warning) {
             ignoreWarning("InvalidPropertyWatcher.qml", 22, 5, "QML ServiceProperties: No such property 'ThisIsAnInvalidPropertyToWatch'");
         }
-        QScopedPointer<UbuntuTestCase> test(new UbuntuTestCase("InvalidPropertyWatcher.qml"));
+        QScopedPointer<LomiriTestCase> test(new LomiriTestCase("InvalidPropertyWatcher.qml"));
         UCServiceProperties *watcher = static_cast<UCServiceProperties*>(test->rootObject()->property("service").value<QObject*>());
         QVERIFY(watcher);
         // error should contain the warning
@@ -168,7 +168,7 @@ private Q_SLOTS:
         if (warning) {
             ignoreWarning("InvalidPropertyWatcher2.qml", 22, 5, "QML ServiceProperties: No such property 'ThisIsAnInvalidPropertyToWatch'");
         }
-        QScopedPointer<UbuntuTestCase> test(new UbuntuTestCase("InvalidPropertyWatcher2.qml"));
+        QScopedPointer<LomiriTestCase> test(new LomiriTestCase("InvalidPropertyWatcher2.qml"));
         UCServiceProperties *watcher = static_cast<UCServiceProperties*>(test->rootObject()->property("service").value<QObject*>());
         QVERIFY(watcher);
         // error should contain the wearning
@@ -201,7 +201,7 @@ private Q_SLOTS:
         if (warning) {
             ignoreWarning("IncomingCallVibrateWatcher.qml", 22, 5, "QML ServiceProperties: Changing connection parameters forbidden.");
         }
-        QScopedPointer<UbuntuTestCase> test(new UbuntuTestCase("IncomingCallVibrateWatcher.qml"));
+        QScopedPointer<LomiriTestCase> test(new LomiriTestCase("IncomingCallVibrateWatcher.qml"));
         UCServiceProperties *watcher = static_cast<UCServiceProperties*>(test->rootObject()->property("service").value<QObject*>());
         QVERIFY(watcher);
 

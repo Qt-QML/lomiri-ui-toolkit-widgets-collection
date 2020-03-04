@@ -16,9 +16,9 @@
 import QtQuick 2.4
 import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Private 1.3
-import Ubuntu.Components.Styles 1.3 as Style
+import Lomiri.Components 1.3
+import Lomiri.Components.Private 1.3
+import Lomiri.Components.Styles 1.3 as Style
 
 Style.SectionsStyle {
     id: sectionsStyle
@@ -165,7 +165,7 @@ Style.SectionsStyle {
                     height: sectionsStyle.underlineHeight
                     color: sectionsStyle.selectedSectionColor
                 }
-                Behavior on x { UbuntuNumberAnimation {} }
+                Behavior on x { LomiriNumberAnimation {} }
             }
 
             delegate: ListItem {
@@ -201,7 +201,7 @@ Style.SectionsStyle {
                                sectionsStyle.sectionColor
 
                     Behavior on color {
-                        ColorAnimation { duration: UbuntuAnimation.SlowDuration }
+                        ColorAnimation { duration: LomiriAnimation.SlowDuration }
                     }
                 }
 
@@ -225,7 +225,7 @@ Style.SectionsStyle {
                 id: contentXAnim
                 target: sectionsListView
                 property: "contentX"
-                duration: UbuntuAnimation.FastDuration
+                duration: LomiriAnimation.FastDuration
                 velocity: units.gu(10)
             }
         }
@@ -294,8 +294,8 @@ Style.SectionsStyle {
                      : 0.0
             name: "chevron"
             Behavior on opacity {
-                UbuntuNumberAnimation {
-                    duration: UbuntuAnimation.FastDuration
+                LomiriNumberAnimation {
+                    duration: LomiriAnimation.FastDuration
                 }
             }
         }
@@ -323,8 +323,8 @@ Style.SectionsStyle {
                      : 0.0
             name: "chevron"
             Behavior on opacity {
-                UbuntuNumberAnimation {
-                    duration: UbuntuAnimation.FastDuration
+                LomiriNumberAnimation {
+                    duration: LomiriAnimation.FastDuration
                 }
             }
         }

@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.PerformanceMetrics 1.0
+import Lomiri.PerformanceMetrics 1.0
 import QtQuick.Window 2.0
 
 /*! \internal */

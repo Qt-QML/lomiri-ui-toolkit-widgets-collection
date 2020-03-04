@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 Item {
     id: checkBoxStyle
@@ -35,7 +35,7 @@ Item {
     /*!
       The background color when the checkbox is checked.
      */
-    property color checkedBackgroundColor: UbuntuColors.green
+    property color checkedBackgroundColor: LomiriColors.green
 
     /*!
       The image to show inside the checkbox when it is checked.
@@ -57,7 +57,7 @@ Item {
     implicitWidth: units.gu(3)
     implicitHeight: units.gu(3)
 
-    UbuntuShape {
+    LomiriShape {
         id: background
         anchors {
             fill: parent
@@ -108,8 +108,8 @@ Item {
                 to: "unchecked"
                 ColorAnimation {
                     target: background
-                    duration: UbuntuAnimation.FastDuration
-                    easing: UbuntuAnimation.StandardEasingReverse
+                    duration: LomiriAnimation.FastDuration
+                    easing: LomiriAnimation.StandardEasingReverse
                 }
                 SequentialAnimation {
                     PropertyAction {
@@ -120,8 +120,8 @@ Item {
                     NumberAnimation {
                         target: tick
                         property: "anchors.verticalCenterOffset"
-                        duration: UbuntuAnimation.FastDuration
-                        easing: UbuntuAnimation.StandardEasingReverse
+                        duration: LomiriAnimation.FastDuration
+                        easing: LomiriAnimation.StandardEasingReverse
                     }
                     PropertyAction {
                         target: background
@@ -135,8 +135,8 @@ Item {
                 to: "checked"
                 ColorAnimation {
                     target: background
-                    duration: UbuntuAnimation.FastDuration
-                    easing: UbuntuAnimation.StandardEasing
+                    duration: LomiriAnimation.FastDuration
+                    easing: LomiriAnimation.StandardEasing
                 }
                 SequentialAnimation {
                     PropertyAction {
@@ -147,8 +147,8 @@ Item {
                     NumberAnimation {
                         target: tick
                         property: "anchors.verticalCenterOffset"
-                        duration: UbuntuAnimation.FastDuration
-                        easing: UbuntuAnimation.StandardEasing
+                        duration: LomiriAnimation.FastDuration
+                        easing: LomiriAnimation.StandardEasing
                     }
                     PropertyAction {
                         target: background

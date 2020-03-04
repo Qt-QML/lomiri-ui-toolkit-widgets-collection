@@ -20,10 +20,10 @@
 UT_NAMESPACE_BEGIN
 
 /*!
- * \qmltype Ubuntu
- * \inqmlmodule Ubuntu.Components
- * \ingroup ubuntu
- * \since Ubuntu.Components 1.2
+ * \qmltype Lomiri
+ * \inqmlmodule Lomiri.Components
+ * \ingroup lomiri
+ * \since Lomiri.Components 1.2
  * \brief Provides global object with different enums.
  *
  * \section2 Enums
@@ -48,29 +48,29 @@ UCNamespace::UCNamespace(QObject *parent)
 }
 
 /*!
- * \qmlproperty uint16 Ubuntu::toolkitVersion
- * \since Ubuntu.Components 1.3
+ * \qmlproperty uint16 Lomiri::toolkitVersion
+ * \since Lomiri.Components 1.3
  * \readonly
  * The property holds the version of the current toolkit imported.
  */
 
 /*!
- * \qmlproperty uint16 Ubuntu::toolkitVersionMajor
- * \since Ubuntu.Components 1.3
+ * \qmlproperty uint16 Lomiri::toolkitVersionMajor
+ * \since Lomiri.Components 1.3
  * \readonly
  * The property holds the major version of the current toolkit imported.
  */
 
 /*!
- * \qmlproperty uint16 Ubuntu::toolkitVersionMinor
- * \since Ubuntu.Components 1.3
+ * \qmlproperty uint16 Lomiri::toolkitVersionMinor
+ * \since Lomiri.Components 1.3
  * \readonly
  * The property holds the minor version of the current toolkit imported.
  */
 
 /*!
- * \qmlmethod uint16 Ubuntu::version(int major, int minor)
- * \since Ubuntu.Components 1.3
+ * \qmlmethod uint16 Lomiri::version(int major, int minor)
+ * \since Lomiri.Components 1.3
  * The function builds a version identifier using a major and minor components.
  */
 quint16 UCNamespaceV13::version(quint8 major, quint8 minor)

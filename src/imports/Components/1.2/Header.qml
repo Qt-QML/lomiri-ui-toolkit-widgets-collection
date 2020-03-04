@@ -31,7 +31,7 @@ AppHeader {
     property string _for_autopilot
 
     Component.onCompleted: {
-        print("WARNING: Header is an internal component of Ubuntu.Components and" +
+        print("WARNING: Header is an internal component of Lomiri.Components and" +
               "its API may change or be removed at any moment." +
               "Please use MainView and Page instead."
               );

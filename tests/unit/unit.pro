@@ -16,7 +16,7 @@ SUBDIRS += testparser
 
 SUBDIRS += \
     visual \
-    ubuntu_shape \
+    lomiri_shape \
     page \
     test \
     iconprovider \

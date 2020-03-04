@@ -17,7 +17,7 @@
  */
 
 #include <QtTest/QtTest>
-#include <UbuntuToolkit/private/ucscalingimageprovider_p.h>
+#include <LomiriToolkit/private/ucscalingimageprovider_p.h>
 
 UT_USE_NAMESPACE
 

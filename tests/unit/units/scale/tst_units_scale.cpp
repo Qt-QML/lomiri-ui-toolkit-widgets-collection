@@ -16,7 +16,7 @@
 
 #include <QtGui/qpa/qplatformnativeinterface.h>
 #include <QtTest/QtTest>
-#include <UbuntuToolkit/private/ucunits_p.h>
+#include <LomiriToolkit/private/ucunits_p.h>
 
 UT_USE_NAMESPACE
 

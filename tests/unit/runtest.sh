@@ -115,7 +115,7 @@ function execute_test_cmd {
     SRC_TARGETPATH=$(echo $EXE | sed "s@$BUILD_DIR@$SRC_DIR@")
     cd $(dirname $SRC_TARGETPATH)
 
-    # https://bugs.launchpad.net/ubuntu-ui-toolkit/+bug/1256999
+    # https://bugs.launchpad.net/lomiri-ui-toolkit/+bug/1256999
     # https://bugreports.qt-project.org/browse/QTBUG-36243
     # QV4_MM_AGGRESSIVE_GC=1 \
     ALARM_BACKEND=memory SUPPRESS_DEPRECATED_NOTE=no \

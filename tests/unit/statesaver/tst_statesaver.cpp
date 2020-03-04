@@ -31,13 +31,13 @@
 #include <QtQuick/QQuickView>
 #include <QtTest/QSignalSpy>
 #include <QtTest/QtTest>
-#include <UbuntuToolkit/ubuntutoolkitmodule.h>
-#include <UbuntuToolkit/private/quickutils_p.h>
-#include <UbuntuToolkit/private/ucapplication_p.h>
+#include <LomiriToolkit/lomiritoolkitmodule.h>
+#include <LomiriToolkit/private/quickutils_p.h>
+#include <LomiriToolkit/private/ucapplication_p.h>
 #define protected public
 #define private public
-#include <UbuntuToolkit/private/ucstatesaver_p.h>
-#include <UbuntuToolkit/private/statesaverbackend_p.h>
+#include <LomiriToolkit/private/ucstatesaver_p.h>
+#include <LomiriToolkit/private/statesaverbackend_p.h>
 #undef private
 #undef protected
 
@@ -57,17 +57,17 @@ private:
 
     QQuickView *createView(const QString &file)
     {
-        UbuntuTestCase* testCase = new UbuntuTestCase(file);
+        LomiriTestCase* testCase = new LomiriTestCase(file);
         return qobject_cast<QQuickView*>(testCase);
     }
 
-    void resetView(QScopedPointer<UbuntuTestCase> &view, const QString &file)
+    void resetView(QScopedPointer<LomiriTestCase> &view, const QString &file)
     {
         Q_EMIT StateSaverBackend::instance()->initiateStateSaving();
         view.reset();
         // Make sure that the state is reloaded from file
         StateSaverBackend::instance()->m_archive.data()->sync();
-        view.reset(new UbuntuTestCase(file));
+        view.reset(new LomiriTestCase(file));
     }
 
     void resetView(QScopedPointer<QQuickView> &view, const QString &file)
@@ -92,7 +92,7 @@ private Q_SLOTS:
     {
         QCoreApplication::setApplicationName("savedstate");
         QCoreApplication::setOrganizationName("");
-        QDir modules (UBUNTU_QML_IMPORT_PATH);
+        QDir modules (LOMIRI_QML_IMPORT_PATH);
         QVERIFY(modules.exists());
         m_modulePath = modules.absolutePath();
         // XDG_RUNTIME_DIR may not be set in a test environment
@@ -112,7 +112,7 @@ private Q_SLOTS:
     void init()
     {
         engine = new QQmlEngine;
-        UbuntuToolkitModule::initializeContextProperties(engine);
+        LomiriToolkitModule::initializeContextProperties(engine);
         // invoke initialization
         StateSaverBackend::instance(engine);
     }
@@ -171,7 +171,7 @@ private Q_SLOTS:
         values.insert("rect", QRect(100, 100, 200, 200));
         values.insert("size", QSize(345, 678));
         values.insert("color", QColor("blue"));
-        values.insert("font", QFont("Ubuntu"));
+        values.insert("font", QFont("Lomiri"));
         values.insert("vector2d", QVector2D(100.0, 200.0));
         values.insert("vector3d", QVector3D(100.0, 200.0, 300.0));
         values.insert("vector4d", QVector4D(100.0, 200.0, 300.0, 400.0));
@@ -286,10 +286,10 @@ private Q_SLOTS:
     {
         QString filePath(QFileInfo("InvalidUID.qml").absoluteFilePath());
         QString objectId(filePath.replace("/", "_") + ":21:5:testItem");
-        UbuntuTestCase::ignoreWarning("InvalidUID.qml", 20, 1,
+        LomiriTestCase::ignoreWarning("InvalidUID.qml", 20, 1,
             QString("QML Item: All the parents must have an id.\nState saving disabled for %1, class %2")
             .arg(objectId).arg("QQuickItem"), 2);
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("InvalidUID.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("InvalidUID.qml"));
         QObject *testItem = view->rootObject()->findChild<QObject*>("testItem");
         QVERIFY(testItem);
 
@@ -318,9 +318,9 @@ private Q_SLOTS:
 
     void test_InvalidGroupProperty()
     {
-        UbuntuTestCase::ignoreWarning("InvalidGroupProperty.qml", 24, 29,
+        LomiriTestCase::ignoreWarning("InvalidGroupProperty.qml", 24, 29,
             "QML QtObject: Warning: attachee must have an ID. State will not be saved.", 2);
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("InvalidGroupProperty.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("InvalidGroupProperty.qml"));
         QObject *testItem = view->rootObject()->findChild<QObject*>("testItem");
         QVERIFY(testItem);
 
@@ -436,9 +436,9 @@ private Q_SLOTS:
 
     void test_ComponentsWithStateSaversNoId()
     {
-        UbuntuTestCase::ignoreWarning("ComponentsWithStateSaversNoId.qml", 25, 5,
+        LomiriTestCase::ignoreWarning("ComponentsWithStateSaversNoId.qml", 25, 5,
             "QML Rectangle: Warning: attachee must have an ID. State will not be saved.");
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("ComponentsWithStateSaversNoId.qml"));
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("ComponentsWithStateSaversNoId.qml"));
         QObject *control1 = view->rootObject()->findChild<QObject*>("control1");
         QVERIFY(control1);
         QObject *control2 = view->rootObject()->findChild<QObject*>("control2");
@@ -574,7 +574,7 @@ private Q_SLOTS:
     void test_normalAppClose()
     {
         QProcess testApp;
-        testApp.start("qmlscene", QStringList() << "-I" <<  UBUNTU_QML_IMPORT_PATH << "NormalAppClose.qml");
+        testApp.start("qmlscene", QStringList() << "-I" <<  LOMIRI_QML_IMPORT_PATH << "NormalAppClose.qml");
         testApp.waitForFinished();
 
         QString fileName = stateFile("NormalAppClose");
@@ -584,7 +584,7 @@ private Q_SLOTS:
     void test_SigTerm()
     {
         QProcess testApp;
-        testApp.start("qmlscene",QStringList() << "-I" << UBUNTU_QML_IMPORT_PATH << "SimpleApp.qml");
+        testApp.start("qmlscene",QStringList() << "-I" << LOMIRI_QML_IMPORT_PATH << "SimpleApp.qml");
         testApp.waitForStarted();
 
         // send SIGTERM signal to the process, use terminate() to do that.
@@ -598,7 +598,7 @@ private Q_SLOTS:
     void test_SigInt()
     {
         QProcess testApp;
-        testApp.start("qmlscene",QStringList() << "-I" << UBUNTU_QML_IMPORT_PATH << "SimpleApp.qml");
+        testApp.start("qmlscene",QStringList() << "-I" << LOMIRI_QML_IMPORT_PATH << "SimpleApp.qml");
         testApp.waitForStarted();
 
         QTest::qWait(1000);

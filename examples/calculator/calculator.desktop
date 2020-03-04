@@ -4,7 +4,7 @@ Comment=My project description
 Exec=qmlscene $@ calculator.qml
 Terminal=false
 Type=Application
-X-Ubuntu-Touch=true
-X-Ubuntu-Gettext-Domain=com.ubuntu.developer.bzoltan.calculator
+X-Lomiri-Touch=true
+X-Lomiri-Gettext-Domain=com.lomiri.developer.bzoltan.calculator
 Icon=calculator.png
 

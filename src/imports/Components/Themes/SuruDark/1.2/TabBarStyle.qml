@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components.Themes.Ambiance 0.1 as Ambiance
+import Lomiri.Components.Themes.Ambiance 0.1 as Ambiance
 
 Ambiance.TabBarStyle {
     indicatorImageSource: Qt.resolvedUrl("../artwork/chevron.png")

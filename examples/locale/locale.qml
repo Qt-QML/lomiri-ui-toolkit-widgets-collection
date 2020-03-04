@@ -16,8 +16,8 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 1.3
-import Ubuntu.Components.ListItems 1.3 as ListItem
+import Lomiri.Components 1.3
+import Lomiri.Components.ListItems 1.3 as ListItem
 
 /*!
   \brief An application to test locales on the device

@@ -15,17 +15,17 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3 as Toolkit
+import Lomiri.Components 1.3 as Toolkit
 
 /*!
     \qmltype Tabs
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \deprecated
     \brief The Tabs class provides an environment where multible \l Tab
     children can be added, and the user is presented with a tab
     bar with tab buttons to select different tab pages.
-    This component is DEPRECATED. See http://design.ubuntu.com/apps/patterns/navigation
+    This component is DEPRECATED. See http://design.lomiri.com/apps/patterns/navigation
 
     Tabs must be placed inside a \l MainView so that it will automatically
     have a header that shows the tabs that can be selected, and the toolbar
@@ -34,8 +34,8 @@ import Ubuntu.Components 1.3 as Toolkit
     Example:
     \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.3
-        import Ubuntu.Components.ListItems 1.3 as ListItem
+        import Lomiri.Components 1.3
+        import Lomiri.Components.ListItems 1.3 as ListItem
 
         MainView {
             width: units.gu(48)
@@ -92,14 +92,14 @@ import Ubuntu.Components 1.3 as Toolkit
     is declared inside the Tabs at the end, because otherwise the shuffling of
     the order of children by the Repeater can cause incorrect ordering of the tabs.
 
-    The \l {http://design.ubuntu.com/apps/global-patterns/navigation}{Navigation Patterns} specify that
+    The \l {http://design.lomiri.com/apps/global-patterns/navigation}{Navigation Patterns} specify that
     a tabs header should never be combined with the back button of a \l PageStack. The only way to
     combine Tabs and \l PageStack that avoids this is by pushing the Tabs as the first page on the
     \l PageStack, and pushing other pages on top of that, as is shown in the following example:
 
     \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.3
+        import Lomiri.Components 1.3
 
         MainView {
             id: mainView
@@ -151,7 +151,7 @@ Toolkit.PageTreeNode {
 
     Component.onCompleted: {
         print("Tabs component is deprecated. " +
-              "See http://design.ubuntu.com/apps/patterns/navigation");
+              "See http://design.lomiri.com/apps/patterns/navigation");
     }
 
     /*!

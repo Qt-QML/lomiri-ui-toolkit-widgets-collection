@@ -1,4 +1,4 @@
-TARGETPATH = Ubuntu/Components/Themes/Ambiance
+TARGETPATH = Lomiri/Components/Themes/Ambiance
 
 ARTWORK_FILES += artwork/background_paper@27.png \
              artwork/bubble_arrow@20.png \
@@ -124,6 +124,6 @@ QML_FILES += 1.2/ActivityIndicatorStyle.qml \
 	     1.3/SectionsForPageHeadStyle.qml \
              $$ARTWORK_FILES
 
-load(ubuntu_qml_module)
+load(lomiri_qml_module)
 
 OTHER_FILES+=qmldir

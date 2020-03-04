@@ -1,0 +1,7 @@
+include(lomiri-ui-toolkit-offline.qdocconf)
+outputdir = $BLD/offline
+
+qhp.projects = LomiriUserInterfaceToolkit
+qhp.LomiriUserInterfaceToolkit.namespace = com.lomiri.lomiriuitoolkit.0.1
+qhp.LomiriUserInterfaceToolkit.virtualFolder = LomiriUserInterfaceToolkit
+qhp.LomiriUserInterfaceToolkit.extraFiles = style/*.css style/*.js

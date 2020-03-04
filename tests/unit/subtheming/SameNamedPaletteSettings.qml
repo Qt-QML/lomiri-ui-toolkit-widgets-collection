@@ -15,23 +15,23 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Themes 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Themes 1.3
 
 Item {
     StyledItem {
         theme: ThemeSettings {
             objectName: "firstTheme"
-            name: "Ubuntu.Components.Themes.SuruDark"
+            name: "Lomiri.Components.Themes.SuruDark"
             palette: Palette{
-                normal.background: UbuntuColors.red
+                normal.background: LomiriColors.red
             }
         }
     }
     StyledItem {
         theme: ThemeSettings {
             objectName: "secondTheme"
-            name: "Ubuntu.Components.Themes.SuruDark"
+            name: "Lomiri.Components.Themes.SuruDark"
         }
     }
 

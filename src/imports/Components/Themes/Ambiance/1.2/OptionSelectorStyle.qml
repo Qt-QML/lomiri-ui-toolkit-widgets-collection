@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 Item {
     id: ambianceStyle
@@ -26,7 +26,7 @@ Item {
     property url tick: Qt.resolvedUrl("../artwork/tick.png")
     property bool colourComponent: true
 
-    UbuntuShape {
+    LomiriShape {
         id: background
 
         width: styledItem.width

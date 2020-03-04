@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 
 /*
   This component is a unified text selection and scrolling handler for both
@@ -60,8 +60,8 @@ MultiPointTouchArea {
     }
 
     function showInputPanel() {
-        if (!UbuntuApplication.inputMethod.visible) {
-            UbuntuApplication.inputMethod.show();
+        if (!LomiriApplication.inputMethod.visible) {
+            LomiriApplication.inputMethod.show();
         }
         textChanged = false;
     }
@@ -300,7 +300,7 @@ MultiPointTouchArea {
             }
         }
         onFocusChanged: {
-            UbuntuApplication.inputMethod.commit()
+            LomiriApplication.inputMethod.commit()
             state = (main.focus) ? "" : "inactive";
             if (main.focus) {
                 input.forceActiveFocus()

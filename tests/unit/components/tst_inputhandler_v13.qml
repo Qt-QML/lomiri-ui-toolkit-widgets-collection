@@ -16,10 +16,10 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Test 1.3
-import Ubuntu.Components 1.3
+import Lomiri.Test 1.3
+import Lomiri.Components 1.3
 
-UbuntuTestCase {
+LomiriTestCase {
     name: "InputHandlerTest"
 
     TextField {

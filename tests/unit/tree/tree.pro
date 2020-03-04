@@ -1,6 +1,6 @@
 include(../test-include.pri)
 
-QT *= UbuntuToolkit
+QT *= LomiriToolkit
 
 SOURCES += \
     tst_tree.cpp

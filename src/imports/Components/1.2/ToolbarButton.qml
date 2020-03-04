@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 /*!
     \qmltype ToolbarButton
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief An \l ActionItem that represents a button in the toolbar.
         ToolbarButtons should be included in \l ToolbarItems to define the tools of a \l Page.
         The behavior and look of the toolbar button can be specified by setting an \l Action for
@@ -29,7 +29,7 @@ import Ubuntu.Components 1.2
         Example of different ways to define the toolbar button:
         \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
+        import Lomiri.Components 1.2
 
         MainView {
             width: units.gu(50)

@@ -18,9 +18,9 @@ import QtQuick 2.4
 
 /*!
     \qmltype PageHeadSections
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
-    \since Ubuntu.Components 1.1
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
+    \since Lomiri.Components 1.1
     \brief PageHeadSections is used to configure the sections for a \l Page.
 
     These sections will be shown in the bottom part of the header. This component does not
@@ -39,7 +39,7 @@ QtObject {
     /*!
       List of strings that represent section names. Example:
       \qml
-        import Ubuntu.Components 1.2
+        import Lomiri.Components 1.2
         import QtQuick 2.4
 
         MainView {

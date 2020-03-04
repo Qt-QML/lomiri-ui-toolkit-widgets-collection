@@ -20,8 +20,8 @@
 #include <QtQml/QQmlEngine>
 #include <QtQuick/QQuickView>
 #include <QtTest/QtTest>
-#include <UbuntuGestures/private/timer_p.h>
-#include <UbuntuGestures/private/touchregistry_p.h>
+#include <LomiriGestures/private/timer_p.h>
+#include <LomiriGestures/private/touchregistry_p.h>
 
 #include "uctestcase.h"
 #include "uctestextras.h"
@@ -44,7 +44,7 @@ void GestureTest::initTestCase()
 
 void GestureTest::init()
 {
-    m_view = new UbuntuTestCase(m_qmlFilename, QQuickView::SizeRootObjectToView, true);
+    m_view = new LomiriTestCase(m_qmlFilename, QQuickView::SizeRootObjectToView, true);
 
     m_fakeTimerFactory = new FakeTimerFactory;
 

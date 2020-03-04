@@ -21,13 +21,13 @@ import QtQuick 2.4
 
 /*!
     \qmltype Switch
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
     \brief Switch is a component with two states, checked or unchecked. It can
     be used to set boolean options. The behavior is the same as \l CheckBox, the
     only difference is the graphical style.
 
-    \l {https://design.ubuntu.com/apps/building-blocks/selection}{See also the Design Guidelines on selection}.
+    \l {https://design.lomiri.com/apps/building-blocks/selection}{See also the Design Guidelines on selection}.
 
     Example:
     \qml

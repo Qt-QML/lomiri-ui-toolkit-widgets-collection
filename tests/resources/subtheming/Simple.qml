@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Themes 1.0
+import Lomiri.Components 1.3
+import Lomiri.Components.Themes 1.0
 
 MainView {
     objectName: "TopItem"
@@ -33,7 +33,7 @@ MainView {
         }
         Button {
             text: "Theme change"
-            onClicked: theme.name = "Ubuntu.Components.Themes.SuruDark"
+            onClicked: theme.name = "Lomiri.Components.Themes.SuruDark"
         }
         Button {
             text: "Reset palette"
@@ -57,11 +57,11 @@ MainView {
                 objectName: "InnerTheme"
                 id: thisTheme
                 name: parentTheme.name
-//                name: "Ubuntu.Components.Themes.SuruDark"
+//                name: "Lomiri.Components.Themes.SuruDark"
                 palette: Palette {
                     id: config
                     normal {
-                        foregroundText: UbuntuColors.blue
+                        foregroundText: LomiriColors.blue
                         overlayText: "#BAFEDC"
                         field: "lime"
                     }
@@ -70,7 +70,7 @@ MainView {
                         fieldText: "brown"
                         foregroundText: Qt.rgba(0, 0, 1, 1)
                         overlayText: config.normal.overlayText
-                        foreground: UbuntuColors.green
+                        foreground: LomiriColors.green
                     }
                 }
             }

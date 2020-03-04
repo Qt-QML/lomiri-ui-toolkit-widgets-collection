@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Styles 1.3 as Style
+import Lomiri.Components 1.3
+import Lomiri.Components.Styles 1.3 as Style
 
 Style.PullToRefreshStyle {
     id: style
@@ -25,18 +25,18 @@ Style.PullToRefreshStyle {
     defaultContent: Label {
         id: labelComponent
         visible: control.enabled
-        text: releaseToRefresh ? i18n.dtr("ubuntu-ui-toolkit", "Release to refresh...") : i18n.dtr("ubuntu-ui-toolkit", "Pull to refresh...")
+        text: releaseToRefresh ? i18n.dtr("lomiri-ui-toolkit", "Release to refresh...") : i18n.dtr("lomiri-ui-toolkit", "Pull to refresh...")
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         Behavior on text {
             SequentialAnimation {
-                UbuntuNumberAnimation {
+                LomiriNumberAnimation {
                     target: labelComponent
                     property: "opacity"
                     from: 1.0
                     to: 0.0
                 }
-                UbuntuNumberAnimation {
+                LomiriNumberAnimation {
                     target: labelComponent
                     property: "opacity"
                     from: 0.0
@@ -240,7 +240,7 @@ Style.PullToRefreshStyle {
             from: "ready-to-refresh"
             to: "refreshing"
             SequentialAnimation {
-                UbuntuNumberAnimation {
+                LomiriNumberAnimation {
                     target: control.target
                     property: "contentY"
                     to: style.initialContentY - control.height
@@ -254,7 +254,7 @@ Style.PullToRefreshStyle {
         Transition {
             from: "idle"
             to: "refreshing"
-            UbuntuNumberAnimation {
+            LomiriNumberAnimation {
                 target: control.target
                 property: "contentY"
                 to: style.initialContentY - control.height
@@ -263,11 +263,11 @@ Style.PullToRefreshStyle {
         Transition {
             from: "refreshing"
             to: "idle"
-            UbuntuNumberAnimation {
+            LomiriNumberAnimation {
                 target: control.target
                 property: "topMargin"
             }
-            UbuntuNumberAnimation {
+            LomiriNumberAnimation {
                 target: control.target
                 property: "contentY"
                 to: style.initialContentY

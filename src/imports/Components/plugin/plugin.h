@@ -21,15 +21,15 @@
 
 #include <QtQml/QQmlEngine>
 #include <QtQml/QQmlExtensionPlugin>
-#include <UbuntuToolkit/ubuntutoolkitglobal.h>
+#include <LomiriToolkit/lomiritoolkitglobal.h>
 
-class UbuntuComponentsPlugin : public QQmlExtensionPlugin
+class LomiriComponentsPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface")
 
 public:
-    ~UbuntuComponentsPlugin();
+    ~LomiriComponentsPlugin();
     void registerTypes(const char *uri) override;
     void initializeEngine(QQmlEngine *engine, const char *uri) override;
 

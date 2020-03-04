@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*!
     \qmltype Dialer
-    \inqmlmodule Ubuntu.Components.Pickers 1.0
-    \ingroup ubuntu-pickers
+    \inqmlmodule Lomiri.Components.Pickers 1.0
+    \ingroup lomiri-pickers
     \brief Dialer is a phone dialer style picker component.
     \deprecated
 
@@ -36,7 +36,7 @@ import Ubuntu.Components 1.3
 
     \qml
     import QtQuick 2.4
-    import Ubuntu.Components.Pickers 1.0
+    import Lomiri.Components.Pickers 1.0
 
     Dialer {
         size: units.gu(20)

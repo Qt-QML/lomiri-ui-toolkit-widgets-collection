@@ -16,8 +16,8 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components 1.1
-import Ubuntu.Components.ListItems 1.0 as ListItem
+import Lomiri.Components 1.1
+import Lomiri.Components.ListItems 1.0 as ListItem
 
 Item {
     width: 400
@@ -97,7 +97,7 @@ Item {
             compare(listItemStandard.icon,undefined,"icon is not set by default")
 
             // test with url
-            var newIcon = Qt.resolvedUrl("../../../examples/ubuntu-ui-toolkit-gallery/small_avatar.png")
+            var newIcon = Qt.resolvedUrl("../../../examples/lomiri-ui-toolkit-gallery/small_avatar.png")
             listItemStandard.icon = newIcon
             compare(listItemStandard.icon,newIcon,"set/get from url")
         }

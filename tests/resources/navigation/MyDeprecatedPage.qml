@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.2
-import Ubuntu.Components 1.0
+import Lomiri.Components 1.0
 
 Page {
     title: i18n.tr("My 1.0 page")

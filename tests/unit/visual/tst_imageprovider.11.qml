@@ -16,8 +16,8 @@
 
 import QtQuick 2.0
 import QtTest 1.0
-import Ubuntu.Components 1.1
-import Ubuntu.Test 1.0
+import Lomiri.Components 1.1
+import Lomiri.Test 1.0
 
 Item {
     width: units.gu(50)
@@ -28,7 +28,7 @@ Item {
             id: test
             width: units.gu(20)
             height: units.gu(20)
-            source: "/usr/share/icons/ubuntu-mobile/actions/scalable/add.svg"
+            source: "/usr/share/icons/lomiri-mobile/actions/scalable/add.svg"
             visible: source != ""
         }
         Image {
@@ -39,7 +39,7 @@ Item {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "ImageExtension"
         when: windowShown
 

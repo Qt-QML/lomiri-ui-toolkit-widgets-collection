@@ -17,7 +17,7 @@
 import QtQuick 2.0
 import QtTest 1.0
 // Note: See tst_progressbar11.qml for the newer API tests
-import Ubuntu.Components 1.0
+import Lomiri.Components 1.0
 
 TestCase {
      name: "ProgressBarAPI"

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# ubuntu-ui-toolkit-autopilot documentation build configuration file.
+# lomiri-ui-toolkit-autopilot documentation build configuration file.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -13,11 +13,11 @@
 
 import sys
 import os
-import ubuntuuitoolkit
+import lomiriuitoolkit
 
 assert sys
 assert os
-assert ubuntuuitoolkit
+assert lomiriuitoolkit
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -53,7 +53,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'ubuntu-ui-toolkit-autopilot'
+project = u'lomiri-ui-toolkit-autopilot'
 copyright = u'2015, Canonical'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -188,7 +188,7 @@ html_show_copyright = True
 # html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ubuntu-ui-toolkit-autopilotdoc'
+htmlhelp_basename = 'lomiri-ui-toolkit-autopilotdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -208,8 +208,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    ('index', 'ubuntu-ui-toolkit-autopilot.tex',
-     u'ubuntu-ui-toolkit-autopilot Documentation',
+    ('index', 'lomiri-ui-toolkit-autopilot.tex',
+     u'lomiri-ui-toolkit-autopilot Documentation',
      u'authors', 'manual'),
 ]
 
@@ -239,8 +239,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'ubuntu-ui-toolkit-autopilot',
-     u'ubuntu-ui-toolkit-autopilot Documentation',
+    ('index', 'lomiri-ui-toolkit-autopilot',
+     u'lomiri-ui-toolkit-autopilot Documentation',
      [u'authors'], 1)
 ]
 
@@ -254,10 +254,10 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    ('index', 'ubuntu-ui-toolkit-autopilot',
-     u'ubuntu-ui-toolkit-autopilot Documentation',
-     u'authors', 'ubuntu-ui-toolkit-autopilot',
-     'An autopilot emulator for the ubuntu sdk',
+    ('index', 'lomiri-ui-toolkit-autopilot',
+     u'lomiri-ui-toolkit-autopilot Documentation',
+     u'authors', 'lomiri-ui-toolkit-autopilot',
+     'An autopilot emulator for the lomiri sdk',
      'Miscellaneous'),
 ]
 
@@ -277,13 +277,13 @@ texinfo_documents = [
 # -- Options for Epub output ----------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'ubuntu-ui-toolkit-autopilot'
+epub_title = u'lomiri-ui-toolkit-autopilot'
 epub_author = u'authors'
 epub_publisher = u'Canonical'
 epub_copyright = u'2015, Canonical'
 
 # The basename for the epub file. It defaults to the project name.
-# epub_basename = u'ubuntu-ui-toolkit-autopilot'
+# epub_basename = u'lomiri-ui-toolkit-autopilot'
 
 # The HTML theme for the epub output. Since the default themes are not
 # optimized for small screen space, using the same theme for HTML and

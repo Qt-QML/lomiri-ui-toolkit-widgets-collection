@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Test 1.0
+import Lomiri.Components 1.3
+import Lomiri.Test 1.0
 
 Item {
     id: root
@@ -35,7 +35,7 @@ Item {
         Rectangle {
             // to visualize the header
             anchors.fill: parent
-            color: UbuntuColors.red
+            color: LomiriColors.red
             opacity: 0.5
             border {
                 color: "black"
@@ -181,7 +181,7 @@ Item {
         height: root.initialHeaderHeight
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "Header"
         when: windowShown
         id: testCase

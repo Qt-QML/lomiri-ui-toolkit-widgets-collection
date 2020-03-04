@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 MainView {
     width: units.gu(48)
     height: units.gu(60)
-    applicationName: "ubuntu-ui-toolkit"
+    applicationName: "lomiri-ui-toolkit"
 
     Page {
         objectName: 'page'

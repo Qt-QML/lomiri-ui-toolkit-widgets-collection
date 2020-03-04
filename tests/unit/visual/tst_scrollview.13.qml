@@ -18,9 +18,9 @@
 
 import QtQuick 2.4
 import QtTest 1.0
-import Ubuntu.Test 1.0
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Styles 1.3
+import Lomiri.Test 1.0
+import Lomiri.Components 1.3
+import Lomiri.Components.Styles 1.3
 import QtQml.Models 2.1
 
 Item {
@@ -144,7 +144,7 @@ Item {
         id: styledScrollbarComp
         Scrollbar {
             StyleHints {
-                sliderColor: UbuntuColors.green
+                sliderColor: LomiriColors.green
             }
         }
     }
@@ -816,7 +816,7 @@ Item {
             anotherDynamicComp = styledScrollbar
 
             scrollview.verticalScrollbar = styledScrollbar
-            compare(scrollview.verticalScrollbar.__styleInstance.sliderColor, UbuntuColors.green, "Wrong slider colour.")
+            compare(scrollview.verticalScrollbar.__styleInstance.sliderColor, LomiriColors.green, "Wrong slider colour.")
         }
 
         function test_changeDefaultScrollbarProps() {

@@ -34,9 +34,9 @@ namespace C {
 #include <QtTest/QTest>
 #include <QtTest/QtTestGui>
 #include <QtTest/QSignalSpy>
-#include <UbuntuToolkit/ubuntutoolkitmodule.h>
-#include <UbuntuToolkit/private/ucunits_p.h>
-#include <UbuntuToolkit/private/i18n_p.h>
+#include <LomiriToolkit/lomiritoolkitmodule.h>
+#include <LomiriToolkit/private/ucunits_p.h>
+#include <LomiriToolkit/private/i18n_p.h>
 
 UT_USE_NAMESPACE
 
@@ -83,12 +83,12 @@ private Q_SLOTS:
         // Verify that we set it correctly
         QVERIFY(QFileInfo(testAppDir + "/share/locale/en/LC_MESSAGES/localizedApp.mo").exists());
 
-        QString modules(UBUNTU_QML_IMPORT_PATH);
+        QString modules(LOMIRI_QML_IMPORT_PATH);
         QVERIFY(QDir(modules).exists());
 
         view = new QQuickView;
         QQmlEngine *quickEngine = view->engine();
-        UbuntuToolkitModule::initializeContextProperties(quickEngine);
+        LomiriToolkitModule::initializeContextProperties(quickEngine);
 
         view->setGeometry(0,0, UCUnits::instance()->gu(40), UCUnits::instance()->gu(30));
         //add modules folder so we have access to the plugin from QML
@@ -105,8 +105,8 @@ private Q_SLOTS:
     void testCase_LocalizedApp()
     {
         QQmlEngine engine;
-        UbuntuToolkitModule::initializeContextProperties(&engine);
-        UbuntuI18n* i18n = UbuntuI18n::instance();
+        LomiriToolkitModule::initializeContextProperties(&engine);
+        LomiriI18n* i18n = LomiriI18n::instance();
         // By default no domain is set
         QCOMPARE(i18n->domain(), QString(""));
 

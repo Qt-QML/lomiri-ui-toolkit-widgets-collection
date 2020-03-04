@@ -15,13 +15,13 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 Item {
     id: bubbleShape
 
     /*!
-      Do not use an UbuntuShape but a Rectangle as the background of the BubbleShape.
+      Do not use an LomiriShape but a Rectangle as the background of the BubbleShape.
      */
     property bool square: false
 
@@ -35,7 +35,7 @@ Item {
     property bool clipContent: false
     default property alias children: content.children
     // FIXME: This should not be necessary. See
-    // https://bugs.launchpad.net/ubuntu-ui-toolkit/+bug/1214978
+    // https://bugs.launchpad.net/lomiri-ui-toolkit/+bug/1214978
     property alias arrowSource: arrow.source
 
     implicitWidth: units.gu(10)
@@ -64,16 +64,16 @@ Item {
             property: "opacity"
             from: 0.0
             to: 1.0
-            duration: UbuntuAnimation.FastDuration
-            easing: UbuntuAnimation.StandardEasing
+            duration: LomiriAnimation.FastDuration
+            easing: LomiriAnimation.StandardEasing
         }
         NumberAnimation {
             target: scaleTransform
             property: (direction === "up" || direction === "down") ? "yScale" : "xScale"
             from: 0.91
             to: 1.0
-            duration: UbuntuAnimation.FastDuration
-            easing: UbuntuAnimation.StandardEasing
+            duration: LomiriAnimation.FastDuration
+            easing: LomiriAnimation.StandardEasing
         }
         onStopped: showCompleted()
     }
@@ -84,8 +84,8 @@ Item {
         property: "opacity"
         from: 1.0
         to: 0.0
-        duration: UbuntuAnimation.FastDuration
-        easing: UbuntuAnimation.StandardEasing
+        duration: LomiriAnimation.FastDuration
+        easing: LomiriAnimation.StandardEasing
         onStopped: hideCompleted()
     }
 
@@ -108,7 +108,7 @@ Item {
         opacity: 0.8
     }
 
-    UbuntuShape {
+    LomiriShape {
         anchors.fill: parent
         borderSource: "none"
         color: Theme.palette.normal.overlay

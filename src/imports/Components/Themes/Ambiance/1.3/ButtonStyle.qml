@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 Item {
     id: buttonStyle
@@ -26,7 +26,7 @@ Item {
     property real minimumWidth: units.gu(10)
     property real horizontalPadding: units.gu(1)
     property color defaultColor: "#666666"
-    property font defaultFont: Qt.font({family: "Ubuntu", pixelSize: FontUtils.sizeToPixels("medium")})
+    property font defaultFont: Qt.font({family: "Lomiri", pixelSize: FontUtils.sizeToPixels("medium")})
     property Gradient defaultGradient
     property real buttonFaceOffset: 0
     property bool stroke: button.hasOwnProperty("strokeColor") && button.strokeColor != Qt.rgba(0.0, 0.0, 0.0, 0.0)
@@ -50,7 +50,7 @@ Item {
     // Color properties in a JS ternary operator don't work as expected in
     // QML because it overwrites alpha values with 1. A workaround is to use
     // Qt.rgba(). For more information, see
-    // https://bugs.launchpad.net/ubuntu-ui-toolkit/+bug/1197802 and
+    // https://bugs.launchpad.net/lomiri-ui-toolkit/+bug/1197802 and
     // https://bugreports.qt-project.org/browse/QTBUG-32238.
     function __colorHack(color) { return Qt.rgba(color.r, color.g, color.b, color.a); }
 
@@ -122,7 +122,7 @@ Item {
             }"
     }
 
-    UbuntuShape {
+    LomiriShape {
         id: background
         anchors.fill: parent
         borderSource: "radius_idle.sci"  // Deprecated, use a dedicated shape.
@@ -131,21 +131,21 @@ Item {
 
         backgroundColor: backgroundSource ? "#00000000" : (isGradient ? __colorHack(gradientProxy.topColor) : __colorHack(button.color))
         secondaryBackgroundColor: backgroundSource ? "#00000000" : (isGradient ? __colorHack(gradientProxy.bottomColor) : __colorHack(button.color))
-        backgroundMode: isGradient ? UbuntuShape.VerticalGradient : UbuntuShape.SolidColor
+        backgroundMode: isGradient ? LomiriShape.VerticalGradient : LomiriShape.SolidColor
         opacity: styledItem.enabled ? 1.0 : 0.6
     }
 
-    UbuntuShape {
+    LomiriShape {
         id: backgroundPressed
         anchors.fill: parent
         backgroundColor: stroke ? button.strokeColor : background.backgroundColor
         secondaryBackgroundColor: background.secondaryBackgroundColor
-        backgroundMode: stroke ? UbuntuShape.SolidColor : UbuntuShape.VerticalGradient
+        backgroundMode: stroke ? LomiriShape.SolidColor : LomiriShape.VerticalGradient
         borderSource: "radius_pressed.sci"  // Deprecated, use a dedicated shape.
         opacity: button.pressed ? 1.0 : 0.0
         Behavior on opacity {
             NumberAnimation {
-                duration: UbuntuAnimation.SnapDuration
+                duration: LomiriAnimation.SnapDuration
                 easing.type: Easing.Linear
             }
         }
@@ -173,7 +173,7 @@ Item {
         scale: button.pressed ? 0.98 : 1.0
         Behavior on scale {
             NumberAnimation {
-                duration: UbuntuAnimation.SnapDuration
+                duration: LomiriAnimation.SnapDuration
                 easing.type: Easing.Linear
             }
         }

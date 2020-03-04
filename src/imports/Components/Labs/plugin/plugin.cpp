@@ -17,9 +17,9 @@
  */
 
 #include <QtQml/QQmlExtensionPlugin>
-#include <ubuntutoolkitmodule.h>
+#include <lomiritoolkitmodule.h>
 
-class UbuntuComponentsLabsPlugin : public QQmlExtensionPlugin
+class LomiriComponentsLabsPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface/1.0")
@@ -27,19 +27,19 @@ class UbuntuComponentsLabsPlugin : public QQmlExtensionPlugin
 public:
     void registerTypes(const char *uri) override
     {
-        Q_ASSERT(uri == QLatin1String("Ubuntu.Components.Labs"));
-        UT_PREPEND_NAMESPACE(UbuntuLabsModule)::defineModule(uri);
+        Q_ASSERT(uri == QLatin1String("Lomiri.Components.Labs"));
+        UT_PREPEND_NAMESPACE(LomiriLabsModule)::defineModule(uri);
     }
 
     void initializeEngine(QQmlEngine *engine, const char *uri) override
     {
-        UT_PREPEND_NAMESPACE(UbuntuLabsModule)::initializeModule(engine, this);
+        UT_PREPEND_NAMESPACE(LomiriLabsModule)::initializeModule(engine, this);
         QQmlExtensionPlugin::initializeEngine(engine, uri);
     }
 
-    ~UbuntuComponentsLabsPlugin()
+    ~LomiriComponentsLabsPlugin()
     {
-        UT_PREPEND_NAMESPACE(UbuntuLabsModule)::undefineModule();
+        UT_PREPEND_NAMESPACE(LomiriLabsModule)::undefineModule();
     }
 };
 

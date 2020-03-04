@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 StyledItem {
     id: component1
@@ -41,7 +41,7 @@ StyledItem {
                     StyledItem {
                         id: component4
                         theme: ThemeSettings {
-                            name: "Ubuntu.Components.Themes.Ambiance"
+                            name: "Lomiri.Components.Themes.Ambiance"
                         }
 
                         width: units.gu(40)

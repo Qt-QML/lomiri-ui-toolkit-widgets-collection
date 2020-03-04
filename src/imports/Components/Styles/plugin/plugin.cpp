@@ -17,9 +17,9 @@
  */
 
 #include <QtQml/QQmlExtensionPlugin>
-#include <ubuntutoolkitmodule.h>
+#include <lomiritoolkitmodule.h>
 
-class UbuntuComponentsStylesPlugin : public QQmlExtensionPlugin
+class LomiriComponentsStylesPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface/1.0")
@@ -27,13 +27,13 @@ class UbuntuComponentsStylesPlugin : public QQmlExtensionPlugin
 public:
     void registerTypes(const char *uri) override
     {
-        Q_ASSERT(uri == QLatin1String("Ubuntu.Components.Styles"));
-        UT_PREPEND_NAMESPACE(UbuntuStylesModule)::defineModule(uri);
+        Q_ASSERT(uri == QLatin1String("Lomiri.Components.Styles"));
+        UT_PREPEND_NAMESPACE(LomiriStylesModule)::defineModule(uri);
     }
 
-    ~UbuntuComponentsStylesPlugin()
+    ~LomiriComponentsStylesPlugin()
     {
-        UT_PREPEND_NAMESPACE(UbuntuStylesModule)::undefineModule();
+        UT_PREPEND_NAMESPACE(LomiriStylesModule)::undefineModule();
     }
 };
 

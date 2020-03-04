@@ -18,14 +18,14 @@ import QtQuick 2.4
 
 /*!
     \qmltype Label
-    \inqmlmodule Ubuntu.Components
-    \ingroup ubuntu
-    \brief Text with Ubuntu styling.
+    \inqmlmodule Lomiri.Components
+    \ingroup lomiri
+    \brief Text with Lomiri styling.
 
     Example:
     \qml
     Rectangle {
-        color: UbuntuColors.coolGrey
+        color: LomiriColors.coolGrey
         width: units.gu(30)
         height: units.gu(30)
 

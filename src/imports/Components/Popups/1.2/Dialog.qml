@@ -15,26 +15,26 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 import "internalPopupUtils.js" as InternalPopupUtils
 
 /*!
     \qmltype Dialog
     \inherits PopupBase
-    \inqmlmodule Ubuntu.Components.Popups 1.0
-    \ingroup ubuntu-popups
+    \inqmlmodule Lomiri.Components.Popups 1.0
+    \ingroup lomiri-popups
     \brief The Dialog caters for cases in which the application requires the user to determine
         between optional actions. The Dialog will interrupt the user flow and lock the view
         for further interaction before the user has selected a desired action.
         It can only be closed by selecting an optional action confirming or cancelling the operation.
 
-    \l {http://design.ubuntu.com/apps/building-blocks/dialog}{See also the Design Guidelines on Dialogs}.
+    \l {http://design.lomiri.com/apps/building-blocks/dialog}{See also the Design Guidelines on Dialogs}.
 
     Example:
     \qml
         import QtQuick 2.4
-        import Ubuntu.Components 1.2
-        import Ubuntu.Components.Popups 1.0
+        import Lomiri.Components 1.2
+        import Lomiri.Components.Popups 1.0
 
         Item {
             width: units.gu(80)
@@ -51,12 +51,12 @@ import "internalPopupUtils.js" as InternalPopupUtils
                      }
                      Button {
                          text: "overwrite previous version"
-                         color: UbuntuColors.orange
+                         color: LomiriColors.orange
                          onClicked: PopupUtils.close(dialogue)
                      }
                      Button {
                          text: "save a copy"
-                         color: UbuntuColors.orange
+                         color: LomiriColors.orange
                          onClicked: PopupUtils.close(dialogue)
                      }
                  }
@@ -149,7 +149,7 @@ PopupBase {
     __foreground: foreground
     __eventGrabber.enabled: modal
     __dimBackground: modal
-    fadingAnimation: UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration }
+    fadingAnimation: LomiriNumberAnimation { duration: LomiriAnimation.SnapDuration }
 
     StyledItem {
         id: foreground
@@ -168,7 +168,7 @@ PopupBase {
         property real margins: units.gu(4)
         property real itemSpacing: units.gu(2)
         property Item dismissArea: dialog.dismissArea
-        property real keyboardHeight: dialog.anchorToKeyboard && UbuntuApplication.inputMethod.visible ? UbuntuApplication.inputMethod.keyboardRectangle.height : 0
+        property real keyboardHeight: dialog.anchorToKeyboard && LomiriApplication.inputMethod.visible ? LomiriApplication.inputMethod.keyboardRectangle.height : 0
 
         height: Math.min(contentsColumn.height + foreground.margins, dialog.height - keyboardHeight)
 
@@ -193,7 +193,7 @@ PopupBase {
                     maximumLineCount: 2
                     elide: Text.ElideRight
                     fontSize: "large"
-                    color: UbuntuColors.darkGrey
+                    color: LomiriColors.darkGrey
                     visible: (text !== "")
                 }
 
@@ -201,7 +201,7 @@ PopupBase {
                     horizontalAlignment: Text.AlignHCenter
                     text: dialog.text
                     fontSize: "medium"
-                    color: UbuntuColors.darkGrey
+                    color: LomiriColors.darkGrey
                     wrapMode: Text.Wrap
                     visible: (text !== "")
                 }

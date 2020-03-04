@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 // internal helper class to create the visuals
 // for the icon.
@@ -49,7 +49,7 @@ Item {
         fallbackSource: iconVisual.fallbackIconName ? "image://theme/" + iconVisual.fallbackIconName : ""
     }
 
-    UbuntuShape {
+    LomiriShape {
         id: shape
         visible: iconVisual.hasFrame
         anchors.fill: parent

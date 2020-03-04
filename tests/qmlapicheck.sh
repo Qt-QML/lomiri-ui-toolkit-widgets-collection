@@ -18,12 +18,12 @@
 
 source `dirname $0`/../export_qml_dir.sh || exit 1
 
-if [ ! -e $BUILD_DIR/qml/Ubuntu/Layouts/libUbuntuLayouts.so ]; then
+if [ ! -e $BUILD_DIR/qml/Lomiri/Layouts/libLomiriLayouts.so ]; then
     echo You need to build UITK before you can dump QML API!
     exit 1
 fi
 
-CPP="Ubuntu.Components Ubuntu.Components.ListItems Ubuntu.Components.Popups Ubuntu.Components.Pickers Ubuntu.Components.Styles Ubuntu.Components.Themes Ubuntu.Layouts Ubuntu.PerformanceMetrics Ubuntu.Metrics Ubuntu.Test"
+CPP="Lomiri.Components Lomiri.Components.ListItems Lomiri.Components.Popups Lomiri.Components.Pickers Lomiri.Components.Styles Lomiri.Components.Themes Lomiri.Layouts Lomiri.PerformanceMetrics Lomiri.Metrics Lomiri.Test"
 echo Dumping QML API of C++ components
 test -s $BUILD_DIR/components.api.new && rm $BUILD_DIR/components.api.new
 env ALARM_BACKEND=memory \

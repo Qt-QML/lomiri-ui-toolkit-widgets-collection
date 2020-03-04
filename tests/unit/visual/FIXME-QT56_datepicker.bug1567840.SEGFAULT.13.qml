@@ -16,9 +16,9 @@
 
 import QtQuick 2.4
 import QtTest 1.0
-import Ubuntu.Test 1.3
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Pickers 1.3
+import Lomiri.Test 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Pickers 1.3
 
 Item {
     id: testSuite
@@ -37,7 +37,7 @@ Item {
         width: parent.width
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "DatePicker13API"
         when: windowShown
 
@@ -544,7 +544,7 @@ Item {
 
         function test_4_linearSecondsPicker() {
             // skip the test temporaily
-            // https://bugs.launchpad.net/ubuntu-ui-toolkit/+bug/1315241
+            // https://bugs.launchpad.net/lomiri-ui-toolkit/+bug/1315241
             skip("Disabled due to flakyness on ppc64el target");
             picker.mode = "Hours|Minutes|Seconds";
             var date = setHMS(new Date(), 12, 10, 45);

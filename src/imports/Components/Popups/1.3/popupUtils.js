@@ -16,8 +16,8 @@
 
 /*!
     \qmltype popupUtils
-    \inqmlmodule Ubuntu.Components.Popups 1.0
-    \ingroup ubuntu-popups
+    \inqmlmodule Lomiri.Components.Popups 1.0
+    \ingroup lomiri-popups
     \brief Popover utility functions.
 */
 
@@ -40,8 +40,8 @@
   as the parent of all popups.
 
   \qml
-      import Ubuntu.Components 1.3
-      import Ubuntu.Components.Popups 1.3
+      import Lomiri.Components 1.3
+      import Lomiri.Components.Popups 1.3
 
       Button {
           onClicked: PopupUtils.open(popoverComponent, popoverButton, { 'dummy': true } )
@@ -108,8 +108,8 @@ function open(popup, caller, params) {
   Closes (hides and destroys) the given popup.
 
   \qml
-      import Ubuntu.Components 1.3
-      import Ubuntu.Components.Popups 1.3
+      import Lomiri.Components 1.3
+      import Lomiri.Components.Popups 1.3
 
       Button {
           onClicked: PopupUtils.close(popup)

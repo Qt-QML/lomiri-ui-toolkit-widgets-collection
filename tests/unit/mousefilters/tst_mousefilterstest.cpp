@@ -22,11 +22,11 @@
 #include <QtQuick/private/qquickevents_p_p.h>
 #include <QtQuick/private/qquickmousearea_p.h>
 #include <QtTest/QtTest>
-#include <UbuntuToolkit/private/inversemouseareatype_p.h>
-#include <UbuntuToolkit/private/quickutils_p.h>
-#include <UbuntuToolkit/private/ucinversemouse_p.h>
-#include <UbuntuToolkit/private/ucmouse_p.h>
-#include <UbuntuToolkit/private/ucunits_p.h>
+#include <LomiriToolkit/private/inversemouseareatype_p.h>
+#include <LomiriToolkit/private/quickutils_p.h>
+#include <LomiriToolkit/private/ucinversemouse_p.h>
+#include <LomiriToolkit/private/ucmouse_p.h>
+#include <LomiriToolkit/private/ucunits_p.h>
 
 #include "uctestcase.h"
 #include "uctestextras.h"
@@ -65,7 +65,7 @@ private:
 
     QQuickView * loadTest(const QString &file)
     {
-        UbuntuTestCase* testCase = new UbuntuTestCase(file);
+        LomiriTestCase* testCase = new LomiriTestCase(file);
         return qobject_cast<QQuickView*>(testCase);
     }
 
@@ -119,7 +119,7 @@ private Q_SLOTS:
     {
         UCTestExtras::registerTouchDevice();
 
-        QString modules(UBUNTU_QML_IMPORT_PATH);
+        QString modules(LOMIRI_QML_IMPORT_PATH);
         QVERIFY(QDir(modules).exists());
 
         m_modulePath = QDir(modules).absolutePath();
@@ -218,8 +218,8 @@ private Q_SLOTS:
 
     void testCase_pressedOutsideTextInputAfter()
     {
-        UbuntuTestCase::ignoreWarning("FilterInverseTextInputAfter.qml", 23, 5, "QML TextInput: Ignoring AfterItem priority for InverseMouse filters.");
-        QScopedPointer<UbuntuTestCase> view(new UbuntuTestCase("FilterInverseTextInputAfter.qml"));
+        LomiriTestCase::ignoreWarning("FilterInverseTextInputAfter.qml", 23, 5, "QML TextInput: Ignoring AfterItem priority for InverseMouse filters.");
+        QScopedPointer<LomiriTestCase> view(new LomiriTestCase("FilterInverseTextInputAfter.qml"));
         QCOMPARE(view->warnings(), 1);
         UCInverseMouse *filter = attachedFilter<UCInverseMouse>(view->rootObject(), "FilterOwner");
         QVERIFY(filter);
@@ -569,15 +569,15 @@ private Q_SLOTS:
 
     void testCase_mouseFilterAttachedToNonItem()
     {
-        UbuntuTestCase::ignoreWarning("MouseFilterAttachedToNonItem.qml", 21, 5, "QML QtObject: Warning: Mouse filter can only be attached to Items.");
-        QScopedPointer<UbuntuTestCase> testCase(new UbuntuTestCase("MouseFilterAttachedToNonItem.qml"));
+        LomiriTestCase::ignoreWarning("MouseFilterAttachedToNonItem.qml", 21, 5, "QML QtObject: Warning: Mouse filter can only be attached to Items.");
+        QScopedPointer<LomiriTestCase> testCase(new LomiriTestCase("MouseFilterAttachedToNonItem.qml"));
         QCOMPARE(testCase->warnings(), 1);
     }
 
     void testCase_inverseMouseFilterAttachedToNonItem()
     {
-        UbuntuTestCase::ignoreWarning("InverseMouseFilterAttachedToNonItem.qml", 21, 5, "QML QtObject: Warning: InverseMouse filter can only be attached to Items.");
-        QScopedPointer<UbuntuTestCase> testCase(new UbuntuTestCase("InverseMouseFilterAttachedToNonItem.qml"));
+        LomiriTestCase::ignoreWarning("InverseMouseFilterAttachedToNonItem.qml", 21, 5, "QML QtObject: Warning: InverseMouse filter can only be attached to Items.");
+        QScopedPointer<LomiriTestCase> testCase(new LomiriTestCase("InverseMouseFilterAttachedToNonItem.qml"));
         QCOMPARE(testCase->warnings(), 1);
     }
 
@@ -1092,7 +1092,7 @@ private Q_SLOTS:
 
     void testCase_forwardComposedEventsToProxy()
     {
-        QScopedPointer<UbuntuTestCase> test(new UbuntuTestCase("ForwardComposedEvents.qml"));
+        QScopedPointer<LomiriTestCase> test(new LomiriTestCase("ForwardComposedEvents.qml"));
 
         UCMouse *host = attachedFilter<UCMouse>(test->rootObject(), "host");
         QVERIFY(host);
@@ -1103,7 +1103,7 @@ private Q_SLOTS:
         QSignalSpy proxyHoldSpy(proxy, SIGNAL(pressAndHold(QQuickMouseEvent*, QQuickItem*)));
 
         // produce long press
-        // FIXME move this under UbuntuTestCase
+        // FIXME move this under LomiriTestCase
         mousePressAndHold(test.data(), Qt::LeftButton, 0, guPoint(20, 30));
         QCoreApplication::processEvents();
         QCOMPARE(hostHoldSpy.count(), 1);
@@ -1116,7 +1116,7 @@ private Q_SLOTS:
 
     void testCase_forwardComposedEventsToProxy_whenMoved()
     {
-        QScopedPointer<UbuntuTestCase> test(new UbuntuTestCase("ForwardComposedEvents.qml"));
+        QScopedPointer<LomiriTestCase> test(new LomiriTestCase("ForwardComposedEvents.qml"));
 
         UCMouse *host = attachedFilter<UCMouse>(test->rootObject(), "host");
         QVERIFY(host);
@@ -1127,7 +1127,7 @@ private Q_SLOTS:
         QSignalSpy proxyHoldSpy(proxy, SIGNAL(pressAndHold(QQuickMouseEvent*, QQuickItem*)));
 
         // produce long press, but move mouse while in delay
-        // FIXME move this under UbuntuTestCase
+        // FIXME move this under LomiriTestCase
         QTest::mousePress(test.data(), Qt::LeftButton, 0, guPoint(20, 30));
         QTest::qWait(UCMouse::DefaultPressAndHoldDelay / 2);
         for (int i = 1; i <= 4; i++) {
@@ -1145,7 +1145,7 @@ private Q_SLOTS:
 
     void testCase_forwardToChainedItems()
     {
-        QScopedPointer<UbuntuTestCase> test(new UbuntuTestCase("ForwardEventChained.qml"));
+        QScopedPointer<LomiriTestCase> test(new LomiriTestCase("ForwardEventChained.qml"));
 
         UCMouse *host = attachedFilter<UCMouse>(test->rootObject(), "host");
         QVERIFY(host);
@@ -1178,7 +1178,7 @@ private Q_SLOTS:
     }
 
     void testCase_ignoreSynthesizedEvents() {
-        QScopedPointer<UbuntuTestCase> test(new UbuntuTestCase("FilterSynthesizedEvents.qml"));
+        QScopedPointer<LomiriTestCase> test(new LomiriTestCase("FilterSynthesizedEvents.qml"));
         QQuickMouseArea *rootMouseArea = qobject_cast<QQuickMouseArea *>(test->rootObject());
         QQuickMouseArea* overlayArea = test->findItem<QQuickMouseArea *>("overlayArea");
         UCMouse *overlayFilter = attachedFilter<UCMouse>(test->rootObject(), "overlayArea");

@@ -21,9 +21,9 @@ import QtQuick 2.4
 
 /*!
     \qmltype Icon
-    \inqmlmodule Ubuntu.Components
+    \inqmlmodule Lomiri.Components
     \inherits Item
-    \ingroup ubuntu
+    \ingroup lomiri
     \brief The Icon component displays an icon from the icon theme.
 
     The icon theme contains a set of standard icons referred to by their name.
@@ -49,7 +49,7 @@ import QtQuick 2.4
         width: 64
         height: 64
         name: "search"
-        color: UbuntuColors.warmGrey
+        color: LomiriColors.warmGrey
     }
     \endqml
 
@@ -66,11 +66,11 @@ Item {
 
        If both name and source are set, name will be ignored.
 
-       \note The complete list of icons available in Ubuntu is not published yet.
+       \note The complete list of icons available in Lomiri is not published yet.
            For now please refer to the folders where the icon themes are installed:
            \list
-             \li Ubuntu Touch: \l file:/usr/share/icons/suru
-             \li Ubuntu Desktop: \l file:/usr/share/icons/ubuntu-mono-dark
+             \li Lomiri Touch: \l file:/usr/share/icons/suru
+             \li Lomiri Desktop: \l file:/usr/share/icons/lomiri-mono-dark
            \endlist
            These 2 separate icon themes will be merged soon.
     */
@@ -95,7 +95,7 @@ Item {
 
        If both name and source are set, name will be ignored.
 
-       \since Ubuntu.Components 1.1
+       \since Lomiri.Components 1.1
        \qmlproperty url Icon::source
     */
 

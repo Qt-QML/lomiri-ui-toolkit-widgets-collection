@@ -16,9 +16,9 @@
 
 import QtTest 1.0
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
-import Ubuntu.Test 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
+import Lomiri.Test 1.3
 
 Item {
     id: root
@@ -116,7 +116,7 @@ Item {
                                     right: parent.right
                                 }
                                 height: units.gu(35)
-                                color: UbuntuColors.ash
+                                color: LomiriColors.ash
 
                                 Button {
                                     anchors.centerIn: parent
@@ -134,7 +134,7 @@ Item {
         }
     }
 
-    UbuntuTestCase {
+    LomiriTestCase {
         name: "Dialog"
         when: windowShown
         id: testCase

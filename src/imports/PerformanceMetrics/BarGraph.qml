@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.PerformanceMetrics 1.0 as PerformanceMetrics
+import Lomiri.Components 1.3
+import Lomiri.PerformanceMetrics 1.0 as PerformanceMetrics
 
 Item {
     id: graph

@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 MainView {
     width: units.gu(40)
@@ -35,7 +35,7 @@ MainView {
             contentComponent: Rectangle {
                 width: bottomEdge.width
                 height: bottomEdge.height
-                color: UbuntuColors.green
+                color: LomiriColors.green
                 PageHeader {
                     title: "Bottom edge content"
                     objectName: "bottomEdgeHeader"

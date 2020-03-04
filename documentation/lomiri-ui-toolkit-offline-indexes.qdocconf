@@ -1,0 +1,2 @@
+include(lomiri-ui-toolkit-offline.qdocconf)
+include(lomiri-ui-toolkit-indexes.qdocconf)

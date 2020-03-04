@@ -21,8 +21,8 @@
 /*!
  * \qmltype ItemLayout
  * \instantiates ULItemLayout
- * \inqmlmodule Ubuntu.Layouts 1.0
- * \ingroup ubuntu-layouts
+ * \inqmlmodule Lomiri.Layouts 1.0
+ * \ingroup lomiri-layouts
  * \brief ItemLayout defines a new size & position of a single Item, for the purposes
  * of specifying layouts. This is to be used within a ConditionalLayout definition.
  *
@@ -35,7 +35,7 @@
  * Example:
  * \qml
  * import QtQuick 2.4
- * import Ubuntu.Layouts 0.1
+ * import Lomiri.Layouts 0.1
  *
  * Layouts {
  *     id: layouts

@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
+import Lomiri.Components 1.2
 
 // internal helper class for text inside the list items.
 Label {
@@ -32,7 +32,7 @@ Label {
 
     fontSize: "medium"
     elide: Text.ElideRight
-    color: selected ? UbuntuColors.orange : secondary ? overlay ? Theme.palette.normal.overlayText : Theme.palette.normal.backgroundText
+    color: selected ? LomiriColors.orange : secondary ? overlay ? Theme.palette.normal.overlayText : Theme.palette.normal.backgroundText
                                                       : overlay ? Theme.palette.selected.overlayText : Theme.palette.selected.backgroundText
     opacity: label.enabled ? 1.0 : 0.5
 }

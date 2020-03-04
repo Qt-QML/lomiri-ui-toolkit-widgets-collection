@@ -85,9 +85,9 @@ for x in $(seq 1 ${COUNT}); do
       rm -rf ~/.cache/QML/Apps/${APP_NAME}
     fi
     echo ${PASSWORD}|sudo -S /usr/bin/app-launch-tracepoints
-    ubuntu-app-launch ${APP_NAME}
+    lomiri-app-launch ${APP_NAME}
     sleep ${SLEEP_TIME}
-    ubuntu-app-stop ${APP_NAME}
+    lomiri-app-stop ${APP_NAME}
 done
 
 echo ${PASSWORD}|sudo -S bash -c 'lttng stop'
