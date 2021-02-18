@@ -284,7 +284,7 @@ LomiriThemeIconProvider::LomiriThemeIconProvider(const QString &themeName):
         m_themeName = QString::fromLocal8Bit(qgetenv("UITK_ICON_THEME"));
 }
 
-QSharedPointer<class IconTheme> UnityThemeIconProvider::getTheme()
+QSharedPointer<class IconTheme> LomiriThemeIconProvider::getTheme()
 {
     if (!m_themeName.isEmpty())
         return IconTheme::get(m_themeName);
