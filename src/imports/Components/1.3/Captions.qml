@@ -124,22 +124,16 @@ ColumnLayout {
     }
 
     Label {
+        Layout.fillWidth: true
         id: titleLabel
-        anchors {
-            left: parent.left
-            right: parent.right
-        }
         textSize: (captionStyle == Lomiri.SummaryCaptionStyle) ? Label.Small : Label.Medium
         horizontalAlignment: (captionStyle == Lomiri.SummaryCaptionStyle) ? Text.AlignRight : Text.AlignLeft
         visible: text !== ""
         elide: (captionStyle == Lomiri.TitleCaptionStyle) ? Text.ElideRight : Text.ElideNone
     }
     Label {
+        Layout.fillWidth: true
         id: subtitleLabel
-        anchors {
-            left: parent.left
-            right: parent.right
-        }
         textSize: Label.Small
         horizontalAlignment: (captionStyle == Lomiri.SummaryCaptionStyle) ? Text.AlignRight : Text.AlignLeft
         visible: text !== ""

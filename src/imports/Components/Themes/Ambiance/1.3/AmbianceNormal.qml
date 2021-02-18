@@ -31,8 +31,8 @@ PaletteValues {
     raisedText: LomiriColors.slate
     raisedSecondaryText: LomiriColors.silk
     overlay: "#FFFFFF"
-    overlayText: LomiriColors.slate
-    overlaySecondaryText: LomiriColors.silk
+    overlayText: LomiriColors.inkstone
+    overlaySecondaryText: LomiriColors.slate
     field: "#FFFFFF"
     fieldText: LomiriColors.jet
     focus: LomiriColors.blue

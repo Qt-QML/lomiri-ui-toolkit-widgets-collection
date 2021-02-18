@@ -139,7 +139,7 @@ QByteArray convertToId(const QString &cppName)
     QString qmlType(QString(qPrintable(cppName)).replace(QRegExp("(QQmlListProperty|QList)<(.+)>"), "\\2"));
     QString typeFormat(qmlType != cppName ? "list<%1>" : "%1");
 
-    QList<QQmlType>types(qmlTypesByCppName[qPrintable(qmlType)].toList());
+    QList<QQmlType>types(qmlTypesByCppName[qPrintable(qmlType)].values());
     std::sort(types.begin(), types.end(), typeNameSort);
 
     if (qmlType.contains("::")) {
@@ -549,7 +549,7 @@ public:
 
         if (!qmlTypes.isEmpty()) {
             object.insert("exports", QJsonArray::fromStringList(exportStrings));
-            object["namespace"] = qmlTypes.toList()[0].qmlTypeName().split("/")[0];
+            object["namespace"] = qmlTypes.values()[0].qmlTypeName().split("/")[0];
             object["#version"] = exportStrings.last().split(" ")[1];
 
             if (isUncreatable)
@@ -911,11 +911,19 @@ int main(int argc, char *argv[])
 #if QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)
             Q_FOREACH (const QQmlJS::DiagnosticMessage &e, p.errors(qmlDirFile.fileName())) {
                 QString errorString = QLatin1String("qmldir");
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+                if (e.loc.startLine > 0) {
+                    errorString += QLatin1Char(':') + QString::number(e.loc.startLine);
+                    if (e.loc.startColumn > 0)
+                        errorString += QLatin1Char(':') + QString::number(e.loc.startColumn);
+                }
+#else
                 if (e.line > 0) {
                     errorString += QLatin1Char(':') + QString::number(e.line);
                     if (e.column > 0)
                         errorString += QLatin1Char(':') + QString::number(e.column);
                 }
+#endif
 
                 errorString += QLatin1String(": ") + e.message;
                 std::cerr << qPrintable( errorString ) << std::endl;
@@ -1115,7 +1123,11 @@ int main(int argc, char *argv[])
                     exports.append(expor.toString());
                 // Reverse exports: latest to oldest
                 for(int k = 0; k < (exports.size() / 2); k++)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 13, 0)
+                    exports.swapItemsAt(k, exports.size() - (1 + k));
+#else
                     exports.swap(k, exports.size() - (1 + k));
+#endif
                 QStringList sortedExports;
                 if (!exports.isEmpty()) {
                     QString currentTypeName;
