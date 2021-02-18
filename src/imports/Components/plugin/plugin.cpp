@@ -30,14 +30,20 @@ LomiriComponentsPlugin::~LomiriComponentsPlugin()
 
 void LomiriComponentsPlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("Lomiri.Components"));
-    Q_UNUSED(uri);
+    if (uri == QLatin1String("Ubuntu.Components")) {
+        qWarning("Ubuntu.Components is deprecated please use Lomiri.Components");
+
+        qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespace)>(uri, 1, 2, "Ubuntu");
+        qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespaceV13)>(uri, 1, 3, "Ubuntu");
+    } else {
+        Q_ASSERT(uri == QLatin1String("Lomiri.Components"));
+    }
 
     qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespace)>(uri, 1, 2, "Lomiri");
     qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespaceV13)>(uri, 1, 3, "Lomiri");
 
     UG_PREPEND_NAMESPACE(LomiriGesturesModule)::defineModule(uri);
-    UT_PREPEND_NAMESPACE(LomiriToolkitModule)::defineModule();
+    UT_PREPEND_NAMESPACE(LomiriToolkitModule)::defineModule(uri);
 }
 
 void LomiriComponentsPlugin::initializeEngine(QQmlEngine *engine, const char *uri)

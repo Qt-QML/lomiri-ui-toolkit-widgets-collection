@@ -55,7 +55,7 @@ public:
     static QUrl baseUrl(QQmlEngine *engine);
 
     static void initializeModule(QQmlEngine *engine, const QUrl &pluginBaseUrl);
-    static void defineModule();
+    static void defineModule(const char *uri);
     static void undefineModule();
 
     // use this API only in tests!
