@@ -12,7 +12,12 @@ LIBS += -L$$PLUGIN_BLD/Test -lLomiriTest
 LIBS += -L$${ROOT_BUILD_DIR}/lib -lLomiriGestures
 LIBS += -L$$PLUGIN_BLD/LomiriToolkit -lLomiriToolkit
 DEFINES += QUICK_TEST_SOURCE_DIR=\"\\\"$$_PRO_FILE_PWD_\\\"\"
-QMAKE_CXXFLAGS += -Werror
+
+# warnings_are_errors depending on the compiler version, sometimes it doesn't
+# add the required flags (for instance for recent clang version on old Qt).
+warnings_are_errors:!contains(QMAKE_CXXFLAGS_WARN_ON, -Werror){
+    QMAKE_CXXFLAGS_WARN_ON += -Werror
+}
 
 DEFINES+=LOMIRI_COMPONENT_PATH='\\"$${ROOT_BUILD_DIR}/qml/Lomiri/Components\\"'
 DEFINES+=LOMIRI_QML_IMPORT_PATH='\\"$${ROOT_BUILD_DIR}/qml\\"'

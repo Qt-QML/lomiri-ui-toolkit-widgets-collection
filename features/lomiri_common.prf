@@ -48,6 +48,3 @@ greaterThan(QT_MAJOR_VERSION, 5)| \
         CONFIG += strict_c++
 
 CONFIG += no_keywords
-
-# Make all warnings into errors.
-CONFIG += warnings_are_errors
