@@ -1,7 +1,7 @@
 Source: lomiri-ui-toolkit
 Priority: optional
 Section: libs
-Maintainer: Lomiri Developers <lomiri-devel-discuss@lists.lomiri.com>
+Maintainer: UBports Developers <developers@ubports.com>
 Build-Depends: accountsservice <!nocheck>,
                dbus <!nocheck>,
                dbus-test-runner <!nocheck>,
