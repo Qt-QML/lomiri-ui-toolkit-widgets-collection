@@ -1,5 +1,9 @@
 TEMPLATE = subdirs
 
+# Don't use Qt's internal example install system; it installs to the wrong directory.
+# This is the side effect of piggy-back on Qt's internal part building system.
+CONFIG -= qt_example_installs
+
 SUBDIRS += po
 
 filetypes = qml png svg js jpg pro desktop in apparmor

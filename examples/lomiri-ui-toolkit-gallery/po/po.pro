@@ -1,5 +1,9 @@
 TEMPLATE = aux
 
+# Don't use Qt's internal example install system; it installs to the wrong directory.
+# This is the side effect of piggy-back on Qt's internal part building system.
+CONFIG -= qt_example_installs
+
 MO_FILES = $$system(ls *.po)
 
 install_mo_commands =
