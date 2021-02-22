@@ -135,7 +135,7 @@ void UCLabelPrivate::init()
 
     updatePixelSize();
     QFont defaultFont = q->font();
-    defaultFont.setFamily(QStringLiteral("Lomiri"));
+    defaultFont.setFamily(QStringLiteral("Ubuntu"));
     defaultFont.setWeight(QFont::Light);
     q->setFont(defaultFont);
     updateRenderType();

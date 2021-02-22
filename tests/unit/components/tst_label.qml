@@ -27,7 +27,7 @@ TestCase {
     }
 
     function test_0_defaults() {
-        compare(textCustom.font.family, "Lomiri", "Default font family");
+        compare(textCustom.font.family, "Ubuntu", "Default font family");
         compare(textCustom.font.weight, Font.Light, "Default font weight");
         compare(textCustom.fontSize,"medium","fontSize is 'medium' by default")
     }

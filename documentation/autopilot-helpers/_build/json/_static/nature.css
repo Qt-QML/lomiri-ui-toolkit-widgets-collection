@@ -176,7 +176,7 @@ pre {
     line-height:1.1em;
     border:1px solid #C6C9CB;
     font-size:1.2em;
-    font-family:"Lomiri Mono", Monaco, Consolas, "DejaVu Sans Mono", "Lucida Console", monospace;
+    font-family:"Ubuntu Mono", Monaco, Consolas, "DejaVu Sans Mono", "Lucida Console", monospace;
     margin:1.5em 0;
     padding:6px;
 }
@@ -185,7 +185,7 @@ tt {
     background-color:#EFEFEF;
     color:#222;
     font-size:1.1em;
-    font-family:"Lomiri Mono", Monaco, Consolas, "DejaVu Sans Mono", "Lucida Console", monospace;
+    font-family:"Ubuntu Mono", Monaco, Consolas, "DejaVu Sans Mono", "Lucida Console", monospace;
 }
 
 .viewcode-back {

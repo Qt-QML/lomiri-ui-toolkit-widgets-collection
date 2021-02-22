@@ -424,7 +424,7 @@ void UCTheme::setupDefault()
     // FIXME: move this into QPA
     // set the default font
     QFont defaultFont = QGuiApplication::font();
-    defaultFont.setFamily(QStringLiteral("Lomiri"));
+    defaultFont.setFamily(QStringLiteral("Ubuntu"));
     defaultFont.setPixelSize(UCFontUtils::instance()->sizeToPixels(QStringLiteral("medium")));
     defaultFont.setWeight(QFont::Light);
     QGuiApplication::setFont(defaultFont);

@@ -37,7 +37,7 @@ Item {
         verticalAlignment: Text.AlignVCenter
         font.pixelSize: 20
         font.bold: true
-        font.family: "Lomiri"
+        font.family: "Ubuntu"
         color: "white"
         text: "Uri: \"\""
     }

@@ -121,7 +121,7 @@ Item {
             var lheight = combo.expandedHeight - combo.collapsedHeight - combo.__styleInstance.comboListMargin;
             compare(combo.comboListHeight, lheight, "comboListHeight default");
             compare(combo.comboList.length, 0, "comboList is empty");
-            verify(combo.font === Qt.font({family: "Lomiri", pixelSize: FontUtils.sizeToPixels("medium")}), "Default font differs.");
+            verify(combo.font === Qt.font({family: "Ubuntu", pixelSize: FontUtils.sizeToPixels("medium")}), "Default font differs.");
             verify(combo.dropdownColor === combo.__styleInstance.defaultDropdownColor, "Default dropdown color differs");
         }
 

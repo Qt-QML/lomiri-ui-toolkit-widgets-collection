@@ -46,7 +46,7 @@ Style.ComboButtonStyle {
         property real minimumWidth: units.gu(36)
         property real horizontalPadding: units.gu(4)
         property color defaultColor: theme.palette.normal.foreground
-        property font defaultFont: Qt.font({family: "Lomiri", pixelSize: FontUtils.sizeToPixels("medium")})
+        property font defaultFont: Qt.font({family: "Ubuntu", pixelSize: FontUtils.sizeToPixels("medium")})
         property Gradient defaultGradient: null
         property real buttonFaceOffset: -dropDownWidth/2
         property bool stroke: false

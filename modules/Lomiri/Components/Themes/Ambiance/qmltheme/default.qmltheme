@@ -308,7 +308,7 @@ Examples:
     color: (item.enabled) ? "#757373"  : "darkgray";
     selectedTextColor: "#F3F3E7";
     selectionColor: "#19B6EE";
-    font: Qt.font({family: "Lomiri", pixelSize: FontUtils.sizeToPixels("medium")});
+    font: Qt.font({family: "Ubuntu", pixelSize: FontUtils.sizeToPixels("medium")});
     frameSpacing: units.gu(1);
     overlaySpacing: units.gu(0.5);
     passwordCharacter: "\u2022";
@@ -350,5 +350,5 @@ Examples:
 .slider .label {
     fontSize: "medium";
     color: "white";
-    font: Qt.font({family: "Lomiri", weight: Font.Bold, pixelSize: FontUtils.sizeToPixels(fontSize)});
+    font: Qt.font({family: "Ubuntu", weight: Font.Bold, pixelSize: FontUtils.sizeToPixels(fontSize)});
 }

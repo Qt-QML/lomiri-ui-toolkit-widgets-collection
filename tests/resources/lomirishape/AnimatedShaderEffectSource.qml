@@ -28,7 +28,7 @@ Rectangle {
     Text {
         id: text
         anchors.centerIn: parent
-        font.family: "Lomiri"
+        font.family: "Ubuntu"
         font.pixelSize: 34
         color: "#c0c0c0"
         text: "This is a scrolling text... "

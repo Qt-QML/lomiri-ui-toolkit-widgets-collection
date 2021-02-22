@@ -54,7 +54,7 @@ TestCase {
     }
 
     function test_font() {
-        verify(button.font === Qt.font({family: "Lomiri", pixelSize: FontUtils.sizeToPixels("medium")}), "Default font differs");
+        verify(button.font === Qt.font({family: "Ubuntu", pixelSize: FontUtils.sizeToPixels("medium")}), "Default font differs");
     }
 
     function test_hovered() {

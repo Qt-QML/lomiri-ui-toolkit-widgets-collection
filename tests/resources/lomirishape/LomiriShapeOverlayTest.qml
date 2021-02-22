@@ -152,7 +152,7 @@ Item {
         anchors.topMargin: 10
         anchors.left: parent.left
         anchors.leftMargin: 10
-        font.family: "Lomiri Mono"
+        font.family: "Ubuntu Mono"
         font.pixelSize: 14
         font.weight: Font.Bold
         color: "black"

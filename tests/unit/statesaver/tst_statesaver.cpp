@@ -171,7 +171,7 @@ private Q_SLOTS:
         values.insert("rect", QRect(100, 100, 200, 200));
         values.insert("size", QSize(345, 678));
         values.insert("color", QColor("blue"));
-        values.insert("font", QFont("Lomiri"));
+        values.insert("font", QFont("Ubuntu"));
         values.insert("vector2d", QVector2D(100.0, 200.0));
         values.insert("vector3d", QVector3D(100.0, 200.0, 300.0));
         values.insert("vector4d", QVector4D(100.0, 200.0, 300.0, 400.0));
