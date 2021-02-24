@@ -15,12 +15,14 @@
  */
 
 #include <QtCore/QDebug>
+#include <QtCore/QFile>
 #include <QtCore/QRegularExpression>
 #include <QtCore/QString>
 #include <QtTest/QSignalSpy>
 #include <QtTest/QTest>
 #include <LomiriToolkit/private/ucserviceproperties_p_p.h>
 
+#include "qstringliteral.h"
 #include "uctestcase.h"
 
 UT_USE_NAMESPACE
@@ -51,6 +53,14 @@ private Q_SLOTS:
 
     void initTestCase()
     {
+        // The test uses this schema, which might not be available on non-Ubuntu
+        // distros even though the AccountsService is available.
+        if (!QFile::exists(
+                    QStringLiteral("/usr/share/accountsservice/interfaces/com.ubuntu.touch.AccountsService.Sound.xml"))) {
+            error = QStringLiteral("Skip test: required schema not installed.");
+            return;
+        }
+
         // check if the connection is possible, otherwise we must skip all tests
         QScopedPointer<LomiriTestCase> test(new LomiriTestCase("IncomingCallVibrateWatcher.qml"));
         UCServiceProperties *watcher = static_cast<UCServiceProperties*>(test->rootObject()->property("service").value<QObject*>());
