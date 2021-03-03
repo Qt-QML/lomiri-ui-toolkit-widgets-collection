@@ -18,6 +18,7 @@
 
 #include <QtCore/QSysInfo>
 #include <QtCore/private/qobject_p.h>
+#include <QtGui/QOpenGLContext>
 #include <QtGui/qpa/qwindowsysteminterface.h>
 #include <LomiriToolkit/private/mousetouchadaptor_p.h>
 #include <LomiriGestures/private/ucswipearea_p_p.h>
@@ -67,11 +68,11 @@ UCTestExtras::UCTestExtras(QObject *parent) :
  */
 QString UCTestExtras::openGLflavor()
 {
-#if defined(QT_OPENGL_ES)
-    return QString("opengles2");
-#else
-    return QString("opengl");
-#endif
+    if (QOpenGLContext::openGLModuleType() == QOpenGLContext::LibGLES)
+        return QStringLiteral("opengles2");
+    else
+        return QStringLiteral("opengl");
+
 }
 
 /*!
