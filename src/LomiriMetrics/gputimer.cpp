@@ -30,8 +30,10 @@ void GPUTimer::initialize()
     DASSERT(QOpenGLContext::currentContext());
     DASSERT(m_type == Unset);
 
+    auto context = QOpenGLContext::currentContext();
+    auto functions = context->functions();
 #if !defined QT_NO_DEBUG
-    m_context = QOpenGLContext::currentContext();
+    m_context = context;
 #endif
 
 #if defined(QT_OPENGL_ES)
@@ -39,7 +41,7 @@ void GPUTimer::initialize()
         static_cast<const char*>(
             eglQueryString(eglGetCurrentDisplay(), EGL_EXTENSIONS))).split(' ');
     QList<QByteArray> glExtensions = QByteArray(
-        reinterpret_cast<const char*>(glGetString(GL_EXTENSIONS))).split(' ');
+        reinterpret_cast<const char*>(functions->glGetString(GL_EXTENSIONS))).split(' ');
 
     // KHRFence.
     if (eglExtensions.contains("EGL_KHR_fence_sync")
@@ -78,7 +80,6 @@ void GPUTimer::initialize()
     // inspect OpenGL version and extensions, which is basically as annoying as
     // doing the whole thing here.
     // TODO(loicm) Add an hasQuerycounter() method to QOpenGLTimerQuery.
-    QOpenGLContext* context = QOpenGLContext::currentContext();
     QSurfaceFormat format = context->format();
 
     // ARBTimerQuery.

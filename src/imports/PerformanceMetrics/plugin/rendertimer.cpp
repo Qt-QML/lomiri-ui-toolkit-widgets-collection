@@ -86,6 +86,8 @@ RenderTimer::~RenderTimer()
 
 bool RenderTimer::isAvailable(TimerType type)
 {
+    auto context = QOpenGLContext::currentContext();
+
     if (type == RenderTimer::Trivial) {
         return true;
 
@@ -94,14 +96,16 @@ bool RenderTimer::isAvailable(TimerType type)
         QList<QByteArray> eglExtensions = QByteArray(
             static_cast<const char*>(eglQueryString(eglGetCurrentDisplay(), EGL_EXTENSIONS))).split(' ');
         QList<QByteArray> glExtensions = QByteArray(
-            reinterpret_cast<const char*>(glGetString(GL_EXTENSIONS))).split(' ');
+            reinterpret_cast<const char*>(
+                context->functions()->glGetString(GL_EXTENSIONS))).split(' ');
         // Note the workaround for PowerVR that declares 'GL_OES_egl_sync'.
         return eglExtensions.contains("EGL_KHR_fence_sync") &&
                 (glExtensions.contains("GL_OES_EGL_sync") || glExtensions.contains("GL_OES_egl_sync"));
 
     } else if (type == RenderTimer::NVFence) {
         QList<QByteArray> glExtensions = QByteArray(
-            reinterpret_cast<const char*>(glGetString(GL_EXTENSIONS))).split(' ');
+            reinterpret_cast<const char*>(
+                context->functions()->glGetString(GL_EXTENSIONS))).split(' ');
         return glExtensions.contains("GL_NV_fence");
 #else
     } else if (type == RenderTimer::ARBTimerQuery) {
@@ -109,13 +113,11 @@ bool RenderTimer::isAvailable(TimerType type)
         // the presence of glQueryCounter() would force us to inspect OpenGL version and extensions, which
         // is basically as annoying as doing the whole thing here.
         // TODO(loicm) Add an hasQuerycounter() method to QOpenGLTimerQuery.
-        QOpenGLContext* context = QOpenGLContext::currentContext();
         QSurfaceFormat format = context->format();
         return qMakePair(format.majorVersion(), format.minorVersion()) >= qMakePair(3, 2)
                 && context->hasExtension(QByteArrayLiteral("GL_ARB_timer_query"));
 
     } else if (type == RenderTimer::EXTTimerQuery) {
-        QOpenGLContext* context = QOpenGLContext::currentContext();
         return context->hasExtension(QByteArrayLiteral("GL_EXT_timer_query"));
 #endif
     }
@@ -259,7 +261,8 @@ qint64 RenderTimer::stop()
 {
     Q_D(RenderTimer);
     if (d->m_type == RenderTimer::Trivial) {
-        glFinish();
+        auto functions = QOpenGLContext::currentContext()->functions();
+        functions->glFinish();
         return d-> m_trivialTimer.nsecsElapsed();
 #if defined(QT_OPENGL_ES)
     } else if (d->m_type == RenderTimer::KHRFence) {
