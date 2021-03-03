@@ -20,10 +20,8 @@
 
 #include <QtGui/QOpenGLFunctions>
 
-#if defined(QT_OPENGL_ES)
 #include <EGL/egl.h>
 #include <EGL/eglext.h>
-#endif
 
 #include <LomiriMetrics/private/lomirimetricsglobal_p.h>
 
@@ -61,13 +59,10 @@ private:
     enum Type {
         Unset,
         Finish,
-#if defined(QT_OPENGL_ES)
         KHRFence,
         NVFence,
-#else
         ARBTimerQuery,
         EXTTimerQuery
-#endif
     };
 
 #if !defined QT_NO_DEBUG
@@ -76,7 +71,6 @@ private:
 #endif
     Type m_type;
 
-#if defined(QT_OPENGL_ES)
     struct {
         void (QOPENGLF_APIENTRYP genFencesNV)(GLsizei n, GLuint* fences);
         void (QOPENGLF_APIENTRYP deleteFencesNV)(GLsizei n, const GLuint* fences);
@@ -94,7 +88,6 @@ private:
     } m_fenceSyncKHR;
     EGLSyncKHR m_beforeSync;
 
-#else
     struct {
         void (QOPENGLF_APIENTRYP genQueries)(GLsizei n, GLuint* ids);
         void (QOPENGLF_APIENTRYP deleteQueries)(GLsizei n, const GLuint* ids);
@@ -106,7 +99,6 @@ private:
         void (QOPENGLF_APIENTRYP queryCounter)(GLuint id, GLenum target);
     } m_timerQuery;
     GLuint m_timer[2];
-#endif
 };
 
 #endif  // GPUTIMER_P_H
