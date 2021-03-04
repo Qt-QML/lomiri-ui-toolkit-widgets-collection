@@ -64,3 +64,14 @@ endif
 	# Drop QML types used to test apicheck only
 	rm -f debian/tmp/usr/lib/*/qt5/qml/Extinct/Animals/*
 	dh_install --fail-missing
+
+override_dh_auto_clean:
+	dh_auto_clean
+
+	# Delete additional files
+	rm -rvf \
+		.cache/ \
+		.config/ \
+		.local/ \
+		xvfb.err \
+		;
