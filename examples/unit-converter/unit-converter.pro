@@ -1,5 +1,9 @@
 TEMPLATE = subdirs
 
+# Don't use Qt's internal example install system; it installs to the wrong directory.
+# This is the side effect of piggy-back on Qt's internal part building system.
+CONFIG -= qt_example_installs
+
 # specify the manifest file, this file is required for click
 # packaging and for the IDE to create runconfigurations
 LOMIRI_MANIFEST_FILE=manifest.json.in
