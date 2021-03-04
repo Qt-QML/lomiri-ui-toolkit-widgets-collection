@@ -28,11 +28,12 @@ UT_NAMESPACE_BEGIN
 class LOMIRITOOLKIT_EXPORT LomiriThemeIconProvider: public QQuickImageProvider
 {
 public:
-    LomiriThemeIconProvider(const QString &themeName = QStringLiteral("suru"));
+    LomiriThemeIconProvider(const QString &themeName = QString());
     QImage requestImage(const QString &id, QSize *size, const QSize &requestedSize) override;
 
 private:
-    QSharedPointer<class IconTheme> theme;
+    QString m_themeName;
+    QSharedPointer<class IconTheme> getTheme();
 };
 
 UT_NAMESPACE_END

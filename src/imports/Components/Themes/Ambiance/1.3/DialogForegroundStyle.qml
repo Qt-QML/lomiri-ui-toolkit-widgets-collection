@@ -23,6 +23,6 @@ Item {
     LomiriShape {
         id: background
         anchors.fill: parent
-        backgroundColor: theme.palette.normal.overlay
+        backgroundColor: theme.palette.normal.background
     }
 }

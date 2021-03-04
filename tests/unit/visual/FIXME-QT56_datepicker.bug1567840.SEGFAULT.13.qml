@@ -543,9 +543,7 @@ Item {
         }
 
         function test_4_linearSecondsPicker() {
-            // skip the test temporaily
-            // https://bugs.launchpad.net/lomiri-ui-toolkit/+bug/1315241
-            skip("Disabled due to flakyness on ppc64el target");
+            // https://bugs.launchpad.net/ubuntu-ui-toolkit/+bug/1315241
             picker.mode = "Hours|Minutes|Seconds";
             var date = setHMS(new Date(), 12, 10, 45);
             var minDate = setHMS(new Date(), 12, 10, 1);
