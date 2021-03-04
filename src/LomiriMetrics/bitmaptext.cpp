@@ -26,11 +26,14 @@
 #include "lomirimetricsglobal_p.h"
 
 static const GLchar* bitmapTextVertexShaderSource =
-#if !defined(QT_OPENGL_ES_2)
-    "#define highp \n"
-    "#define mediump \n"
-    "#define lowp \n"
-#endif
+    // See "The OpenGL® ES Shading Language", section 3.4 Preprocessor,
+    // for "GL_ES" macro.
+    // https://www.khronos.org/registry/OpenGL/specs/es/2.0/GLSL_ES_Specification_1.00.pdf
+    "#ifndef GL_ES \n"
+    "#  define highp \n"
+    "#  define mediump \n"
+    "#  define lowp \n"
+    "#endif \n"
     "attribute highp vec4 positionAttrib; \n"
     "attribute mediump vec2 textureCoordAttrib; \n"
     "varying mediump vec2 textureCoord; \n"
@@ -42,11 +45,11 @@ static const GLchar* bitmapTextVertexShaderSource =
     "} \n";
 
 static const GLchar* bitmapTextFragmentShaderSource =
-#if !defined(QT_OPENGL_ES_2)
-    "#define highp \n"
-    "#define mediump \n"
-    "#define lowp \n"
-#endif
+    "#ifndef GL_ES \n"
+    "#  define highp \n"
+    "#  define mediump \n"
+    "#  define lowp \n"
+    "#endif \n"
     "varying mediump vec2 textureCoord; \n"
     "uniform sampler2D texture; \n"
     "uniform lowp float opacity; \n"
@@ -100,7 +103,7 @@ static GLuint createProgram(QOpenGLFunctions* functions, const char* vertexShade
     vertexShader = functions->glCreateShader(GL_VERTEX_SHADER);
     fragmentShader = functions->glCreateShader(GL_FRAGMENT_SHADER);
     if (vertexShader == 0 || fragmentShader == 0) {
-        WARN("ApplicationMonitor: glCreateShader() failed (OpenGL error: %d).", glGetError());
+        WARN("ApplicationMonitor: glCreateShader() failed (OpenGL error: %d).", functions->glGetError());
         return 0;
     }
 

@@ -1,4 +1,5 @@
 QT *= qml quick
+CONFIG += egl
 
 # Input
 SOURCES += \
@@ -16,7 +17,3 @@ HEADERS += \
     $$PWD/upmrenderingtimes.h \
     $$PWD/upmcpuusage.h \
     $$PWD/rendertimer.h
-
-contains(QT_CONFIG, opengles2) {
-    CONFIG += egl
-}

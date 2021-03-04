@@ -100,7 +100,7 @@ void ShapeShader::updateState(
     const ShapeMaterial::Data* data = material->constData();
 
     // Bind shape texture.
-    glBindTexture(GL_TEXTURE_2D, material->textureIds()[data->shapeTextureIndex]);
+    m_functions->glBindTexture(GL_TEXTURE_2D, material->textureIds()[data->shapeTextureIndex]);
 
     // Bind source texture on the 2nd texture unit and update uniforms.
     bool textured = false;
@@ -161,31 +161,33 @@ void ShapeShader::updateState(
 // Create and setup shape textures.
 static void createShapeTextures(QOpenGLContext* openglContext, quint32* ids)
 {
-    glGenTextures(shapeTextureCount, ids);
+    auto functions = openglContext->functions();
+
+    functions->glGenTextures(shapeTextureCount, ids);
 
     if (UCLomiriShape::useDistanceFields(openglContext)) {
         // Create distance field textures.
         for (int i = 0; i < shapeTextureCount; i++) {
-            glBindTexture(GL_TEXTURE_2D, ids[i]);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, shapeTextureWidth, shapeTextureHeight, 0,
-                         GL_RGBA, GL_UNSIGNED_BYTE, shapeTextureData[i]);
+            functions->glBindTexture(GL_TEXTURE_2D, ids[i]);
+            functions->glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+            functions->glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+            functions->glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+            functions->glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+            functions->glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, shapeTextureWidth, shapeTextureHeight, 0,
+                                    GL_RGBA, GL_UNSIGNED_BYTE, shapeTextureData[i]);
         }
     } else {
         // Create mipmap textures.
         for (int i = 0; i < shapeTextureCount; i++) {
-            glBindTexture(GL_TEXTURE_2D, ids[i]);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+            functions->glBindTexture(GL_TEXTURE_2D, ids[i]);
+            functions->glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+            functions->glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+            functions->glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+            functions->glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR_MIPMAP_LINEAR);
             for (int j = 0; j < shapeTextureMipmapCount; j++) {
-                glTexImage2D(GL_TEXTURE_2D, j, GL_RGBA, shapeTextureMipmapWidth >> j,
-                             shapeTextureMipmapHeight >> j, 0, GL_RGBA, GL_UNSIGNED_BYTE,
-                             &shapeTextureMipmapData[i][shapeTextureMipmapOffset[j]]);
+                functions->glTexImage2D(GL_TEXTURE_2D, j, GL_RGBA, shapeTextureMipmapWidth >> j,
+                                        shapeTextureMipmapHeight >> j, 0, GL_RGBA, GL_UNSIGNED_BYTE,
+                                        &shapeTextureMipmapData[i][shapeTextureMipmapOffset[j]]);
             }
         }
     }
@@ -226,11 +228,14 @@ ShapeMaterial::ShapeMaterial()
 
 ShapeMaterial::~ShapeMaterial()
 {
+    auto context = QOpenGLContext::currentContext();
+    auto functions = context->functions();
+
     shapeTexturesHashMutex.lock();
-    auto it = shapeTexturesHash.find(QOpenGLContext::currentContext());
+    auto it = shapeTexturesHash.find(context);
     Q_ASSERT(it != shapeTexturesHash.end());
     if (it.value().unref() == 0) {
-        glDeleteTextures(shapeTextureCount, it.value().ids());
+        functions->glDeleteTextures(shapeTextureCount, it.value().ids());
         shapeTexturesHash.erase(it);
     }
     shapeTexturesHashMutex.unlock();

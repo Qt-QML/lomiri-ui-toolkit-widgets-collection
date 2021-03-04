@@ -36,13 +36,10 @@ public:
     enum TimerType {
         Automatic,
         Trivial,
-#if defined(QT_OPENGL_ES)
         KHRFence,
         NVFence,
-#else
         ARBTimerQuery,
         EXTTimerQuery
-#endif
     };
 
     explicit RenderTimer(QObject* parent = 0);

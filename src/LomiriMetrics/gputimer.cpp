@@ -21,8 +21,12 @@
 
 #include "lomirimetricsglobal_p.h"
 
-#if !defined(QT_OPENGL_ES) && !defined(GL_TIME_ELAPSED)
+#if !defined(GL_TIME_ELAPSED)
 #define GL_TIME_ELAPSED 0x88BF  // For GL_EXT_timer_query.
+#endif
+
+#if !defined(GL_TIMESTAMP)
+#define GL_TIMESTAMP 0x8E28
 #endif
 
 void GPUTimer::initialize()
@@ -30,35 +34,84 @@ void GPUTimer::initialize()
     DASSERT(QOpenGLContext::currentContext());
     DASSERT(m_type == Unset);
 
+    auto context = QOpenGLContext::currentContext();
 #if !defined QT_NO_DEBUG
-    m_context = QOpenGLContext::currentContext();
+    m_context = context;
 #endif
 
-#if defined(QT_OPENGL_ES)
-    QList<QByteArray> eglExtensions = QByteArray(
-        static_cast<const char*>(
-            eglQueryString(eglGetCurrentDisplay(), EGL_EXTENSIONS))).split(' ');
-    QList<QByteArray> glExtensions = QByteArray(
-        reinterpret_cast<const char*>(glGetString(GL_EXTENSIONS))).split(' ');
+    QSurfaceFormat format = context->format();
 
-    // KHRFence.
-    if (eglExtensions.contains("EGL_KHR_fence_sync")
-        && (glExtensions.contains("GL_OES_EGL_sync")
-            || glExtensions.contains("GL_OES_egl_sync") /*PowerVR fix*/)) {
-        m_fenceSyncKHR.createSyncKHR = reinterpret_cast<
-            EGLSyncKHR (QOPENGLF_APIENTRYP)(EGLDisplay, EGLenum, const EGLint*)>(
-                eglGetProcAddress("eglCreateSyncKHR"));
-        m_fenceSyncKHR.destroySyncKHR = reinterpret_cast<
-            EGLBoolean (QOPENGLF_APIENTRYP)(EGLDisplay, EGLSyncKHR)>(
-                eglGetProcAddress("eglDestroySyncKHR"));
-        m_fenceSyncKHR.clientWaitSyncKHR = reinterpret_cast<
-            EGLint (QOPENGLF_APIENTRYP)(EGLDisplay, EGLSyncKHR, EGLint, EGLTimeKHR)>(
-                eglGetProcAddress("eglClientWaitSyncKHR"));
-        m_type = KHRFence;
-        DLOG("GPUTimer is based on GL_OES_EGL_sync");
+    if (format.renderableType() == QSurfaceFormat::OpenGLES) {
+        QList<QByteArray> eglExtensions = QByteArray(
+            static_cast<const char*>(
+                eglQueryString(eglGetCurrentDisplay(), EGL_EXTENSIONS))).split(' ');
 
-    // NVFence.
-    } else if (glExtensions.contains("GL_NV_fence")) {
+        // KHRFence.
+        if (eglExtensions.contains("EGL_KHR_fence_sync")
+            && (context->hasExtension(QByteArrayLiteral("GL_OES_EGL_sync"))
+                || context->hasExtension(QByteArrayLiteral("GL_OES_egl_sync")) /*PowerVR fix*/)) {
+            m_fenceSyncKHR.createSyncKHR = reinterpret_cast<
+                EGLSyncKHR (QOPENGLF_APIENTRYP)(EGLDisplay, EGLenum, const EGLint*)>(
+                    eglGetProcAddress("eglCreateSyncKHR"));
+            m_fenceSyncKHR.destroySyncKHR = reinterpret_cast<
+                EGLBoolean (QOPENGLF_APIENTRYP)(EGLDisplay, EGLSyncKHR)>(
+                    eglGetProcAddress("eglDestroySyncKHR"));
+            m_fenceSyncKHR.clientWaitSyncKHR = reinterpret_cast<
+                EGLint (QOPENGLF_APIENTRYP)(EGLDisplay, EGLSyncKHR, EGLint, EGLTimeKHR)>(
+                    eglGetProcAddress("eglClientWaitSyncKHR"));
+            m_type = KHRFence;
+            DLOG("GPUTimer is based on GL_OES_EGL_sync");
+            return;
+        }
+    }
+
+    if (format.renderableType() == QSurfaceFormat::OpenGL) {
+        // We could use the thin QOpenGLTimerQuery wrapper from Qt 5.1, but the lack
+        // of a method to check the presence of glQueryCounter() would force us to
+        // inspect OpenGL version and extensions, which is basically as annoying as
+        // doing the whole thing here.
+        // TODO(loicm) Add an hasQuerycounter() method to QOpenGLTimerQuery.
+
+        // ARBTimerQuery.
+        if (qMakePair(format.majorVersion(), format.minorVersion()) >= qMakePair(3, 2)
+            && context->hasExtension(QByteArrayLiteral("GL_ARB_timer_query"))) {
+            m_timerQuery.genQueries = reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLsizei, GLuint*)>(
+                context->getProcAddress("glGenQueries"));
+            m_timerQuery.deleteQueries =
+                reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLsizei, const GLuint*)>(
+                    context->getProcAddress("glDeleteQueries"));
+            m_timerQuery.getQueryObjectui64v =
+                reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLuint, GLenum, GLuint64*)>(
+                    context->getProcAddress("glGetQueryObjectui64v"));
+            m_timerQuery.queryCounter = reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLuint, GLenum)>(
+                context->getProcAddress("glQueryCounter"));
+            m_timerQuery.genQueries(2, m_timer);
+            m_type = ARBTimerQuery;
+            DLOG("GPUTimer is based on GL_ARB_timer_query");
+            return;
+        // EXTTimerQuery.
+        } else if (context->hasExtension(QByteArrayLiteral("GL_EXT_timer_query"))) {
+            m_timerQuery.genQueries = reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLsizei, GLuint*)>(
+                context->getProcAddress("glGenQueries"));
+            m_timerQuery.deleteQueries =
+                reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLsizei, const GLuint*)>(
+                    context->getProcAddress("glDeleteQueries"));
+            m_timerQuery.beginQuery = reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLenum, GLuint)>(
+                context->getProcAddress("glBeginQuery"));
+            m_timerQuery.endQuery = reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLenum)>(
+                context->getProcAddress("glEndQuery"));
+            m_timerQuery.getQueryObjectui64vExt =
+                reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLuint, GLenum, GLuint64EXT*)>(
+                    context->getProcAddress("glGetQueryObjectui64vEXT"));
+            m_timerQuery.genQueries(1, m_timer);
+            m_type = EXTTimerQuery;
+            DLOG("GPUTimer is based on GL_EXT_timer_query");
+            return;
+        }
+    }
+
+    // NVFence. Might be implemented by OpenGL or OpenGL ES implemenntations.
+    if (context->hasExtension(QByteArrayLiteral("GL_NV_fence"))) {
         m_fenceNV.genFencesNV = reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLsizei, GLuint*)>(
             eglGetProcAddress("glGenFencesNV"));
         m_fenceNV.deleteFencesNV =
@@ -71,57 +124,11 @@ void GPUTimer::initialize()
         m_fenceNV.genFencesNV(2, m_fence);
         m_type = NVFence;
         DLOG("GPUTimer is based on GL_NV_fence");
+        return;
     }
-#else
-    // We could use the thin QOpenGLTimerQuery wrapper from Qt 5.1, but the lack
-    // of a method to check the presence of glQueryCounter() would force us to
-    // inspect OpenGL version and extensions, which is basically as annoying as
-    // doing the whole thing here.
-    // TODO(loicm) Add an hasQuerycounter() method to QOpenGLTimerQuery.
-    QOpenGLContext* context = QOpenGLContext::currentContext();
-    QSurfaceFormat format = context->format();
 
-    // ARBTimerQuery.
-    if (qMakePair(format.majorVersion(), format.minorVersion()) >= qMakePair(3, 2)
-        && context->hasExtension(QByteArrayLiteral("GL_ARB_timer_query"))) {
-        m_timerQuery.genQueries = reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLsizei, GLuint*)>(
-            context->getProcAddress("glGenQueries"));
-        m_timerQuery.deleteQueries =
-            reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLsizei, const GLuint*)>(
-                context->getProcAddress("glDeleteQueries"));
-        m_timerQuery.getQueryObjectui64v =
-            reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLuint, GLenum, GLuint64*)>(
-                context->getProcAddress("glGetQueryObjectui64v"));
-        m_timerQuery.queryCounter = reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLuint, GLenum)>(
-            context->getProcAddress("glQueryCounter"));
-        m_timerQuery.genQueries(2, m_timer);
-        m_type = ARBTimerQuery;
-        DLOG("GPUTimer is based on GL_ARB_timer_query");
-
-    // EXTTimerQuery.
-    } else if (context->hasExtension(QByteArrayLiteral("GL_EXT_timer_query"))) {
-        m_timerQuery.genQueries = reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLsizei, GLuint*)>(
-            context->getProcAddress("glGenQueries"));
-        m_timerQuery.deleteQueries =
-            reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLsizei, const GLuint*)>(
-                context->getProcAddress("glDeleteQueries"));
-        m_timerQuery.beginQuery = reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLenum, GLuint)>(
-            context->getProcAddress("glBeginQuery"));
-        m_timerQuery.endQuery = reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLenum)>(
-            context->getProcAddress("glEndQuery"));
-        m_timerQuery.getQueryObjectui64vExt =
-            reinterpret_cast<void (QOPENGLF_APIENTRYP)(GLuint, GLenum, GLuint64EXT*)>(
-                context->getProcAddress("glGetQueryObjectui64vEXT"));
-        m_timerQuery.genQueries(1, m_timer);
-        m_type = EXTTimerQuery;
-        DLOG("GPUTimer is based on GL_EXT_timer_query");
-    }
-#endif
-
-    else {
-        m_type = Finish;
-        DLOG("GPUTimer is based on glFinish");
-    }
+    m_type = Finish;
+    DLOG("GPUTimer is based on glFinish");
 }
 
 void GPUTimer::finalize()
@@ -133,7 +140,6 @@ void GPUTimer::finalize()
     m_context = nullptr;
 #endif
 
-#if defined(QT_OPENGL_ES)
     // KHRFence.
     if (m_type == KHRFence) {
         if (m_beforeSync != EGL_NO_SYNC_KHR) {
@@ -146,9 +152,9 @@ void GPUTimer::finalize()
         m_fenceNV.deleteFencesNV(2, m_fence);
         m_type = Unset;
     }
-#else
+
     // ARBTimerQuery.
-    if (m_type == ARBTimerQuery) {
+    else if (m_type == ARBTimerQuery) {
         m_timerQuery.deleteQueries(2, m_timer);
         m_type = Unset;
 
@@ -157,7 +163,6 @@ void GPUTimer::finalize()
         m_timerQuery.deleteQueries(1, m_timer);
         m_type = Unset;
     }
-#endif
 }
 
 void GPUTimer::start()
@@ -170,7 +175,6 @@ void GPUTimer::start()
     m_started = true;
 #endif
 
-#if defined(QT_OPENGL_ES)
     // KHRFence.
     if (m_type == KHRFence) {
         m_beforeSync = m_fenceSyncKHR.createSyncKHR(
@@ -180,16 +184,15 @@ void GPUTimer::start()
     } else if (m_type == NVFence) {
         m_fenceNV.setFenceNV(m_fence[0], GL_ALL_COMPLETED_NV);
     }
-#else
+
     // ARBTimerQuery.
-    if (m_type == ARBTimerQuery) {
+    else if (m_type == ARBTimerQuery) {
         m_timerQuery.queryCounter(m_timer[0], GL_TIMESTAMP);
 
     // EXTTimerQuery.
     } else if (m_type == EXTTimerQuery) {
         m_timerQuery.beginQuery(GL_TIME_ELAPSED, m_timer[0]);
     }
-#endif
 }
 
 quint64 GPUTimer::stop()
@@ -202,7 +205,6 @@ quint64 GPUTimer::stop()
     m_started = false;
 #endif
 
-#if defined(QT_OPENGL_ES)
     // KHRFence.
     if (m_type == KHRFence) {
         QElapsedTimer timer;
@@ -235,9 +237,9 @@ quint64 GPUTimer::stop()
         quint64 afterTime = timer.nsecsElapsed();
         return afterTime - beforeTime;
     }
-#else
+
     // ARBTimerQuery.
-    if (m_type == ARBTimerQuery) {
+    else if (m_type == ARBTimerQuery) {
         GLuint64 time[2] = { 0, 0 };
         m_timerQuery.queryCounter(m_timer[1], GL_TIMESTAMP);
         m_timerQuery.getQueryObjectui64v(m_timer[0], GL_QUERY_RESULT, &time[0]);
@@ -255,7 +257,7 @@ quint64 GPUTimer::stop()
         m_timerQuery.getQueryObjectui64vExt(m_timer[0], GL_QUERY_RESULT, &time);
         return time;
     }
-#endif
+
     // Finish.
     else {
         QOpenGLFunctions* functions = QOpenGLContext::currentContext()->functions();

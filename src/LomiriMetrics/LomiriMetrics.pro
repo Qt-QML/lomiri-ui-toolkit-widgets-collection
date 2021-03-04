@@ -2,10 +2,8 @@ TARGET = LomiriMetrics
 QT = core-private gui-private quick-private
 LIBS += -ldl
 
-contains(QT_CONFIG, opengles2) {
-    CONFIG += egl
-    DEFINES += MESA_EGL_NO_X11_HEADERS
-}
+CONFIG += egl
+DEFINES += MESA_EGL_NO_X11_HEADERS EGL_NO_X11
 
 linux {
     DEFINES += \
