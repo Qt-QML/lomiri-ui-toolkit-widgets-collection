@@ -26,7 +26,7 @@ Item {
     property real minimumWidth: units.gu(10)
     property real horizontalPadding: units.gu(1)
     property color defaultColor: "#666666"
-    property font defaultFont: Qt.font({family: "Lomiri", pixelSize: FontUtils.sizeToPixels("medium")})
+    property font defaultFont: Qt.font({family: "Ubuntu", pixelSize: FontUtils.sizeToPixels("medium")})
     property Gradient defaultGradient
     property real buttonFaceOffset: 0
     property bool stroke: button.hasOwnProperty("strokeColor") && button.strokeColor != Qt.rgba(0.0, 0.0, 0.0, 0.0)
