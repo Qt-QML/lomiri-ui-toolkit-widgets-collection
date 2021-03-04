@@ -1,7 +1,13 @@
 TEMPLATE = app
 LIBS += -llttng-ust -ldl
 CONFIG += -I.
-QMAKE_CXXFLAGS += -Werror
+
+# warnings_are_errors depending on the compiler version, sometimes it doesn't
+# add the required flags (for instance for recent clang version on old Qt).
+warnings_are_errors:!contains(QMAKE_CXXFLAGS_WARN_ON, -Werror){
+    QMAKE_CXXFLAGS_WARN_ON += -Werror
+}
+
 HEADERS += app-launch-tracepoints.h
 SOURCES += app-launch-tracepoints.c
 TARGET = app-launch-tracepoints

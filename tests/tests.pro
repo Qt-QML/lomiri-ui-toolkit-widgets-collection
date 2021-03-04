@@ -10,5 +10,4 @@ INSTALLS += autopilot_module
 
 OTHER_FILES += qmlapicheck.sh
 
-check.commands += $$PWD/packaging-sorting.sh || exit 1;
 check.commands += $$PWD/qmlapicheck.sh || exit 1;

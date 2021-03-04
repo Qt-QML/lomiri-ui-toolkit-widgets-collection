@@ -11,6 +11,8 @@ DEB_HOST_MULTI_ARCH ?= $(shell dpkg-architecture -qDEB_BUILD_MULTIARCH)
 DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
 DEB_HOST_SERIES ?= $(shell lsb_release -c -s)
 
+# Enforce -Werror for an upstream build.
+CONFIGURE_OPTS := CONFIG+=warnings_are_errors
 ifneq ($(DEB_BUILD_GNU_TYPE),$(DEB_HOST_GNU_TYPE))
 	# Cross compiling
 	CONFIGURE_OPTS += "CONFIG+=no_docs" "CONFIG+=cross_compile"
