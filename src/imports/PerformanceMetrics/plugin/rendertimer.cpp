@@ -28,6 +28,10 @@
 #define GL_TIME_ELAPSED 0x88BF
 #endif
 
+#if !defined(GL_TIMESTAMP)
+#define GL_TIMESTAMP 0x8E28
+#endif
+
 class RenderTimerPrivate
 {
 public:

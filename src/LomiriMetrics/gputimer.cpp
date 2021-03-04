@@ -25,6 +25,10 @@
 #define GL_TIME_ELAPSED 0x88BF  // For GL_EXT_timer_query.
 #endif
 
+#if !defined(GL_TIMESTAMP)
+#define GL_TIMESTAMP 0x8E28
+#endif
+
 void GPUTimer::initialize()
 {
     DASSERT(QOpenGLContext::currentContext());
