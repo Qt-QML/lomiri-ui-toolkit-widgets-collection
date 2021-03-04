@@ -960,7 +960,7 @@ private Q_SLOTS:
 
         UCBottomEdgePrivate *d = UCBottomEdgePrivate::get(bottomEdge);
         for (int i = 0; i < d->regions.size(); i++) {
-            QVERIFY(UCBottomEdgeRegionPrivate::get(d->regions[i])->contentItem);
+            QTRY_VERIFY(UCBottomEdgeRegionPrivate::get(d->regions[i])->contentItem);
         }
 
         // set preloadContent: false

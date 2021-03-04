@@ -662,6 +662,107 @@ Lomiri.Metrics.LoggingFilters: Flag
     GenericEvent
     ProcessEvent
     WindowEvent
+Lomiri.Components.Lomiri 1.2: QtObject singleton
+Lomiri.Components.Lomiri 1.3: Lomiri singleton
+    function ushort version(uchar major, uchar minor)
+    readonly property ushort toolkitVersion
+    readonly property ushort toolkitVersionMajor
+    readonly property ushort toolkitVersionMinor
+Lomiri.Components.LomiriAnimation 1.0 0.1: QtObject singleton
+    readonly property int BriskDuration
+    readonly property int FastDuration
+    readonly property int SleepyDuration
+    readonly property int SlowDuration
+    readonly property int SnapDuration
+    readonly property QEasingCurve StandardEasing
+    readonly property QEasingCurve StandardEasingReverse
+Lomiri.Components.LomiriColors 1.0 0.1: QtObject singleton
+    readonly property color coolGrey
+    readonly property color darkAubergine
+    property Gradient greyGradient
+    readonly property color lightAubergine
+    readonly property color midAubergine
+    readonly property color orange
+    property Gradient orangeGradient
+    readonly property color warmGrey
+Lomiri.Components.LomiriColors 1.1: QtObject singleton
+    readonly property color blue
+    readonly property color coolGrey
+    readonly property color darkAubergine
+    readonly property color darkGrey
+    readonly property color green
+    property Gradient greyGradient
+    readonly property color lightAubergine
+    readonly property color lightGrey
+    readonly property color midAubergine
+    readonly property color orange
+    property Gradient orangeGradient
+    readonly property color purple
+    readonly property color red
+    readonly property color warmGrey
+Lomiri.Components.LomiriColors 1.3: QtObject singleton
+    readonly property color ash
+    readonly property color blue
+    readonly property color coolGrey
+    readonly property color darkAubergine
+    readonly property color darkGrey
+    readonly property color graphite
+    readonly property color green
+    property Gradient greyGradient
+    readonly property color inkstone
+    readonly property color jet
+    readonly property color lightAubergine
+    readonly property color lightBlue
+    readonly property color lightGreen
+    readonly property color lightGrey
+    readonly property color lightRed
+    readonly property color midAubergine
+    readonly property color orange
+    property Gradient orangeGradient
+    readonly property color porcelain
+    readonly property color purple
+    readonly property color red
+    readonly property color silk
+    readonly property color slate
+    readonly property color warmGrey
+Lomiri.Components.LomiriListView 1.0 0.1: ListView
+    property int expandedIndex
+Lomiri.Components.LomiriListView 1.1 LomiriListView11: LomiriListView
+    readonly property PullToRefresh pullToRefresh
+Lomiri.Components.LomiriListView 1.3: ListView
+    property int expandedIndex
+    readonly property PullToRefresh pullToRefresh
+Lomiri.Components.LomiriNumberAnimation 1.0 0.1: PropertyAnimation
+Lomiri.Components.LomiriNumberAnimation 1.3: PropertyAnimation
+Lomiri.Components.LomiriShapeOverlay 1.2 UCLomiriShapeOverlay: Shape
+    property color overlayColor
+    property QRectF overlayRect
+Lomiri.Test.LomiriTestCase 1.0 0.1: TestCase
+    function var findChild(var obj, var objectName)
+    function var findInvisibleChild(var obj, var objectName)
+    function var findChildWithProperty(var item, var property, var value)
+    function var centerOf(var item)
+    function var mouseMoveSlowly(var item, var x, var y, var dx, var dy, var steps, var stepdelay, var buttons)
+    function var flick(var item, var x, var y, var dx, var dy, var pressTimeout, var steps, var button, var modifiers, var delay)
+    function var mouseLongPress(var item, var x, var y, var button, var modifiers, var delay)
+    function var tryCompareFunction(var func, var expectedResult, var timeout)
+    function var typeString(var string)
+    function var warningFormat(var line, var column, var message)
+    function var waitForHeaderAnimation(var mainView)
+    readonly property QuickTestUtil testUtil
+Lomiri.Test.LomiriTestCase 1.3 LomiriTestCase13: TestCase
+    function var findChild(var obj, var objectName)
+    function var findInvisibleChild(var obj, var objectName)
+    function var findChildWithProperty(var item, var property, var value)
+    function var centerOf(var item)
+    function var mouseMoveSlowly(var item, var x, var y, var dx, var dy, var steps, var stepdelay, var buttons)
+    function var flick(var item, var x, var y, var dx, var dy, var pressTimeout, var steps, var button, var modifiers, var delay)
+    function var mouseLongPress(var item, var x, var y, var button, var modifiers, var delay)
+    function var tryCompareFunction(var func, var expectedResult, var timeout)
+    function var typeString(var string)
+    function var warningFormat(var line, var column, var message)
+    function var waitForHeaderAnimation(var mainView)
+    readonly property QuickTestUtil testUtil
 Lomiri.Components.MainView 1.0 0.1: MainViewBase
     property bool automaticOrientation
     default property list<QtObject> contentsItem
@@ -1076,7 +1177,7 @@ Lomiri.Components.ProgressionSlot 1.3: Item
     property color keyColor
     property string name
     property url source
-Lomiri.Components.ProportionalShape 1.3 UCProportionalShape: LomiriShape
+Lomiri.Components.ProportionalShape 1.3 UCProportionalShape: Shape
 Lomiri.Components.PullToRefresh 1.1: StyledItem
     property Component content
     signal refresh()
@@ -1135,6 +1236,29 @@ Lomiri.Components.ServiceType: Enum
     Session
     System
     Undefined
+Lomiri.Components.Shape 1.0 0.1 LomiriShape 1.3 1.2 1.0 0.1 UCLomiriShape: Item
+    property Aspect aspect 1.0
+    property color backgroundColor 1.0
+    property BackgroundMode backgroundMode 1.0
+    property string borderSource
+    property color color
+    property color gradientColor
+    property HAlignment horizontalAlignment
+    property var image
+    property string radius
+    property double relativeRadius 1.0
+    property color secondaryBackgroundColor 1.0
+    property var source 1.0
+    property FillMode sourceFillMode 1.0
+    property HAlignment sourceHorizontalAlignment 1.0
+    property WrapMode sourceHorizontalWrapMode 1.0
+    property double sourceOpacity 1.0
+    property vector2d sourceScale 1.0
+    property vector2d sourceTranslation 1.0
+    property VAlignment sourceVerticalAlignment 1.0
+    property WrapMode sourceVerticalWrapMode 1.0
+    property bool stretched
+    property VAlignment verticalAlignment
 Lomiri.Components.Popups.SheetBase 1.0 0.1: PopupBase
     default property list<QtObject> container
     property double contentsHeight
@@ -1681,130 +1805,6 @@ UPMGraphModel: QtObject
     readonly property QImage image
     property int samples
     readonly property int shift
-Lomiri.Components.Lomiri 1.2: QtObject singleton
-Lomiri.Components.Lomiri 1.3: Lomiri singleton
-    function ushort version(uchar major, uchar minor)
-    readonly property ushort toolkitVersion
-    readonly property ushort toolkitVersionMajor
-    readonly property ushort toolkitVersionMinor
-Lomiri.Components.LomiriAnimation 1.0 0.1: QtObject singleton
-    readonly property int BriskDuration
-    readonly property int FastDuration
-    readonly property int SleepyDuration
-    readonly property int SlowDuration
-    readonly property int SnapDuration
-    readonly property QEasingCurve StandardEasing
-    readonly property QEasingCurve StandardEasingReverse
-Lomiri.Components.LomiriColors 1.0 0.1: QtObject singleton
-    readonly property color coolGrey
-    readonly property color darkAubergine
-    property Gradient greyGradient
-    readonly property color lightAubergine
-    readonly property color midAubergine
-    readonly property color orange
-    property Gradient orangeGradient
-    readonly property color warmGrey
-Lomiri.Components.LomiriColors 1.1: QtObject singleton
-    readonly property color blue
-    readonly property color coolGrey
-    readonly property color darkAubergine
-    readonly property color darkGrey
-    readonly property color green
-    property Gradient greyGradient
-    readonly property color lightAubergine
-    readonly property color lightGrey
-    readonly property color midAubergine
-    readonly property color orange
-    property Gradient orangeGradient
-    readonly property color purple
-    readonly property color red
-    readonly property color warmGrey
-Lomiri.Components.LomiriColors 1.3: QtObject singleton
-    readonly property color ash
-    readonly property color blue
-    readonly property color coolGrey
-    readonly property color darkAubergine
-    readonly property color darkGrey
-    readonly property color graphite
-    readonly property color green
-    property Gradient greyGradient
-    readonly property color inkstone
-    readonly property color jet
-    readonly property color lightAubergine
-    readonly property color lightBlue
-    readonly property color lightGreen
-    readonly property color lightGrey
-    readonly property color lightRed
-    readonly property color midAubergine
-    readonly property color orange
-    property Gradient orangeGradient
-    readonly property color porcelain
-    readonly property color purple
-    readonly property color red
-    readonly property color silk
-    readonly property color slate
-    readonly property color warmGrey
-Lomiri.Components.LomiriListView 1.0 0.1: ListView
-    property int expandedIndex
-Lomiri.Components.LomiriListView 1.1 LomiriListView11: LomiriListView
-    readonly property PullToRefresh pullToRefresh
-Lomiri.Components.LomiriListView 1.3: ListView
-    property int expandedIndex
-    readonly property PullToRefresh pullToRefresh
-Lomiri.Components.LomiriNumberAnimation 1.0 0.1: PropertyAnimation
-Lomiri.Components.LomiriNumberAnimation 1.3: PropertyAnimation
-Lomiri.Components.LomiriShape 1.3 1.2 1.0 0.1 Shape 1.0 0.1 UCLomiriShape: Item
-    property Aspect aspect 1.3
-    property color backgroundColor 1.3
-    property BackgroundMode backgroundMode 1.3
-    property string borderSource
-    property color color
-    property color gradientColor
-    property HAlignment horizontalAlignment
-    property var image
-    property string radius
-    property double relativeRadius 1.3
-    property color secondaryBackgroundColor 1.3
-    property var source 1.3
-    property FillMode sourceFillMode 1.3
-    property HAlignment sourceHorizontalAlignment 1.3
-    property WrapMode sourceHorizontalWrapMode 1.3
-    property double sourceOpacity 1.3
-    property vector2d sourceScale 1.3
-    property vector2d sourceTranslation 1.3
-    property VAlignment sourceVerticalAlignment 1.3
-    property WrapMode sourceVerticalWrapMode 1.3
-    property bool stretched
-    property VAlignment verticalAlignment
-Lomiri.Components.LomiriShapeOverlay 1.2 UCLomiriShapeOverlay: LomiriShape
-    property color overlayColor
-    property QRectF overlayRect
-Lomiri.Test.LomiriTestCase 1.0 0.1: TestCase
-    function var findChild(var obj, var objectName)
-    function var findInvisibleChild(var obj, var objectName)
-    function var findChildWithProperty(var item, var property, var value)
-    function var centerOf(var item)
-    function var mouseMoveSlowly(var item, var x, var y, var dx, var dy, var steps, var stepdelay, var buttons)
-    function var flick(var item, var x, var y, var dx, var dy, var pressTimeout, var steps, var button, var modifiers, var delay)
-    function var mouseLongPress(var item, var x, var y, var button, var modifiers, var delay)
-    function var tryCompareFunction(var func, var expectedResult, var timeout)
-    function var typeString(var string)
-    function var warningFormat(var line, var column, var message)
-    function var waitForHeaderAnimation(var mainView)
-    readonly property QuickTestUtil testUtil
-Lomiri.Test.LomiriTestCase 1.3 LomiriTestCase13: TestCase
-    function var findChild(var obj, var objectName)
-    function var findInvisibleChild(var obj, var objectName)
-    function var findChildWithProperty(var item, var property, var value)
-    function var centerOf(var item)
-    function var mouseMoveSlowly(var item, var x, var y, var dx, var dy, var steps, var stepdelay, var buttons)
-    function var flick(var item, var x, var y, var dx, var dy, var pressTimeout, var steps, var button, var modifiers, var delay)
-    function var mouseLongPress(var item, var x, var y, var button, var modifiers, var delay)
-    function var tryCompareFunction(var func, var expectedResult, var timeout)
-    function var typeString(var string)
-    function var warningFormat(var line, var column, var message)
-    function var waitForHeaderAnimation(var mainView)
-    readonly property QuickTestUtil testUtil
 Lomiri.Components.UriHandler 1.0 0.1: QtObject singleton
     signal opened(QStringList uris)
 Lomiri.Components.VAlignment: Enum

@@ -24,6 +24,7 @@
 #include <LomiriToolkit/private/inversemouseareatype_p.h>
 #include <LomiriToolkit/private/ucunits_p.h>
 
+#include "QtTest/qtestcase.h"
 #include "uctestcase.h"
 #include "uctestextras.h"
 
@@ -132,8 +133,13 @@ private Q_SLOTS:
         QList<QQuickWindow *> l = quickView->rootObject()->findChildren<QQuickWindow*>("isawindow");
         QVERIFY(l.count());
 
-        // make sure we have the clickArea present
-        quickView->findItem<QQuickItem*>("clickArea");
+        // make sure we have the clickArea and ima present
+        auto clickArea = quickView->findItem<QQuickItem*>("clickArea");
+        auto ima = quickView->findItem<QQuickItem*>("ima");
+
+        // Wait until anchor positioning is completed, which can take more than
+        // 1 event loop iteration.
+        QTRY_VERIFY(clickArea->height() > 0 && ima->height() > 0);
 
         QTest::mouseClick(l[0], Qt::LeftButton, 0, QPoint(20, 10));
         QCoreApplication::processEvents();

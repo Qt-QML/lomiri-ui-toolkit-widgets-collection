@@ -39,7 +39,6 @@ for _XML in $*; do
                 qquick_image_extension \
                 tst_label13.qml \
                 performance \
-                tst_optionselector.13.qml \
                 tst_pickerpanel.11.qml \
                 tst_scrollbar.13.qml \
                 recreateview \

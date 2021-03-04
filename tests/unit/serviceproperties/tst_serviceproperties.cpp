@@ -15,11 +15,14 @@
  */
 
 #include <QtCore/QDebug>
+#include <QtCore/QFile>
+#include <QtCore/QRegularExpression>
 #include <QtCore/QString>
 #include <QtTest/QSignalSpy>
 #include <QtTest/QTest>
 #include <LomiriToolkit/private/ucserviceproperties_p_p.h>
 
+#include "qstringliteral.h"
 #include "uctestcase.h"
 
 UT_USE_NAMESPACE
@@ -50,6 +53,14 @@ private Q_SLOTS:
 
     void initTestCase()
     {
+        // The test uses this schema, which might not be available on non-Ubuntu
+        // distros even though the AccountsService is available.
+        if (!QFile::exists(
+                    QStringLiteral("/usr/share/accountsservice/interfaces/com.ubuntu.touch.AccountsService.Sound.xml"))) {
+            error = QStringLiteral("Skip test: required schema not installed.");
+            return;
+        }
+
         // check if the connection is possible, otherwise we must skip all tests
         QScopedPointer<LomiriTestCase> test(new LomiriTestCase("IncomingCallVibrateWatcher.qml"));
         UCServiceProperties *watcher = static_cast<UCServiceProperties*>(test->rootObject()->property("service").value<QObject*>());
@@ -118,13 +129,21 @@ private Q_SLOTS:
         QFETCH(bool, warning);
         qputenv("SHOW_SERVICEPROPERTIES_WARNINGS", value);
         if (warning) {
-            ignoreWarning("InvalidPropertyWatcher.qml", 22, 5, "QML ServiceProperties: No such property 'ThisIsAnInvalidPropertyToWatch'");
+            // \u201C is a "Left Double Quotation Mark", and \u201D is "Right Double Quotation Mark"
+            QRegularExpression warningRe(QStringLiteral(u" QML ServiceProperties: No such property ['\u201C]ThisIsAnInvalidPropertyToWatch['\u201D]$"));
+            QTest::ignoreMessage(QtWarningMsg, warningRe);
+
         }
         QScopedPointer<LomiriTestCase> test(new LomiriTestCase("InvalidPropertyWatcher.qml"));
         UCServiceProperties *watcher = static_cast<UCServiceProperties*>(test->rootObject()->property("service").value<QObject*>());
         QVERIFY(watcher);
         // error should contain the warning
-        QCOMPARE(watcher->property("error").toString(), QString("No such property 'ThisIsAnInvalidPropertyToWatch'"));
+        // \u201C is a "Left Double Quotation Mark", and \u201D is "Right Double Quotation Mark"
+        // And sometimes they appear as '?' for some reason. However, that's beside the point of the test.
+        QRegularExpression errorRe(QStringLiteral(u"^No such property ['\u201C?]ThisIsAnInvalidPropertyToWatch['\u201D?]$"));
+        QTRY_VERIFY2(errorRe.match(watcher->property("error").toString()).hasMatch(),
+            qPrintable(QStringLiteral("The content of the \"error\" property is \"%1\"")
+                .arg(watcher->property("error").toString())));
     }
 
     void test_invalid_property_data()
@@ -142,13 +161,20 @@ private Q_SLOTS:
         QFETCH(bool, warning);
         qputenv("SHOW_SERVICEPROPERTIES_WARNINGS", warning ? "1" : "0");
         if (warning) {
-            ignoreWarning("InvalidPropertyWatcher.qml", 22, 5, "QML ServiceProperties: No such property 'ThisIsAnInvalidPropertyToWatch'");
+            // \u201C is a "Left Double Quotation Mark", and \u201D is "Right Double Quotation Mark"
+            QRegularExpression warningRe(QStringLiteral(u" QML ServiceProperties: No such property ['\u201C]ThisIsAnInvalidPropertyToWatch['\u201D]$"));
+            QTest::ignoreMessage(QtWarningMsg, warningRe);
         }
         QScopedPointer<LomiriTestCase> test(new LomiriTestCase("InvalidPropertyWatcher.qml"));
         UCServiceProperties *watcher = static_cast<UCServiceProperties*>(test->rootObject()->property("service").value<QObject*>());
         QVERIFY(watcher);
         // error should contain the warning
-        QCOMPARE(watcher->property("error").toString(), QString("No such property 'ThisIsAnInvalidPropertyToWatch'"));
+        // \u201C is a "Left Double Quotation Mark", and \u201D is "Right Double Quotation Mark"
+        // And sometimes they appear as '?' for some reason. However, that's beside the point of the test.
+        QRegularExpression errorRe(QStringLiteral(u"^No such property ['\u201C?]ThisIsAnInvalidPropertyToWatch['\u201D?]$"));
+        QTRY_VERIFY2(errorRe.match(watcher->property("error").toString()).hasMatch(),
+            qPrintable(QStringLiteral("The content of the \"error\" property is \"%1\"")
+                .arg(watcher->property("error").toString())));
     }
 
     void test_one_valid_one_invalid_property_data()
@@ -166,13 +192,21 @@ private Q_SLOTS:
         QFETCH(bool, warning);
         qputenv("SHOW_SERVICEPROPERTIES_WARNINGS", warning ? "1" : "0");
         if (warning) {
-            ignoreWarning("InvalidPropertyWatcher2.qml", 22, 5, "QML ServiceProperties: No such property 'ThisIsAnInvalidPropertyToWatch'");
+            // \u201C is a "Left Double Quotation Mark", and \u201D is "Right Double Quotation Mark"
+            QRegularExpression warningRe(QStringLiteral(u" QML ServiceProperties: No such property ['\u201C]ThisIsAnInvalidPropertyToWatch['\u201D]$"));
+            QTest::ignoreMessage(QtWarningMsg, warningRe);
+
         }
         QScopedPointer<LomiriTestCase> test(new LomiriTestCase("InvalidPropertyWatcher2.qml"));
         UCServiceProperties *watcher = static_cast<UCServiceProperties*>(test->rootObject()->property("service").value<QObject*>());
         QVERIFY(watcher);
         // error should contain the wearning
-        QCOMPARE(watcher->property("error").toString(), QString("No such property 'ThisIsAnInvalidPropertyToWatch'"));
+        // \u201C is a "Left Double Quotation Mark", and \u201D is "Right Double Quotation Mark"
+        // And sometimes they appear as '?' for some reason. However, that's beside the point of the test.
+        QRegularExpression errorRe(QStringLiteral(u"^No such property ['\u201C?]ThisIsAnInvalidPropertyToWatch['\u201D?]$"));
+        QTRY_VERIFY2(errorRe.match(watcher->property("error").toString()).hasMatch(),
+            qPrintable(QStringLiteral("The content of \"error\" property is \"%1\"")
+                .arg(watcher->property("error").toString())));
     }
 
     void test_change_connection_props_data()
