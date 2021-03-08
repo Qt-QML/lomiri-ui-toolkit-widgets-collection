@@ -25,6 +25,27 @@
 
 UT_USE_NAMESPACE
 
+// Certain versions of Qt 5.15 and 6.0 will crash if we call QQmlIncubator::clear()
+// from QQmlIncubator::setInitialState(). This is reported as QTBUG-91519 and
+// promptly fixed in later versions. To avoid crashing on those versions, we worked
+// around it by preventing AsyncLoader from reset()'ing in Initializing state.
+// https://bugreports.qt.io/browse/QTBUG-91519
+static constexpr bool WORKAROUND_QTBUG_91519 =
+#if defined(HAS_QTBUG_91519_FIXED)
+    // In case people backported the fix to the problemetic version.
+    false
+#elif QT_VERSION >= QT_VERSION_CHECK(5, 15, 0) && QT_VERSION < QT_VERSION_CHECK(5, 15, 4)
+    // The Qt 5.15.4 case is just in case, as we the open source users is
+    // unlikely to encounter that version.
+    true
+#elif QT_VERSION >= QT_VERSION_CHECK(6, 0, 0) && QT_VERSION < QT_VERSION_CHECK(6, 0, 3)
+    true
+#else
+    // Qt 6.1.0+ are fixed. Qt 5.14 and below are not affected.
+    false
+#endif
+;
+
 class LoaderSpy : public QObject
 {
     Q_OBJECT
@@ -271,6 +292,13 @@ private Q_SLOTS:
         QFETCH(QString, doc2);
         QFETCH(int, when);
         QFETCH(bool, success);
+
+        // See above for what this works around, and AsyncLoader's code for how.
+        if (WORKAROUND_QTBUG_91519 && when == (int) AsyncLoader::Initializing) {
+            QSKIP("Some Qt 5.15 and Qt 6.0 will crash if we call QQmlIncubator::clear() "
+                  "from QQmlIncubator::setInitialState(). The code has been updated to "
+                  "prevent this. QTBUG-91519.");
+        }
 
         QScopedPointer<LomiriTestCase> view(new LomiriTestCase("TestApp.qml"));
         AsyncLoader loader;
