@@ -23,7 +23,7 @@ Column {
     width: parent.width
     property string className
     property string title: className
-    property string documentation: "Ubuntu.Components/%1.html".arg(className)
+    property string documentation: "Lomiri.Components/%1.html".arg(className)
 
     Item {
         anchors.left: parent.left

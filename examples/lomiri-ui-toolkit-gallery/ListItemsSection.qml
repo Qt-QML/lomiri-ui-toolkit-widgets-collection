@@ -21,7 +21,7 @@ TemplateSection {
     id: section
     property alias delegate: repeater.delegate
     property alias count: repeater.count
-    documentation: "Ubuntu.Components.ListItems/%1.html".arg(className)
+    documentation: "Lomiri.Components.ListItems/%1.html".arg(className)
 
 
     function itemAt(index)

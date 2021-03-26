@@ -23,7 +23,7 @@ Template {
     TemplateSection {
         id: crossFadeImageTemplateSection
         className: "CrossFadeImage"
-        documentation: "Ubuntu.Components/%1.html".arg(className)
+        documentation: "Lomiri.Components/%1.html".arg(className)
 
         function next() {
             if (internal.index < internal.paths.length - 1)

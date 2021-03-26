@@ -7,7 +7,7 @@ CONFIG -= qt_example_installs
 MO_FILES = $$system(ls *.po)
 
 TARGET_PREFIX = $$[QT_INSTALL_PREFIX]
-TARGET_NAMESPACE = "ubuntu-ui-toolkit-gallery"
+TARGET_NAMESPACE = "lomiri-ui-toolkit-gallery"
 CLICKABLE {
     TARGET_PREFIX = /
     TARGET_NAMESPACE = "uitk-gallery.ubports"

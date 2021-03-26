@@ -23,7 +23,7 @@ Template {
 
     TemplateSection {
         className: "Dialog"
-        documentation: "Ubuntu.Components.Popups/%1.html".arg(className)
+        documentation: "Lomiri.Components.Popups/%1.html".arg(className)
 
         TemplateRow {
             title: i18n.tr("Dialog")

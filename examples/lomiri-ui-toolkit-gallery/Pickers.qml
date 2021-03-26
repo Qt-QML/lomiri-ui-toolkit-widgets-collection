@@ -25,7 +25,7 @@ Template {
     property var stringListModel: ["starred", "media-record", "like", "language-chooser", "go-home", "email", "contact-group", "notification", "active-call"]
     TemplateSection {
         className: "Picker"
-        documentation: "Ubuntu.Components.Pickers/%1.html".arg(className)
+        documentation: "Lomiri.Components.Pickers/%1.html".arg(className)
 
         TemplateRow {
             title: i18n.tr("Linear")
@@ -131,7 +131,7 @@ Template {
 
     TemplateSection {
         className: "Dialer"
-        documentation: "Ubuntu.Components/%1.html".arg(className)
+        documentation: "Lomiri.Components/%1.html".arg(className)
 
         TemplateRow {
             title: i18n.tr("Clock")
@@ -207,7 +207,7 @@ Template {
     }
     TemplateSection {
         className: "DatePicker"
-        documentation: "Ubuntu.Components.Pickers/%1.html".arg(className)
+        documentation: "Lomiri.Components.Pickers/%1.html".arg(className)
 
         TemplateRow {
             title: "Date"
