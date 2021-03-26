@@ -130,11 +130,6 @@ ListItem.Empty {
         value: childrenRect.height
     }
 
-    onChildrenRectChanged: {
-        height = listView.itemHeight = childrenRect.height
-    }
-
-
     //Since we don't want to add states to our divider, we use the exposed alias provided in Empty to access it and alter it's opacity from here.
     states: [ State {
             name: "dividerExpanded"
