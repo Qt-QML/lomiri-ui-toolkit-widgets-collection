@@ -21,7 +21,8 @@ TemplateSection {
     id: section
     property alias delegate: repeater.delegate
     property alias count: repeater.count
-    documentation: "qml-lomiri-components-listitems-%1.html".arg(className.toLowerCase())
+    documentation: "Lomiri.Components.ListItems/%1.html".arg(className)
+
 
     function itemAt(index)
     {

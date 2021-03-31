@@ -1,15 +1,15 @@
 {
     "architecture": "all",
-    "description": "Component showcase gallery of the Lomiri user interface toolkit (UITK)",
-    "framework": "lomiri-sdk-15.04.3",
+    "description": "Component showcase gallery of the Ubuntu user interface toolkit (UITK)",
+    "framework": "ubuntu-sdk-16.04",
     "hooks": {
         "lomiri-ui-toolkit-gallery": {
             "apparmor": "lomiri-ui-toolkit-gallery.apparmor",
             "desktop": "lomiri-ui-toolkit-gallery.desktop"
         }
     },
-    "maintainer": "Zoltán Balogh <zoltan.balogh@lomiri.com>",
-    "name": "com.lomiri.developer.bzoltan.lomiri-ui-toolkit-gallery",
+    "maintainer": "UBports <dev@ubports.com>",
+    "name": "uitk-gallery.ubports",
     "title": "Lomiri UI Toolkit Gallery",
-    "version": "0.5"
+    "version": "0.6"
 }

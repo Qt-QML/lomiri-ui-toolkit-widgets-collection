@@ -1,5 +1,7 @@
 TEMPLATE = subdirs
 
+SUBDIRS += po
+
 #load Lomiri specific features
 load(lomiri-click)
 
