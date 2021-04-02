@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <QtCore/QRegularExpression>
 #include <QtCore/QString>
 #include <QtQml/QQmlComponent>
 #include <QtQml/QQmlContext>
@@ -734,11 +735,20 @@ private Q_SLOTS:
         QCOMPARE(newProperty, testValue);
         // NOTE TestTheme resets the theme therefore the theming will look for the tested style under Ambiance theme
         // which will cause a warning; therefore we mark the warning to be ignored
-        ThemeTestCase::ignoreWarning(document, 19, 1, "QML StyledItem: Warning: Style TestStyle.qml not found in theme Lomiri.Components.Themes.Ambiance");
+        QRegularExpression warningRe(QStringLiteral(
+            ": QML (StyledItem|StyledItemV13|StyledItemAppThemeVersioned): Warning: "
+            "Style TestStyle\\.qml not found in theme Lomiri\\.Components\\.Themes\\.Ambiance$"
+        ));
+        QTest::ignoreMessage(QtWarningMsg, warningRe);
     }
 
     void test_mixed_versions() {
-        ThemeTestCase::ignoreWarning("OtherVersion.qml", 19, 1, "QML StyledItem: Mixing of Lomiri.Components module versions 1.3 and 1.2 detected!");
+        QRegularExpression warningRe(QStringLiteral(
+            ": QML (StyledItem|OtherVersion): Mixing of Lomiri\\.Components module "
+            "versions 1\\.3 and 1\\.2 detected!$"
+        ));
+        QTest::ignoreMessage(QtWarningMsg, warningRe);
+
         QScopedPointer<ThemeTestCase> view(new ThemeTestCase("OtherVersion.qml"));
         QCoreApplication::processEvents();
         UCStyledItemBase *newStyled = static_cast<UCStyledItemBase*>(view->rootObject());
@@ -808,7 +818,12 @@ private Q_SLOTS:
 
     void test_stylename_extension_failure()
     {
-        ThemeTestCase::ignoreWarning("DeprecatedTheme.qml", 19, 1, "QML StyledItem: Warning: Style OptionSelectorStyle.qml.qml not found in theme Lomiri.Components.Themes.SuruGradient");
+        QRegularExpression warningRe(QStringLiteral(
+            "QML (StyledItem|DeprecatedTheme): Warning: Style OptionSelectorStyle\\.qml\\.qml "
+            "not found in theme Lomiri\\.Components\\.Themes\\.SuruGradient$"
+        ));
+        QTest::ignoreMessage(QtWarningMsg, warningRe);
+
         QScopedPointer<ThemeTestCase> view(new ThemeTestCase("DeprecatedTheme.qml"));
         view->rootObject()->setProperty("styleName", "OptionSelectorStyle.qml");
     }
