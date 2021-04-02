@@ -50,7 +50,7 @@ Item {
                             iconName: "add"
                         },
                         Action {
-                            iconName: "clear"
+                            iconName: "toolkit_input-clear"
                         },
                         Action {
                             iconName: "delete"

@@ -51,7 +51,7 @@ import Lomiri.Components 1.2 // for Action
                         name: "default"
                         head: searchPage.head
                         actions: Action {
-                            iconName: "search"
+                            iconName: "toolkit_input-search"
                             onTriggered: searchPage.state = "search"
                         }
                     },

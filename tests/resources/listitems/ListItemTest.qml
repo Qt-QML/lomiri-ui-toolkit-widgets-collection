@@ -78,7 +78,7 @@ MainView {
     ]
     property list<Action> trailingArray: [
         Action {
-            iconName: "search"
+            iconName: "toolkit_input-search"
             onTriggered: print(iconName, "triggered", value)
         },
         Action {

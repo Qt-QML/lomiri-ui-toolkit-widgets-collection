@@ -76,7 +76,7 @@ Template {
         title: "Default title"
         trailingActionBar.actions: [
             Action {
-                iconName: "search"
+                iconName: "toolkit_input-search"
                 text: "Search"
                 onTriggered: page.header = searchHeader
             },

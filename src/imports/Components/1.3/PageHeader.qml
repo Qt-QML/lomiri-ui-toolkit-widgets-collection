@@ -204,7 +204,7 @@ Header {
                       text: "second"
                   },
                   Action {
-                      iconName: "search"
+                      iconName: "toolkit_input-search"
                       text: "third"
                   }
              ]

@@ -43,7 +43,7 @@ Item {
             id: icon
             width: visible ? units.gu(10) : 0
             height: width
-            name: "search"
+            name: "toolkit_input-search"
         }
         Icon {
             id: icon2
@@ -79,22 +79,22 @@ Item {
 
         function test_updateIconSize_bug1349769() {
             icon.visible = false;
-            // causes "QML Image: Failed to get image from provider: image://theme/search"
+            // causes "QML Image: Failed to get image from provider: image://theme/toolkit_input-search"
             // warning when sourceSize.width or sourceSize.height becomes 0 while
             // while still trying to render the icon. Tests will pass with the warning, but
             // the MR is rejected by jenkins continuous integration.
         }
 
         function test_name() {
-            icon2.name = "search";
+            icon2.name = "toolkit_input-search";
 
             var image = findChild(icon2, "image");
-            compare(image.source, "image://theme/search",
+            compare(image.source, "image://theme/toolkit_input-search",
                     "Source of the image should be image://theme/{name}.");
         }
 
         function test_source() {
-            icon2.name = "search";
+            icon2.name = "toolkit_input-search";
             icon2.source = "/usr/share/icons/suru/actions/scalable/edit-find.svg";
 
             var image = findChild(icon2, "image");
@@ -109,7 +109,7 @@ Item {
             var shader = findChild(icon, "shader");
             shaderSpy.target = shader;
 
-            compare(icon.name, 'search');
+            compare(icon.name, "toolkit_input-search");
             compare(shader.visible, false);
             compare(shader.status, ShaderEffect.Uncompiled)
             icon.color = LomiriColors.orange;
@@ -128,7 +128,7 @@ Item {
             compare(icon.source, '');
             compare(shader.visible, false);
             // Let's get back to a valid source
-            icon.name = 'search';
+            icon.name = "toolkit_input-search";
             compare(shader.visible, true);
             compare(shader.source, image);
             // Unsetting the keyColor should also disable the shader

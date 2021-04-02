@@ -51,7 +51,7 @@ MainView {
                     primaryItem: Icon {
                         width: height
                         height: parent.height - units.gu(1)
-                        name: "search"
+                        name: "toolkit_input-search"
                     }
 
                     text: "The orange (specifically, the sweet orange) is the fruit of the citrus species Citrus × ​sinensis in the family Rutaceae."

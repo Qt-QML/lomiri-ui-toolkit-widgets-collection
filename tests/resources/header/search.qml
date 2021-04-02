@@ -39,13 +39,13 @@ MainView {
                 head: searchPage.head
                 actions: Action {
                     id: searchAction
-                    iconName: "search"
+                    iconName: "toolkit_input-search"
                     onTriggered: searchPage.state = "search"
                 }
             },
             PageHeadState {
                 id: headerState
-                name: "search"
+                name: "toolkit_input-search"
                 head: searchPage.head
                 actions: [
                     Action {

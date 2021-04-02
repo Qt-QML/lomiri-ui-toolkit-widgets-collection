@@ -52,7 +52,7 @@ import "pageUtils.js" as Utils
 
                         trailingActionBar.actions: [
                             Action {
-                                iconName: "search"
+                                iconName: "toolkit_input-search"
                                 text: i18n.tr("Search")
                             }
                         ]
