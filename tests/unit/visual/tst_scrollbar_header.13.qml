@@ -135,6 +135,12 @@ Item {
                                 onTriggered: pageItem.header = editHeaderItem
                             }
                         ]
+
+                        // Workaround Qt not setting null parent as expected.
+                        // https://bugreports.qt.io/browse/QTBUG-92446
+                        Component.onCompleted: {
+                            parent = null;
+                        }
                     }
                     PageHeader {
                         id: editHeaderItem
@@ -199,6 +205,12 @@ Item {
                                 text: "delete"
                                 onTriggered: print("Delete action triggered")
                             }
+                        }
+
+                        // Workaround Qt not setting null parent as expected.
+                        // https://bugreports.qt.io/browse/QTBUG-92446
+                        Component.onCompleted: {
+                            parent = null;
                         }
                     }
 
