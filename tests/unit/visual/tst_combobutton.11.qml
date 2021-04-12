@@ -192,10 +192,19 @@ Item {
             // drag the rectangle, the Flickable should be moving
             var x = comboListFlicker.width / 2;
             var y = comboListFlicker.height / 2;
-            var dy = comboListFlicker.height / 6;
+            var dy = comboListFlicker.height / 3;
             spy.target = comboListFlicker;
             spy.signalName = "onMovementEnded";
-            mouseDrag(comboList, x, y, 0, -dy);
+
+            // Split the draging event into at least 2 mouseMove() instead of
+            // single mouseDrag(), as Qt's Flickable seems not to send out
+            // movement{Started,Ended} if there's only a single mouseMove() event.
+            // https://bugreports.qt.io/browse/QTBUG-92600
+            mousePress(comboList, x, y);
+            mouseMove(comboList, x, y - (dy / 2));
+            mouseMove(comboList, x, y - dy);
+            mouseRelease(comboList, x, y - dy);
+
             waitForRendering(comboListFlicker);
             spy.wait();
         }
