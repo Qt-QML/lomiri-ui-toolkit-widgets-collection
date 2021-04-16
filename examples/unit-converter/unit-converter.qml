@@ -112,7 +112,7 @@ MainView {
                 trailingActionBar.actions: [
                     Action {
                         objectName: "action"
-                        iconName: "clear"
+                        iconName: "toolkit_input-clear"
                         text: i18n.tr("Clear")
                         onTriggered: Converter.clear(converter)
                     }

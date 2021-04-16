@@ -53,7 +53,7 @@ MainView {
                 trailingActions: ListItemActions {
                     actions: [
                         Action {
-                            iconName: "search"
+                            iconName: "toolkit_input-search"
                             objectName: 'search_action'
                             onTriggered: testPage.title = objectName + " action triggered";
                         },

@@ -54,7 +54,7 @@ Item {
                             onTriggered: print("Trigger second action")
                         },
                         Action {
-                            iconName: "search"
+                            iconName: "toolkit_input-search"
                             text: "third"
                             onTriggered: print("Trigger third action")
                         },

@@ -21,6 +21,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/QProcess>
 #include <QtCore/QProcessEnvironment>
+#include <QtCore/QRegularExpression>
 #include <QtGui/QMatrix4x4>
 #include <QtGui/QQuaternion>
 #include <QtGui/QVector3D>
@@ -286,9 +287,15 @@ private Q_SLOTS:
     {
         QString filePath(QFileInfo("InvalidUID.qml").absoluteFilePath());
         QString objectId(filePath.replace("/", "_") + ":21:5:testItem");
-        LomiriTestCase::ignoreWarning("InvalidUID.qml", 20, 1,
-            QString("QML Item: All the parents must have an id.\nState saving disabled for %1, class %2")
-            .arg(objectId).arg("QQuickItem"), 2);
+
+        QRegularExpression warningRe(QStringLiteral(
+            ": QML (Item|InvalidUID): All the parents must have an id\\.\n"
+            "State saving disabled for %1, class (QQuickItem|InvalidUID)$"
+        ).arg(QRegularExpression::escape(objectId)));
+        // The warning happens twice.
+        QTest::ignoreMessage(QtWarningMsg, warningRe);
+        QTest::ignoreMessage(QtWarningMsg, warningRe);
+
         QScopedPointer<LomiriTestCase> view(new LomiriTestCase("InvalidUID.qml"));
         QObject *testItem = view->rootObject()->findChild<QObject*>("testItem");
         QVERIFY(testItem);
@@ -436,8 +443,11 @@ private Q_SLOTS:
 
     void test_ComponentsWithStateSaversNoId()
     {
-        LomiriTestCase::ignoreWarning("ComponentsWithStateSaversNoId.qml", 25, 5,
-            "QML Rectangle: Warning: attachee must have an ID. State will not be saved.");
+        QRegularExpression warningRe(QStringLiteral(
+            ": QML (Rectangle|CustomControl): Warning: attachee must have an ID\\. State will not be saved\\.$"
+        ));
+        QTest::ignoreMessage(QtWarningMsg, warningRe);
+
         QScopedPointer<LomiriTestCase> view(new LomiriTestCase("ComponentsWithStateSaversNoId.qml"));
         QObject *control1 = view->rootObject()->findChild<QObject*>("control1");
         QVERIFY(control1);

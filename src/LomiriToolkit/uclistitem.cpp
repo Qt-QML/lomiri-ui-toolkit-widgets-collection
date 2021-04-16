@@ -640,7 +640,7 @@ void UCListItemPrivate::swipeEvent(const QPointF &localPos, UCSwipeEvent::Status
  *     trailingActions: ListItemActions {
  *         actions: [
  *             Action {
- *                 iconName: "search"
+ *                 iconName: "toolkit_input-search"
  *                 onTriggered: {
  *                     // do some search
  *                 }
@@ -947,7 +947,7 @@ void UCListItemPrivate::swipeEvent(const QPointF &localPos, UCSwipeEvent::Status
  *         trailingActions: ListItemActions {
  *             actions: [
  *                 Action {
- *                     icon: "search"
+ *                     icon: "toolkit_input-search"
  *                 },
  *                 Action {
  *                     icon: "edit"

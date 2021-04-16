@@ -53,7 +53,7 @@ MainView {
                     objectName: "clearIcon"
                     anchors.fill: parent
                     anchors.margins: units.gu(.75)
-                    source: "image://theme/clear"
+                    source: "image://theme/toolkit_input-clear"
                     opacity: searchTextField.text.length > 0
                     visible: opacity > 0
                     Behavior on opacity {

@@ -288,11 +288,10 @@ Style.SectionsStyle {
             height: units.gu(1)
             visible: false
             asynchronous: true
-            rotation: 180
             opacity: visible
                      ? sectionsListView.atXBeginning ? hoveringArea.iconsDisabledOpacity : 1.0
                      : 0.0
-            name: "chevron"
+            name: "toolkit_chevron-rtl_1gu"
             Behavior on opacity {
                 LomiriNumberAnimation {
                     duration: LomiriAnimation.FastDuration
@@ -321,7 +320,7 @@ Style.SectionsStyle {
             opacity: visible
                      ? sectionsListView.atXEnd ? hoveringArea.iconsDisabledOpacity : 1.0
                      : 0.0
-            name: "chevron"
+            name: "toolkit_chevron-ltr_1gu"
             Behavior on opacity {
                 LomiriNumberAnimation {
                     duration: LomiriAnimation.FastDuration

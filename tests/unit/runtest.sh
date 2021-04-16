@@ -118,8 +118,14 @@ function execute_test_cmd {
     # https://bugs.launchpad.net/lomiri-ui-toolkit/+bug/1256999
     # https://bugreports.qt-project.org/browse/QTBUG-36243
     # QV4_MM_AGGRESSIVE_GC=1 \
+    # qt.qml.connections silence "onFoo()" deprecation warnings, and 
+    # qt.qml.binding.restoreMode silence "Binding.restoreMode" warnings.
+    # They're deprecated/require new behavior in Qt 5.15 but new syntax/
+    # new behavior isn't available in Qt 5.12.
+    # https://code.qt.io/cgit/qt/qtdeclarative.git/commit/?id=a2eef6b511988b2435c4e39b6b5551e857ce7775
+    # https://code.qt.io/cgit/qt/qtdeclarative.git/commit/?id=316a120f37982db9f3062ac1e094d92da4e356d7
     ALARM_BACKEND=memory SUPPRESS_DEPRECATED_NOTE=no \
-    QT_LOGGING_RULES="[PERFORMANCE].warning=false" \
+    QT_LOGGING_RULES="qt.qml.connections.warning=false;qt.qml.binding.restoreMode.warning=false;[PERFORMANCE].warning=false" \
     $_CMD $_ARGS 2>&1 | sed "s@$_TESTFILE: @@" | grep -v 'QFontDatabase: Cannot find font directory'
     if [ ! -s $_XML ]; then
         # Write fallback in case it crashed and the file is empty

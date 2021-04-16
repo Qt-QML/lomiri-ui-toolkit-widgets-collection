@@ -84,7 +84,7 @@ UCListItemActionsPrivate::~UCListItemActionsPrivate()
  *             trailingActions: ListItemActions {
  *                 actions: [
  *                     Action {
- *                         iconName: "search"
+ *                         iconName: "toolkit_input-search"
  *                     },
  *                     Action {
  *                         iconName: "edit"
@@ -117,7 +117,7 @@ UCListItemActionsPrivate::~UCListItemActionsPrivate()
  *         id: trailing
  *         actions: [
  *             Action {
- *                 iconName: "search"
+ *                 iconName: "toolkit_input-search"
  *             },
  *             Action {
  *                 iconName: "edit"

@@ -22,6 +22,27 @@
 #include <QtQml/QQmlComponent>
 #include <QtQuick/QQuickItem>
 
+// Certain versions of Qt 5.15 and 6.0 will crash if we call QQmlIncubator::clear()
+// from QQmlIncubator::setInitialState(). This is reported as QTBUG-91519 and
+// promptly fixed in later versions. To avoid crashing on those versions, we worked
+// around it by preventing AsyncLoader from reset()'ing in Initializing state.
+// https://bugreports.qt.io/browse/QTBUG-91519
+static constexpr bool WORKAROUND_QTBUG_91519 =
+#if defined(HAS_QTBUG_91519_FIXED)
+    // In case people backported the fix to the problemetic version.
+    false
+#elif QT_VERSION >= QT_VERSION_CHECK(5, 15, 0) && QT_VERSION < QT_VERSION_CHECK(5, 15, 4)
+    // The Qt 5.15.4 case is just in case, as we the open source users is
+    // unlikely to encounter that version.
+    true
+#elif QT_VERSION >= QT_VERSION_CHECK(6, 0, 0) && QT_VERSION < QT_VERSION_CHECK(6, 0, 3)
+    true
+#else
+    // Qt 6.1.0+ are fixed. Qt 5.14 and below are not affected.
+    false
+#endif
+;
+
 UT_NAMESPACE_BEGIN
 
 AsyncLoader::AsyncLoader(QObject *parent)
@@ -188,6 +209,10 @@ bool AsyncLoader::reset()
 {
     Q_D(AsyncLoader);
     if (d->status < Loading) {
+        return false;
+    }
+    // See above to understand what this works around.
+    if (WORKAROUND_QTBUG_91519 && d->status == Initializing) {
         return false;
     }
     if (d->status >= Ready) {

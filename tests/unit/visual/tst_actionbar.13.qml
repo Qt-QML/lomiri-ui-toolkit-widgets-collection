@@ -127,9 +127,7 @@ Item {
         height: childrenRect.height
 
         Label {
-            anchors {
-                verticalCenter: shortBar.verticalCenter
-            }
+            Layout.alignment: Qt.AlignVCenter
             text: "" + shortBar.numberOfSlots + " slot(s):"
         }
         ActionBar {
@@ -141,9 +139,7 @@ Item {
         }
 
         Label {
-            anchors {
-                verticalCenter: bar.verticalCenter
-            }
+            Layout.alignment: Qt.AlignVCenter
             text: "" + bar.numberOfSlots + " slot(s):"
         }
         ActionBar {
@@ -155,9 +151,7 @@ Item {
         }
 
         Label {
-            anchors {
-                verticalCenter: coloredBar.verticalCenter
-            }
+            Layout.alignment: Qt.AlignVCenter
             text: "colored:"
         }
         ActionBar {
@@ -181,10 +175,7 @@ Item {
         Slider {
             id: numberOfActionsSlider
             Layout.columnSpan: 2
-            anchors {
-                left: parent.left
-                right: parent.right
-            }
+            Layout.fillWidth: true
             minimumValue: -1
             maximumValue: 10
             value: 3
@@ -192,9 +183,7 @@ Item {
         }
 
         Label {
-            anchors {
-                verticalCenter: customDelegateBar.verticalCenter
-            }
+            Layout.alignment: Qt.AlignVCenter
             text: "Custom delegate"
         }
         ActionBar {
@@ -211,9 +200,7 @@ Item {
         }
 
         Label {
-            anchors {
-                verticalCenter: greenButtonsBar.verticalCenter
-            }
+            Layout.alignment: Qt.AlignVCenter
             text: "Custom delegate 2"
         }
         ActionBar {

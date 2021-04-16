@@ -39,7 +39,7 @@ import QtQuick 2.4
     Icon {
         width: 64
         height: 64
-        name: "search"
+        name: "toolkit_input-search"
     }
     \endqml
 
@@ -48,7 +48,7 @@ import QtQuick 2.4
     Icon {
         width: 64
         height: 64
-        name: "search"
+        name: "toolkit_input-search"
         color: LomiriColors.warmGrey
     }
     \endqml

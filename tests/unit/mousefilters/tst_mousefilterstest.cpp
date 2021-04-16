@@ -841,7 +841,8 @@ private Q_SLOTS:
 
         preventDblClick();
         QTest::mousePress(flickable->window(), Qt::LeftButton, 0, guPoint(5, 5));
-        for (int i = 0; i < 30; i++) {
+        // Avoid sending MouseMove with no movement.
+        for (int i = 1; i <= 30; i++) {
             QTest::mouseMove(flickable->window(), guPoint(5 + i, 5 + i));
         }
         QCoreApplication::processEvents();
@@ -851,7 +852,7 @@ private Q_SLOTS:
         QCOMPARE(pressed.count(), 1);
         QCOMPARE(released.count(), 1);
         QCOMPARE(clicked.count(), 1);
-        QCOMPARE(positionChanged.count(), 31);
+        QCOMPARE(positionChanged.count(), 30);
         QCOMPARE(doubleClicked.count(), 0);
         QCOMPARE(pressAndHold.count(), 0);
         QCOMPARE(entered.count(), 1);
@@ -880,7 +881,8 @@ private Q_SLOTS:
 
         preventDblClick();
         QTest::mousePress(flickable->window(), Qt::LeftButton, 0, guPoint(5, 5));
-        for (int i = 0; i < 30; i++) {
+        // Avoid sending MouseMove with no movement.
+        for (int i = 1; i <= 30; i++) {
             QTest::mouseMove(flickable->window(), guPoint(5 + i, 5 + i));
         }
         QTest::mouseRelease(flickable->window(), Qt::LeftButton, 0, guPoint(35, 35));
@@ -889,7 +891,7 @@ private Q_SLOTS:
         QCOMPARE(pressed.count(), 1);
         QCOMPARE(released.count(), 1);
         QCOMPARE(clicked.count(), 1);
-        QCOMPARE(positionChanged.count(), 31);
+        QCOMPARE(positionChanged.count(), 30);
         QCOMPARE(doubleClicked.count(), 0);
         QCOMPARE(pressAndHold.count(), 0);
         QCOMPARE(entered.count(), 1);
