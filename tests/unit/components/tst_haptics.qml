@@ -24,7 +24,7 @@ LomiriTestCase {
     name: "HapticsAPI"
 
     function waitForHapticsCompleted() {
-        tryCompareFunction(function() { return Haptics.effect.state; }, HapticsEffect.Stopped, 1000);
+        tryCompareFunction(function() { return Haptics.effect.state; }, HapticsEffect.Stopped, 1500);
     }
 
     function test_0_defaults() {
@@ -45,7 +45,7 @@ LomiriTestCase {
         if (Haptics.enabled && Haptics.effect.running) {
             compare(Haptics.effect.attackTime, 10, "attack time not modified");
             compare(Haptics.effect.attackIntensity, 0.5, "attack intensity not modified");
-            compare(Haptics.effect.duration, 400, "duration not modified");
+            compare(Haptics.effect.duration, 1200, "duration not modified");
             waitForHapticsCompleted();
         }
     }
