@@ -31,7 +31,7 @@ UT_NAMESPACE_BEGIN
  * to a command line parameter (e.g. \e{--target}) and the values passed to it
  * (e.g. \e{--target=http://myaddress}).
  *
- * For example, the following code allows to retrieve parameters on the
+ * For example, the following code allows one to retrieve parameters on the
  * command line of the form \e{--target=URL}:
  *
  * \qml

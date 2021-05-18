@@ -12,7 +12,7 @@
 # ugly because preprocessor defines are directly set in the QMAKE_C*FLAGS. In
 # order to workaround these issues, we unset these variables and set the
 # different flags apart from -g and -O2 in the right qmake variables. This
-# allows to keep compiling with the Debian flags but in a more flexible way.
+# allows one to keep compiling with the Debian flags but in a more flexible way.
 !qt_submodule_build:!debian_build {
     gcc:!clang {
         QMAKE_CFLAGS = -fstack-protector

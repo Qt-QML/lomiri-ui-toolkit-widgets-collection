@@ -649,7 +649,7 @@ void UCSlotsLayoutPrivate::handleAttachedPropertySignals(QQuickItem *item, bool 
     leading or trailing one.
     \l {SlotsLayout::padding} can be used to tweak the padding around a
     slot.
-    \l {SlotsLayout::overrideVerticalPositioning} allows to disable the
+    \l {SlotsLayout::overrideVerticalPositioning} allows one to disable the
     automatic positioning of the vertical coordinate of a slot as described
     in \l {Automatic vertical positioning of slots}, in case
     a custom behaviour is needed.

@@ -15,7 +15,7 @@
 // Author: Loïc Molinari <loic.molinari@canonical.com>
 
 // Static flow control (branching on a uniform value) is fast on most GPUs (including ultra-low
-// power ones) because it allows to use the same shader execution path for an entire draw call. We
+// power ones) because it allows one to use the same shader execution path for an entire draw call. We
 // rely on that technique here (also known as "uber-shader" solution) to avoid the complexity of
 // dealing with a multiple shaders solution.
 // FIXME(loicm) Validate GPU behavior with regards to static flow control.
