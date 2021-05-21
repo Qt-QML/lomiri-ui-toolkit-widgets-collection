@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Canonical, Ltd.
+ * Copyright (C) 2014 Canonical Ltd.
  *
  * Authors:
  *   Christian Dywan <christian.dywan@canonical.com>
