@@ -126,6 +126,13 @@ Row {
                 positionViewAtIndex(pickerModel.indexOf());
             }
 
+            onReadyChanged: {
+            	// make sure positionner is updated when everything is ready
+            	if (ready) {
+                    positionViewAtIndex(pickerModel.indexOf());
+                }
+            }
+
             Component.onCompleted: {
                 // update model with the item instance
                 pickerModel.pickerItem = unitPicker;

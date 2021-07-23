@@ -136,6 +136,7 @@ StyledItem {
       */
     property real itemHeight: units.gu(4)
 
+
     /*!
       The function positions the picker's view to the given index without animating
       the view. The component must be ready when calling the function, e.g. to make
@@ -169,6 +170,9 @@ StyledItem {
 
     /*! \internal */
     property int __clickedIndex: -1
+
+    /*! \internal */
+    property alias ready: loader.completed
 
     // bind style instance's view property to the Loader's item
     Binding {

@@ -444,7 +444,7 @@ StyledItem {
         parent: (datePicker.__styleInstance && datePicker.__styleInstance.hasOwnProperty("tumblerHolder")) ?
                     datePicker.__styleInstance.tumblerHolder : datePicker
         mainComponent: datePicker
-        model: tumblerModel
+        model: internals.completed ? tumblerModel : null
         margins: internals.margin
         anchors {
             top: parent.top
