@@ -212,7 +212,12 @@ void LomiriToolkitModule::registerTypesToVersion(const char *uri, int major, int
     qmlRegisterExtendedType<
         QQuickImageBase, UCQQuickImageExtension>(uri, major, minor, "QQuickImageBase");
     qmlRegisterUncreatableType<UCUnits>(uri, major, minor, "UCUnits", notInstantiatable);
-    qmlRegisterType<UCLomiriShape>(uri, major, minor, "LomiriShape");
+    if (uri == QLatin1String("Ubuntu.Components")) {
+        // FIXME/DEPRECATED: Ubuntu.* is exported for backwards compatibility only
+        qmlRegisterType<UCLomiriShape>(uri, major, minor, "UbuntuShape");
+    } else {
+        qmlRegisterType<UCLomiriShape>(uri, major, minor, "LomiriShape");
+    }
     // FIXME/DEPRECATED: Shape is exported for backwards compatibility only
     qmlRegisterType<UCLomiriShape>(uri, major, minor, "Shape");
     qmlRegisterType<InverseMouseAreaType>(uri, major, minor, "InverseMouseArea");
@@ -338,9 +343,8 @@ void LomiriToolkitModule::initializeModule(QQmlEngine *engine, const QUrl &plugi
         QStringLiteral("performanceMonitor"), new UCPerformanceMonitor(engine));
 }
 
-void LomiriToolkitModule::defineModule()
+void LomiriToolkitModule::defineModule(const char *uri)
 {
-    const char *uri = "Lomiri.Components";
     // register 0.1 for backward compatibility
     registerTypesToVersion(uri, 0, 1);
     registerTypesToVersion(uri, 1, 0);
@@ -368,8 +372,14 @@ void LomiriToolkitModule::defineModule()
         uri, 1, 2, "ListItemDrag", QStringLiteral("This is an event object"));
     qmlRegisterType<UCListItemActions>(uri, 1, 2, "ListItemActions");
     qmlRegisterUncreatableType<UCViewItemsAttached>(uri, 1, 2, "ViewItems", notInstantiatable);
-    qmlRegisterType<UCLomiriShape, 1>(uri, 1, 2, "LomiriShape");
-    qmlRegisterType<UCLomiriShapeOverlay>(uri, 1, 2, "LomiriShapeOverlay");
+    if (uri == QLatin1String("Ubuntu.Components")) {
+        // FIXME/DEPRECATED: Ubuntu.* is exported for backwards compatibility only
+        qmlRegisterType<UCLomiriShape, 1>(uri, 1, 2, "UbuntuShape");
+        qmlRegisterType<UCLomiriShapeOverlay>(uri, 1, 2, "UbuntuShapeOverlay");
+    } else {
+        qmlRegisterType<UCLomiriShape, 1>(uri, 1, 2, "LomiriShape");
+        qmlRegisterType<UCLomiriShapeOverlay>(uri, 1, 2, "LomiriShapeOverlay");
+    }
 
     // register 1.3 API
     qmlRegisterType<UCListItem, 1>(uri, 1, 3, "ListItem");
@@ -380,7 +390,12 @@ void LomiriToolkitModule::defineModule()
     qmlRegisterCustomType<UCStyleHints>(uri, 1, 3, "StyleHints", new UCStyleHintsParser);
     qmlRegisterType<UCAction, 1>(uri, 1, 3, "Action");
     qmlRegisterType<UCSlotsLayout>(uri, 1, 3, "SlotsLayout");
-    qmlRegisterType<UCLomiriShape, 2>(uri, 1, 3, "LomiriShape");
+    if (uri == QLatin1String("Ubuntu.Components")) {
+        // FIXME/DEPRECATED: Ubuntu.* is exported for backwards compatibility only
+        qmlRegisterType<UCLomiriShape, 2>(uri, 1, 3, "UbuntuShape");
+    } else {
+        qmlRegisterType<UCLomiriShape, 2>(uri, 1, 3, "LomiriShape");
+    }
     qmlRegisterType<UCProportionalShape>(uri, 1, 3, "ProportionalShape");
     qmlRegisterType<LiveTimer>(uri, 1, 3, "LiveTimer");
     qmlRegisterType<UCAbstractButton>(uri, 1, 3, "AbstractButton");

@@ -37,7 +37,7 @@ void LomiriComponentsPlugin::registerTypes(const char *uri)
     qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespaceV13)>(uri, 1, 3, "Lomiri");
 
     UG_PREPEND_NAMESPACE(LomiriGesturesModule)::defineModule(uri);
-    UT_PREPEND_NAMESPACE(LomiriToolkitModule)::defineModule();
+    UT_PREPEND_NAMESPACE(LomiriToolkitModule)::defineModule(uri);
 }
 
 void LomiriComponentsPlugin::initializeEngine(QQmlEngine *engine, const char *uri)
