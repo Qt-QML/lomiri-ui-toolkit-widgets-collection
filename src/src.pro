@@ -47,3 +47,10 @@ src_test_module.subdir = imports/Test
 src_test_module.target = sub-test-module
 src_test_module.depends = sub-toolkit-lib
 SUBDIRS += src_test_module
+
+ubuntu-uitk-compat {
+    src_compat_components_module.subdir = imports-compat/Components
+    src_compat_components_module.target = sub-compat-components-module
+    src_compat_components_module.depends = sub-components-module
+    SUBDIRS += src_compat_components_module
+}
