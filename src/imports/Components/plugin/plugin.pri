@@ -4,8 +4,6 @@ equals(QT_MAJOR_VERSION, 5):lessThan(QT_MINOR_VERSION, 2) {
     QT *= v8-private
 }
 
-HEADERS += $$PWD/plugin.h \
-    $$PWD/ucnamespace.h
+HEADERS += $$PWD/plugin.h
 
-SOURCES += $$PWD/plugin.cpp \
-    $$PWD/ucnamespace.cpp
+SOURCES += $$PWD/plugin.cpp

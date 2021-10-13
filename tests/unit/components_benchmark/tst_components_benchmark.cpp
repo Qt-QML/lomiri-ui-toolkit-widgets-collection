@@ -22,7 +22,7 @@
 #include <QtQml/QQmlEngine>
 #include <QtTest/QtTest>
 
-#include "ucnamespace.h"
+#include <LomiriToolkit/lomiritoolkitglobal.h>
 
 class tst_components_benchmark: public QObject
 {

@@ -111,6 +111,7 @@ HEADERS += \
     $$PWD/ucmargins_p.h \
     $$PWD/ucmathutils_p.h \
     $$PWD/ucmouse_p.h \
+    $$PWD/ucnamespace_p.h \
     $$PWD/ucpagetreenode_p.h \
     $$PWD/ucpagetreenode_p_p.h \
     $$PWD/ucperformancemonitor_p.h \
@@ -208,6 +209,7 @@ SOURCES += \
     $$PWD/ucmainwindow.cpp \
     $$PWD/ucmathutils.cpp \
     $$PWD/ucmousefilters.cpp \
+    $$PWD/ucnamespace.cpp \
     $$PWD/ucpagetreenode.cpp \
     $$PWD/ucperformancemonitor.cpp \
     $$PWD/ucproportionalshape.cpp \

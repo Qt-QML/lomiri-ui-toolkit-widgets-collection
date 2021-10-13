@@ -32,7 +32,6 @@
 #undef private
 
 #include "uctestcase.h"
-#include "ucnamespace.h"
 
 UT_USE_NAMESPACE
 

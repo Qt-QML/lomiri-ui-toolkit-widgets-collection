@@ -15,7 +15,7 @@
  *
  */
 
-#include "ucnamespace.h"
+#include "ucnamespace_p.h"
 
 UT_NAMESPACE_BEGIN
 

@@ -83,6 +83,7 @@
 #include "ucmargins_p.h"
 #include "ucmathutils_p.h"
 #include "ucmouse_p.h"
+#include "ucnamespace_p.h"
 #include "ucpagetreenode_p.h"
 #include "ucperformancemonitor_p.h"
 #include "ucproportionalshape_p.h"
@@ -381,9 +382,11 @@ void LomiriToolkitModule::defineModule(const char *uri)
         // FIXME/DEPRECATED: Ubuntu.* is exported for backwards compatibility only
         qmlRegisterType<UCLomiriShape, 1>(uri, 1, 2, "UbuntuShape");
         qmlRegisterType<UCLomiriShapeOverlay>(uri, 1, 2, "UbuntuShapeOverlay");
+        qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespace)>(uri, 1, 2, "Ubuntu");
     } else {
         qmlRegisterType<UCLomiriShape, 1>(uri, 1, 2, "LomiriShape");
         qmlRegisterType<UCLomiriShapeOverlay>(uri, 1, 2, "LomiriShapeOverlay");
+        qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespace)>(uri, 1, 2, "Lomiri");
     }
 
     // register 1.3 API
@@ -398,8 +401,10 @@ void LomiriToolkitModule::defineModule(const char *uri)
     if (uri == QLatin1String("Ubuntu.Components")) {
         // FIXME/DEPRECATED: Ubuntu.* is exported for backwards compatibility only
         qmlRegisterType<UCLomiriShape, 2>(uri, 1, 3, "UbuntuShape");
+        qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespaceV13)>(uri, 1, 3, "Ubuntu");
     } else {
         qmlRegisterType<UCLomiriShape, 2>(uri, 1, 3, "LomiriShape");
+        qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespaceV13)>(uri, 1, 3, "Lomiri");
     }
     qmlRegisterType<UCProportionalShape>(uri, 1, 3, "ProportionalShape");
     qmlRegisterType<LiveTimer>(uri, 1, 3, "LiveTimer");

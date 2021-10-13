@@ -20,8 +20,6 @@
 #include <LomiriToolkit/lomiritoolkitmodule.h>
 #include <LomiriGestures/lomirigesturesmodule.h>
 
-#include "ucnamespace.h"
-
 LomiriComponentsPlugin::~LomiriComponentsPlugin()
 {
     UT_PREPEND_NAMESPACE(LomiriToolkitModule)::undefineModule();
@@ -32,9 +30,6 @@ void LomiriComponentsPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("Lomiri.Components"));
     Q_UNUSED(uri);
-
-    qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespace)>(uri, 1, 2, "Lomiri");
-    qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespaceV13)>(uri, 1, 3, "Lomiri");
 
     UG_PREPEND_NAMESPACE(LomiriGesturesModule)::defineModule(uri);
     UT_PREPEND_NAMESPACE(LomiriToolkitModule)::defineModule(uri);
