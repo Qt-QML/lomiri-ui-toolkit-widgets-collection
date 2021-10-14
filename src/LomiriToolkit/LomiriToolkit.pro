@@ -19,6 +19,10 @@ unix {
 # Uncomment to compile out qDebug() calls.
 # DEFINES += QT_NO_DEBUG_OUTPUT
 
+ubuntu-uitk-compat {
+    DEFINES += LOMIRI_UITK_WANT_UBUNTU_COMPAT
+}
+
 HEADERS += \
     $$PWD/actionlist_p.h \
     $$PWD/adapters/actionsproxy_p.h \

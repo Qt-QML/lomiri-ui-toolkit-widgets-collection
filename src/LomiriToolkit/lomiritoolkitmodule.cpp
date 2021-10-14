@@ -178,6 +178,17 @@ void LomiriToolkitModule::initializeContextProperties(QQmlEngine *engine)
         new ContextPropertyChangeListener(context, QStringLiteral("LomiriApplication"));
     QObject::connect(UCApplication::instance(), SIGNAL(applicationNameChanged()),
                      applicationChangeListener, SLOT(updateContextProperty()));
+
+    #ifdef LOMIRI_UITK_WANT_UBUNTU_COMPAT
+    /* Note: This provides UbuntuApplication whether we're loaded as Ubuntu.Components
+     * or Lomiri.Components. I don't think it matters much though. */
+    context->setContextProperty(QStringLiteral("UbuntuApplication"), UCApplication::instance());
+    ContextPropertyChangeListener *applicationChangeListener1 =
+        new ContextPropertyChangeListener(context, QStringLiteral("UbuntuApplication"));
+    QObject::connect(UCApplication::instance(), SIGNAL(applicationNameChanged()),
+                     applicationChangeListener1, SLOT(updateContextProperty()));
+    #endif
+
     // Give the application object access to the engine
     UCApplication::instance()->setContext(context);
 
