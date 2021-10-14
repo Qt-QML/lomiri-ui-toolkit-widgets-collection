@@ -53,4 +53,9 @@ ubuntu-uitk-compat {
     src_compat_components_module.target = sub-compat-components-module
     src_compat_components_module.depends = sub-components-module
     SUBDIRS += src_compat_components_module
+
+    src_compat_layouts_module.subdir = imports-compat/Layouts
+    src_compat_layouts_module.target = sub-compat-layouts-module
+    src_compat_layouts_module.depends = sub-layouts-module
+    SUBDIRS += src_compat_layouts_module
 }
