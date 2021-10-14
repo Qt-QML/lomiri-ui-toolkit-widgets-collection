@@ -58,4 +58,9 @@ ubuntu-uitk-compat {
     src_compat_layouts_module.target = sub-compat-layouts-module
     src_compat_layouts_module.depends = sub-layouts-module
     SUBDIRS += src_compat_layouts_module
+
+    src_compat_metrics_module.subdir = imports-compat/Metrics
+    src_compat_metrics_module.target = sub-compat-metrics-module
+    src_compat_metrics_module.depends = sub-metrics-lib
+    SUBDIRS += src_compat_metrics_module
 }
