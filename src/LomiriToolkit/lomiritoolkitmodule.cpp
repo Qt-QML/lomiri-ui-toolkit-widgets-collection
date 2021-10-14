@@ -23,6 +23,7 @@
 
 #include <stdexcept>
 
+#include <QtCore/QPointer>
 #include <QtQml/QQmlContext>
 #include <QtQml/QQmlEngine>
 #include <QtQml/QQmlExtensionPlugin>
@@ -259,6 +260,10 @@ QUrl LomiriToolkitModule::baseUrl(QQmlEngine *engine)
 
 void LomiriToolkitModule::initializeModule(QQmlEngine *engine, const QUrl &pluginBaseUrl)
 {
+    // Ensure that the module is initialized once per engine.
+    if (!LomiriToolkitModule::baseUrl(engine).isEmpty())
+        return;
+
     LomiriToolkitModule *module = create(engine, pluginBaseUrl);
 
     // Register private types.
