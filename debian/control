@@ -411,3 +411,109 @@ Description: Qt Components for Lomiri - productive tools
  .
  This package contains the application launcher, which is a drop-in
  replacement for qmlscene, oxideqmlscene, qml and derivatives.
+
+Package: qml-module-ubuntu-components
+Architecture: any
+Multi-Arch: same
+Pre-Depends: dpkg (>= 1.15.6~),
+             ${misc:Pre-Depends},
+Depends: liblomirigestures5 (= ${binary:Version}),
+         liblomirimetrics5 (= ${binary:Version}),
+         liblomiritoolkit5 (= ${binary:Version}),
+         ubuntu-ui-toolkit-theme (= ${binary:Version}),
+         qml-module-lomiri-components (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Breaks: qml-module-ubuntu-components (<< 1.3.3000),
+Replaces: qml-module-ubuntu-components (<< 1.3.3000),
+Description: Qt Components for Lomiri - Ubuntu compatiblity layer
+ Qt Components for Lomiri offers a set of reusable user interface
+ components for Qt Quick 2 / QML.
+ .
+ This package contains the Ubuntu Components QML plugin, implemented as
+ compatibility layers over Lomiri Components.
+
+Package: qml-module-ubuntu-components-labs
+Architecture: any   
+Multi-Arch: same
+Pre-Depends: dpkg (>= 1.15.6~),
+             ${misc:Pre-Depends},
+Depends: qml-module-lomiri-components-labs (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Breaks: qml-module-ubuntu-components-labs (<< 1.3.3000)
+Replaces: qml-module-ubuntu-components-labs (<< 1.3.3000)
+Description: Qt Components Labs for Lomiri - Ubuntu compatibility layer
+ Qt Components Labs for Lomiri offers a set of non-released and mostly
+ unstable user interface components for Qt Quick 2 / QML.
+ .
+ This package contains the Ubuntu Components Labs QML plugin, implemented
+ as compatibility layers over Lomiri Components.
+
+Package: qml-module-ubuntu-layouts
+Architecture: any
+Multi-Arch: same
+Pre-Depends: dpkg (>= 1.15.6~),
+             ${misc:Pre-Depends},
+Depends: qml-module-lomiri-layouts (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Breaks: qml-module-ubuntu-layouts (<< 1.3.3000),
+Replaces: qml-module-ubuntu-layouts (<< 1.3.3000),
+Description: Qt Components for Lomiri - Ubuntu.Layouts compat layer
+ Qt Components for Lomiri offers a set of reusable user interface
+ components for Qt Quick 2 / QML.
+ .
+ This package contains the Ubuntu Layouts QML plugin, implemented as
+ compatibility layers over Lomiri Components.
+
+Package: qml-module-ubuntu-performancemetrics
+Architecture: any
+Multi-Arch: same
+Pre-Depends: dpkg (>= 1.15.6~),
+             ${misc:Pre-Depends},
+Depends: qml-module-lomiri-performancemetrics (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Breaks: qml-module-ubuntu-performancemetrics (<< 1.3.3000),
+Replaces: qml-module-ubuntu-performancemetrics (<< 1.3.3000),
+Description: Qt Components for Lomiri - Ubuntu.PerformanceMetrics
+ Qt Components for Lomiri offers a set of reusable user interface
+ components for Qt Quick 2 / QML.
+ .
+ This package contains the Ubuntu PerformanceMetrics QML plugin,
+ implemented as compatibility layers over Lomiri Components.
+
+Package: qml-module-ubuntu-metrics
+Architecture: any
+Multi-Arch: same
+Pre-Depends: dpkg (>= 1.15.6~),
+             ${misc:Pre-Depends},
+Depends: qml-module-lomiri-metrics (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Breaks: qml-module-ubuntu-metrics (<< 1.3.3000),
+Replaces: qml-module-ubuntu-metrics (<< 1.3.3000),
+Description: Qt Components for Lomiri - Ubuntu.Metrics compat layer
+ Qt Components for Lomiri offers a set of reusable user interface
+ components for Qt Quick 2 / QML.
+ .
+ This package contains the Ubuntu Metrics QML plugin, implemented
+ as compatibility layers over Lomiri Components.
+
+Package: ubuntu-ui-toolkit-theme
+Architecture: any
+Multi-Arch: foreign
+Pre-Depends: dpkg (>= 1.15.6~),
+             ${misc:Pre-Depends},
+Depends: lomiri-ui-toolkit-theme (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Breaks: ubuntu-ui-toolkit-theme (<< 1.3.3000),
+Replaces: ubuntu-ui-toolkit-theme (<< 1.3.3000),
+Description: Qt Components for Lomiri - Lomiri Theme
+ Qt Components for Lomiri offers a set of reusable user interface
+ components for Qt Quick 2 / QML.
+ .
+ This package contains the Ubuntu compatibility themes for Qt Lomiri
+ Components.
