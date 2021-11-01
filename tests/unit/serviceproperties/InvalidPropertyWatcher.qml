@@ -24,7 +24,7 @@ Item {
         service: "org.freedesktop.Accounts"
         serviceInterface: "org.freedesktop.Accounts"
         path: "/org/freedesktop/Accounts"
-        adaptorInterface: "com.ubuntu.touch.AccountsService.Sound"
+        adaptorInterface: "com.lomiri.touch.AccountsService.Sound"
 
         property bool thisIsAnInvalidPropertyToWatch: true
     }

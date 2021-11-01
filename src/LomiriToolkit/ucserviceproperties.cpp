@@ -107,7 +107,7 @@ void printLocked(UCServiceProperties *owner)
  *     service: "org.freenode.AccountsService"
  *     path: "/org/freenode/AccountsService"
  *     serviceInterface: "org.freenode.AccountsService"
- *     adaptorInterface: "com.ubuntu.touch.AccountsService.Sound"
+ *     adaptorInterface: "com.lomiri.touch.AccountsService.Sound"
  *     // listing properties to watch
  *     // each property name existence will be checked against the current case
  *     // as well as with first character capitalized
