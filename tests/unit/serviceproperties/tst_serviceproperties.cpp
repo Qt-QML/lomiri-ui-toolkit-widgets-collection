@@ -56,7 +56,7 @@ private Q_SLOTS:
         // The test uses this schema, which might not be available on non-Ubuntu
         // distros even though the AccountsService is available.
         if (!QFile::exists(
-                    QStringLiteral("/usr/share/accountsservice/interfaces/com.ubuntu.touch.AccountsService.Sound.xml"))) {
+                    QStringLiteral("/usr/share/accountsservice/interfaces/com.lomiri.touch.AccountsService.Sound.xml"))) {
             error = QStringLiteral("Skip test: required schema not installed.");
             return;
         }
