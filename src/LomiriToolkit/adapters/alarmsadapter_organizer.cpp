@@ -42,8 +42,8 @@ static const QString alarmManagerFallback = QStringLiteral("memory");
 static const QString alarmCollection = QStringLiteral("Alarms");
 
 // special tags used as workaround for bug #1361702
-static const QString tagAlarmService = QStringLiteral("x-canonical-alarm");
-static const QString tagDisabledAlarm = QStringLiteral("x-canonical-disabled");
+static const QString tagAlarmService = QStringLiteral("x-lomiri-alarm");
+static const QString tagDisabledAlarm = QStringLiteral("x-lomiri-disabled");
 
 QTORGANIZER_USE_NAMESPACE
 
