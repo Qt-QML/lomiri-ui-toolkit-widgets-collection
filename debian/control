@@ -3,7 +3,7 @@ Priority: optional
 Section: libs
 Maintainer: UBports Developers <developers@ubports.com>
 Build-Depends: accountsservice <!nocheck>,
-               accountsservice-ubuntu-schemas <!nocheck>,
+               lomiri-schemas <!nocheck>,
                dbus <!nocheck>,
                dbus-test-runner <!nocheck>,
                debhelper (>= 9.0.0),
