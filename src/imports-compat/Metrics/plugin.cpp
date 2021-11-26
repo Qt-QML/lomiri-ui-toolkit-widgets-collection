@@ -17,6 +17,8 @@
 #include <QtQml/QtQml>
 #include <LomiriMetrics/applicationmonitor.h>
 
+#include <LomiriToolkit/private/deprecationprinter_p.h>
+
 // FIXME(loicm)
 //   - Not sure how to add support for the loggers API?
 //   - Add support for the generic logging API.
@@ -119,6 +121,10 @@ public:
     virtual void registerTypes(const char* uri) override
     {
         Q_ASSERT(QLatin1String(uri) == QLatin1String("Ubuntu.Metrics"));
+
+        UT_PREPEND_NAMESPACE(DeprecationPrinter)::instance()->printDeprecation(
+            UT_PREPEND_NAMESPACE(DeprecationPrinter)::METRICS);
+
         qmlRegisterSingletonType<ApplicationMonitorWrapper>(
             uri, 1, 0, "ApplicationMonitor", applicationMonitorSingletonProvider);
     }

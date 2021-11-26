@@ -236,6 +236,14 @@ SOURCES += \
     $$PWD/lomirithemeiconprovider.cpp \
     $$PWD/unixsignalhandler_p.cpp
 
+ubuntu-uitk-compat {
+    HEADERS += \
+        $$PWD/deprecationprinter_p.h
+
+    SOURCES += \
+        $$PWD/deprecationprinter.cpp
+}
+
 RESOURCES += \
     $$PWD/resources.qrc
 

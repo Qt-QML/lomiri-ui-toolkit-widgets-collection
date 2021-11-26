@@ -62,6 +62,8 @@ ubuntu-uitk-compat {
     src_compat_metrics_module.subdir = imports-compat/Metrics
     src_compat_metrics_module.target = sub-compat-metrics-module
     src_compat_metrics_module.depends = sub-metrics-lib
+    # For the DeprecationPrinter.
+    src_compat_metrics_module.depends += sub-toolkit-lib
     SUBDIRS += src_compat_metrics_module
 
     src_compat_performance_metrics_module.subdir = imports-compat/PerformanceMetrics

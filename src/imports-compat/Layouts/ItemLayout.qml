@@ -1,3 +1,12 @@
 import Lomiri.Layouts 1.0
 
-ItemLayout {}
+// DeprecationPrinter
+import QtQml 2.9
+import Lomiri.Components.Private 1.3
+
+ItemLayout {
+    Component.onCompleted: {
+        DeprecationPrinter.printDeprecation(
+            DeprecationPrinter.LAYOUTS);
+    }
+}

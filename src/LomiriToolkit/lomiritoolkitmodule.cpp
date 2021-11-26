@@ -103,6 +103,10 @@
 #include "ucurihandler_p.h"
 #include "lomirithemeiconprovider_p.h"
 
+#ifdef LOMIRI_UITK_WANT_UBUNTU_COMPAT
+#   include "deprecationprinter_p.h"
+#endif
+
 UT_NAMESPACE_BEGIN
 
 static const QString notInstantiatable = QStringLiteral("Not instantiatable");
@@ -288,6 +292,18 @@ void LomiriToolkitModule::initializeModule(QQmlEngine *engine, const QUrl &plugi
     //FIXME: move to a more generic location, i.e StyledItem or QuickUtils
     qmlRegisterSimpleSingletonType<UCScrollbarUtils>(privateUri, 1, 3, "PrivateScrollbarUtils");
 
+#   ifdef LOMIRI_UITK_WANT_UBUNTU_COMPAT
+    // Used by QML forwarder types to trigger deprecation warnings.
+    qmlRegisterSingletonType<DeprecationPrinter>(privateUri, 1, 3,
+        "DeprecationPrinter",
+        [] (QQmlEngine *, QJSEngine *) {
+            QObject * printer = DeprecationPrinter::instance();
+            QQmlEngine::setObjectOwnership(printer, QQmlEngine::CppOwnership);
+
+            return printer;
+        });
+#   endif
+
     // allocate all context property objects prior we register them
     initializeContextProperties(engine);
 
@@ -435,6 +451,13 @@ void LomiriToolkitModule::defineModule(const char *uri)
     qmlRegisterType<UCMainViewBase>(uri, 1, 3, "MainViewBase");
     qmlRegisterType<ActionList>(uri, 1, 3, "ActionList");
     qmlRegisterType<ExclusiveGroup>(uri, 1, 3, "ExclusiveGroup");
+
+#   ifdef LOMIRI_UITK_WANT_UBUNTU_COMPAT
+    if (uri == QLatin1String("Ubuntu.Components")) {
+        DeprecationPrinter::instance()->printDeprecation(
+            DeprecationPrinter::COMPONENTS);
+    }
+#   endif
 }
 
 void LomiriToolkitModule::undefineModule()
