@@ -47,3 +47,27 @@ src_test_module.subdir = imports/Test
 src_test_module.target = sub-test-module
 src_test_module.depends = sub-toolkit-lib
 SUBDIRS += src_test_module
+
+ubuntu-uitk-compat {
+    src_compat_components_module.subdir = imports-compat/Components
+    src_compat_components_module.target = sub-compat-components-module
+    src_compat_components_module.depends = sub-components-module
+    SUBDIRS += src_compat_components_module
+
+    src_compat_layouts_module.subdir = imports-compat/Layouts
+    src_compat_layouts_module.target = sub-compat-layouts-module
+    src_compat_layouts_module.depends = sub-layouts-module
+    SUBDIRS += src_compat_layouts_module
+
+    src_compat_metrics_module.subdir = imports-compat/Metrics
+    src_compat_metrics_module.target = sub-compat-metrics-module
+    src_compat_metrics_module.depends = sub-metrics-lib
+    # For the DeprecationPrinter.
+    src_compat_metrics_module.depends += sub-toolkit-lib
+    SUBDIRS += src_compat_metrics_module
+
+    src_compat_performance_metrics_module.subdir = imports-compat/PerformanceMetrics
+    src_compat_performance_metrics_module.target = sub-compat-performance-metrics-module
+    src_compat_performance_metrics_module.depends = sub-performance-metrics-module
+    SUBDIRS += src_compat_performance_metrics_module
+}

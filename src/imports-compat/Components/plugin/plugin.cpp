@@ -20,23 +20,28 @@
 #include <LomiriToolkit/lomiritoolkitmodule.h>
 #include <LomiriGestures/lomirigesturesmodule.h>
 
-LomiriComponentsPlugin::~LomiriComponentsPlugin()
+UbuntuComponentsPlugin::~UbuntuComponentsPlugin()
 {
     UT_PREPEND_NAMESPACE(LomiriToolkitModule)::undefineModule();
     UG_PREPEND_NAMESPACE(LomiriGesturesModule)::undefineModule();
 }
 
-void LomiriComponentsPlugin::registerTypes(const char *uri)
+void UbuntuComponentsPlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("Lomiri.Components"));
+    Q_ASSERT(uri == QLatin1String("Ubuntu.Components"));
     Q_UNUSED(uri);
 
     UG_PREPEND_NAMESPACE(LomiriGesturesModule)::defineModule(uri);
     UT_PREPEND_NAMESPACE(LomiriToolkitModule)::defineModule(uri);
 }
 
-void LomiriComponentsPlugin::initializeEngine(QQmlEngine *engine, const char *uri)
+void UbuntuComponentsPlugin::initializeEngine(QQmlEngine *engine, const char *uri)
 {
-    UT_PREPEND_NAMESPACE(LomiriToolkitModule)::initializeModule(engine, baseUrl());
+    // Give the base URL for Lomiri.Components. Normally it should be adjacent.
+    // Only one ".." because the rightmost component is considered a file.
+    // FIXME: may be incorrect for QRC case.
+    QUrl lomiriBaseUrl = baseUrl().resolved(QUrl("../Lomiri/Components"));
+
+    UT_PREPEND_NAMESPACE(LomiriToolkitModule)::initializeModule(engine, lomiriBaseUrl);
     QQmlExtensionPlugin::initializeEngine(engine, uri);
 }

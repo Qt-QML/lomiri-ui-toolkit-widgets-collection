@@ -1,0 +1,8 @@
+usr/lib/*/qt5/qml/Ubuntu/Components/Themes/Ambiance/parent_theme
+usr/lib/*/qt5/qml/Ubuntu/Components/Themes/Ambiance/qmldir
+usr/lib/*/qt5/qml/Ubuntu/Components/Themes/SuruDark/parent_theme
+usr/lib/*/qt5/qml/Ubuntu/Components/Themes/SuruDark/qmldir
+usr/lib/*/qt5/qml/Ubuntu/Components/Themes/SuruGradient/deprecated
+usr/lib/*/qt5/qml/Ubuntu/Components/Themes/SuruGradient/parent_theme
+usr/lib/*/qt5/qml/Ubuntu/Components/Themes/SuruGradient/qmldir
+usr/lib/*/qt5/qml/Ubuntu/Components/Themes/qmldir

@@ -23,6 +23,7 @@
 
 #include <stdexcept>
 
+#include <QtCore/QPointer>
 #include <QtQml/QQmlContext>
 #include <QtQml/QQmlEngine>
 #include <QtQml/QQmlExtensionPlugin>
@@ -82,6 +83,7 @@
 #include "ucmargins_p.h"
 #include "ucmathutils_p.h"
 #include "ucmouse_p.h"
+#include "ucnamespace_p.h"
 #include "ucpagetreenode_p.h"
 #include "ucperformancemonitor_p.h"
 #include "ucproportionalshape_p.h"
@@ -100,6 +102,10 @@
 #include "ucunits_p.h"
 #include "ucurihandler_p.h"
 #include "lomirithemeiconprovider_p.h"
+
+#ifdef LOMIRI_UITK_WANT_UBUNTU_COMPAT
+#   include "deprecationprinter_p.h"
+#endif
 
 UT_NAMESPACE_BEGIN
 
@@ -176,6 +182,17 @@ void LomiriToolkitModule::initializeContextProperties(QQmlEngine *engine)
         new ContextPropertyChangeListener(context, QStringLiteral("LomiriApplication"));
     QObject::connect(UCApplication::instance(), SIGNAL(applicationNameChanged()),
                      applicationChangeListener, SLOT(updateContextProperty()));
+
+    #ifdef LOMIRI_UITK_WANT_UBUNTU_COMPAT
+    /* Note: This provides UbuntuApplication whether we're loaded as Ubuntu.Components
+     * or Lomiri.Components. I don't think it matters much though. */
+    context->setContextProperty(QStringLiteral("UbuntuApplication"), UCApplication::instance());
+    ContextPropertyChangeListener *applicationChangeListener1 =
+        new ContextPropertyChangeListener(context, QStringLiteral("UbuntuApplication"));
+    QObject::connect(UCApplication::instance(), SIGNAL(applicationNameChanged()),
+                     applicationChangeListener1, SLOT(updateContextProperty()));
+    #endif
+
     // Give the application object access to the engine
     UCApplication::instance()->setContext(context);
 
@@ -212,7 +229,12 @@ void LomiriToolkitModule::registerTypesToVersion(const char *uri, int major, int
     qmlRegisterExtendedType<
         QQuickImageBase, UCQQuickImageExtension>(uri, major, minor, "QQuickImageBase");
     qmlRegisterUncreatableType<UCUnits>(uri, major, minor, "UCUnits", notInstantiatable);
-    qmlRegisterType<UCLomiriShape>(uri, major, minor, "LomiriShape");
+    if (uri == QLatin1String("Ubuntu.Components")) {
+        // FIXME/DEPRECATED: Ubuntu.* is exported for backwards compatibility only
+        qmlRegisterType<UCLomiriShape>(uri, major, minor, "UbuntuShape");
+    } else {
+        qmlRegisterType<UCLomiriShape>(uri, major, minor, "LomiriShape");
+    }
     // FIXME/DEPRECATED: Shape is exported for backwards compatibility only
     qmlRegisterType<UCLomiriShape>(uri, major, minor, "Shape");
     qmlRegisterType<InverseMouseAreaType>(uri, major, minor, "InverseMouseArea");
@@ -254,6 +276,10 @@ QUrl LomiriToolkitModule::baseUrl(QQmlEngine *engine)
 
 void LomiriToolkitModule::initializeModule(QQmlEngine *engine, const QUrl &pluginBaseUrl)
 {
+    // Ensure that the module is initialized once per engine.
+    if (!LomiriToolkitModule::baseUrl(engine).isEmpty())
+        return;
+
     LomiriToolkitModule *module = create(engine, pluginBaseUrl);
 
     // Register private types.
@@ -265,6 +291,18 @@ void LomiriToolkitModule::initializeModule(QQmlEngine *engine, const QUrl &plugi
 
     //FIXME: move to a more generic location, i.e StyledItem or QuickUtils
     qmlRegisterSimpleSingletonType<UCScrollbarUtils>(privateUri, 1, 3, "PrivateScrollbarUtils");
+
+#   ifdef LOMIRI_UITK_WANT_UBUNTU_COMPAT
+    // Used by QML forwarder types to trigger deprecation warnings.
+    qmlRegisterSingletonType<DeprecationPrinter>(privateUri, 1, 3,
+        "DeprecationPrinter",
+        [] (QQmlEngine *, QJSEngine *) {
+            QObject * printer = DeprecationPrinter::instance();
+            QQmlEngine::setObjectOwnership(printer, QQmlEngine::CppOwnership);
+
+            return printer;
+        });
+#   endif
 
     // allocate all context property objects prior we register them
     initializeContextProperties(engine);
@@ -338,9 +376,8 @@ void LomiriToolkitModule::initializeModule(QQmlEngine *engine, const QUrl &plugi
         QStringLiteral("performanceMonitor"), new UCPerformanceMonitor(engine));
 }
 
-void LomiriToolkitModule::defineModule()
+void LomiriToolkitModule::defineModule(const char *uri)
 {
-    const char *uri = "Lomiri.Components";
     // register 0.1 for backward compatibility
     registerTypesToVersion(uri, 0, 1);
     registerTypesToVersion(uri, 1, 0);
@@ -368,8 +405,16 @@ void LomiriToolkitModule::defineModule()
         uri, 1, 2, "ListItemDrag", QStringLiteral("This is an event object"));
     qmlRegisterType<UCListItemActions>(uri, 1, 2, "ListItemActions");
     qmlRegisterUncreatableType<UCViewItemsAttached>(uri, 1, 2, "ViewItems", notInstantiatable);
-    qmlRegisterType<UCLomiriShape, 1>(uri, 1, 2, "LomiriShape");
-    qmlRegisterType<UCLomiriShapeOverlay>(uri, 1, 2, "LomiriShapeOverlay");
+    if (uri == QLatin1String("Ubuntu.Components")) {
+        // FIXME/DEPRECATED: Ubuntu.* is exported for backwards compatibility only
+        qmlRegisterType<UCLomiriShape, 1>(uri, 1, 2, "UbuntuShape");
+        qmlRegisterType<UCLomiriShapeOverlay>(uri, 1, 2, "UbuntuShapeOverlay");
+        qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespace)>(uri, 1, 2, "Ubuntu");
+    } else {
+        qmlRegisterType<UCLomiriShape, 1>(uri, 1, 2, "LomiriShape");
+        qmlRegisterType<UCLomiriShapeOverlay>(uri, 1, 2, "LomiriShapeOverlay");
+        qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespace)>(uri, 1, 2, "Lomiri");
+    }
 
     // register 1.3 API
     qmlRegisterType<UCListItem, 1>(uri, 1, 3, "ListItem");
@@ -380,7 +425,14 @@ void LomiriToolkitModule::defineModule()
     qmlRegisterCustomType<UCStyleHints>(uri, 1, 3, "StyleHints", new UCStyleHintsParser);
     qmlRegisterType<UCAction, 1>(uri, 1, 3, "Action");
     qmlRegisterType<UCSlotsLayout>(uri, 1, 3, "SlotsLayout");
-    qmlRegisterType<UCLomiriShape, 2>(uri, 1, 3, "LomiriShape");
+    if (uri == QLatin1String("Ubuntu.Components")) {
+        // FIXME/DEPRECATED: Ubuntu.* is exported for backwards compatibility only
+        qmlRegisterType<UCLomiriShape, 2>(uri, 1, 3, "UbuntuShape");
+        qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespaceV13)>(uri, 1, 3, "Ubuntu");
+    } else {
+        qmlRegisterType<UCLomiriShape, 2>(uri, 1, 3, "LomiriShape");
+        qmlRegisterSimpleSingletonType<UT_PREPEND_NAMESPACE(UCNamespaceV13)>(uri, 1, 3, "Lomiri");
+    }
     qmlRegisterType<UCProportionalShape>(uri, 1, 3, "ProportionalShape");
     qmlRegisterType<LiveTimer>(uri, 1, 3, "LiveTimer");
     qmlRegisterType<UCAbstractButton>(uri, 1, 3, "AbstractButton");
@@ -399,6 +451,13 @@ void LomiriToolkitModule::defineModule()
     qmlRegisterType<UCMainViewBase>(uri, 1, 3, "MainViewBase");
     qmlRegisterType<ActionList>(uri, 1, 3, "ActionList");
     qmlRegisterType<ExclusiveGroup>(uri, 1, 3, "ExclusiveGroup");
+
+#   ifdef LOMIRI_UITK_WANT_UBUNTU_COMPAT
+    if (uri == QLatin1String("Ubuntu.Components")) {
+        DeprecationPrinter::instance()->printDeprecation(
+            DeprecationPrinter::COMPONENTS);
+    }
+#   endif
 }
 
 void LomiriToolkitModule::undefineModule()

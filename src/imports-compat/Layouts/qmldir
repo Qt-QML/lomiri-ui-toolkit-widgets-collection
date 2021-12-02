@@ -1,0 +1,9 @@
+module Ubuntu.Layouts
+
+Layouts 0.1 Layouts.qml
+ConditionalLayout 0.1 ConditionalLayout.qml
+ItemLayout 0.1 ItemLayout.qml
+
+Layouts 1.0 Layouts.qml
+ConditionalLayout 1.0 ConditionalLayout.qml
+ItemLayout 1.0 ItemLayout.qml

@@ -1,0 +1,18 @@
+module Ubuntu.PerformanceMetrics
+
+#version 0.1
+PerformanceOverlay 0.1 ../../Lomiri/PerformanceMetrics/PerformanceOverlay.qml
+internal BarGraph ../../Lomiri/PerformanceMetrics/BarGraph.qml
+
+#Forwarders
+RenderingTimes 0.1 RenderingTimes.qml
+CpuUsage 0.1 CpuUsage.qml
+TextureFromImage 0.1 TextureFromImage.qml
+
+#version 1.0
+PerformanceOverlay 1.0 ../../Lomiri/PerformanceMetrics/PerformanceOverlay.qml
+
+#Forwarders
+RenderingTimes 1.0 RenderingTimes.qml
+CpuUsage 1.0 CpuUsage.qml
+TextureFromImage 1.0 TextureFromImage.qml

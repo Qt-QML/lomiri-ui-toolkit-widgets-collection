@@ -19,6 +19,10 @@ unix {
 # Uncomment to compile out qDebug() calls.
 # DEFINES += QT_NO_DEBUG_OUTPUT
 
+ubuntu-uitk-compat {
+    DEFINES += LOMIRI_UITK_WANT_UBUNTU_COMPAT
+}
+
 HEADERS += \
     $$PWD/actionlist_p.h \
     $$PWD/adapters/actionsproxy_p.h \
@@ -111,6 +115,7 @@ HEADERS += \
     $$PWD/ucmargins_p.h \
     $$PWD/ucmathutils_p.h \
     $$PWD/ucmouse_p.h \
+    $$PWD/ucnamespace_p.h \
     $$PWD/ucpagetreenode_p.h \
     $$PWD/ucpagetreenode_p_p.h \
     $$PWD/ucperformancemonitor_p.h \
@@ -208,6 +213,7 @@ SOURCES += \
     $$PWD/ucmainwindow.cpp \
     $$PWD/ucmathutils.cpp \
     $$PWD/ucmousefilters.cpp \
+    $$PWD/ucnamespace.cpp \
     $$PWD/ucpagetreenode.cpp \
     $$PWD/ucperformancemonitor.cpp \
     $$PWD/ucproportionalshape.cpp \
@@ -229,6 +235,14 @@ SOURCES += \
     $$PWD/ucviewitemsattached.cpp \
     $$PWD/lomirithemeiconprovider.cpp \
     $$PWD/unixsignalhandler_p.cpp
+
+ubuntu-uitk-compat {
+    HEADERS += \
+        $$PWD/deprecationprinter_p.h
+
+    SOURCES += \
+        $$PWD/deprecationprinter.cpp
+}
 
 RESOURCES += \
     $$PWD/resources.qrc
