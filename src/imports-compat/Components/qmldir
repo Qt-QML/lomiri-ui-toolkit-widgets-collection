@@ -33,8 +33,8 @@ internal PageWrapper ../../Lomiri/Components/1.2/PageWrapper.qml
 CrossFadeImage 0.1 ../../Lomiri/Components/1.2/CrossFadeImage10.qml
 Icon 0.1 ../../Lomiri/Components/1.0/Icon.qml
 OrientationHelper 0.1 ../../Lomiri/Components/1.2/OrientationHelper.qml
-LomiriNumberAnimation 0.1 ../../Lomiri/Components/1.2/LomiriNumberAnimation.qml
-LomiriListView 0.1 ../../Lomiri/Components/1.2/LomiriListView.qml
+UbuntuNumberAnimation 0.1 ../../Lomiri/Components/1.2/LomiriNumberAnimation.qml
+UbuntuListView 0.1 ../../Lomiri/Components/1.2/LomiriListView.qml
 singleton LomiriColors 0.1 ../../Lomiri/Components/1.0/LomiriColors.qml
 SliderUtils 0.1 ../../Lomiri/Components/1.2/sliderUtils.js
 DateUtils 0.1 ../../Lomiri/Components/1.2/dateUtils.js
@@ -67,11 +67,11 @@ Header 1.0 ../../Lomiri/Components/1.2/Header.qml
 CrossFadeImage 1.0 ../../Lomiri/Components/1.2/CrossFadeImage10.qml
 Icon 1.0 ../../Lomiri/Components/1.0/Icon.qml
 OrientationHelper 1.0 ../../Lomiri/Components/1.2/OrientationHelper.qml
-LomiriNumberAnimation 1.0 ../../Lomiri/Components/1.2/LomiriNumberAnimation.qml
+UbuntuNumberAnimation 1.0 ../../Lomiri/Components/1.2/LomiriNumberAnimation.qml
 singleton LomiriColors 1.0 ../../Lomiri/Components/1.0/LomiriColors.qml
 SliderUtils 1.0 ../../Lomiri/Components/1.2/sliderUtils.js
 DateUtils 1.0 ../../Lomiri/Components/1.2/dateUtils.js
-LomiriListView 1.0 ../../Lomiri/Components/1.2/LomiriListView.qml
+UbuntuListView 1.0 ../../Lomiri/Components/1.2/LomiriListView.qml
 
 #version 1.1
 ComboButton 1.1 ../../Lomiri/Components/1.2/ComboButton.qml
@@ -79,7 +79,7 @@ Button 1.1 ../../Lomiri/Components/1.1/Button.qml
 ProgressBar 1.1 ../../Lomiri/Components/1.1/ProgressBar.qml
 CrossFadeImage 1.1 ../../Lomiri/Components/1.2/CrossFadeImage11.qml
 PullToRefresh 1.1 ../../Lomiri/Components/1.2/PullToRefresh.qml
-LomiriListView 1.1 ../../Lomiri/Components/1.2/LomiriListView11.qml
+UbuntuListView 1.1 ../../Lomiri/Components/1.2/LomiriListView11.qml
 Page 1.1 ../../Lomiri/Components/1.2/Page11.qml
 PageHeadConfiguration 1.1 ../../Lomiri/Components/1.2/PageHeadConfiguration.qml
 PageHeadSections 1.1 ../../Lomiri/Components/1.2/PageHeadSections.qml
@@ -124,9 +124,9 @@ PageHeadState 1.3 ../../Lomiri/Components/1.3/PageHeadState.qml
 Sections 1.3 ../../Lomiri/Components/1.3/Sections.qml
 CrossFadeImage 1.3 ../../Lomiri/Components/1.3/CrossFadeImage.qml
 OrientationHelper 1.3 ../../Lomiri/Components/1.3/OrientationHelper.qml
-LomiriNumberAnimation 1.3 ../../Lomiri/Components/1.3/LomiriNumberAnimation.qml
+UbuntuNumberAnimation 1.3 ../../Lomiri/Components/1.3/LomiriNumberAnimation.qml
 PullToRefresh 1.3 ../../Lomiri/Components/1.3/PullToRefresh.qml
-LomiriListView 1.3 ../../Lomiri/Components/1.3/LomiriListView.qml
+UbuntuListView 1.3 ../../Lomiri/Components/1.3/LomiriListView.qml
 Captions 1.3 ../../Lomiri/Components/1.3/Captions.qml
 DateUtils 1.3 ../../Lomiri/Components/1.3/dateUtils.js
 ProgressionSlot 1.3 ../../Lomiri/Components/1.3/ProgressionSlot.qml
