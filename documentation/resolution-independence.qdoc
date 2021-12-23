@@ -93,7 +93,7 @@
     more care.
 
     The size of a bitmap needs to be adequate to render well on a given
-    device. The toolkit allows to design multiple versions of a bitmap and choose
+    device. The toolkit allows one to design multiple versions of a bitmap and choose
     the appropriate one dynamically depending on the device the application is
     being run on.
     In order to know for what target device a given version of a bitmap was

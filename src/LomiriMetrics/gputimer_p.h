@@ -30,7 +30,7 @@
 // determine the time taken by the graphics driver to push the graphics commands
 // in the command buffer from the CPU, this timer pushes dedicated
 // synchronization commands to the command buffer, which the GPU signals
-// whenever completed. That allows to get accurate GPU timings.
+// whenever completed. That allows one to get accurate GPU timings.
 class LOMIRI_METRICS_PRIVATE_EXPORT GPUTimer
 {
 public:
