@@ -43,7 +43,7 @@ Item {
             id: icon
             width: visible ? units.gu(10) : 0
             height: width
-            name: "search"
+            name: "find"
         }
         Icon {
             id: icon2
@@ -64,11 +64,6 @@ Item {
         name: "Icon"
         when: windowShown
 
-        SignalSpy {
-            id: shaderSpy
-            signalName: 'onStatusChanged'
-        }
-
         function cleanup() {
             icon2.name = "";
         }
@@ -86,15 +81,15 @@ Item {
         }
 
         function test_name() {
-            icon2.name = "search";
+            icon2.name = "find";
 
             var image = findChild(icon2, "image");
-            compare(image.source, "image://theme/search",
+            compare(image.source, "image://theme/find",
                     "Source of the image should be image://theme/{name}.");
         }
 
         function test_source() {
-            icon2.name = "search";
+            icon2.name = "find";
             icon2.source = "/usr/share/icons/suru/actions/scalable/edit-find.svg";
 
             var image = findChild(icon2, "image");
@@ -107,19 +102,17 @@ Item {
             icon.visible = true;
             var image = findChild(icon, "image");
             var shader = findChild(icon, "shader");
-            shaderSpy.target = shader;
 
-            compare(icon.name, 'search');
+            compare(icon.name, 'find');
             compare(shader.visible, false);
             compare(shader.status, ShaderEffect.Uncompiled)
             icon.color = UbuntuColors.orange;
-            shaderSpy.wait();
+            tryCompare(shader, "visible", true);
             compare(shader.log, '')
             // https://bugreports.qt.io/browse/QTBUG-49713
-            // status may be Error with no log even if successful
-            verify(shader.status !== ShaderEffect.Uncompiled)
+            // status is not getting updated even if successful
+            //compare(shader.status, ShaderEffect.Compiled)
             compare(shader.keyColorOut, icon.color);
-            compare(shader.visible, true);
             compare(shader.source, image);
             icon.keyColor = UbuntuColors.purple;
             compare(shader.keyColorIn, icon.keyColor);
@@ -128,7 +121,7 @@ Item {
             compare(icon.source, '');
             compare(shader.visible, false);
             // Let's get back to a valid source
-            icon.name = 'search';
+            icon.name = 'find';
             compare(shader.visible, true);
             compare(shader.source, image);
             // Unsetting the keyColor should also disable the shader
