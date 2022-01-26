@@ -59,6 +59,7 @@ Build-Depends: accountsservice <!nocheck>,
                qttools5-dev-tools,
                qtwebkit5-doc-html <!cross>,
                suru-icon-theme (>= 14.04+16.10.20160720),
+               ubuntu-mobile-icons,
                uuid-runtime,
                xvfb <!nocheck>,
 Standards-Version: 3.9.7
